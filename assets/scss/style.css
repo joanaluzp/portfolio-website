@@ -534,20 +534,16 @@ section {
 
 /*======FONTS======*/
 @font-face {
-  font-family: "Calissa Words";
-  src: url("/assets/fonts/CalissaWords.ttf");
+  font-family: "Berzulis-Gaila";
+  src: url("/assets/fonts/Berzulis-GAILA-Regular.ttf");
 }
 @font-face {
-  font-family: "saturno";
-  src: url("/assets/fonts/saturno.ttf");
+  font-family: "Berzulis-Magyla";
+  src: url("/assets/fonts/Berzulis-MAGYLA-Regular.ttf");
 }
 @font-face {
-  font-family: "Starlz";
-  src: url("/assets/fonts/Starlz.ttf");
-}
-@font-face {
-  font-family: "Zai";
-  src: url("/assets/fonts/zai_TributeToCasellisPantelegraph.ttf");
+  font-family: "Coentgen-Kanzley";
+  src: url("/assets/fonts/Coentgen_Kanzley.ttf");
 }
 .container,
 .container-fluid,
@@ -2954,6 +2950,246 @@ section {
 /*======COLORS======*/
 /*======FONTS======*/
 /*======TYPOGRAPHY======*/
+.description-text {
+  display: block;
+  width: 100%;
+  font-family: "Coentgen-Kanzley";
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+.description-text {
+  font-size: 14px;
+}
+@media screen and (min-width: 320px) {
+  .description-text {
+    font-size: calc(
+          14px + 2 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-text {
+    font-size: 16px;
+  }
+}
+.description-text.small {
+  font-size: 12px;
+}
+@media screen and (min-width: 320px) {
+  .description-text.small {
+    font-size: calc(
+          12px + 2 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-text.small {
+    font-size: 14px;
+  }
+}
+.description-text.medium {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  .description-text.medium {
+    font-size: calc(
+          16px + 2 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-text.medium {
+    font-size: 18px;
+  }
+}
+.description-text.big {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  .description-text.big {
+    font-size: calc(
+          18px + 2 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-text.big {
+    font-size: 20px;
+  }
+}
+.description-text.font-bold {
+  font-family: "Coentgen-Kanzley";
+}
+.description-text.font-bold-italic {
+  font-family: "Coentgen-Kanzley";
+}
+.description-text.font-italic {
+  font-family: "Coentgen-Kanzley";
+}
+.description-text.font-black {
+  font-family: "Coentgen-Kanzley";
+}
+.description-text.font-fungal {
+  font-family: "Coentgen-Kanzley";
+}
+.description-text.text-right {
+  text-align: right;
+}
+.description-text.text-justify {
+  text-align: justify;
+}
+.description-text.text-center {
+  text-align: center;
+}
+.description-text.black {
+  color: #000;
+}
+.description-text.text-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.description-text.white {
+  color: #fff;
+}
+.description-text.text-decoration {
+  text-decoration: underline;
+}
+.description-text.uppercase {
+  text-transform: uppercase;
+}
+.description-text.lowercase {
+  text-transform: lowercase;
+}
+.description-text.capitalize {
+  text-transform: capitalize;
+}
+
+.description-title {
+  display: block;
+  width: 100%;
+  font-family: "Berzulis-Magyla";
+  text-align: left;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+.description-title {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .description-title {
+    font-size: calc(
+          20px + 4 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-title {
+    font-size: 24px;
+  }
+}
+.description-title.small {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  .description-title.small {
+    font-size: calc(
+          18px + 4 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-title.small {
+    font-size: 22px;
+  }
+}
+.description-title.big {
+  font-size: 24px;
+}
+@media screen and (min-width: 320px) {
+  .description-title.big {
+    font-size: calc(
+          24px + 4 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-title.big {
+    font-size: 28px;
+  }
+}
+.description-title.bigger {
+  font-size: 40px;
+}
+@media screen and (min-width: 320px) {
+  .description-title.bigger {
+    font-size: calc(
+          40px + 20 *
+            ((100vw - 320px) / 879)
+        );
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-title.bigger {
+    font-size: 60px;
+  }
+}
+.description-title.text-right {
+  text-align: right;
+}
+.description-title.text-decoration {
+  text-decoration: underline;
+}
+.description-title.text-justify {
+  text-align: justify;
+}
+.description-title.text-center {
+  text-align: center;
+}
+.description-title.font-bold {
+  font-family: "Coentgen-Kanzley";
+}
+.description-title.font-bold-italic {
+  font-family: "Coentgen-Kanzley";
+}
+.description-title.font-black {
+  font-family: "Coentgen-Kanzley";
+}
+.description-title.font-italic {
+  font-family: "Coentgen-Kanzley";
+}
+.description-title.font-fungal {
+  font-family: "Coentgen-Kanzley";
+}
+.description-title.black {
+  color: #000;
+}
+.description-title.white {
+  color: #fff;
+}
+.description-title.text-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.description-title.uppercase {
+  text-transform: uppercase;
+}
+.description-title.lowercase {
+  text-transform: lowercase;
+}
+.description-title.capitalize {
+  text-transform: capitalize;
+}
+
 /*======GLOBAL======*/
 html,
 body {
@@ -3261,66 +3497,50 @@ body .main {
 /*====NAVBAR====*/
 .header {
   position: fixed;
-  width: 100%;
-  background-color: red;
-  border-radius: 0 0 20px 20px;
-  height: 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ff00d4;
+  border-radius: 20px 0 0 20px;
+  height: auto;
   z-index: 10;
+  bottom: 0;
+  right: 0;
   transition: all 0.5s ease-in-out;
 }
-.header .header-mobile-icon {
-  position: absolute;
-  top: 15px;
-  right: 30px;
+.header .header-toggle-wrapper {
+  padding: 5px 10px;
+  width: 100%;
 }
-.header .header-mobile-icon img {
-  height: 70px;
+.header .header-toggle-wrapper .description-title {
+  cursor: pointer;
+  text-align: right;
+  color: #fff;
+  text-decoration: underline;
 }
-.header .header-mobile-icon img.close {
+.header .header-toggle-wrapper .description-title.closed {
   display: none;
 }
 
+.navbar {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+}
+.navbar.is-open {
+  grid-template-rows: 1fr;
+}
 .navbar.is-open .navbar-menu {
-  transform: translateX(0);
+  padding: 30px 50px;
 }
 .navbar .navbar-menu {
-  position: fixed;
   z-index: 9;
   display: inline-block;
-  bottom: 0;
-  height: 100vh;
   width: 100%;
-  left: 0;
-  transform: translateX(100%);
-  text-align: center;
+  text-align: right;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 .navbar .navbar-menu li {
   cursor: pointer;
   margin: 20px 0;
-}
-.navbar .navbar-menu li p {
-  font-size: 50px;
-  font-family: "Zai";
-}
-.navbar .navbar-menu li p:hover, .navbar .navbar-menu li p:active, .navbar .navbar-menu li p:focus {
-  font-family: "Calissa Words";
-}
-
-@media (min-width: 768px) {
-  .header .header-mobile-icon {
-    display: none;
-  }
-  .navbar .navbar-menu {
-    bottom: 50px;
-    right: 70px;
-    text-align: right;
-    transform: translateX(0);
-  }
-  .navbar .navbar-menu li {
-    margin: 10px 0;
-  }
-  .navbar .navbar-menu li p {
-    font-size: 40px;
-  }
 }/*# sourceMappingURL=style.css.map */

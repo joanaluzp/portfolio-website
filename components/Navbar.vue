@@ -1,28 +1,40 @@
 <template>
   <header class="header">
-    <div class="header-mobile-icon" @click="open = !open">
-      <img
-        src="../assets/images/animated-disk-image-0055.gif"
+    <div class="header-toggle-wrapper" @click="open = !open">
+      <p
+        class="description-title capitalize bigger"
         :class="{ 'd-none': open }"
-      />
-      <img
-        src="../assets/images/animated-goodbye-image-0011.gif"
-        class="close"
+      >
+        open
+      </p>
+      <p
+        class="closed description-title capitalize bigger"
         :class="{ 'd-block': open }"
-      />
+      >
+        hide
+      </p>
     </div>
+    <nav class="navbar" :class="{ 'is-open': open }">
+      <ul class="navbar-menu">
+        <li @click="scrollToComponent('section-welcome')">
+          <p class="description-text medium">welcome</p>
+        </li>
+        <li @click="scrollToComponent('section-about')">
+          <p class="description-text medium">about</p>
+        </li>
+        <li @click="scrollToComponent('section-work')">
+          <p class="description-text medium">work</p>
+        </li>
+        <li @click="scrollToComponent('section-skills')">
+          <p class="description-text medium">skills</p>
+        </li>
+        <li @click="scrollToComponent('section-contact')">
+          <p class="description-text medium">contact</p>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <nav class="navbar" :class="{ 'is-open': open }">
-    <ul class="navbar-menu">
-      <li @click="scrollToComponent('section-welcome')"><p>welcome</p></li>
-      <li @click="scrollToComponent('section-about')"><p>about</p></li>
-      <li @click="scrollToComponent('section-work')"><p>work</p></li>
-      <li @click="scrollToComponent('section-skills')"><p>skills</p></li>
-      <li @click="scrollToComponent('section-contact')"><p>contact</p></li>
-    </ul>
-  </nav>
 </template>
-
 <script setup>
 const open = ref(false);
 const scrollToComponent = (id) => {
