@@ -1,5 +1,5 @@
 /*====NAVBAR====*/
-.header {
+.navbar {
   position: fixed;
   width: fit-content;
   background-color: $color-pink-primary;
@@ -8,47 +8,45 @@
   z-index: 10;
   bottom: 0;
   right: 0;
+  padding: 10px 20px;
   @include transition2(all, 0.5s, ease-in-out);
-  .header-toggle-wrapper {
-    padding: 5px 10px;
+  .navbar-toggle-wrapper {
     width: 100%;
     .description-title {
       cursor: pointer;
       text-align: right;
       color: $white;
-      text-decoration: underline;
       &.closed {
         display: none;
       }
     }
   }
-}
-.navbar {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
-  &.is-open {
-    grid-template-rows: 1fr;
-    .navbar-menu {
-      padding: 30px 50px;
+  .navbar-menu-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    &.is-open {
+      grid-template-rows: 1fr;
     }
-  }
-  .navbar-menu {
-    z-index: 9;
-    display: inline-block;
-    width: 100%;
-    text-align: right;
-    overflow: hidden;
-    @include transition;
-    li {
-      cursor: pointer;
-      margin: 20px 0;
+    .navbar-menu {
+      z-index: 9;
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+      overflow: hidden;
+      @include transition;
+      li {
+        cursor: pointer;
+        margin: 20px 0;
+        .description-text {
+          text-align: left;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 768px) {
-
 }
 
 @media (min-width: 992px) {
