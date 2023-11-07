@@ -1,0 +1,75 @@
+/*====NAVBAR====*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: red;
+  border-radius: 0 0 20px 20px;
+  height: 100px;
+  z-index: 10;
+  @include transition2(all, 0.5s, ease-in-out);
+  .header-mobile-icon {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    img {
+      height: 70px;
+      &.close {
+        display: none;
+      }
+    }
+  }
+}
+.navbar {
+  &.is-open {
+    .navbar-menu {
+      transform: translateX(0);
+    }
+  }
+  .navbar-menu {
+    position: fixed;
+    z-index: 9;
+    display: inline-block;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    transform: translateX(100%);
+    text-align: center;
+    @include transition;
+    li {
+      cursor: pointer;
+      margin: 20px 0;
+      p {
+        font-size: 50px;
+        font-family: $font-04;
+        &:hover,
+        &:active,
+        &:focus {
+          font-family: $font-01;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    .header-mobile-icon {
+      display: none;
+    }
+  }
+  .navbar {
+    .navbar-menu {
+      bottom: 50px;
+      right: 70px;
+      text-align: right;
+      transform: translateX(0);
+      li {
+        margin: 10px 0;
+        p {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
