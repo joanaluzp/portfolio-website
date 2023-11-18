@@ -15,21 +15,33 @@
       </p>
     </div>
     <div class="navbar-menu-wrapper" :class="{ 'is-open': open }">
-      <ul class="navbar-menu">
-        <li @click="scrollToComponent('section-welcome')">
-          <p class="description-text medium white">welcome</p>
+      <ul class="navbar-menu-list">
+        <li
+          class="navbar-menu-item"
+          @click="scrollToComponent('section-welcome')"
+        >
+          <p class="description-text medium">welcome</p>
         </li>
-        <li @click="scrollToComponent('section-about')">
-          <p class="description-text medium white">about</p>
+        <li
+          class="navbar-menu-item"
+          @click="scrollToComponent('section-about')"
+        >
+          <p class="description-text medium">about</p>
         </li>
-        <li @click="scrollToComponent('section-work')">
-          <p class="description-text medium white">work</p>
+        <li class="navbar-menu-item" @click="scrollToComponent('section-work')">
+          <p class="description-text medium">work</p>
         </li>
-        <li @click="scrollToComponent('section-skills')">
-          <p class="description-text medium white">skills</p>
+        <li
+          class="navbar-menu-item"
+          @click="scrollToComponent('section-skills')"
+        >
+          <p class="description-text medium">skills</p>
         </li>
-        <li @click="scrollToComponent('section-contact')">
-          <p class="description-text medium white">contact</p>
+        <li
+          class="navbar-menu-item"
+          @click="scrollToComponent('section-contact')"
+        >
+          <p class="description-text medium">contact</p>
         </li>
       </ul>
     </div>
@@ -39,13 +51,17 @@
 const open = ref(false);
 const scrollToComponent = (id) => {
   const el = document.getElementById(id);
-  el.scrollIntoView({ behavior: "smooth" });
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 const clickOutside = (event) => {
   const nav = document.querySelector(".navbar");
-  if (!nav.contains(event.target)) {
-    open.value = false;
+  if (nav) {
+    if (!nav.contains(event.target)) {
+      open.value = false;
+    }
   }
 };
 

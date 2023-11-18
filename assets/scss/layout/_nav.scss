@@ -1,21 +1,23 @@
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
-  width: fit-content;
-  background-color: $color-pink-primary;
-  border-radius: 20px 0 0 20px;
+  background-color: $blue-light;
+  border-radius: 20px;
+  max-width: 300px;
   height: auto;
   z-index: 10;
-  bottom: 0;
-  right: 0;
-  padding: 10px 20px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
   @include transition2(all, 0.5s, ease-in-out);
   .navbar-toggle-wrapper {
     width: 100%;
     .description-title {
       cursor: pointer;
-      text-align: right;
-      color: $white;
+      text-align: center;
+      color: $pink;
+      font-family: $font-03;
       &.closed {
         display: none;
       }
@@ -28,26 +30,46 @@
     &.is-open {
       grid-template-rows: 1fr;
     }
-    .navbar-menu {
+    .navbar-menu-list {
       z-index: 9;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
       width: 100%;
       text-align: right;
       overflow: hidden;
       @include transition;
-      li {
+      .navbar-menu-item {
         cursor: pointer;
-        margin: 20px 0;
+        padding: 3px 10px;
+        background-color: $white;
+        border-radius: 30px;
+        border: 2px solid $yellow;
         .description-text {
-          text-align: left;
+          text-align: center;
+          color: $black;
         }
       }
     }
   }
 }
-
-@media (min-width: 768px) {
-}
-
 @media (min-width: 992px) {
+  .navbar {
+    .navbar-menu-wrapper {
+      .navbar-menu-list {
+        .navbar-menu-item {
+          &:hover {
+            animation: shake 0.3s ease-in-out infinite;
+            border-color: $blue-light;
+            .description-text {
+              color: $red;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
 }
