@@ -1,0 +1,25 @@
+/*====ABOUT====*/
+.section-about {
+  position: relative;
+  background-color: $grey-clear01;
+  .about-text-wrapper {
+    background-color: $color-purple-blue;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 250px;
+    position: absolute;
+    z-index: 3;
+    left: 5%;
+    bottom: 5%;
+    .description-text {
+      color: $black;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .section-about {
+    .about-text-wrapper {
+      max-width: 550px;
+    }
+  }
+}
