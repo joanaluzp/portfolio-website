@@ -29,14 +29,12 @@
     }
   }
   .welcome-ascii-wrapper {
-    user-select: none;
     position: absolute;
     font-size: 12px;
     z-index: 2;
     left: 10%;
-    top: 30%;
+    top: 20%;
     pre {
-      animation: rotate3d 10s ease-in-out infinite;
       color: $black;
       font-weight: 900;
       font-family: monospace;
@@ -50,6 +48,13 @@
       height: 100vh;
       object-fit: cover;
       object-position: center;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .section-welcome {
+    .welcome-ascii-wrapper {
+      left: 25%;
     }
   }
 }

@@ -3256,12 +3256,12 @@ body .main {
 }
 
 ::-moz-selection {
-  color: #333333;
+  color: #575757;
   background: #ffff00;
 }
 
 ::selection {
-  color: #333333;
+  color: #575757;
   background: #ffff00;
 }
 
@@ -3354,12 +3354,12 @@ body .main {
 }
 .navbar .navbar-menu-wrapper .navbar-menu-list .navbar-menu-item {
   cursor: pointer;
-  padding: 3px 10px;
   background-color: #ffffff;
   border-radius: 30px;
   border: 2px solid #ffff00;
 }
 .navbar .navbar-menu-wrapper .navbar-menu-list .navbar-menu-item .description-text {
+  padding: 3px 10px;
   text-align: center;
   color: #000;
 }
@@ -3404,17 +3404,13 @@ body .main {
   bottom: 20%;
 }
 .section-welcome .welcome-ascii-wrapper {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   position: absolute;
   font-size: 12px;
   z-index: 2;
   left: 10%;
-  top: 30%;
+  top: 20%;
 }
 .section-welcome .welcome-ascii-wrapper pre {
-  animation: rotate3d 10s ease-in-out infinite;
   color: #000;
   font-weight: 900;
   font-family: monospace;
@@ -3430,13 +3426,18 @@ body .main {
      object-position: center;
 }
 
+@media (min-width: 992px) {
+  .section-welcome .welcome-ascii-wrapper {
+    left: 25%;
+  }
+}
 /*====ABOUT====*/
 .section-about {
   position: relative;
   background-color: #f2f2f2;
 }
 .section-about .about-text-wrapper {
-  background-color: #7e00ff;
+  background-color: #6f00ff;
   padding: 20px;
   border-radius: 15px;
   max-width: 250px;
@@ -3463,11 +3464,96 @@ body .main {
 /*====SKILLS===*/
 .section-skills {
   position: relative;
-  background-color: #00ff2a;
+  background: #E7E7E7;
+  background: radial-gradient(circle, #E7E7E7 25%, #ffffff 40%);
+}
+.section-skills .skills-wraper .skills-text {
+  color: #1900ff;
+  max-width: 200px;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+.section-skills .skills-wraper .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 5%;
+}
+.section-skills .skills-wraper .skills-list .skills-item {
+  cursor: pointer;
+  color: #575757;
+}
+.section-skills .skills-wraper .skills-list .skills-item .skills-info-box-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+  width: 90%;
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: -35vh;
+  transform: translateX(-50%);
+}
+.section-skills .skills-wraper .skills-list .skills-item .skills-info-box-wrapper.is-open {
+  grid-template-rows: 1fr;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #1900ff;
+}
+.section-skills .skills-wraper .skills-list .skills-item .skills-info-box-wrapper .skills-info-box {
+  overflow: hidden;
+  color: #ff0000;
 }
 
+@media (min-width: 992px) {
+  .section-skills .skills-wraper .skills-list {
+    left: 20%;
+    bottom: 30%;
+  }
+  .section-skills .skills-wraper .skills-list .skills-item .skills-info-box-wrapper {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 /*====CONTACT====*/
 .section-contact {
   position: relative;
   background-color: #ffffff;
+  height: 50vh;
+  min-height: 50vh;
+}
+.section-contact .contact-ascii-wrapper {
+  position: absolute;
+  font-size: 10px;
+  z-index: 2;
+  right: 5%;
+  top: 0;
+}
+.section-contact .contact-ascii-wrapper pre {
+  color: #1900ff;
+  font-weight: 900;
+  font-family: monospace;
+  white-space: pre;
+}
+.section-contact .contact-text-wrapper {
+  max-width: 200px;
+  position: absolute;
+  z-index: 3;
+  left: 10%;
+  bottom: 10%;
+}
+
+@media (min-width: 768px) {
+  .section-contact .contact-ascii-wrapper {
+    right: 10%;
+    top: 20%;
+  }
+  .section-contact .contact-text-wrapper {
+    left: 20%;
+    bottom: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */

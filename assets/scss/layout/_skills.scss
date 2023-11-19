@@ -1,5 +1,65 @@
 /*====SKILLS===*/
 .section-skills {
   position: relative;
-  background-color: $green;
+  background: $grey-clear02;
+  background: radial-gradient(circle, $grey-clear02 25%, $white 40%);
+  .skills-wraper {
+    .skills-text {
+      color: $blue;
+      max-width: 200px;
+      position: absolute;
+      top: 30%;
+      right: 5%;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 5%;
+      .skills-item {
+        cursor: pointer;
+        color: $black-clear02;
+        .skills-info-box-wrapper {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.5s ease-out;
+          width: 90%;
+          max-width: 600px;
+          position: absolute;
+          left: 50%;
+          top: -35vh;
+          transform: translateX(-50%);
+          &.is-open {
+            grid-template-rows: 1fr;
+            padding: 10px;
+            background-color: $white;
+            border: 1px solid $blue;
+          }
+          .skills-info-box {
+            overflow: hidden;
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .section-skills {
+    .skills-wraper {
+      .skills-list {
+        left: 20%;
+        bottom: 30%;
+        .skills-item {
+          .skills-info-box-wrapper {
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
 }

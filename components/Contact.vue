@@ -1,7 +1,36 @@
 <template>
   <section class="section section-contact" id="section-contact">
-    <div class=""></div>
+    <div class="contact-text-wrapper">
+      <p class="description-title font-italic big lowercase">{{ database.data.contact.text }}</p>
+      <a href="mailto: joanaluzp@gmail.com"
+        ><p class="description-text big">{{ database.data.contact.email }}</p></a
+      >
+    </div>
+    <div class="contact-ascii-wrapper" data-aos="fade-right" data-aos-duration="1000">
+      <pre>
+
+                                                       
+                                                       
+        ____                        ,--,    
+                 ,'  , `.             ,--,   ,--.'|    
+              ,-+-,.' _ |           ,--.'|   |  | :    
+           ,-+-. ;   , ||           |  |,    :  : '    
+   ,---.  ,--.'|'   |  || ,--.--.   `--'_    |  ' |    
+  /     \|   |  ,', |  |,/       \  ,' ,'|   '  | |    
+ /    /  |   | /  | |--'.--.  .-. | '  | |   |  | :    
+.    ' / |   : |  | ,    \__\/: . . |  | :   '  : |__  
+'   ;   /|   : |  |/     ," .--.; | '  : |__ |  | '.'| 
+'   |  / |   | |`-'     /  /  ,.  | |  | '.'|;  :    ; 
+|   :    |   ;/        ;  :   .'   \;  :    ;|  ,   /  
+ \   \  /'---'         |  ,     .-./|  ,   /  ---`-'   
+  `----'                `--`---'     ---`-'            
+                                                       
+                                  
+</pre
+      >
+    </div>
   </section>
 </template>
-
-<script setup></script>
+<script setup>
+import database from "../data/db.json";
+</script>

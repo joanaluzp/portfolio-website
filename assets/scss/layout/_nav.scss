@@ -43,11 +43,11 @@
       @include transition;
       .navbar-menu-item {
         cursor: pointer;
-        padding: 3px 10px;
         background-color: $white;
         border-radius: 30px;
         border: 2px solid $yellow;
         .description-text {
+          padding: 3px 10px;
           text-align: center;
           color: $black;
         }
