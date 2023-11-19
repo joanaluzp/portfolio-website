@@ -17,7 +17,6 @@ export default defineNuxtConfig({
         { name: "theme-color", content: "#ffffff" },
       ],
       link: [
-        //ADD EXTRA FAVICONS
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
           rel: "icon",
@@ -39,7 +38,9 @@ export default defineNuxtConfig({
         },
         { rel: "manifest", href: "/site.webmanifest" },
         { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#000000" },
+        { rel:"stylesheet", type:"text/css", href:'https://unpkg.com/aos@2.3.1/dist/aos.css' },
       ],
+      script: [{ src: 'https://unpkg.com/aos@2.3.1/dist/aos.js' }],
     },
   },
   css: ["@/assets/scss/style.scss"],

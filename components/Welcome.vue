@@ -9,7 +9,7 @@
           dolores.
         </p>
       </div>
-      <div class="welcome-text-btn" @click="open = !open">
+      <div class="welcome-text-btn" data-aos="flip-up" @click="open = !open">
         <p
           class="description-text font-italic big"
           :class="{ 'font-bold': open }"
@@ -18,7 +18,7 @@
         </p>
       </div>
     </div>
-    <div class="welcome-ascii-wrapper">
+    <div class="welcome-ascii-wrapper" data-aos="fade-up">
       <pre>
                _                        
               | |                         

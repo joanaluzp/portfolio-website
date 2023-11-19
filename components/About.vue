@@ -1,6 +1,8 @@
 <template>
   <section class="section section-about" id="section-about">
-    <div class=""></div>
+    <div class="" data-aos="fade-up">
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
   </section>
 </template>
 

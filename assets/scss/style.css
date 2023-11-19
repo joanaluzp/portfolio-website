@@ -3245,8 +3245,14 @@ body .main {
 }
 
 .section {
-  height: 100vh;
-  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  .section {
+    height: 100vh;
+  }
 }
 
 ::-moz-selection {
@@ -3463,5 +3469,5 @@ body .main {
 /*====CONTACT====*/
 .section-contact {
   position: relative;
-  background-color: #7e00ff;
+  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
