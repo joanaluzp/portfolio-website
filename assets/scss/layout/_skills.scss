@@ -19,9 +19,17 @@
       z-index: 2;
       left: 0;
       bottom: 5%;
+      max-width: 500px;
       .skills-item {
-        cursor: pointer;
-        color: $black-clear02;
+        .description-text {
+          color: $black-clear02;
+          &.option {
+            cursor: pointer;
+          }
+          &.divider {
+            text-decoration: underline;
+          }
+        }
         .skills-info-box-wrapper {
           display: grid;
           grid-template-rows: 0fr;
@@ -51,12 +59,14 @@
   .section-skills {
     .skills-wraper {
       .skills-list {
-        left: 20%;
+        left: 10%;
         bottom: 30%;
         .skills-item {
           .skills-info-box-wrapper {
             top: 50%;
-            transform: translate(-50%, -50%);
+            left: auto;
+            right: -275px;
+            transform: translateY(-50%);
           }
         }
       }

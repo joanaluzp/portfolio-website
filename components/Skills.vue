@@ -12,12 +12,12 @@
       <ul class="skills-list">
         <li class="skills-item" v-for="item in skillOption" :key="item.id">
           <p
-            class="description-text d-inline big font-italic uppercase"
+            class="description-text option d-inline big font-italic uppercase"
             @click="showElm(item.category)"
           >
             {{ item.skill }}
           </p>
-          <p class="description-text big d-inline font-italic uppercase"> ªªª </p>
+          <p class="description-text divider big d-inline font-italic uppercase"> ªªª </p>
           <div
             class="skills-info-box-wrapper"
             :class="{ 'is-open': open && info === item.category }"
