@@ -13,12 +13,75 @@
     },
     "welcome": {
       "btn": "click me",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure suscipit autem cum adipisci, aliquid tenetur expedita quam sunt, totam dignissimos provident illo aut obcaecati quod at sit laboriosam. Cum, dolores."
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure suscipit autem cum adipisci, aliquid tenetur expedita quam sunt, totam dignissimos provident illo aut obcaecati quod at sit laboriosam. Cum, dolores.",
+      "video": "/videos/myweb_min.mp4"
     },
     "about": {},
-    "work": {},
+    "work": {
+      "category": {
+        "front_end": "front-end development",
+        "video_art": "video art"
+      },
+      "categoryItem": {
+        "front_end": [
+          {
+            "id": 1,
+            "name": "kunst 3",
+            "description": "Lorem ipsum dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/front-end/kunst3/1.jpg"
+              },
+              {
+                "id": 2,
+                "image": "/images/front-end/kunst3/2.energyfield.jpg"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "work-related-projects",
+            "description": "Lorem ipsuaaaaaaam dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/front-end/kunst3/1.jpg"
+              },
+              {
+                "id": 2,
+                "image": "/images/front-end/kunst3/2.energyfield.jpg"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "this website!",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/front-end/kunst3/1.jpg"
+              },
+              {
+                "id": 2,
+                "image": "/images/front-end/kunst3/2.energyfield.jpg"
+              }
+            ]
+          }
+        ],
+        "video_art": [
+          {
+            "id": 1,
+            "name": "kunst 3",
+            "description": "Lorem ipsum dolor sit"
+          }
+        ]
+      }
+    },
     "skills": {
       "text": "Click on each one to find out its Wikipedia definition respectively",
+      "close": "close",
       "option": [
         {
           "id": 1,

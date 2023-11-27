@@ -1,10 +1,7 @@
 <template>
   <section class="section section-skills" id="section-skills">
-    <div class="skills-wraper">
-      <div
-        class="skills-text"
-        :class="{ 'd-none': open }"
-      >
+    <div class="skills-container-wrapper">
+      <div class="skills-text" :class="{ 'd-none': open }">
         <p class="description-text lowercase font-black text-justify">
           {{ database.data.skills.text }}
         </p>
@@ -17,14 +14,26 @@
           >
             {{ item.skill }}
           </p>
-          <p class="description-text divider big d-inline font-italic uppercase"> ªªª </p>
+          <p
+            class="description-text divider big d-inline font-italic uppercase"
+          >
+            ϡ
+          </p>
           <div
             class="skills-info-box-wrapper"
             :class="{ 'is-open': open && info === item.category }"
           >
-            <p class="skills-info-box description-text text-justify">
-              {{ item.description }}
-            </p>
+            <div class="skills-info-box">
+              <p
+                class="close d-inline description-text font-bold-italic lowercase big"
+                @click="open = false"
+              >
+                {{ database.data.skills.close }}
+              </p>
+              <p class="info-description description-text text-justify">
+                {{ item.description }}
+              </p>
+            </div>
           </div>
         </li>
       </ul>

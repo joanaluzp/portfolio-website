@@ -51,7 +51,7 @@
     </div>
     <div class="welcome-video-wrapper">
       <video autoplay muted playsinline loop>
-        <source src="../assets/images/myweb_min.mp4" type="video/mp4" />
+        <source :src="database.data.welcome.video" type="video/mp4" />
       </video>
     </div>
   </section>

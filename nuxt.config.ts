@@ -43,6 +43,7 @@ export default defineNuxtConfig({
       script: [{ src: 'https://unpkg.com/aos@2.3.1/dist/aos.js' }],
     },
   },
+  modules: ['nuxt-swiper'],
   css: ["@/assets/scss/style.scss"],
   vite: {
     css: {},

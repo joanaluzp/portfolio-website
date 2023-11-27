@@ -2,14 +2,11 @@
 .section-contact {
   position: relative;
   background-color: $white;
-  height: 50vh;
-  min-height: 50vh;
+  min-height: 30vh;
   .contact-ascii-wrapper {
-    position: absolute;
+    position: relative;
     font-size: 10px;
     z-index: 2;
-    right: 5%;
-    top: 0;
     pre {
       color: $blue;
       font-weight: 900;
@@ -19,21 +16,7 @@
   }
   .contact-text-wrapper {
     max-width: 200px;
-    position: absolute;
+    position: relative;
     z-index: 3;
-    left: 10%;
-    bottom: 10%;
-  }
-}
-@media (min-width: 768px) {
-  .section-contact {
-    .contact-ascii-wrapper {
-      right: 10%;
-      top: 20%;
-    }
-    .contact-text-wrapper {
-      left: 20%;
-      bottom: 30%;
-    }
   }
 }
