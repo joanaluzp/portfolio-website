@@ -69,25 +69,37 @@
         </div>
       </div>
     </div>
-    <div class="work-choose-btn-options d-flex align-items-center">
-      <p
-        class="work-choose-btn description-text big font-bold-italic"
-        @click="categoryOption = `${database.data.work.category.front_end}`"
-        :class="{
-          active: categoryOption === `${database.data.work.category.front_end}`,
-        }"
-      >
-        {{ database.data.work.category.front_end }}
-      </p>
-      <p
-        class="work-choose-btn description-text big font-bold-italic"
-        @click="categoryOption = `${database.data.work.category.video_art}`"
-        :class="{
-          active: categoryOption === `${database.data.work.category.video_art}`,
-        }"
-      >
-        {{ database.data.work.category.video_art }}
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="work-choose-btn-options d-flex flex-wrap align-items-center">
+            <p
+              class="work-choose-btn description-text font-bold-italic"
+              @click="
+                categoryOption = `${database.data.work.category.front_end}`
+              "
+              :class="{
+                active:
+                  categoryOption === `${database.data.work.category.front_end}`,
+              }"
+            >
+              {{ database.data.work.category.front_end }}
+            </p>
+            <p
+              class="work-choose-btn description-text font-bold-italic"
+              @click="
+                categoryOption = `${database.data.work.category.video_art}`
+              "
+              :class="{
+                active:
+                  categoryOption === `${database.data.work.category.video_art}`,
+              }"
+            >
+              {{ database.data.work.category.video_art }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>

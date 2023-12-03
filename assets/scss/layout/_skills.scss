@@ -1,68 +1,59 @@
 /*====SKILLS===*/
 .section-skills {
   position: relative;
-  min-height: 80vh;
   background: radial-gradient(circle, $grey-clear02 25%, $white 30%);
-  .skills-container-wrapper {
-    .skills-text {
-      color: $blue;
-      max-width: 200px;
-      position: absolute;
-      top: 30%;
-      right: 5%;
+}
+.skills-popup-text {
+  color: $blue;
+  margin-bottom: 30px;
+}
+.skills-full-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  .skills-full-list-item {
+    .description-text {
+      color: $black-clear02;
+      &.option {
+        cursor: pointer;
+      }
     }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
+    .skills-info-box-wrapper {
+      @include transition;
+      width: 90%;
+      max-width: 600px;
       position: absolute;
-      z-index: 2;
-      left: 0;
-      bottom: 5%;
-      max-width: 500px;
-      .skills-item {
-        .description-text {
-          color: $black-clear02;
-          &.option {
-            cursor: pointer;
-          }
-          &.divider {
-            text-decoration: underline;
-          }
+      z-index: 5;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+      border: 1px solid $blue;
+      padding: 10px;
+      opacity: 0;
+      pointer-events: none;
+      &.is-open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .skills-info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .close {
+          width: fit-content;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: underline;
         }
-        .skills-info-box-wrapper {
-          display: grid;
-          grid-template-rows: 0fr;
-          transition: grid-template-rows 0.5s ease-out;
-          width: 90%;
-          max-width: 600px;
-          position: fixed;
-          z-index: 5;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          &.is-open {
-            grid-template-rows: 1fr;
-            padding: 10px;
-            background-color: $white;
-            border: 1px solid $blue;
-          }
-          .skills-info-box {
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            .close {
-              width: fit-content;
-              cursor: pointer;
-              text-align: center;
-              text-decoration: underline;
-            }
-            .info-description {
-              color: $red;
-            }
-          }
+        .info-title {
+          font-family: $font-handwriting;
+          text-align: center;
+          color: $black-clear02;
+        }
+        .info-description {
+          color: $red;
         }
       }
     }
@@ -70,10 +61,29 @@
 }
 @media (min-width: 992px) {
   .section-skills {
-    .skills-container-wrapper {
-      .skills-list {
-        left: 10%;
-        bottom: 30%;
+    .container {
+      .row {
+        min-height: 70vh;
+        & > div {
+          &:last-child {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .skills-popup-text {
+    margin: 70px 0 0 0;
+  }
+  .skills-full-list {
+    align-items: flex-end;
+    .skills-full-list-item {
+      .skills-info-box-wrapper {
+        position: fixed;
+        max-width: 700px;
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }

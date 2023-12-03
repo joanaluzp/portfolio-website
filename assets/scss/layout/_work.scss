@@ -2,11 +2,14 @@
 .section-work {
   position: relative;
   background-color: $white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   .section-work-option {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    height: 80vh;
   }
   .container {
     .row {
@@ -41,12 +44,9 @@
   }
   .work-choose-btn-options {
     width: 100%;
-    position: absolute;
-    z-index: 2;
-    justify-content: center;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: -20px;
+    z-index: 1;
     gap: 8px;
     .work-choose-btn {
       display: inline;
@@ -55,6 +55,7 @@
       padding: 10px 15px;
       border-radius: 35px;
       border: 2px solid $blue-light;
+      background-color: $white;
       cursor: pointer;
       color: $blue-medium;
       @include transition;
@@ -78,7 +79,6 @@
       padding-right: 0;
       .row {
         --bs-gutter-y: 0;
-        height: 100vh;
         align-items: center;
       }
     }
@@ -92,7 +92,6 @@
     }
     .work-choose-btn-options {
       justify-content: flex-start;
-      left: 40px;
       transform: translateX(0);
       .work-choose-btn {
         min-width: 350px;

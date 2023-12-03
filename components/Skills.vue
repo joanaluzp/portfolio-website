@@ -1,42 +1,50 @@
 <template>
   <section class="section section-skills" id="section-skills">
-    <div class="skills-container-wrapper">
-      <div class="skills-text" :class="{ 'd-none': open }">
-        <p class="description-text lowercase font-black text-justify">
-          {{ database.data.skills.text }}
-        </p>
-      </div>
-      <ul class="skills-list">
-        <li class="skills-item" v-for="item in skillOption" :key="item.id">
-          <p
-            class="description-text option d-inline big font-italic uppercase"
-            @click="showElm(item.category)"
-          >
-            {{ item.skill }}
-          </p>
-          <p
-            class="description-text divider big d-inline font-italic uppercase"
-          >
-            ϡ
-          </p>
-          <div
-            class="skills-info-box-wrapper"
-            :class="{ 'is-open': open && info === item.category }"
-          >
-            <div class="skills-info-box">
-              <p
-                class="close d-inline description-text font-bold-italic lowercase big"
-                @click="open = false"
-              >
-                {{ database.data.skills.close }}
-              </p>
-              <p class="info-description description-text text-justify">
-                {{ item.description }}
-              </p>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-7 offset-lg-4 col-lg-2 order-lg-2">
+          <div class="skills-popup-text">
+            <p class="description-text lowercase font-black text-justify">
+              {{ database.data.skills.text }}
+            </p>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="col-12 col-lg-5 order-lg-1">
+          <ul class="skills-full-list">
+            <li
+              class="skills-full-list-item"
+              v-for="item in skillOption"
+              :key="item.id"
+            >
+              <p
+                class="description-text option d-inline big font-italic uppercase"
+                @click="showElm(item.category)"
+              >
+                {{ item.skill }}
+              </p>
+              <div
+                class="skills-info-box-wrapper"
+                :class="{ 'is-open': open && info === item.category }"
+              >
+                <div class="skills-info-box">
+                  <p
+                    class="close d-inline description-text font-bold-italic lowercase big"
+                    @click="open = false"
+                  >
+                    {{ database.data.skills.close }}
+                  </p>
+                  <p class="info-title description-title capitalize bigger">
+                    {{ item.skill }}
+                  </p>
+                  <p class="info-description description-text text-justify">
+                    {{ item.description }}
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -52,7 +60,7 @@ const showElm = (elmId) => {
 };
 
 const clickOutside = (event) => {
-  const elmList = document.querySelector(".skills-list");
+  const elmList = document.querySelector(".skills-full-list");
   if (elmList) {
     if (!elmList.contains(event.target)) {
       open.value = false;

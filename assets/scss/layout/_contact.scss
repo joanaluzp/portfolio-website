@@ -4,9 +4,7 @@
   background-color: $white;
   min-height: 30vh;
   .contact-ascii-wrapper {
-    position: relative;
     font-size: 10px;
-    z-index: 2;
     pre {
       color: $blue;
       font-weight: 900;
@@ -16,7 +14,5 @@
   }
   .contact-text-wrapper {
     max-width: 200px;
-    position: relative;
-    z-index: 3;
   }
 }

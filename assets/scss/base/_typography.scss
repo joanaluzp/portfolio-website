@@ -79,7 +79,7 @@
     @include fluid-type(320px, 1199px, 24px, 28px);
   }
   &.bigger {
-    @include fluid-type(320px, 1199px, 40px, 60px);
+    @include fluid-type(320px, 992px, 40px, 60px);
   }
   &.text-right {
     text-align: right;

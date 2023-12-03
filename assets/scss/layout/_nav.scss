@@ -1,7 +1,11 @@
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
-  background-color: $blue-light;
+  border-radius: 50px;
+  background: linear-gradient(145deg, $grey-clear01, $grey-clear02);
+  -webkit-box-shadow: 9px 6px 6px -3px $grey-clear01;
+  -moz-box-shadow: 9px 6px 6px -3px $grey-clear01;
+  box-shadow: 9px 6px 6px -3px $grey-clear01;
   border-radius: 20px;
   max-width: 300px;
   height: auto;
@@ -17,7 +21,7 @@
       cursor: pointer;
       text-align: center;
       color: $pink;
-      font-family: $font-03;
+      font-family: $font-regular;
       &.closed {
         display: none;
       }
@@ -65,7 +69,7 @@
             border-color: $blue-light;
             .description-text {
               color: $red;
-              font-style: italic;
+              font-family: $font-03;
             }
           }
         }
