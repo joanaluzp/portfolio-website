@@ -3452,6 +3452,7 @@ body .main {
 .section-work .work-item-swiper-wrapper {
   display: flex;
   justify-content: end;
+  position: relative;
 }
 .section-work .work-item-swiper-wrapper .swiper {
   transition: all 0.3s ease-in-out;
@@ -3468,6 +3469,34 @@ body .main {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev,
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next {
+  cursor: pointer;
+}
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev i,
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next i {
+  color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  transition: all 0.2s ease-in-out;
+}
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev:hover i,
+.section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next:hover i {
+  color: #ff0000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff0000;
 }
 .section-work .work-choose-btn-options {
   width: 100%;

@@ -27,6 +27,7 @@
   .work-item-swiper-wrapper {
     display: flex;
     justify-content: end;
+    position: relative;
     .swiper {
       @include transition;
       border: 3px solid $yellow;
@@ -38,6 +39,34 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
+        }
+      }
+    }
+    .slider-arrows-wrapper {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      align-items: center;
+      justify-content: space-between;
+      .arrow-gallery-prev,
+      .arrow-gallery-next {
+        cursor: pointer;
+        i {
+          color: $white;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $black;
+          @include transition2(all, 0.2s, ease-in-out);
+        }
+        &:hover {
+          i {
+            color: $red;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $red;
+          }
         }
       }
     }

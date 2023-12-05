@@ -63,12 +63,12 @@
                     <img class="work-item-swiper" :src="image.image" />
                   </SwiperSlide>
                 </Swiper>
-                <div class="slider-arrows-wrapper d-none d-lg-block">
+                <div class="slider-arrows-wrapper d-none d-lg-flex">
                   <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-4x fa-chevron-left"></i>
                   </button>
                   <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-4x fa-chevron-right"></i>
                   </button>
                 </div>
               </div>
