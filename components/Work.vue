@@ -40,30 +40,38 @@
             </div>
           </div>
           <div class="col-12 col-md-8">
-            <div
-              class="work-item-swiper-wrapper"
-              v-for="item in categoryFrontEnd"
-              :key="item.id"
-            >
-              <Swiper
+            <div v-for="item in categoryFrontEnd" :key="item.id">
+              <div
+                class="work-item-swiper-wrapper"
                 v-if="categoryFrontEndSelected === item.name"
-                :modules="[SwiperAutoplay, SwiperNavigation]"
-                :slides-per-view="1"
-                :pagination="{ clickable: true }"
-                :speed="1000"
-                :loop="true"
-                :autoplay="{
-                  delay: 5000,
-                }"
-                :navigation="{
-                  nextEl: '.arrow-gallery-next',
-                  prevEl: '.arrow-gallery-prev',
-                }"
               >
-                <SwiperSlide v-for="image in item.images" :key="image.id">
-                  <img class="work-item-swiper" :src="image.image" />
-                </SwiperSlide>
-              </Swiper>
+                <Swiper
+                  :modules="[SwiperAutoplay, SwiperNavigation]"
+                  :slides-per-view="1"
+                  :pagination="{ clickable: true }"
+                  :speed="1000"
+                  :loop="true"
+                  :autoplay="{
+                    delay: 5000,
+                  }"
+                  :navigation="{
+                    nextEl: '.arrow-gallery-next',
+                    prevEl: '.arrow-gallery-prev',
+                  }"
+                >
+                  <SwiperSlide v-for="image in item.images" :key="image.id">
+                    <img class="work-item-swiper" :src="image.image" />
+                  </SwiperSlide>
+                </Swiper>
+                <div class="slider-arrows-wrapper d-none d-lg-block">
+                  <button type="button" class="arrow-prev arrow-gallery-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button type="button" class="arrow-next arrow-gallery-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -72,7 +80,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="work-choose-btn-options d-flex flex-wrap align-items-center">
+          <div
+            class="work-choose-btn-options d-flex flex-wrap align-items-center"
+          >
             <p
               class="work-choose-btn description-text font-bold-italic"
               @click="

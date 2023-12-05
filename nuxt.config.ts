@@ -39,6 +39,10 @@ export default defineNuxtConfig({
         { rel: "manifest", href: "/site.webmanifest" },
         { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#000000" },
         { rel:"stylesheet", type:"text/css", href:'https://unpkg.com/aos@2.3.1/dist/aos.css' },
+        {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+        },
       ],
       script: [{ src: 'https://unpkg.com/aos@2.3.1/dist/aos.js' }],
     },

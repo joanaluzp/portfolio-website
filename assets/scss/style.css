@@ -33,6 +33,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -3108,10 +3109,10 @@ section {
 }
 @media screen and (min-width: 320px) {
   .description-title.bigger {
-    font-size: calc(40px + 20 * (100vw - 320px) / 879);
+    font-size: calc(40px + 20 * (100vw - 320px) / 672);
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 992px) {
   .description-title.bigger {
     font-size: 60px;
   }
@@ -3277,7 +3278,9 @@ body .main {
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
-  background-color: #efe7ff;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #fcfcfc, #dbdbdb);
+  box-shadow: 9px 6px 6px -3px #fcfcfc;
   border-radius: 20px;
   max-width: 300px;
   height: auto;
@@ -3295,7 +3298,7 @@ body .main {
   cursor: pointer;
   text-align: center;
   color: #ff00be;
-  font-family: "Berzulis-Magyla";
+  font-family: "Inter", sans-serif;
 }
 .navbar .navbar-toggle-wrapper .description-title.closed {
   display: none;
@@ -3339,7 +3342,7 @@ body .main {
   }
   .navbar .navbar-menu-wrapper .navbar-menu-list .navbar-menu-item:hover .description-text {
     color: #ff0000;
-    font-style: italic;
+    font-family: "Berzulis-Magyla";
   }
 }
 /*====WELCOME====*/
@@ -3367,14 +3370,14 @@ body .main {
   cursor: pointer;
   display: inline-block;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   right: 10%;
   bottom: 20%;
 }
 .section-welcome .welcome-ascii-wrapper {
   position: absolute;
   font-size: 12px;
-  z-index: 2;
+  z-index: 1;
   left: 10%;
   top: 20%;
 }
@@ -3402,7 +3405,7 @@ body .main {
 /*====ABOUT====*/
 .section-about {
   position: relative;
-  background-color: #f2f2f2;
+  background-color: #fcfcfc;
 }
 .section-about .about-text-wrapper {
   background-color: #6f00ff;
@@ -3427,12 +3430,15 @@ body .main {
 .section-work {
   position: relative;
   background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .section-work .section-work-option {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  height: 80vh;
 }
 .section-work .container .row {
   --bs-gutter-y: 1.5rem;
@@ -3465,12 +3471,9 @@ body .main {
 }
 .section-work .work-choose-btn-options {
   width: 100%;
-  position: absolute;
-  z-index: 2;
-  justify-content: center;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: -20px;
+  z-index: 1;
   gap: 8px;
 }
 .section-work .work-choose-btn-options .work-choose-btn {
@@ -3481,6 +3484,7 @@ body .main {
   padding: 10px 15px;
   border-radius: 35px;
   border: 2px solid #efe7ff;
+  background-color: #ffffff;
   cursor: pointer;
   color: #3375e0;
   transition: all 0.3s ease-in-out;
@@ -3502,7 +3506,6 @@ body .main {
   }
   .section-work .container .row {
     --bs-gutter-y: 0;
-    height: 100vh;
     align-items: center;
   }
   .section-work .work-item-swiper-wrapper .swiper:hover {
@@ -3511,7 +3514,6 @@ body .main {
   }
   .section-work .work-choose-btn-options {
     justify-content: flex-start;
-    left: 40px;
     transform: translateX(0);
   }
   .section-work .work-choose-btn-options .work-choose-btn {
@@ -3529,75 +3531,85 @@ body .main {
 /*====SKILLS===*/
 .section-skills {
   position: relative;
-  min-height: 80vh;
-  background: radial-gradient(circle, #E7E7E7 25%, #ffffff 30%);
+  background: radial-gradient(circle, #dbdbdb 25%, #ffffff 30%);
 }
-.section-skills .skills-container-wrapper .skills-text {
+
+.skills-popup-text {
   color: #1900ff;
-  max-width: 200px;
-  position: absolute;
-  top: 30%;
-  right: 5%;
+  margin-bottom: 30px;
 }
-.section-skills .skills-container-wrapper .skills-list {
+
+.skills-full-list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  bottom: 5%;
-  max-width: 500px;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .description-text {
+.skills-full-list .skills-full-list-item .description-text {
   color: #575757;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .description-text.option {
+.skills-full-list .skills-full-list-item .description-text.option {
   cursor: pointer;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .description-text.divider {
-  text-decoration: underline;
-}
-.section-skills .skills-container-wrapper .skills-list .skills-item .skills-info-box-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper {
+  transition: all 0.3s ease-in-out;
   width: 90%;
   max-width: 600px;
-  position: fixed;
+  position: absolute;
   z-index: 5;
+  top: -70px;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.section-skills .skills-container-wrapper .skills-list .skills-item .skills-info-box-wrapper.is-open {
-  grid-template-rows: 1fr;
-  padding: 10px;
+  transform: translateX(-50%);
   background-color: #ffffff;
   border: 1px solid #1900ff;
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .skills-info-box-wrapper .skills-info-box {
-  overflow: hidden;
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .skills-info-box-wrapper .skills-info-box .close {
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .close {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   text-align: center;
   text-decoration: underline;
 }
-.section-skills .skills-container-wrapper .skills-list .skills-item .skills-info-box-wrapper .skills-info-box .info-description {
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .info-title {
+  font-family: "Beau Rivage", cursive;
+  text-align: center;
+  color: #575757;
+}
+.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .info-description {
   color: #ff0000;
 }
 
 @media (min-width: 992px) {
-  .section-skills .skills-container-wrapper .skills-list {
-    left: 10%;
-    bottom: 30%;
+  .section-skills .container .row {
+    min-height: 70vh;
+  }
+  .section-skills .container .row > div:last-child {
+    display: flex;
+    align-items: center;
+  }
+  .skills-popup-text {
+    margin: 70px 0 0 0;
+  }
+  .skills-full-list {
+    align-items: flex-end;
+  }
+  .skills-full-list .skills-full-list-item .skills-info-box-wrapper {
+    position: fixed;
+    max-width: 700px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 /*====CONTACT====*/
@@ -3607,9 +3619,7 @@ body .main {
   min-height: 30vh;
 }
 .section-contact .contact-ascii-wrapper {
-  position: relative;
   font-size: 10px;
-  z-index: 2;
 }
 .section-contact .contact-ascii-wrapper pre {
   color: #1900ff;
@@ -3619,6 +3629,4 @@ body .main {
 }
 .section-contact .contact-text-wrapper {
   max-width: 200px;
-  position: relative;
-  z-index: 3;
 }/*# sourceMappingURL=style.css.map */
