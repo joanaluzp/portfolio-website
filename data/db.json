@@ -73,8 +73,211 @@
         "video_art": [
           {
             "id": 1,
-            "name": "kunst 3",
-            "description": "Lorem ipsum dolor sit"
+            "name": "kapa4",
+            "description": "Lorem ipsum dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/kapa4/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/kapa4/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/kapa4/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/kapa4/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/kapa4/5.png"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "시공간 @espaço/tempo",
+            "description": "Lorem ipsuaaaaaaam dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/espaço_tempo/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/espaço_tempo/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/espaço_tempo/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/espaço_tempo/4.png"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Energy Field",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/energy_field/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/energy_field/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/energy_field/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/energy_field/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/energy_field/5.png"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Life 0",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/life0/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/life0/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/life0/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/life0/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/life0/5.png"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Explaining Sound To A Deaf Person",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/explaining_sound/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/explaining_sound/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/explaining_sound/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/explaining_sound/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/explaining_sound/5.png"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "lunch time/pleasure and pain: a constant feeling of nothingness through 4 hours straight",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/pleasure_pain/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/pleasure_pain/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/pleasure_pain/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/pleasure_pain/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/pleasure_pain/5.png"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "power house nr8",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/power_house_8/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/power_house_8/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/power_house_8/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/power_house_8/4.png"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Negative Index",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/video_art/negative_index/1.png"
+              },
+              {
+                "id": 2,
+                "image": "/images/video_art/negative_index/2.png"
+              },
+              {
+                "id": 3,
+                "image": "/images/video_art/negative_index/3.png"
+              },
+              {
+                "id": 4,
+                "image": "/images/video_art/negative_index/4.png"
+              },
+              {
+                "id": 5,
+                "image": "/images/video_art/negative_index/5.png"
+              }
+            ]
           }
         ]
       }

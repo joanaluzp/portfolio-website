@@ -2952,6 +2952,7 @@ section {
 /*======TYPOGRAPHY======*/
 .description-text {
   display: block;
+  word-break: break-word;
   width: 100%;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -3058,6 +3059,7 @@ section {
 
 .description-title {
   display: block;
+  word-break: break-word;
   width: 100%;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -3456,7 +3458,6 @@ body .main {
 }
 .section-work .work-item-swiper-wrapper .swiper {
   transition: all 0.3s ease-in-out;
-  border: 3px solid #ffff00;
 }
 .section-work .work-item-swiper-wrapper .swiper .swiper-slide {
   width: 100%;
@@ -3478,11 +3479,13 @@ body .main {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  pointer-events: none;
   align-items: center;
   justify-content: space-between;
 }
 .section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev,
 .section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next {
+  pointer-events: all;
   cursor: pointer;
 }
 .section-work .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev i,
@@ -3535,13 +3538,16 @@ body .main {
   }
   .section-work .container .row {
     --bs-gutter-y: 0;
-    align-items: center;
   }
-  .section-work .work-item-swiper-wrapper .swiper:hover {
-    border: 3px solid #000;
-    transform: skew(5deg, 5deg);
+  .section-work .work-option-list-wrapper,
+  .section-work .work-item-info-wrapper .description-text {
+    padding-bottom: 30px;
+  }
+  .section-work .work-choose-btn-options-wrapper {
+    position: relative;
   }
   .section-work .work-choose-btn-options {
+    position: absolute;
     justify-content: flex-start;
     transform: translateX(0);
   }
@@ -3565,7 +3571,7 @@ body .main {
 
 .skills-popup-text {
   color: #1900ff;
-  margin-bottom: 30px;
+  margin: 50px 0 30px 0;
 }
 
 .skills-full-list {

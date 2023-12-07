@@ -30,7 +30,6 @@
     position: relative;
     .swiper {
       @include transition;
-      border: 3px solid $yellow;
       .swiper-slide {
         width: 100%;
         .work-item-swiper {
@@ -50,10 +49,12 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
+      pointer-events: none;
       align-items: center;
       justify-content: space-between;
       .arrow-gallery-prev,
       .arrow-gallery-next {
+        pointer-events: all;
         cursor: pointer;
         i {
           color: $white;
@@ -108,18 +109,23 @@
       padding-right: 0;
       .row {
         --bs-gutter-y: 0;
-        align-items: center;
       }
+    }
+    .work-option-list-wrapper,
+    .work-item-info-wrapper .description-text {
+      padding-bottom: 30px;
     }
     .work-item-swiper-wrapper {
       .swiper {
         &:hover {
-          border: 3px solid $black;
-          transform: skew(5deg, 5deg);
         }
       }
     }
+    .work-choose-btn-options-wrapper {
+      position: relative;
+    }
     .work-choose-btn-options {
+      position: absolute;
       justify-content: flex-start;
       transform: translateX(0);
       .work-choose-btn {
