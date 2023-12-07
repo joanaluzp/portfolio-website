@@ -2,7 +2,6 @@
 .section-work {
   position: relative;
   background-color: $white;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -16,6 +15,12 @@
       --bs-gutter-y: 1.5rem;
     }
   }
+  .work-ascii-wrapper {
+    pre {
+      font-size: 8px;
+      color: $black;
+    }
+  }
   .work-option-list-wrapper {
     gap: 5px;
     .work-option-item {
@@ -24,10 +29,16 @@
       }
     }
   }
+  .work-item-info-wrapper {
+    .description-text {
+      color: $black-clear01;
+    }
+  }
   .work-item-swiper-wrapper {
     display: flex;
     justify-content: end;
     position: relative;
+    min-height: 30vh;
     .swiper {
       @include transition;
       .swiper-slide {
@@ -72,27 +83,30 @@
       }
     }
   }
-  .work-choose-btn-options {
-    width: 100%;
-    position: relative;
-    top: -20px;
-    z-index: 1;
-    gap: 8px;
-    .work-choose-btn {
-      display: inline;
-      width: fit-content;
-      text-align: center;
-      padding: 10px 15px;
-      border-radius: 35px;
-      border: 2px solid $blue-light;
-      background-color: $white;
-      cursor: pointer;
-      color: $blue-medium;
-      @include transition;
-      &.active {
-        text-decoration: none;
-        background-color: $blue-medium;
-        color: $white;
+  .work-choose-btn-options-wrapper {
+    padding-top: 30px;
+    .work-choose-btn-options {
+      width: 100%;
+      position: relative;
+      top: -20px;
+      z-index: 1;
+      gap: 8px;
+      .work-choose-btn {
+        display: inline;
+        width: fit-content;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 35px;
+        border: 2px solid $blue-light;
+        background-color: $white;
+        cursor: pointer;
+        color: $blue-medium;
+        @include transition;
+        &.active {
+          text-decoration: none;
+          background-color: $blue-medium;
+          color: $white;
+        }
       }
     }
   }
@@ -113,9 +127,10 @@
     }
     .work-option-list-wrapper,
     .work-item-info-wrapper .description-text {
-      padding-bottom: 30px;
+      padding-bottom: 60px;
     }
     .work-item-swiper-wrapper {
+      min-height: 60vh;
       .swiper {
         &:hover {
         }
@@ -123,20 +138,20 @@
     }
     .work-choose-btn-options-wrapper {
       position: relative;
-    }
-    .work-choose-btn-options {
-      position: absolute;
-      justify-content: flex-start;
-      transform: translateX(0);
-      .work-choose-btn {
-        min-width: 350px;
-        &:hover {
-          font-family: $font-03;
-          font-size: 40px;
-          background-color: $red;
-          color: $black;
-          border-color: $black;
-          animation: strobe 0.3s ease-in-out infinite;
+      .work-choose-btn-options {
+        position: absolute;
+        justify-content: flex-start;
+        transform: translateX(0);
+        .work-choose-btn {
+          min-width: 350px;
+          &:hover {
+            font-family: $font-03;
+            font-size: 40px;
+            background-color: $red;
+            color: $black;
+            border-color: $black;
+            animation: strobe 0.3s ease-in-out infinite;
+          }
         }
       }
     }

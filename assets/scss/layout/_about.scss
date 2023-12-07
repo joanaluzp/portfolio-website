@@ -3,23 +3,24 @@
   position: relative;
   background-color: $grey-clear01;
   .about-text-wrapper {
-    background-color: $purple;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 250px;
-    position: absolute;
-    z-index: 3;
-    left: 5%;
-    bottom: 5%;
     .description-text {
       color: $black;
+    }
+  }
+  .about-ascii-wrapper {
+    pre {
+      font-family: monospace;
+      white-space: pre;
+      font-size: 6px;
     }
   }
 }
 @media (min-width: 992px) {
   .section-about {
-    .about-text-wrapper {
-      max-width: 550px;
+    .about-ascii-wrapper {
+      pre {
+        font-size: 10px;
+      }
     }
   }
 }

@@ -1,12 +1,46 @@
 <template>
   <section class="section section-work" id="section-work">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="work-ascii-wrapper d-flex justify-content-center"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <pre>
+
+              /\'‚                              /¯¯¯\ '            /\   /¯¯¯¯\                    /\          
+         /    \               /\'‚         /         \‚         /    \|   |:'\    \        /\      /    \        
+        |\      \'           /    \      /            '\°      |\         |:::|    |     /    \   |\      \  '‚   
+        |:|      |          |\      \°  |        |\      \°    |:|        |::/    /|    |\      \ '|:|      |'     
+        |/      /|          |:|      '|  |        |::\      \ '‚ |:|        |/    /::|    |:|      | |/      /|  °  
+       /      /::|          |/      /|  |\       '\:::\      \ ' \|            (:::'|    |:|      |/      /::|     
+     /      /::::|         /      /::|‘ |::\       '\::|      |   |      |\      \:/'     \|            (:::'|     
+   /      /:::::/        /      /::::|' |::::\       '\|      |   |      |::\      \'      |      |\      \:/'     
+ /      /:: /¯¯¯|    /      /:::::/ ° \:::::\            /|   |      |::::\      \'    |      |::\      \ '    
+|      |:::/   /|  |  /      /:::::/°      \:::::\____ /::|  /'     /|\::::|      '|‘   |      |::::\      \'   
+|\      \/   /::|  |/      /:::::/           \::::|::::::|:::'| |\    /::|  \/       /|‘  /      /|\:::::\     \ °
+|::\____/::::|____ /:::::/‘              \::|::::::|::/‘ '|::\/::::|   |\    /::|  |\    /::|  \:::::\    /|‘
+|:::|::::::|::::/|:::::::|::::/'                  \|::::::|/‘   '|:::|::::/   |::\/::::|  |::\/::::|    \:::::\/::|‘
+ \::|::::::|::/  |:::::::|::/'‚                     ¯¯¯'      \::'|::/     |:::|::::/° |:::|:::/       \::::|::| 
+   \|::::::|/    |:::::::|/'‚                       ‘             '\|/        \::|::/    '\::|::/          \::|::/ 
+     ¯¯¯       ¯¯¯¯                                     ‘               \|/°       '\|/              \|/   
+                             
+
+     </pre
+            >
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="section-work-option"
       v-if="categoryOption === `${database.data.work.category.front_end}`"
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-2">
+          <div class="col-12 col-lg-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -25,7 +59,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-2">
+          <div class="col-12 col-lg-2">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryFrontEnd.slice().reverse()"
@@ -39,14 +73,17 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-lg-8">
             <div
               v-for="item in categoryFrontEnd.slice().reverse()"
               :key="item.id"
             >
               <div
                 class="work-item-swiper-wrapper"
-                v-if="categoryFrontEndSelected === item.name"
+                v-if="
+                  categoryFrontEndSelected === item.name &&
+                  item.images.length > 0
+                "
               >
                 <Swiper
                   :modules="[SwiperAutoplay, SwiperNavigation]"
@@ -86,7 +123,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-2">
+          <div class="col-12 col-lg-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -105,7 +142,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-2">
+          <div class="col-12 col-lg-2">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryVideoArt.slice().reverse()"
@@ -119,14 +156,17 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-lg-8">
             <div
               v-for="item in categoryVideoArt.slice().reverse()"
               :key="item.id"
             >
               <div
                 class="work-item-swiper-wrapper"
-                v-if="categoryVideoArtSelected === item.name"
+                v-if="
+                  categoryVideoArtSelected === item.name &&
+                  item.images.length > 0
+                "
               >
                 <Swiper
                   :modules="[SwiperAutoplay, SwiperNavigation]"

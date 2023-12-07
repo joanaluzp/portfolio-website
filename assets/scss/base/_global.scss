@@ -40,7 +40,13 @@ body {
 .section {
   width: 100%;
   height: auto;
-  min-height: 50vh;
+  padding: 100px 0;
+  &:first-child {
+    padding: 0;
+  }
+  &:last-child {
+    padding-bottom: 50px;
+  }
 }
 ::selection {
   color: $black-clear02;

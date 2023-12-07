@@ -2,7 +2,7 @@
   <section class="section section-contact" id="section-contact">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-4">
           <div class="contact-text-wrapper">
             <p class="description-title font-italic big lowercase">
               {{ database.data.contact.text }}
@@ -14,12 +14,8 @@
             >
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div
-            class="contact-ascii-wrapper"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
+        <div class="col-12 col-lg-4">
+          <div class="contact-ascii-wrapper">
             <pre>
 
                                                        
@@ -41,6 +37,22 @@
                                   
 </pre
             >
+          </div>
+        </div>
+        <div class="col-12 col-lg-2 d-flex justify-content-end">
+          <div
+            class="contact-cv-wrapper d-inline-block"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <p class="description-text d-inline lowercase">
+              {{ database.data.contact.cv.text }}
+            </p>
+            <NuxtLink :to="database.data.contact.cv.link" target="”_blank”"
+              ><p class="description-text d-inline">
+                {{ database.data.contact.cv.link_text }}
+              </p>
+            </NuxtLink>
           </div>
         </div>
       </div>

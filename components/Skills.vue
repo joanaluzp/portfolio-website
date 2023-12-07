@@ -2,14 +2,35 @@
   <section class="section section-skills" id="section-skills">
     <div class="container">
       <div class="row">
-        <div class="col-7 offset-lg-4 col-lg-2 order-lg-2">
+        <div class="col-12">
+          <div
+            class="skills-ascii-wrapper d-flex justify-content-end"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            <pre>
+
+              :'######::'##:::'##:'####:'##:::::::'##::::::::'######::
+              '##... ##: ##::'##::. ##:: ##::::::: ##:::::::'##... ##:
+              ##:::..:: ##:'##:::: ##:: ##::::::: ##::::::: ##:::..::
+              . ######:: #####::::: ##:: ##::::::: ##:::::::. ######::
+              :..... ##: ##. ##:::: ##:: ##::::::: ##::::::::..... ##:
+              '##::: ##: ##:. ##::: ##:: ##::::::: ##:::::::'##::: ##:
+              . ######:: ##::. ##:'####: ########: ########:. ######::
+              :......:::..::::..::....::........::........:::......:::
+
+        </pre
+            >
+          </div>
+        </div>
+        <div class="col-7 offset-lg-4 col-lg-2 order-lg-3">
           <div class="skills-popup-text">
             <p class="description-text lowercase font-black text-justify">
               {{ database.data.skills.text }}
             </p>
           </div>
         </div>
-        <div class="col-12 col-lg-5 order-lg-1">
+        <div class="col-12 col-lg-5 order-lg-2">
           <ul class="skills-full-list">
             <li
               class="skills-full-list-item"

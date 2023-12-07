@@ -2,17 +2,42 @@
 .section-contact {
   position: relative;
   background-color: $white;
-  min-height: 30vh;
   .contact-ascii-wrapper {
-    font-size: 10px;
     pre {
       color: $blue;
       font-weight: 900;
       font-family: monospace;
       white-space: pre;
+      font-size: 8px;
     }
   }
   .contact-text-wrapper {
-    max-width: 200px;
+    max-width: 245px;
+  }
+  .contact-cv-wrapper {
+    margin: 20px 0 0 0;
+    padding: 15px 20px;
+    height: fit-content;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
+      inset 4px 4px 15px 0px $grey-clear02, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 5px 0px $grey-clear02,
+      inset 4px 4px 15px 0px $grey-clear02, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    a {
+      text-decoration: none;
+      color: $blue-medium;
+    }
+  }
+}
+
+@media (min-width: 998px) {
+  .section-contact {
+    .contact-cv-wrapper {
+      max-width: 200px;
+      margin: 0;
+      &:hover {
+        animation: shake 0.3s ease-in-out infinite;
+      }
+    }
   }
 }
