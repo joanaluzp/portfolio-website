@@ -18,11 +18,15 @@
     margin: 20px 0 0 0;
     padding: 15px 20px;
     height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     border-radius: 25px;
     -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 4px 4px 15px 0px $grey-clear02, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      inset 4px 4px 15px 0px $grey-clear02;
     box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 4px 4px 15px 0px $grey-clear02, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      inset 4px 4px 15px 0px $grey-clear02;
     a {
       text-decoration: none;
       color: $blue-medium;

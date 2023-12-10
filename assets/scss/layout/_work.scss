@@ -15,10 +15,11 @@
       --bs-gutter-y: 1.5rem;
     }
   }
-  .work-ascii-wrapper {
-    pre {
-      font-size: 8px;
-      color: $black;
+  .work-title-wrapper {
+    margin-bottom: 30px;
+    .description-title {
+      width: fit-content;
+      color: $red;
     }
   }
   .work-option-list-wrapper {
@@ -133,6 +134,11 @@
       min-height: 60vh;
       .swiper {
         &:hover {
+          transform: translateX(-50px);
+          -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
+          inset 4px 4px 15px 0px $grey-clear02;
+        box-shadow: 5px 5px 5px 0px $grey-clear02,
+          inset 4px 4px 15px 0px $grey-clear02;
         }
       }
     }

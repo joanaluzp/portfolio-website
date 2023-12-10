@@ -1,22 +1,111 @@
 {
   "data": {
     "nav": {
-      "open": "open",
-      "hide": "hide",
       "menu": [
         { "id": 1, "name": "welcome", "category": "section-welcome" },
         { "id": 2, "name": "about", "category": "section-about" },
         { "id": 3, "name": "work", "category": "section-work" },
-        { "id": 4, "name": "skills", "category": "section-skills" },
-        { "id": 5, "name": "contact", "category": "section-contact" }
+        { "id": 4, "name": "contact", "category": "section-contact" }
       ]
     },
     "welcome": {
       "btn": "click me",
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure suscipit autem cum adipisci, aliquid tenetur expedita quam sunt, totam dignissimos provident illo aut obcaecati quod at sit laboriosam. Cum, dolores.",
-      "video": "/videos/myweb_min.mp4"
+      "video_primary" : "",
+      "video_secondary": "/videos/myweb_min.mp4"
     },
-    "about": {},
+    "about": {
+      "skills": {
+        "text": "Click on each one to find out its Wikipedia definition respectively",
+        "close": "close",
+        "option": [
+          {
+            "id": 1,
+            "skill": "CSS (SCSS)",
+            "category": "css",
+            "description": "CSS3 consists of a series of selectors and pseudo-selectors that group rules that apply to them. Sass (in the larger context of both syntaxes) extends CSS by providing several mechanisms available in more traditional programming languages, particularly object-oriented languages, but that are not available to CSS3 itself. When SassScript is interpreted, it creates blocks of CSS rules for various selectors as defined by the Sass file. The Sass interpreter translates SassScript into CSS. Alternatively, Sass can monitor the .sass or .scss file and translate it to an output .css file whenever the .sass or .scss file is saved.[3]"
+          },
+          {
+            "id": 2,
+            "skill": "html",
+            "category": "html",
+            "description": "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance."
+          },
+          {
+            "id": 3,
+            "skill": "javascript",
+            "category": "javascript",
+            "description": "JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior,[10] often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices. JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[11] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM)."
+          },
+          {
+            "id": 4,
+            "skill": "git",
+            "category": "git",
+            "description": "Git (/ɡɪt/)[8] is a distributed version control system[9] that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different computers).[10][11][12]"
+          },
+          {
+            "id": 5,
+            "skill": "VUE.JS",
+            "category": "vue",
+            "description": "Vue.js features an incrementally adaptable architecture that focuses on declarative rendering and component composition. The core library is focused on the view layer only.[4] Advanced features required for complex applications such as routing, state management and build tooling are offered via officially maintained supporting libraries and packages.[12] Vue.js allows for extending HTML with HTML attributes called directives.[13] The directives offer functionality to HTML applications, and come as either built-in or user defined directives."
+          },
+          {
+            "id": 6,
+            "skill": "NUXT.JS",
+            "category": "nuxt",
+            "description": "The framework is advertised as a 'Meta-framework for universal applications'. The term universal is used here with the meaning that the goal of the framework is to enable users to create web views in JavaScript utilizing the Vue.js single file component system and that can function both as in-browser single page application (SPA) views as well as server-rendered web views which are then (after server rendering) 'rehydrated' to full SPA functionality.[5][6] Additionally, the framework enables users to have the content, or parts of it, fully pre-rendered on the server and served in the manner of static site generators."
+          },
+          {
+            "id": 7,
+            "skill": "blade php",
+            "category": "blade",
+            "description": "Blade templating engine combines one or more templates with a data model to produce resulting views, doing that by transpiling the templates into cached PHP code for improved performance. Blade also provides a set of its own control structures such as conditional statements and loops, which are internally mapped to their PHP counterparts. Furthermore, Laravel services may be called from Blade templates, and the templating engine itself can be extended with custom directives.[30][31]"
+          },
+          {
+            "id": 8,
+            "skill": "responsive web design",
+            "category": "responsive",
+            "description": "Responsive web design (RWD) or responsive design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.[1][2] A responsive design adapts the web-page layout to the viewing environment[1] by using techniques such as fluid proportion-based grids,[3][4] flexible images,[5][6] and CSS3 media queries,[7][8][9] an extension of the @media rule,[10] in the following ways:"
+          },
+          {
+            "id": 9,
+            "skill": "figma",
+            "category": "figma",
+            "description": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. The feature set of Figma focuses on user interface and user experience design, with an emphasis on real-time collaboration,[1] utilising a variety of vector graphics editor and prototyping tools. The Figma mobile app for Android and iOS allows viewing and interacting with Figma prototypes in real-time on mobile and tablet devices."
+          },
+          {
+            "id": 10,
+            "skill": "adobe photoshop",
+            "category": "photoshop",
+            "description": "Photoshop can edit and compose raster images in multiple layers and supports masks, alpha compositing and several color models. Photoshop uses its own PSD and PSB file formats to support these features. In addition to raster graphics, Photoshop has limited abilities to edit or render text and vector graphics (especially through clipping path for the latter), as well as 3D graphics and video. Its feature set can be expanded by plug-ins; programs developed and distributed independently of Photoshop that run inside it and offer new or enhanced features."
+          },
+          {
+            "id": 11,
+            "skill": "adobe premiere",
+            "category": "premiere",
+            "description": "Premiere Pro can be used for all common video editing tasks necessary for producing broadcast-quality, high-definition video. It can be used to import video, audio and graphics, and is used to create new, edited versions of video which can be exported to the medium and format necessary for the distribution. When creating videos using Premiere Pro, various videos, still images and audio files can be edited together. Titles and motion graphics can be added to videos and filters can be applied along with other effects."
+          },
+          {
+            "id": 12,
+            "skill": "adobe Lightroom",
+            "category": "lightroom",
+            "description": " Lightroom's editing functions include white balance, presence, tone, tone curve, HSL, color grading, detail, lens corrections, and calibration manipulation, as well as transformation, spot removal, red eye correction, graduated filters, radial filters, and adjustment brushing. The name of the software is based on darkrooms used for processing light-sensitive photographic materials."
+          },
+          {
+            "id": 13,
+            "skill": "adobe After Effects",
+            "category": "after_effects",
+            "description": "Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Inc.; it is used in the post-production process of film making, video games and television production. Among other things, After Effects can be used for keying, tracking, compositing, and animation. It also functions as a very basic non-linear editor, audio editor, and media transcoder. In 2019, the program won an Academy Award for scientific and technical achievement.[3]"
+          },
+          {
+            "id": 14,
+            "skill": "ableton live",
+            "category": "ableton",
+            "description": "Ableton Live, also known as Live or sometimes colloquially as 'Ableton', is a digital audio workstation for macOS and Windows developed by the German company Ableton. In contrast to many other software sequencers, Live is designed to be an instrument for live performances as well as a tool for composing, recording, arranging, mixing, and mastering. It is also used by DJs, as it offers a suite of controls for beatmatching, crossfading, and other different effects used by turntablists, and was one of the first music applications to automatically beatmatch songs.[3]"
+          }
+        ]
+      }
+    },
     "work": {
       "category": {
         "front_end": "front-end development",
@@ -82,10 +171,6 @@
               {
                 "id": 4,
                 "image": "/images/video_art/kapa4/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/kapa4/5.png"
               }
             ]
           },
@@ -119,23 +204,11 @@
             "images": [
               {
                 "id": 1,
-                "image": "/images/video_art/energy_field/1.png"
+                "image": "/images/video_art/energy_field/1.jpg"
               },
               {
                 "id": 2,
-                "image": "/images/video_art/energy_field/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/energy_field/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/energy_field/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/energy_field/5.png"
+                "image": "/images/video_art/energy_field/2.jpg"
               }
             ]
           },
@@ -182,14 +255,6 @@
               {
                 "id": 3,
                 "image": "/images/video_art/explaining_sound/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/explaining_sound/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/explaining_sound/5.png"
               }
             ]
           },
@@ -209,14 +274,6 @@
               {
                 "id": 3,
                 "image": "/images/video_art/pleasure_pain/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/pleasure_pain/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/pleasure_pain/5.png"
               }
             ]
           },
@@ -272,96 +329,6 @@
           }
         ]
       }
-    },
-    "skills": {
-      "text": "Click on each one to find out its Wikipedia definition respectively",
-      "close": "close",
-      "option": [
-        {
-          "id": 1,
-          "skill": "CSS (SCSS)",
-          "category": "css",
-          "description": "CSS3 consists of a series of selectors and pseudo-selectors that group rules that apply to them. Sass (in the larger context of both syntaxes) extends CSS by providing several mechanisms available in more traditional programming languages, particularly object-oriented languages, but that are not available to CSS3 itself. When SassScript is interpreted, it creates blocks of CSS rules for various selectors as defined by the Sass file. The Sass interpreter translates SassScript into CSS. Alternatively, Sass can monitor the .sass or .scss file and translate it to an output .css file whenever the .sass or .scss file is saved.[3]"
-        },
-        {
-          "id": 2,
-          "skill": "html",
-          "category": "html",
-          "description": "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance."
-        },
-        {
-          "id": 3,
-          "skill": "javascript",
-          "category": "javascript",
-          "description": "JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior,[10] often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices. JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[11] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM)."
-        },
-        {
-          "id": 4,
-          "skill": "git",
-          "category": "git",
-          "description": "Git (/ɡɪt/)[8] is a distributed version control system[9] that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different computers).[10][11][12]"
-        },
-        {
-          "id": 5,
-          "skill": "VUE.JS",
-          "category": "vue",
-          "description": "Vue.js features an incrementally adaptable architecture that focuses on declarative rendering and component composition. The core library is focused on the view layer only.[4] Advanced features required for complex applications such as routing, state management and build tooling are offered via officially maintained supporting libraries and packages.[12] Vue.js allows for extending HTML with HTML attributes called directives.[13] The directives offer functionality to HTML applications, and come as either built-in or user defined directives."
-        },
-        {
-          "id": 6,
-          "skill": "NUXT.JS",
-          "category": "nuxt",
-          "description": "The framework is advertised as a 'Meta-framework for universal applications'. The term universal is used here with the meaning that the goal of the framework is to enable users to create web views in JavaScript utilizing the Vue.js single file component system and that can function both as in-browser single page application (SPA) views as well as server-rendered web views which are then (after server rendering) 'rehydrated' to full SPA functionality.[5][6] Additionally, the framework enables users to have the content, or parts of it, fully pre-rendered on the server and served in the manner of static site generators."
-        },
-        {
-          "id": 7,
-          "skill": "blade php",
-          "category": "blade",
-          "description": "Blade templating engine combines one or more templates with a data model to produce resulting views, doing that by transpiling the templates into cached PHP code for improved performance. Blade also provides a set of its own control structures such as conditional statements and loops, which are internally mapped to their PHP counterparts. Furthermore, Laravel services may be called from Blade templates, and the templating engine itself can be extended with custom directives.[30][31]"
-        },
-        {
-          "id": 8,
-          "skill": "responsive web design",
-          "category": "responsive",
-          "description": "Responsive web design (RWD) or responsive design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.[1][2] A responsive design adapts the web-page layout to the viewing environment[1] by using techniques such as fluid proportion-based grids,[3][4] flexible images,[5][6] and CSS3 media queries,[7][8][9] an extension of the @media rule,[10] in the following ways:"
-        },
-        {
-          "id": 9,
-          "skill": "figma",
-          "category": "figma",
-          "description": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. The feature set of Figma focuses on user interface and user experience design, with an emphasis on real-time collaboration,[1] utilising a variety of vector graphics editor and prototyping tools. The Figma mobile app for Android and iOS allows viewing and interacting with Figma prototypes in real-time on mobile and tablet devices."
-        },
-        {
-          "id": 10,
-          "skill": "adobe photoshop",
-          "category": "photoshop",
-          "description": "Photoshop can edit and compose raster images in multiple layers and supports masks, alpha compositing and several color models. Photoshop uses its own PSD and PSB file formats to support these features. In addition to raster graphics, Photoshop has limited abilities to edit or render text and vector graphics (especially through clipping path for the latter), as well as 3D graphics and video. Its feature set can be expanded by plug-ins; programs developed and distributed independently of Photoshop that run inside it and offer new or enhanced features."
-        },
-        {
-          "id": 11,
-          "skill": "adobe premiere",
-          "category": "premiere",
-          "description": "Premiere Pro can be used for all common video editing tasks necessary for producing broadcast-quality, high-definition video. It can be used to import video, audio and graphics, and is used to create new, edited versions of video which can be exported to the medium and format necessary for the distribution. When creating videos using Premiere Pro, various videos, still images and audio files can be edited together. Titles and motion graphics can be added to videos and filters can be applied along with other effects."
-        },
-        {
-          "id": 12,
-          "skill": "adobe Lightroom",
-          "category": "lightroom",
-          "description": " Lightroom's editing functions include white balance, presence, tone, tone curve, HSL, color grading, detail, lens corrections, and calibration manipulation, as well as transformation, spot removal, red eye correction, graduated filters, radial filters, and adjustment brushing. The name of the software is based on darkrooms used for processing light-sensitive photographic materials."
-        },
-        {
-          "id": 13,
-          "skill": "adobe After Effects",
-          "category": "after_effects",
-          "description": "Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Inc.; it is used in the post-production process of film making, video games and television production. Among other things, After Effects can be used for keying, tracking, compositing, and animation. It also functions as a very basic non-linear editor, audio editor, and media transcoder. In 2019, the program won an Academy Award for scientific and technical achievement.[3]"
-        },
-        {
-          "id": 14,
-          "skill": "ableton live",
-          "category": "ableton",
-          "description": "Ableton Live, also known as Live or sometimes colloquially as 'Ableton', is a digital audio workstation for macOS and Windows developed by the German company Ableton. In contrast to many other software sequencers, Live is designed to be an instrument for live performances as well as a tool for composing, recording, arranging, mixing, and mastering. It is also used by DJs, as it offers a suite of controls for beatmatching, crossfading, and other different effects used by turntablists, and was one of the first music applications to automatically beatmatch songs.[3]"
-        }
-      ]
     },
     "contact": {
       "text": "you can contact me here",

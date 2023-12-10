@@ -28,20 +28,18 @@
       bottom: 20%;
     }
   }
-  .welcome-ascii-wrapper {
+  .welcome-video-primary-wrapper {
     position: absolute;
     font-size: 12px;
     z-index: 1;
-    left: 10%;
-    top: 20%;
-    pre {
-      color: $black;
-      font-weight: 900;
-      font-family: monospace;
-      white-space: pre;
+    left: 20%;
+    bottom: 30%;
+    video {
+      @include transition;
+      max-width: 150px;
     }
   }
-  .welcome-video-wrapper {
+  .welcome-video-secondary-wrapper {
     video {
       display: block;
       width: 100%;

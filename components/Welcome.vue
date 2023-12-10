@@ -21,37 +21,17 @@
       </div>
     </div>
     <div
-      class="welcome-ascii-wrapper"
-      data-aos="fade-up"
+      class="welcome-video-primary-wrapper"
+      data-aos="fade-in"
       data-aos-duration="1000"
     >
-      <pre>
-
-        _                          
-              | |                         
- __      _____| | ___ ___  _ __ ___   ___ 
- \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
-  \ V  V /  __/ | (_| (_) | | | | | |  __/
- | \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
- | |_ ___    _ __ ___  _   _              
- | __/ _ \  | '_ ` _ \| | | |             
- | || (_) | | | | | | | |_| |             
-  \__\___/  |_| |_| |_|\__, |             
-                        __/ |             
-               _       |___/              
-              | |       (_) |             
- __      _____| |__  ___ _| |_ ___        
- \ \ /\ / / _ \ '_ \/ __| | __/ _ \       
-  \ V  V /  __/ |_) \__ \ | ||  __/       
-   \_/\_/ \___|_.__/|___/_|\__\___|       
-                                          
-                                          
-</pre
-      >
-    </div>
-    <div class="welcome-video-wrapper">
       <video autoplay muted playsinline loop>
-        <source :src="database.data.welcome.video" type="video/mp4" />
+        <source :src="database.data.welcome.video_primary" type="video/mp4" />
+      </video>
+    </div>
+    <div class="welcome-video-secondary-wrapper">
+      <video autoplay muted playsinline loop>
+        <source :src="database.data.welcome.video_secondary" type="video/mp4" />
       </video>
     </div>
   </section>
@@ -70,7 +50,7 @@ const clickOutside = (event) => {
 };
 
 const hoverEffect = () => {
-  let el = document.querySelector(".welcome-ascii-wrapper");
+  let el = document.querySelector(".welcome-video-primary-wrapper video");
   const height = el.clientHeight;
   const width = el.clientWidth;
   if (el) {
@@ -81,7 +61,7 @@ const hoverEffect = () => {
       const yRotation = 20 * ((xVal - width / 2) / width);
       const xRotation = -20 * ((yVal - height / 2) / height);
       const string =
-        "perspective(500px) scale(1.1) rotateX(" +
+        "perspective(500px) scale(1.9) rotateX(" +
         xRotation +
         "deg) rotateY(" +
         yRotation +
@@ -97,7 +77,7 @@ const hoverEffect = () => {
     });
     el.addEventListener("mouseup", function () {
       el.style.transform =
-        "perspective(500px) scale(1.1) rotateX(0) rotateY(0)";
+        "perspective(500px) scale(1.9) rotateX(0) rotateY(0)";
     });
   }
 };

@@ -4,32 +4,11 @@
       <div class="row">
         <div class="col-12">
           <div
-            class="work-ascii-wrapper d-flex justify-content-center"
+            class="work-title-wrapper d-flex justify-content-center"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <pre>
-
-              /\'‚                              /¯¯¯\ '            /\   /¯¯¯¯\                    /\          
-         /    \               /\'‚         /         \‚         /    \|   |:'\    \        /\      /    \        
-        |\      \'           /    \      /            '\°      |\         |:::|    |     /    \   |\      \  '‚   
-        |:|      |          |\      \°  |        |\      \°    |:|        |::/    /|    |\      \ '|:|      |'     
-        |/      /|          |:|      '|  |        |::\      \ '‚ |:|        |/    /::|    |:|      | |/      /|  °  
-       /      /::|          |/      /|  |\       '\:::\      \ ' \|            (:::'|    |:|      |/      /::|     
-     /      /::::|         /      /::|‘ |::\       '\::|      |   |      |\      \:/'     \|            (:::'|     
-   /      /:::::/        /      /::::|' |::::\       '\|      |   |      |::\      \'      |      |\      \:/'     
- /      /:: /¯¯¯|    /      /:::::/ ° \:::::\            /|   |      |::::\      \'    |      |::\      \ '    
-|      |:::/   /|  |  /      /:::::/°      \:::::\____ /::|  /'     /|\::::|      '|‘   |      |::::\      \'   
-|\      \/   /::|  |/      /:::::/           \::::|::::::|:::'| |\    /::|  \/       /|‘  /      /|\:::::\     \ °
-|::\____/::::|____ /:::::/‘              \::|::::::|::/‘ '|::\/::::|   |\    /::|  |\    /::|  \:::::\    /|‘
-|:::|::::::|::::/|:::::::|::::/'                  \|::::::|/‘   '|:::|::::/   |::\/::::|  |::\/::::|    \:::::\/::|‘
- \::|::::::|::/  |:::::::|::/'‚                     ¯¯¯'      \::'|::/     |:::|::::/° |:::|:::/       \::::|::| 
-   \|::::::|/    |:::::::|/'‚                       ‘             '\|/        \::|::/    '\::|::/          \::|::/ 
-     ¯¯¯       ¯¯¯¯                                     ‘               \|/°       '\|/              \|/   
-                             
-
-     </pre
-            >
+            <h3 class="description-title font-bold-italic d-inline bigger">WORK</h3>
           </div>
         </div>
       </div>
@@ -37,6 +16,8 @@
     <div
       class="section-work-option"
       v-if="categoryOption === `${database.data.work.category.front_end}`"
+      data-aos="fade-in"
+      data-aos-duration="2000"
     >
       <div class="container">
         <div class="row">
@@ -120,6 +101,8 @@
     <div
       class="section-work-option"
       v-if="categoryOption === `${database.data.work.category.video_art}`"
+      data-aos="fade-in"
+      data-aos-duration="2000"
     >
       <div class="container">
         <div class="row">

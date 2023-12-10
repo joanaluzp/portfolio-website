@@ -41,11 +41,11 @@
         </div>
         <div class="col-12 col-lg-2 d-flex justify-content-end">
           <div
-            class="contact-cv-wrapper d-inline-block"
+            class="contact-cv-wrapper d-inline-flex"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <p class="description-text d-inline lowercase">
+            <p class="description-text d-inline text-center lowercase">
               {{ database.data.contact.cv.text }}
             </p>
             <NuxtLink :to="database.data.contact.cv.link" target="”_blank”"
