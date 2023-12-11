@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-work" id="section-work">
+  <section class="section aside section-work" id="section-work">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -8,7 +8,9 @@
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <h3 class="description-title font-bold-italic d-inline bigger">WORK</h3>
+            <h3 class="description-title font-bold-italic d-inline bigger">
+              WORK
+            </h3>
           </div>
         </div>
       </div>
@@ -21,7 +23,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-2">
+          <div class="col-12 col-xxl-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -32,7 +34,7 @@
                   class="d-inline description-text"
                   @click="categoryFrontEndSelected = item.name"
                   :class="{
-                    'font-bold': categoryFrontEndSelected === item.name,
+                    'active': categoryFrontEndSelected === item.name,
                   }"
                 >
                   {{ item.name }}
@@ -40,7 +42,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-lg-2">
+          <div class="col-12 col-xxl-2">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryFrontEnd.slice().reverse()"
@@ -54,7 +56,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-xxl-8">
             <div
               v-for="item in categoryFrontEnd.slice().reverse()"
               :key="item.id"
@@ -106,7 +108,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-2">
+          <div class="col-12 col-xxl-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -117,7 +119,7 @@
                   class="d-inline description-text"
                   @click="categoryVideoArtSelected = item.name"
                   :class="{
-                    'font-bold': categoryVideoArtSelected === item.name,
+                    'active': categoryVideoArtSelected === item.name,
                   }"
                 >
                   {{ item.name }}
@@ -125,7 +127,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-lg-2">
+          <div class="col-12 col-xxl-2">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryVideoArt.slice().reverse()"
@@ -139,7 +141,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-xxl-8">
             <div
               v-for="item in categoryVideoArt.slice().reverse()"
               :key="item.id"
@@ -190,32 +192,36 @@
             <div
               class="work-choose-btn-options d-flex flex-wrap align-items-center"
             >
-              <p
-                class="work-choose-btn description-text font-bold-italic"
-                @click="
-                  categoryOption = `${database.data.work.category.front_end}`
-                "
+              <div
+                class="work-choose-btn"
                 :class="{
                   active:
                     categoryOption ===
                     `${database.data.work.category.front_end}`,
                 }"
-              >
-                {{ database.data.work.category.front_end }}
-              </p>
-              <p
-                class="work-choose-btn description-text font-bold-italic"
                 @click="
-                  categoryOption = `${database.data.work.category.video_art}`
+                  categoryOption = `${database.data.work.category.front_end}`
                 "
+              >
+                <p class="description-text font-bold-italic">
+                  {{ database.data.work.category.front_end }}
+                </p>
+              </div>
+              <div
+                class="work-choose-btn"
                 :class="{
                   active:
                     categoryOption ===
                     `${database.data.work.category.video_art}`,
                 }"
+                @click="
+                  categoryOption = `${database.data.work.category.video_art}`
+                "
               >
-                {{ database.data.work.category.video_art }}
-              </p>
+                <p class="description-text font-bold-italic">
+                  {{ database.data.work.category.video_art }}
+                </p>
+              </div>
             </div>
           </div>
         </div>

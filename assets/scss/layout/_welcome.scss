@@ -26,6 +26,7 @@
       z-index: 1;
       right: 10%;
       bottom: 20%;
+      animation: translate 2s ease infinite;
     }
   }
   .welcome-video-primary-wrapper {
@@ -51,8 +52,11 @@
 }
 @media (min-width: 992px) {
   .section-welcome {
-    .welcome-ascii-wrapper {
-      left: 25%;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 40%;
+    padding: 20px;
   }
 }

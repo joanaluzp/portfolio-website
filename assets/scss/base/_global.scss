@@ -47,11 +47,20 @@ body {
   &:last-child {
     padding-bottom: 50px;
   }
+  @media (min-width: 992px) {
+    &.aside {
+      position: relative;
+      top: 0;
+      left: 40%;
+      width: 60%;
+    }
+  }
 }
 ::selection {
   color: $black-clear02;
   background: $yellow;
 }
+
 @keyframes rotate3d {
   from {
     transform: rotateY(0deg);
@@ -60,7 +69,6 @@ body {
     transform: rotateY(360deg);
   }
 }
-
 @keyframes shake {
   0% {
     transform: rotate(0deg);
@@ -78,7 +86,6 @@ body {
     transform: rotate(0deg);
   }
 }
-
 @keyframes strobe {
   0% {
     opacity: 0;
@@ -90,9 +97,19 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes spin {
   100% {
     transform: rotate(360deg);
   }
+}
+@keyframes translate {
+  0% { transform: translateX(15px); } 
+  50% { transform: translateX(-15px); }
+  100% { transform: translateX(15px); }
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
 }

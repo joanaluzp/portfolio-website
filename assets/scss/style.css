@@ -3231,6 +3231,14 @@ body .main {
 .section:last-child {
   padding-bottom: 50px;
 }
+@media (min-width: 992px) {
+  .section.aside {
+    position: relative;
+    top: 0;
+    left: 40%;
+    width: 60%;
+  }
+}
 
 ::-moz-selection {
   color: #575757;
@@ -3283,6 +3291,31 @@ body .main {
     transform: rotate(360deg);
   }
 }
+@keyframes translate {
+  0% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+@keyframes gelatine {
+  from, to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
@@ -3290,33 +3323,17 @@ body .main {
   background: linear-gradient(145deg, #fcfcfc, #dbdbdb);
   box-shadow: 9px 6px 6px -3px #fcfcfc;
   border-radius: 20px;
-  max-width: 300px;
+  min-width: 90%;
   height: auto;
   z-index: 10;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
-  transition: all 0.5s ease-in-out;
-}
-.navbar .navbar-toggle-wrapper {
-  width: 100%;
-}
-.navbar .navbar-toggle-wrapper .description-title {
-  cursor: pointer;
-  text-align: center;
-  color: #ff00be;
-  font-family: "Inter", sans-serif;
-}
-.navbar .navbar-toggle-wrapper .description-title.closed {
-  display: none;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .navbar-menu-wrapper {
   display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
-}
-.navbar .navbar-menu-wrapper.is-open {
   grid-template-rows: 1fr;
 }
 .navbar .navbar-menu-wrapper .navbar-menu-list {
@@ -3335,6 +3352,7 @@ body .main {
   cursor: pointer;
   background-color: #ffffff;
   border-radius: 30px;
+  min-width: 115px;
   border: 2px solid #ffff00;
 }
 .navbar .navbar-menu-wrapper .navbar-menu-list .navbar-menu-item .description-text {
@@ -3343,6 +3361,24 @@ body .main {
   color: #000;
 }
 
+.navbar-linear-gradient {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.2s;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    min-width: auto;
+  }
+}
 @media (min-width: 992px) {
   .navbar .navbar-menu-wrapper .navbar-menu-list .navbar-menu-item:hover {
     animation: shake 0.3s ease-in-out infinite;
@@ -3381,21 +3417,20 @@ body .main {
   z-index: 1;
   right: 10%;
   bottom: 20%;
+  animation: translate 2s ease infinite;
 }
-.section-welcome .welcome-ascii-wrapper {
+.section-welcome .welcome-video-primary-wrapper {
   position: absolute;
   font-size: 12px;
   z-index: 1;
-  left: 10%;
-  top: 20%;
+  left: 20%;
+  bottom: 30%;
 }
-.section-welcome .welcome-ascii-wrapper pre {
-  color: #000;
-  font-weight: 900;
-  font-family: monospace;
-  white-space: pre;
+.section-welcome .welcome-video-primary-wrapper video {
+  transition: all 0.3s ease-in-out;
+  max-width: 150px;
 }
-.section-welcome .welcome-video-wrapper video {
+.section-welcome .welcome-video-secondary-wrapper video {
   display: block;
   width: 100%;
   height: 100vh;
@@ -3406,14 +3441,23 @@ body .main {
 }
 
 @media (min-width: 992px) {
-  .section-welcome .welcome-ascii-wrapper {
-    left: 25%;
+  .section-welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 40%;
+    background-color: red;
+    padding: 20px;
+  }
+  .section-welcome .welcome-video-secondary-wrapper video {
+    border-radius: 25px;
   }
 }
 /*====ABOUT====*/
 .section-about {
   position: relative;
-  background-color: #fcfcfc;
+  background-color: pink;
 }
 .section-about .about-text-wrapper .description-text {
   color: #000;
@@ -3426,7 +3470,7 @@ body .main {
 
 @media (min-width: 992px) {
   .section-about .about-ascii-wrapper pre {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 /*====WORK====*/
@@ -3445,9 +3489,13 @@ body .main {
 .section-work .container .row {
   --bs-gutter-y: 1.5rem;
 }
-.section-work .work-ascii-wrapper pre {
-  font-size: 8px;
-  color: #000;
+.section-work .work-title-wrapper {
+  margin-bottom: 30px;
+}
+.section-work .work-title-wrapper .description-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ff0000;
 }
 .section-work .work-option-list-wrapper {
   gap: 5px;
@@ -3557,6 +3605,10 @@ body .main {
   .section-work .work-item-swiper-wrapper {
     min-height: 60vh;
   }
+  .section-work .work-item-swiper-wrapper .swiper:hover {
+    transform: translateX(-50px);
+    box-shadow: 5px 5px 5px 0px #dbdbdb, inset 4px 4px 15px 0px #dbdbdb;
+  }
   .section-work .work-choose-btn-options-wrapper {
     position: relative;
   }
@@ -3578,37 +3630,55 @@ body .main {
   }
 }
 /*====SKILLS===*/
-.section-skills {
-  position: relative;
-  background-color: #fcfcfc;
+.skills-dropdown-toggle {
+  margin: 30px 0 20px 0;
+  background-color: #ffffff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 0px #dbdbdb, inset 4px 4px 15px 0px #dbdbdb;
+  cursor: pointer;
+  animation: gelatine 3s infinite;
 }
-
-.skills-popup-text {
+.skills-dropdown-toggle .description-text:first-child {
   color: #1900ff;
-  margin: 0 0 30px 0;
+}
+.skills-dropdown-toggle .description-text:last-child {
+  margin-left: 10px;
 }
 
-.skills-ascii-wrapper pre {
-  font-weight: 900;
-  font-family: monospace;
-  white-space: pre;
-  font-size: 12px;
-  color: #000;
+.skills-dropdown-list-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+}
+.skills-dropdown-list-wrapper.is-open {
+  grid-template-rows: 1fr;
+}
+.skills-dropdown-list-wrapper.is-open .skills-dropdown-list {
+  padding: 15px 20px;
 }
 
-.skills-full-list {
+.skills-dropdown-list {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
 }
-.skills-full-list .skills-full-list-item .description-text {
+.skills-dropdown-list .skills-dropdown-list-item .description-text {
   color: #575757;
 }
-.skills-full-list .skills-full-list-item .description-text.option {
+.skills-dropdown-list .skills-dropdown-list-item .description-text.option {
   cursor: pointer;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper {
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper {
   transition: all 0.3s ease-in-out;
+  animation: none;
   width: 90%;
   max-width: 600px;
   position: absolute;
@@ -3617,51 +3687,55 @@ body .main {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  border: 1px solid #1900ff;
-  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  padding: 15px 20px;
   opacity: 0;
   pointer-events: none;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper.is-open {
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper.is-open {
   opacity: 1;
   pointer-events: all;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box {
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper .skills-info-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .close {
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper .skills-info-box .close {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 10px;
+  color: #000;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .info-title {
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper .skills-info-box .close span {
+  text-decoration: none;
+  font-style: none;
+  font-weight: 400;
+}
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper .skills-info-box .info-title {
   font-family: "Beau Rivage", cursive;
   text-align: center;
   color: #575757;
 }
-.skills-full-list .skills-full-list-item .skills-info-box-wrapper .skills-info-box .info-description {
-  color: #ff0000;
+.skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper .skills-info-box .info-description {
+  color: #000;
 }
 
 @media (min-width: 992px) {
-  .section-skills .container .row > div:last-child {
-    display: flex;
-    align-items: center;
-  }
-  .skills-popup-text {
-    margin: 70px 0 0 0;
-  }
-  .skills-full-list {
+  .skills-dropdown-list {
     align-items: flex-end;
   }
-  .skills-full-list .skills-full-list-item .skills-info-box-wrapper {
+  .skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper {
     position: fixed;
     max-width: 700px;
+  }
+  .skills-dropdown-list .skills-dropdown-list-item .skills-info-box-wrapper:hover {
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 /*====CONTACT====*/
@@ -3679,13 +3753,27 @@ body .main {
 .section-contact .contact-text-wrapper {
   max-width: 245px;
 }
+.section-contact .contact-text-wrapper a {
+  color: #1900ff;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.section-contact .contact-text-wrapper a .description-text {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .section-contact .contact-cv-wrapper {
   margin: 20px 0 0 0;
   padding: 15px 20px;
   height: -moz-fit-content;
   height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 0px #dbdbdb, inset 4px 4px 15px 0px #dbdbdb, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #dbdbdb, inset 4px 4px 15px 0px #dbdbdb;
 }
 .section-contact .contact-cv-wrapper a {
   text-decoration: none;
@@ -3699,5 +3787,8 @@ body .main {
   }
   .section-contact .contact-cv-wrapper:hover {
     animation: shake 0.3s ease-in-out infinite;
+  }
+  .section-contact .contact-text-wrapper a .description-text:hover {
+    animation: spin 2s ease-in-out infinite;
   }
 }/*# sourceMappingURL=style.css.map */

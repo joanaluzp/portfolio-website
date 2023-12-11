@@ -1,8 +1,8 @@
 <template>
-  <section class="section section-about" id="section-about">
+  <section class="section aside section-about" id="section-about">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-xxl-6">
           <div class="about-ascii-wrapper">
             <pre>
                                                                           
@@ -25,8 +25,6 @@
  **                **                                                                    
             </pre>
           </div>
-        </div>
-        <div class="col-12 col-lg-6">
           <div class="about-text-wrapper">
             <p class="description-text text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
@@ -40,47 +38,71 @@
             </p>
           </div>
         </div>
-        <div class="col-7 offset-lg-4 col-lg-2 order-lg-3">
-          <div class="skills-popup-text">
-            <p class="description-text lowercase font-black text-justify">
+        <div class="col-12 col-xxl-4 offset-xxl-1">
+          <div
+            class="skills-dropdown-toggle d-inline-block"
+            @click="openSkills = !openSkills"
+          >
+            <p
+              class="description-text d-inline lowercase font-black text-justify"
+            >
               {{ database.data.about.skills.text }}
             </p>
-          </div>
-        </div>
-        <div class="col-12 col-lg-5 order-lg-2">
-          <ul class="skills-full-list">
-            <li
-              class="skills-full-list-item"
-              v-for="item in skillOption"
-              :key="item.id"
+            <p
+              class="description-text d-inline small font-italic lowercase text-justify"
             >
-              <p
-                class="description-text option d-inline big font-italic uppercase"
-                @mouseover="showElm(item.category)"
+              {{ database.data.about.skills.text_toggle }}
+            </p>
+          </div>
+          <div
+            class="skills-dropdown-list-wrapper"
+            :class="{ 'is-open': openSkills }"
+          >
+            <ul class="skills-dropdown-list">
+              <li class="skills-dropdown-list-item description">
+                <p
+                  class="description-text lowercase small text-center"
+                >
+                💻 {{ database.data.about.skills.text_informative }} ⚙️
+                </p>
+              </li>
+              <li
+                class="skills-dropdown-list-item option"
+                v-for="item in skillOption"
+                :key="item.id"
               >
-                {{ item.skill }}
-              </p>
-              <div
-                class="skills-info-box-wrapper"
-                :class="{ 'is-open': open && info === item.category }"
-              >
-                <div class="skills-info-box">
-                  <p
-                    class="close d-inline description-text font-bold-italic lowercase big"
-                    @click="open = false"
-                  >
-                    {{ database.data.about.skills.close }}
-                  </p>
-                  <p class="info-title description-title capitalize bigger">
-                    {{ item.skill }}
-                  </p>
-                  <p class="info-description description-text text-justify">
-                    {{ item.description }}
-                  </p>
+                <p
+                  class="description-text d-inline big font-italic uppercase"
+                  @click="showElm(item.category)"
+                >
+                  {{ item.skill }}
+                </p>
+                <div
+                  class="skills-info-box-wrapper"
+                  :class="{
+                    'is-open': openSkillsInfo && info === item.category,
+                  }"
+                >
+                  <div class="skills-info-box">
+                    <p
+                      class="close d-inline description-text font-bold-italic lowercase big"
+                      @click="openSkillsInfo = false"
+                    >
+                      <span>👋</span>
+                      {{ database.data.about.skills.close }}
+                      <span>👋</span>
+                    </p>
+                    <p class="info-title description-title capitalize bigger">
+                      {{ item.skill }}
+                    </p>
+                    <p class="info-description description-text text-justify">
+                      {{ item.description }}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -89,19 +111,20 @@
 <script setup>
 import database from "../data/db.json";
 const skillOption = ref([]);
-const open = ref(false);
+const openSkillsInfo = ref(false);
+const openSkills = ref(false);
 const info = ref("");
 
 const showElm = (elmId) => {
-  open.value = true;
+  openSkillsInfo.value = true;
   info.value = elmId;
 };
 
 const clickOutside = (event) => {
-  const elmList = document.querySelector(".skills-full-list");
+  const elmList = document.querySelector(".skills-dropdown-list");
   if (elmList) {
     if (!elmList.contains(event.target)) {
-      open.value = false;
+      openSkillsInfo.value = false;
     }
   }
 };

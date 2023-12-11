@@ -7,7 +7,7 @@
   -moz-box-shadow: 9px 6px 6px -3px $grey-clear01;
   box-shadow: 9px 6px 6px -3px $grey-clear01;
   border-radius: 20px;
-  max-width: 200px;
+  min-width: 90%;
   height: auto;
   z-index: 10;
   top: 15px;
@@ -30,17 +30,35 @@
       overflow: hidden;
       @include transition;
       .navbar-menu-item {
-        cursor: pointer;
-        background-color: $white;
-        border-radius: 30px;
-        border: 2px solid $yellow;
         .description-text {
+          cursor: pointer;
+          background-color: $white;
+          border-radius: 30px;
+          min-width: 115px;
+          border: 2px solid $yellow;
           padding: 3px 10px;
           text-align: center;
           color: $black;
         }
       }
     }
+  }
+}
+.navbar-linear-gradient {
+  width: 100%;
+  @include transition;
+  transition-delay: 0.2s;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background: $grey-clear02;
+  background: linear-gradient(180deg, $grey-clear02 0%, rgba($grey-clear02, 0) 100%);
+}
+@media (min-width: 768px) {
+  .navbar {
+    min-width: auto;
   }
 }
 @media (min-width: 992px) {
@@ -50,10 +68,10 @@
         .navbar-menu-item {
           &:hover {
             animation: shake 0.3s ease-in-out infinite;
-            border-color: $blue-light;
             .description-text {
+              border-color: $blue-light;
               color: $red;
-              font-family: $font-03;
+              font-weight: 700;
             }
           }
         }

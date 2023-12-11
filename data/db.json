@@ -16,7 +16,9 @@
     },
     "about": {
       "skills": {
-        "text": "Click on each one to find out its Wikipedia definition respectively",
+        "text": "my technical skills",
+        "text_toggle": "click to toggle",
+        "text_informative": "click on each skill to open it's informative wikipedia definition",
         "close": "close",
         "option": [
           {
@@ -75,25 +77,25 @@
           },
           {
             "id": 10,
-            "skill": "adobe photoshop",
+            "skill": "photoshop",
             "category": "photoshop",
             "description": "Photoshop can edit and compose raster images in multiple layers and supports masks, alpha compositing and several color models. Photoshop uses its own PSD and PSB file formats to support these features. In addition to raster graphics, Photoshop has limited abilities to edit or render text and vector graphics (especially through clipping path for the latter), as well as 3D graphics and video. Its feature set can be expanded by plug-ins; programs developed and distributed independently of Photoshop that run inside it and offer new or enhanced features."
           },
           {
             "id": 11,
-            "skill": "adobe premiere",
+            "skill": "premiere",
             "category": "premiere",
             "description": "Premiere Pro can be used for all common video editing tasks necessary for producing broadcast-quality, high-definition video. It can be used to import video, audio and graphics, and is used to create new, edited versions of video which can be exported to the medium and format necessary for the distribution. When creating videos using Premiere Pro, various videos, still images and audio files can be edited together. Titles and motion graphics can be added to videos and filters can be applied along with other effects."
           },
           {
             "id": 12,
-            "skill": "adobe Lightroom",
+            "skill": "Lightroom",
             "category": "lightroom",
             "description": " Lightroom's editing functions include white balance, presence, tone, tone curve, HSL, color grading, detail, lens corrections, and calibration manipulation, as well as transformation, spot removal, red eye correction, graduated filters, radial filters, and adjustment brushing. The name of the software is based on darkrooms used for processing light-sensitive photographic materials."
           },
           {
             "id": 13,
-            "skill": "adobe After Effects",
+            "skill": "After Effects",
             "category": "after_effects",
             "description": "Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Inc.; it is used in the post-production process of film making, video games and television production. Among other things, After Effects can be used for keying, tracking, compositing, and animation. It also functions as a very basic non-linear editor, audio editor, and media transcoder. In 2019, the program won an Academy Award for scientific and technical achievement.[3]"
           },
@@ -115,18 +117,9 @@
         "front_end": [
           {
             "id": 1,
-            "name": "kunst 3",
-            "description": "Lorem ipsum dolor sit",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/front-end/kunst3/1.jpg"
-              },
-              {
-                "id": 2,
-                "image": "/images/front-end/kunst3/2.energyfield.jpg"
-              }
-            ]
+            "name": "this website!",
+            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "images": []
           },
           {
             "id": 2,
@@ -145,9 +138,18 @@
           },
           {
             "id": 3,
-            "name": "this website!",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
-            "images": []
+            "name": "kunst 3",
+            "description": "Lorem ipsum dolor sit",
+            "images": [
+              {
+                "id": 1,
+                "image": "/images/front-end/kunst3/1.jpg"
+              },
+              {
+                "id": 2,
+                "image": "/images/front-end/kunst3/2.energyfield.jpg"
+              }
+            ]
           }
         ],
         "video_art": [

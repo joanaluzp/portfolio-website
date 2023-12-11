@@ -5,6 +5,7 @@
         <li class="navbar-menu-item" v-for="item in navOption" :key="item.id">
           <p
             class="description-text"
+            :class="{ 'd-lg-none': item.name === 'welcome' }"
             @click="scrollToComponent(item.category)"
           >
             {{ item.name }}
@@ -13,6 +14,7 @@
       </ul>
     </div>
   </nav>
+  <div class="navbar-linear-gradient"></div>
 </template>
 <script setup>
 import database from "../data/db.json";
@@ -30,14 +32,18 @@ const scrollToComponent = (id) => {
 const handleScrollNavbar = () => {
   let scroll = window.pageYOffset;
   let elmNavbar = document.querySelector(".navbar");
+  let elmNavbarGradient = document.querySelector(".navbar-linear-gradient");
   let heightNavbar = elmNavbar ? elmNavbar.offsetHeight : 0;
   if (scroll > heightNavbar) {
     elmNavbar.style.top = "-150px";
+    elmNavbarGradient.style.top = "-200px";
     if (scroll < prevScroll.value) {
       elmNavbar.style.top = "15px";
+      elmNavbarGradient.style.top = "0";
     }
   } else {
     elmNavbar.style.top = "15px";
+    elmNavbarGradient.style.top = "0";
   }
   prevScroll.value = scroll;
 };

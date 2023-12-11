@@ -13,6 +13,14 @@
   }
   .contact-text-wrapper {
     max-width: 245px;
+    a {
+      color: $blue;
+      text-decoration: none;
+      width: fit-content;
+      .description-text {
+        width: fit-content;
+      }
+    }
   }
   .contact-cv-wrapper {
     margin: 20px 0 0 0;
@@ -41,6 +49,15 @@
       margin: 0;
       &:hover {
         animation: shake 0.3s ease-in-out infinite;
+      }
+    }
+    .contact-text-wrapper {
+      a {
+        .description-text {
+          &:hover {
+            animation: spin 2s ease-in-out infinite;
+          }
+        }
       }
     }
   }
