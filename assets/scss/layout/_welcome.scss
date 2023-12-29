@@ -1,6 +1,17 @@
 /*====WELCOME====*/
 .section-welcome {
   position: relative;
+  max-height: 60vh;
+  pre {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    color: $blue;
+    font-weight: 800;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 8px;
+  }
   .welcome-text-wrapper {
     .welcome-text-box {
       background-color: $blue-medium;
@@ -52,6 +63,7 @@
 }
 @media (min-width: 992px) {
   .section-welcome {
+    max-height: 100vh;
     position: fixed;
     top: 0;
     left: 0;

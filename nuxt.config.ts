@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Joana da Luz",
+      title: "Joana Pimentel",
       bodyAttrs: {},
       meta: [
         { charset: "utf-8" },

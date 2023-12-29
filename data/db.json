@@ -1,18 +1,24 @@
 {
   "data": {
     "nav": {
-      "menu": [
-        { "id": 1, "name": "welcome", "category": "section-welcome" },
-        { "id": 2, "name": "about", "category": "section-about" },
-        { "id": 3, "name": "work", "category": "section-work" },
-        { "id": 4, "name": "contact", "category": "section-contact" }
-      ]
+      "about": {
+        "name": "about",
+        "category": "section-about"
+      },
+      "work": {
+        "name": "work",
+        "category": "section-work"
+      },
+      "contact": {
+        "name": "contact",
+        "category": "section-contact"
+      }
     },
     "welcome": {
       "btn": "click me",
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure suscipit autem cum adipisci, aliquid tenetur expedita quam sunt, totam dignissimos provident illo aut obcaecati quod at sit laboriosam. Cum, dolores.",
-      "video_primary" : "",
-      "video_secondary": "/videos/myweb_min.mp4"
+      "video_primary": "/videos/myweb_me_min.mp4",
+      "video_secondary": "/videos/sparkle_1.mp4"
     },
     "about": {
       "skills": {

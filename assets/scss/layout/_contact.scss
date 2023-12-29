@@ -2,15 +2,6 @@
 .section-contact {
   position: relative;
   background-color: $white;
-  .contact-ascii-wrapper {
-    pre {
-      color: $blue;
-      font-weight: 900;
-      font-family: monospace;
-      white-space: pre;
-      font-size: 8px;
-    }
-  }
   .contact-text-wrapper {
     max-width: 245px;
     a {
@@ -37,7 +28,12 @@
       inset 4px 4px 15px 0px $grey-clear02;
     a {
       text-decoration: none;
-      color: $blue-medium;
+      .description-text {
+        color: $black-clear01;
+        &.link {
+          color: $blue-medium;
+        }
+      }
     }
   }
 }

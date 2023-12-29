@@ -2,25 +2,36 @@
 .section-about {
   position: relative;
   background-color: $white;
+  .section-about-wrapper {
+    background-color: $purple-light;
+    padding: 60px 10px;
+  }
+  .about-pre-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.5s ease-out;
+    &.is-open {
+      grid-template-rows: 0fr;
+    }
+    pre {
+      overflow: hidden;
+      color: $blue;
+      font-family: monospace;
+      white-space: pre;
+      font-size: 20px;
+    }
+  }
   .about-text-wrapper {
     .description-text {
       color: $black;
     }
   }
-  .about-ascii-wrapper {
-    pre {
-      font-family: monospace;
-      white-space: pre;
-      font-size: 6px;
-    }
-  }
 }
 @media (min-width: 992px) {
   .section-about {
-    .about-ascii-wrapper {
-      pre {
-        font-size: 8px;
-      }
+    padding: 30px;
+    .section-about-wrapper {
+      border-radius: 25px;
     }
   }
 }

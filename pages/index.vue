@@ -1,17 +1,16 @@
 <template>
   <main class="main">
-    <LazyNavbar/>
+    <LazyNavbar />
     <section class="sections">
-      <LazyWelcome/>
-      <LazyAbout/>
-      <LazyWork/>
-      <LazySkills/>
-      <LazyContact/>
+      <LazyWelcome />
+      <LazyAbout />
+      <LazyWork />
+      <LazyContact />
     </section>
   </main>
 </template>
 
 <script setup>
-import AOS from 'aos';
+import AOS from "aos";
 onMounted(() => AOS.init());
 </script>

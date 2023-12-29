@@ -1,41 +1,26 @@
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
-  border-radius: 50px;
-  background: linear-gradient(145deg, $grey-clear01, $grey-clear02);
-  -webkit-box-shadow: 9px 6px 6px -3px $grey-clear01;
-  -moz-box-shadow: 9px 6px 6px -3px $grey-clear01;
-  box-shadow: 9px 6px 6px -3px $grey-clear01;
-  border-radius: 20px;
-  min-width: 90%;
   height: auto;
   z-index: 10;
   top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 15px;
   padding: 10px;
   @include transition;
   .navbar-menu-wrapper {
-    display: grid;
-    grid-template-rows: 1fr;
     .navbar-menu-list {
-      z-index: 9;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 7px;
       flex-wrap: wrap;
       width: 100%;
-      text-align: right;
       overflow: hidden;
       @include transition;
       .navbar-menu-item {
-        .description-text {
+        @include transition;
+        .description-title {
           cursor: pointer;
-          background-color: $white;
-          border-radius: 30px;
-          min-width: 115px;
-          border: 2px solid $yellow;
           padding: 3px 10px;
           text-align: center;
           color: $black;
@@ -44,19 +29,7 @@
     }
   }
 }
-.navbar-linear-gradient {
-  width: 100%;
-  @include transition;
-  transition-delay: 0.2s;
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  height: 100px;
-  background: $grey-clear02;
-  background: linear-gradient(180deg, $grey-clear02 0%, rgba($grey-clear02, 0) 100%);
-}
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .navbar {
     min-width: auto;
   }
@@ -67,10 +40,9 @@
       .navbar-menu-list {
         .navbar-menu-item {
           &:hover {
-            animation: shake 0.3s ease-in-out infinite;
-            .description-text {
+            animation: shake 0.3s ease-in-out infinite; 
+            .description-title {
               border-color: $blue-light;
-              color: $red;
               font-weight: 700;
             }
           }

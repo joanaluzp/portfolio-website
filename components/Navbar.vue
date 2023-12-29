@@ -2,25 +2,38 @@
   <nav class="navbar">
     <div class="navbar-menu-wrapper" :class="{ 'is-open': open }">
       <ul class="navbar-menu-list">
-        <li class="navbar-menu-item" v-for="item in navOption" :key="item.id">
+        <li class="navbar-menu-item">
           <p
-            class="description-text"
-            :class="{ 'd-lg-none': item.name === 'welcome' }"
-            @click="scrollToComponent(item.category)"
+            class="description-title bigger"
+            @click="scrollToComponent(database.data.nav.about.category)"
           >
-            {{ item.name }}
+            {{ database.data.nav.about.name }}
+          </p>
+        </li>
+        <li class="navbar-menu-item">
+          <p
+            class="description-title bigger"
+            @click="scrollToComponent(database.data.nav.work.category)"
+          >
+            {{ database.data.nav.work.name }}
+          </p>
+        </li>
+        <li class="navbar-menu-item">
+          <p
+            class="description-title bigger"
+            @click="scrollToComponent(database.data.nav.contact.category)"
+          >
+            {{ database.data.nav.contact.name }}
           </p>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="navbar-linear-gradient"></div>
 </template>
 <script setup>
 import database from "../data/db.json";
 const open = ref(false);
 const prevScroll = ref(0);
-const navOption = ref([]);
 
 const scrollToComponent = (id) => {
   const el = document.getElementById(id);
@@ -32,24 +45,19 @@ const scrollToComponent = (id) => {
 const handleScrollNavbar = () => {
   let scroll = window.pageYOffset;
   let elmNavbar = document.querySelector(".navbar");
-  let elmNavbarGradient = document.querySelector(".navbar-linear-gradient");
   let heightNavbar = elmNavbar ? elmNavbar.offsetHeight : 0;
   if (scroll > heightNavbar) {
     elmNavbar.style.top = "-150px";
-    elmNavbarGradient.style.top = "-200px";
     if (scroll < prevScroll.value) {
       elmNavbar.style.top = "15px";
-      elmNavbarGradient.style.top = "0";
     }
   } else {
     elmNavbar.style.top = "15px";
-    elmNavbarGradient.style.top = "0";
   }
   prevScroll.value = scroll;
 };
 
 onMounted(() => {
-  navOption.value = database.data.nav.menu;
   window.addEventListener("scroll", handleScrollNavbar);
 });
 </script>
