@@ -40,10 +40,7 @@
   @include transition;
   .skills-dropdown-list-description {
     width: 100%;
-    background-color: $white;
-    border: 1px solid $pink;
-    padding: 15px 20px;
-    border-radius: 20px;
+    text-decoration: underline;
     margin-bottom: 10px;
   }
   .skills-dropdown-list-item {

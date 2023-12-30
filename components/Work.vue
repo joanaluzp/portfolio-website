@@ -34,7 +34,7 @@
                   class="d-inline description-text"
                   @click="categoryFrontEndSelected = item.name"
                   :class="{
-                    'active': categoryFrontEndSelected === item.name,
+                    active: categoryFrontEndSelected === item.name,
                   }"
                 >
                   {{ item.name }}
@@ -62,7 +62,7 @@
               :key="item.id"
             >
               <div
-                class="work-item-swiper-wrapper"
+                class="work-item-swiper-wrapper video"
                 v-if="
                   categoryFrontEndSelected === item.name &&
                   item.images.length > 0
@@ -83,7 +83,9 @@
                   }"
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <img class="work-item-swiper" :src="image.image" />
+                    <video class="work-item-swiper video" loop muted autoplay>
+                      <source :src="image.image" type="video/mp4" />
+                    </video>
                   </SwiperSlide>
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">
@@ -119,7 +121,7 @@
                   class="d-inline description-text"
                   @click="categoryVideoArtSelected = item.name"
                   :class="{
-                    'active': categoryVideoArtSelected === item.name,
+                    active: categoryVideoArtSelected === item.name,
                   }"
                 >
                   {{ item.name }}
@@ -147,7 +149,7 @@
               :key="item.id"
             >
               <div
-                class="work-item-swiper-wrapper"
+                class="work-item-swiper-wrapper photo"
                 v-if="
                   categoryVideoArtSelected === item.name &&
                   item.images.length > 0
@@ -168,7 +170,7 @@
                   }"
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <img class="work-item-swiper" :src="image.image" />
+                    <img class="work-item-swiper photo" :src="image.image" />
                   </SwiperSlide>
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">

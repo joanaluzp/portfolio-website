@@ -2,7 +2,7 @@
   <section class="section aside section-contact" id="section-contact">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-xxl-6">
+        <div class="col-12 col-xl-4">
           <div class="contact-text-wrapper">
             <p class="description-title font-italic big lowercase">
               {{ database.data.contact.text }}
@@ -14,7 +14,7 @@
             >
           </div>
         </div>
-        <div class="col-12 col-xxl-2 d-flex justify-content-end">
+        <div class="col-12 col-xl-6 d-flex justify-content-end">
           <div
             class="contact-cv-wrapper d-inline-flex"
             data-aos="fade-right"

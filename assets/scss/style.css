@@ -3205,7 +3205,7 @@ body {
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 0;
+  width: 10px;
 }
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
@@ -3213,7 +3213,8 @@ body::-webkit-scrollbar-track {
 }
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #dbdbdb;
+  border: 1px solid #575757;
 }
 html .main,
 body .main {
@@ -3461,7 +3462,7 @@ body .main {
 }
 .section-about .section-about-wrapper {
   background-color: #ebd8ff;
-  padding: 60px 10px;
+  padding: 20px 10px;
 }
 .section-about .about-pre-wrapper {
   display: grid;
@@ -3537,7 +3538,7 @@ body .main {
   transition: all 0.3s ease-in-out;
 }
 .section-work .work-item-swiper-wrapper .swiper .swiper-slide {
-  width: 100%;
+  width: 100% !important;
 }
 .section-work .work-item-swiper-wrapper .swiper .swiper-slide .work-item-swiper {
   display: block;
@@ -3628,12 +3629,16 @@ body .main {
   .section-work .work-item-info-wrapper .description-text {
     padding-bottom: 60px;
   }
-  .section-work .work-item-swiper-wrapper {
+  .section-work .work-item-swiper-wrapper.photo {
     min-height: 60vh;
   }
   .section-work .work-item-swiper-wrapper .swiper:hover {
     transform: translateX(-50px);
     box-shadow: 5px 5px 5px 0px #dbdbdb, inset 4px 4px 15px 0px #dbdbdb;
+  }
+  .section-work .work-item-swiper-wrapper .swiper .swiper-slide .work-item-swiper.video {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .section-work .work-choose-btn-options-wrapper {
     position: relative;
@@ -3656,6 +3661,12 @@ body .main {
     font-family: "Berzulis-Magyla";
     font-size: 40px;
     color: #000;
+  }
+}
+@media (min-width: 1400px) {
+  .section-work .work-item-swiper-wrapper .swiper .swiper-slide .work-item-swiper.video {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 /*====SKILLS===*/
@@ -3699,10 +3710,7 @@ body .main {
 }
 .skills-dropdown-list .skills-dropdown-list-description {
   width: 100%;
-  background-color: #ffffff;
-  border: 1px solid #ff00be;
-  padding: 15px 20px;
-  border-radius: 20px;
+  text-decoration: underline;
   margin-bottom: 10px;
 }
 .skills-dropdown-list .skills-dropdown-list-item .description-text {

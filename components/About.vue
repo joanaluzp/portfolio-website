@@ -17,7 +17,22 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-xxl-6">
+          <div class="col-12 col-xxl-4">
+            <div
+                class="skills-dropdown-toggle d-inline-block"
+                @click="openSkills = !openSkills"
+              >
+                <p
+                  class="description-text d-inline lowercase font-black text-justify"
+                >
+                  {{ database.data.about.skills.text }}
+                </p>
+                <p
+                  class="description-text d-inline small font-italic lowercase text-justify"
+                >
+                  {{ database.data.about.skills.text_toggle }}
+                </p>
+              </div>
             <div class="about-pre-wrapper" :class="{ 'is-open': openSkills }">
               <pre>
               ooo,    .---.
@@ -50,7 +65,9 @@ o`   'oooo()  | ________   _   _)
                     >
                       {{ item.skill }}
                     </p>
-                    <p class="description-text divider d-inline uppercase"> !== </p>
+                    <p class="description-text divider d-inline uppercase">
+                      ୨୧
+                    </p>
                     <div
                       class="skills-info-box-wrapper"
                       :class="{
@@ -79,21 +96,6 @@ o`   'oooo()  | ________   _   _)
                   </li>
                 </ul>
               </div>
-            </div>
-            <div
-              class="skills-dropdown-toggle d-inline-block"
-              @click="openSkills = !openSkills"
-            >
-              <p
-                class="description-text d-inline lowercase font-black text-justify"
-              >
-                {{ database.data.about.skills.text }}
-              </p>
-              <p
-                class="description-text d-inline small font-italic lowercase text-justify"
-              >
-                {{ database.data.about.skills.text_toggle }}
-              </p>
             </div>
           </div>
         </div>

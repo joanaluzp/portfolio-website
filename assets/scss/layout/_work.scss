@@ -47,7 +47,7 @@
     .swiper {
       @include transition;
       .swiper-slide {
-        width: 100%;
+        width: 100% !important;
         .work-item-swiper {
           display: block;
           width: 100%;
@@ -140,14 +140,23 @@
       padding-bottom: 60px;
     }
     .work-item-swiper-wrapper {
-      min-height: 60vh;
+      &.photo {
+        min-height: 60vh;
+      }
       .swiper {
         &:hover {
           transform: translateX(-50px);
           -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-          inset 4px 4px 15px 0px $grey-clear02;
-        box-shadow: 5px 5px 5px 0px $grey-clear02,
-          inset 4px 4px 15px 0px $grey-clear02;
+            inset 4px 4px 15px 0px $grey-clear02;
+          box-shadow: 5px 5px 5px 0px $grey-clear02,
+            inset 4px 4px 15px 0px $grey-clear02;
+        }
+        .swiper-slide {
+          .work-item-swiper {
+            &.video {
+              object-fit: contain;
+            }
+          }
         }
       }
     }
@@ -168,6 +177,21 @@
               font-family: $font-03;
               font-size: 40px;
               color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .section-work {
+    .work-item-swiper-wrapper {
+      .swiper {
+        .swiper-slide {
+          .work-item-swiper {
+            &.video {
+              object-fit: contain;
             }
           }
         }

@@ -23,7 +23,7 @@ body {
   scrollbar-color: $black;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
-    width: 0;
+    width: 10px;
   }
   /* Track */
   &::-webkit-scrollbar-track {
@@ -31,7 +31,8 @@ body {
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: $grey-clear02;
+    border: 1px solid $black-clear02;
   }
   .main {
     position: relative;
