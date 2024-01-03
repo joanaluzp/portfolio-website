@@ -1,5 +1,7 @@
 /*====SKILLS===*/
 .skills-dropdown-toggle {
+  position: relative;
+  z-index: 7;
   margin: 30px 0 20px 0;
   background-color: $white;
   width: fit-content;
@@ -34,14 +36,19 @@
 }
 .skills-dropdown-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5px;
+  padding: 30px 20px;
+  border-radius: 35px;
+  background-color: $white;
   @include transition;
   .skills-dropdown-list-description {
     width: 100%;
-    text-decoration: underline;
     margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid $black;
   }
   .skills-dropdown-list-item {
     .description-text {
@@ -112,7 +119,7 @@
       .description-text {
         &.option {
           &:hover {
-            color: $black-clear02;
+            text-decoration: underline;
           }
         }
       }

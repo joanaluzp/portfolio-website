@@ -2,15 +2,19 @@
 .section-welcome {
   position: relative;
   max-height: 60vh;
+  z-index: 7;
+  animation: translate02 1.5s ease-in-out;
   pre {
+    @include transition;
     position: absolute;
-    right: 50px;
-    top: 100px;
-    color: $blue;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $black-clear02;
     font-weight: 800;
     font-family: monospace;
     white-space: pre;
-    font-size: 8px;
+    font-size: 5px;
   }
   .welcome-text-wrapper {
     .welcome-text-box {
@@ -38,6 +42,7 @@
       right: 10%;
       bottom: 20%;
       animation: translate 2s ease infinite;
+      transition-delay: 1.5s;
     }
   }
   .welcome-video-primary-wrapper {
@@ -58,6 +63,13 @@
       height: 100vh;
       object-fit: cover;
       object-position: center;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .section-welcome {
+    pre {
+      font-size: 8px;
     }
   }
 }

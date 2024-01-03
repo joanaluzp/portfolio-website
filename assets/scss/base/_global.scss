@@ -121,6 +121,11 @@ body {
   50% { transform: translateX(-15px); }
   100% { transform: translateX(15px); }
 }
+@keyframes translate02 {
+  0% { transform: translateX(500px); } 
+  80% { transform: translateX(-60px); }
+  100% { transform: translateX(0); }
+}
 @keyframes gelatine {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }

@@ -7,28 +7,34 @@
             <p class="description-title font-italic big lowercase">
               {{ database.data.contact.text }}
             </p>
-            <a href="mailto: joanaluzp@gmail.com"
+            <NuxtLink
+              to="mailto:joanaluzp@gmail.com"
+              class="contact-email-link"
               ><p class="description-text big">
                 {{ database.data.contact.email }}
-              </p></a
+              </p></NuxtLink
             >
           </div>
         </div>
         <div class="col-12 col-xl-6 d-flex justify-content-end">
-          <div
-            class="contact-cv-wrapper d-inline-flex"
-            data-aos="fade-right"
-            data-aos-duration="1000"
+          <NuxtLink
+            :to="database.data.contact.cv.link"
+            class="contact-cv-link-wrapper"
+            target="”_blank”"
           >
-            <NuxtLink :to="database.data.contact.cv.link" target="”_blank”">
+            <div
+              class="contact-cv-wrapper d-inline-flex"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <p class="description-text d-inline text-center lowercase">
                 {{ database.data.contact.cv.text }}
               </p>
               <p class="description-text link d-inline">
                 {{ database.data.contact.cv.link_text }}
-              </p></NuxtLink
-            >
-          </div>
+              </p>
+            </div></NuxtLink
+          >
         </div>
       </div>
     </div>

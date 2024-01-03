@@ -2,7 +2,7 @@
   <section class="section section-welcome" id="section-welcome">
     <div class="welcome-text-wrapper">
       <div class="welcome-text-box" :class="{ 'is-open': open }">
-        <p class="description-text text-justify">
+        <p class="description-text">
           {{ database.data.welcome.text }}
         </p>
       </div>
