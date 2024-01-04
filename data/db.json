@@ -16,12 +16,13 @@
     },
     "welcome": {
       "btn": "click me",
-      "text": "Welcome to my little corner in the big World Wide Web. I'm a Junior Front-end Developer and Audiovisual Artist. I am passionate about the technological field, innovative methods of art, design and new media.",
+      "text": "Welcome to my little corner in the big World Wide Web. I'm a Junior Front-end Developer && Audiovisual Artist fascinated by the technological field, innovative methods of art, design and new media.",
       "video_primary": "/videos/myweb_me_min.mp4",
       "video_secondary": "/videos/sparkle_1.mp4"
     },
     "about": {
-      "text": "Joana da Luz Pimentel (1996), ",
+      "intro": "Hi, I'm Joana.",
+      "text": "I've been interested and hyper curious about technology since I can remember. Once I could actually choose what to learn, I studied Multimedia Arts, specifically Audiovisual practical studies, and later I did a post-graduation in Sound Arts. During these years I did some contemporary art exhibitions with my friends and colleagues. In 2021, I had the need to involve myself in a more left-brain field, while still having the opportunity to be close to design and art, and learned Front-end Development. Since then, I've been working as a Trainee/Junior Front-end Developer and can't be more passionate about what I do professionally.",
       "skills": {
         "text": "my technical skills",
         "text_toggle": "click to toggle",
@@ -155,13 +156,15 @@
           {
             "id": 1,
             "name": "this website!",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
             "images": []
           },
           {
             "id": 2,
             "name": "work-related-projects",
-            "description": "Lorem ipsuaaaaaaam dolor sit",
+            "description01": "Lorem ipsuaaaaaaam dolor sit",
+            "description02": "tech stack: ",
             "images": [
               {
                 "id": 1,
@@ -176,7 +179,8 @@
           {
             "id": 3,
             "name": "kunst 3",
-            "description": "Lorem ipsum dolor sit",
+            "description01": "Lorem ipsum dolor sit",
+            "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
             "images": [
               {
                 "id": 1,
@@ -189,7 +193,8 @@
           {
             "id": 1,
             "name": "kapa4",
-            "description": "Lorem ipsum dolor sit",
+            "description01": "Lorem ipsum dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -212,7 +217,8 @@
           {
             "id": 2,
             "name": "시공간 @espaço/tempo",
-            "description": "Lorem ipsuaaaaaaam dolor sit",
+            "description01": "Lorem ipsuaaaaaaam dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -235,7 +241,8 @@
           {
             "id": 3,
             "name": "Energy Field",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -250,7 +257,8 @@
           {
             "id": 4,
             "name": "Life 0",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -277,7 +285,8 @@
           {
             "id": 5,
             "name": "Explaining Sound To A Deaf Person",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -296,7 +305,8 @@
           {
             "id": 6,
             "name": "lunch time/pleasure and pain: a constant feeling of nothingness through 4 hours straight",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -315,7 +325,8 @@
           {
             "id": 7,
             "name": "power house nr8",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,
@@ -338,7 +349,8 @@
           {
             "id": 8,
             "name": "Negative Index",
-            "description": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description01": "Lorem ipsuaaaaaaam YOYOOYOYYOO dolor sit",
+            "description02": "technical info: ",
             "images": [
               {
                 "id": 1,

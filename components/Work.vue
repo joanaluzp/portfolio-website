@@ -8,8 +8,10 @@
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <h3 class="description-title font-bold-italic d-inline bigger">
-              WORK
+            <h3
+              class="description-title uppercase font-bold-italic d-inline bigger"
+            >
+              {{ database.data.nav.work.name }}
             </h3>
           </div>
         </div>
@@ -23,7 +25,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-xxl-2">
+          <div class="col-12 col-xxxl-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -42,7 +44,10 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-xxl-2">
+          <div
+            class="col-12 col-xxxl-8"
+            v-if="categoryFrontEndSelected === 'this website!'"
+          >
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryFrontEnd.slice().reverse()"
@@ -52,11 +57,37 @@
                 class="description-text"
                 v-if="categoryFrontEndSelected === item.name"
               >
-                {{ item.description }}
+                {{ item.description01 }}
+              </p>
+              <p
+                class="description-text small font-bold"
+                v-if="categoryFrontEndSelected === item.name"
+              >
+                {{ item.description02 }}
               </p>
             </div>
           </div>
-          <div class="col-12 col-xxl-8">
+          <div class="col-12 col-xxxl-3" v-else>
+            <div
+              class="work-item-info-wrapper"
+              v-for="item in categoryFrontEnd.slice().reverse()"
+              :key="item.id"
+            >
+              <p
+                class="description-text"
+                v-if="categoryFrontEndSelected === item.name"
+              >
+                {{ item.description01 }}
+              </p>
+              <p
+                class="description-text small font-bold"
+                v-if="categoryFrontEndSelected === item.name"
+              >
+                {{ item.description02 }}
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-xxxl-7">
             <div
               v-for="item in categoryFrontEnd.slice().reverse()"
               :key="item.id"
@@ -129,7 +160,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-xxl-2">
+          <div class="col-12 col-xxl-3">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryVideoArt.slice().reverse()"
@@ -139,11 +170,17 @@
                 class="description-text"
                 v-if="categoryVideoArtSelected === item.name"
               >
-                {{ item.description }}
+                {{ item.description01 }}
+              </p>
+              <p
+                class="description-text small font-bold"
+                v-if="categoryVideoArtSelected === item.name"
+              >
+                {{ item.description02 }}
               </p>
             </div>
           </div>
-          <div class="col-12 col-xxl-8">
+          <div class="col-12 col-xxl-7">
             <div
               v-for="item in categoryVideoArt.slice().reverse()"
               :key="item.id"

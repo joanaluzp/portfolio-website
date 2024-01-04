@@ -1,6 +1,6 @@
 /*======GLOBAL======*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
 
 html,
 body {
@@ -37,6 +37,19 @@ body {
   .main {
     position: relative;
   }
+  .container {
+    .row {
+      --bs-gutter-y: 1.5rem;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container {
+      height: auto;
+      .row {
+        --bs-gutter-y: 0;
+      }
+    }
+  }
 }
 .section {
   width: 100%;
@@ -49,7 +62,7 @@ body {
     padding-top: 0;
   }
   &:last-child {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   @media (min-width: 992px) {
     &:nth-child(2) {
@@ -60,6 +73,11 @@ body {
       top: 0;
       left: 40%;
       width: 60%;
+    }
+  }
+  @media (min-width: 1200px) {
+    &:last-child {
+      padding-bottom: 100px;
     }
   }
 }
@@ -79,9 +97,19 @@ body {
   }
 }
 @keyframes jump {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 @keyframes shake {
   0% {
@@ -117,18 +145,36 @@ body {
   }
 }
 @keyframes translate {
-  0% { transform: translateX(15px); } 
-  50% { transform: translateX(-15px); }
-  100% { transform: translateX(15px); }
+  0% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
 }
-@keyframes translate02 {
-  0% { transform: translateX(500px); } 
-  80% { transform: translateX(-60px); }
-  100% { transform: translateX(0); }
+@keyframes scaleIntro {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scale(5);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
 }
 @keyframes gelatine {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.9, 1.1); }
-  50% { transform: scale(1.1, 0.9); }
-  75% { transform: scale(0.95, 1.05); }
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }

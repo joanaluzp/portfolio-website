@@ -5,116 +5,170 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  .section-work-option {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
+}
+.section-work-option {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.work-title-wrapper {
+  margin-bottom: 30px;
+  .description-title {
+    width: fit-content;
+    color: $red;
+    font-family: $font-01;
   }
-  .container {
-    .row {
-      --bs-gutter-y: 1.5rem;
+}
+.work-option-list-wrapper {
+  &:last-child {
+    padding-bottom: 25px;
+  }
+}
+.work-item-info-wrapper .description-text {
+  &:last-child {
+    padding-bottom: 10px;
+  }
+}
+.work-option-list-wrapper {
+  gap: 5px;
+  .work-option-item {
+    .description-text {
+      cursor: pointer;
+      &.active {
+        font-weight: 800;
+        font-style: italic;
+      }
     }
   }
-  .work-title-wrapper {
-    margin-bottom: 30px;
-    .description-title {
-      width: fit-content;
-      color: $red;
+}
+.work-item-info-wrapper {
+  .description-text {
+    color: $black-clear01;
+  }
+}
+.work-item-swiper-wrapper {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  min-height: 30vh;
+  .swiper {
+    @include transition;
+    .swiper-slide {
+      width: 100% !important;
+      .work-item-swiper {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
-  .work-option-list-wrapper {
-    gap: 5px;
-    .work-option-item {
-      .description-text {
-        cursor: pointer;
-        &.active {
-          font-weight: 800;
-          font-style: italic;
+  .slider-arrows-wrapper {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    align-items: center;
+    justify-content: space-between;
+    .arrow-gallery-prev,
+    .arrow-gallery-next {
+      pointer-events: all;
+      cursor: pointer;
+      i {
+        color: $white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $black;
+        @include transition2(all, 0.2s, ease-in-out);
+      }
+      &:hover {
+        i {
+          color: $red;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $red;
         }
       }
     }
   }
-  .work-item-info-wrapper {
-    .description-text {
-      color: $black-clear01;
+}
+.work-choose-btn-options-wrapper {
+  padding-top: 30px;
+  .work-choose-btn-options {
+    width: 100%;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    gap: 8px;
+    .work-choose-btn {
+      @include transition;
+      display: inline;
+      width: fit-content;
+      padding: 10px 15px;
+      border-radius: 35px;
+      border: 2px solid $blue-light;
+      background-color: $white;
+      cursor: pointer;
+      .description-text {
+        @include transition;
+        text-align: center;
+        color: $blue-medium;
+      }
+      &.active {
+        background-color: $blue-medium;
+        .description-text {
+          text-decoration: none;
+          color: $white;
+        }
+      }
     }
+  }
+}
+@media (min-width: 992px) {
+  .section-work-option {
+    display: block;
   }
   .work-item-swiper-wrapper {
-    display: flex;
-    justify-content: end;
-    position: relative;
-    min-height: 30vh;
-    .swiper {
-      @include transition;
-      .swiper-slide {
-        width: 100% !important;
-        .work-item-swiper {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-      }
+    &.photo {
+      min-height: 50vh;
     }
-    .slider-arrows-wrapper {
-      position: absolute;
-      width: 90%;
-      height: 100%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      pointer-events: none;
-      align-items: center;
-      justify-content: space-between;
-      .arrow-gallery-prev,
-      .arrow-gallery-next {
-        pointer-events: all;
-        cursor: pointer;
-        i {
-          color: $white;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $black;
-          @include transition2(all, 0.2s, ease-in-out);
-        }
-        &:hover {
-          i {
-            color: $red;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: $red;
+    .swiper {
+      &:hover {
+        transform: translateX(-50px);
+        -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
+          inset 4px 4px 15px 0px $grey-clear02;
+        box-shadow: 5px 5px 5px 0px $grey-clear02,
+          inset 4px 4px 15px 0px $grey-clear02;
+      }
+      .swiper-slide {
+        .work-item-swiper {
+          &.video {
+            object-fit: contain;
           }
         }
       }
     }
   }
   .work-choose-btn-options-wrapper {
-    padding-top: 30px;
+    position: relative;
     .work-choose-btn-options {
-      width: 100%;
-      position: relative;
-      top: -20px;
-      z-index: 1;
-      gap: 8px;
+      position: absolute;
+      justify-content: flex-start;
+      transform: translateX(0);
       .work-choose-btn {
-        @include transition;
-        display: inline;
-        width: fit-content;
-        padding: 10px 15px;
-        border-radius: 35px;
-        border: 2px solid $blue-light;
-        background-color: $white;
-        cursor: pointer;
-        .description-text {
-          @include transition;
-          text-align: center;
-          color: $blue-medium;
-        }
-        &.active {
-          background-color: $blue-medium;
+        min-width: 350px;
+        position: relative;
+        &:hover {
+          background-color: $red;
+          border-color: $black;
+          animation: strobe 0.3s ease-in-out infinite;
           .description-text {
-            text-decoration: none;
-            color: $white;
+            font-family: $font-03;
+            font-size: 40px;
+            color: $black;
           }
         }
       }
@@ -122,77 +176,19 @@
   }
 }
 
-@media (min-width: 992px) {
-  .section-work {
-    .section-work-option {
-      display: block;
-    }
-    .container {
-      height: auto;
-      margin-right: 0;
-      padding-right: 0;
-      .row {
-        --bs-gutter-y: 0;
-      }
-    }
-    .work-option-list-wrapper,
-    .work-item-info-wrapper .description-text {
-      padding-bottom: 60px;
-    }
-    .work-item-swiper-wrapper {
-      &.photo {
-        min-height: 60vh;
-      }
-      .swiper {
-        &:hover {
-          transform: translateX(-50px);
-          -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-            inset 4px 4px 15px 0px $grey-clear02;
-          box-shadow: 5px 5px 5px 0px $grey-clear02,
-            inset 4px 4px 15px 0px $grey-clear02;
-        }
-        .swiper-slide {
-          .work-item-swiper {
-            &.video {
-              object-fit: contain;
-            }
-          }
-        }
-      }
-    }
-    .work-choose-btn-options-wrapper {
-      position: relative;
-      .work-choose-btn-options {
-        position: absolute;
-        justify-content: flex-start;
-        transform: translateX(0);
-        .work-choose-btn {
-          min-width: 350px;
-          position: relative;
-          &:hover {
-            background-color: $red;
-            border-color: $black;
-            animation: strobe 0.3s ease-in-out infinite;
-            .description-text {
-              font-family: $font-03;
-              font-size: 40px;
-              color: $black;
-            }
-          }
-        }
-      }
+@media (min-width: 1400px) {
+  .work-option-list-wrapper,
+  .work-item-info-wrapper .description-text {
+    &:last-child {
+      padding-bottom: 30px;
     }
   }
-}
-@media (min-width: 1400px) {
-  .section-work {
-    .work-item-swiper-wrapper {
-      .swiper {
-        .swiper-slide {
-          .work-item-swiper {
-            &.video {
-              object-fit: contain;
-            }
+  .work-item-swiper-wrapper {
+    .swiper {
+      .swiper-slide {
+        .work-item-swiper {
+          &.video {
+            object-fit: contain;
           }
         }
       }

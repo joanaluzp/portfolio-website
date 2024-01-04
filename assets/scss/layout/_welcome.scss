@@ -2,10 +2,9 @@
 .section-welcome {
   position: relative;
   max-height: 60vh;
-  z-index: 7;
-  animation: translate02 1.5s ease-in-out;
   pre {
     @include transition;
+    animation: scaleIntro 1s ease-in-out;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -14,58 +13,60 @@
     font-weight: 800;
     font-family: monospace;
     white-space: pre;
-    font-size: 5px;
-  }
-  .welcome-text-wrapper {
-    .welcome-text-box {
-      background-color: $blue-medium;
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 250px;
-      position: absolute;
-      z-index: 3;
-      right: 10%;
-      bottom: 30%;
-      display: none;
-      &.is-open {
-        display: block;
-      }
-      .description-text {
-        color: $white;
-      }
-    }
-    .welcome-text-btn {
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      z-index: 1;
-      right: 10%;
-      bottom: 20%;
-      animation: translate 2s ease infinite;
-      transition-delay: 1.5s;
-    }
-  }
-  .welcome-video-primary-wrapper {
-    position: absolute;
-    font-size: 12px;
-    z-index: 1;
-    left: 20%;
-    bottom: 30%;
-    video {
-      @include transition;
-      max-width: 150px;
-    }
-  }
-  .welcome-video-secondary-wrapper {
-    video {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      object-position: center;
-    }
+    font-size: 6px;
   }
 }
+.welcome-text-wrapper {
+  .welcome-text-box {
+    background-color: $blue-medium;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 300px;
+    position: absolute;
+    z-index: 3;
+    right: 5%;
+    bottom: 80px;
+    display: none;
+    &.is-open {
+      display: block;
+    }
+    .description-text {
+      color: $white;
+    }
+  }
+  .welcome-text-btn {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    bottom: 40px;
+    animation: translate 2s ease infinite;
+    transition-delay: 1s;
+  }
+}
+.welcome-video-primary-wrapper {
+  position: absolute;
+  font-size: 12px;
+  z-index: 1;
+  left: 20%;
+  bottom: 30%;
+  video {
+    @include transition;
+    max-width: 150px;
+  }
+}
+.welcome-video-secondary-wrapper {
+  video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @media (min-width: 576px) {
   .section-welcome {
     pre {
@@ -82,5 +83,13 @@
     z-index: 5;
     width: 40%;
     padding: 20px;
+  }
+  .welcome-text-wrapper {
+    .welcome-text-box {
+      bottom: 150px;
+    }
+    .welcome-text-btn {
+      bottom: 100px;
+    }
   }
 }

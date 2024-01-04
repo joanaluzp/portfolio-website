@@ -2,7 +2,7 @@
 .skills-dropdown-toggle {
   position: relative;
   z-index: 7;
-  margin: 30px 0 20px 0;
+  margin-bottom: 20px;
   background-color: $white;
   width: fit-content;
   padding: 15px 20px;
@@ -45,7 +45,7 @@
   @include transition;
   .skills-dropdown-list-description {
     width: 100%;
-    margin-bottom: 10px;
+    margin: 0 50px 20px 50px;
     padding: 10px 15px;
     border-radius: 25px;
     border: 1px solid $black;
@@ -62,28 +62,36 @@
         cursor: pointer;
       }
     }
-    .skills-info-box-wrapper {
-      @include transition;
-      animation: none;
-      width: 90%;
-      max-width: 600px;
-      position: absolute;
-      z-index: 5;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $white;
-      border-radius: 25px;
-      border: 1px solid $black;
-      padding: 15px 20px;
+    .skills-infocard-big-wrapper {
+      z-index: 20;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: scroll;
       opacity: 0;
+      display: flex;
       pointer-events: none;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
       &.is-open {
         opacity: 1;
         pointer-events: all;
         cursor: auto;
       }
-      .skills-info-box {
+    }
+    .skills-infocard-wrapper {
+      @include transition;
+      animation: none;
+      width: 90%;
+      max-width: 600px;
+      min-height: fit-content;
+      background-color: $white;
+      border-radius: 25px;
+      border: 1px solid $black;
+      padding: 15px 20px;
+      .skills-infocard {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -123,11 +131,10 @@
           }
         }
       }
-      .skills-info-box-wrapper {
-        position: fixed;
+      .skills-infocard-wrapper {
         max-width: 700px;
         &:hover {
-          transform: translate(-50%, -50%) scale(1.1);
+          transform: scale(1.1);
         }
       }
     }

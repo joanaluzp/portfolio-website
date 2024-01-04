@@ -2,60 +2,59 @@
 .section-contact {
   position: relative;
   background-color: $white;
-  .contact-text-wrapper {
-    max-width: 245px;
-    .contact-email-link {
-      color: $blue;
-      text-decoration: none;
+}
+.contact-text-wrapper {
+  max-width: 245px;
+  .contact-email-link {
+    color: $blue;
+    text-decoration: none;
+    width: fit-content;
+    .description-text {
       width: fit-content;
-      .description-text {
-        width: fit-content;
-      }
     }
   }
-  .contact-cv-link-wrapper {
-    text-decoration: none;
-    .contact-cv-wrapper {
-      margin: 20px 0 0 0;
-      padding: 15px 20px;
-      height: fit-content;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      border-radius: 25px;
-      -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-        inset 4px 4px 15px 0px $grey-clear02;
-      box-shadow: 5px 5px 5px 0px $grey-clear02,
-        inset 4px 4px 15px 0px $grey-clear02;
-      .description-text {
-        text-align: center;
-        color: $black-clear01;
-        &.link {
-          color: $blue-medium;
-        }
+}
+.contact-cv-link-wrapper {
+  text-decoration: none;
+  margin-right: 30px;
+  .contact-cv-wrapper {
+    margin: 20px 0 0 0;
+    padding: 15px 20px;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
+      inset 4px 4px 15px 0px $grey-clear02;
+    box-shadow: 5px 5px 5px 0px $grey-clear02,
+      inset 4px 4px 15px 0px $grey-clear02;
+    .description-text {
+      text-align: center;
+      color: $black-clear01;
+      &.link {
+        color: $blue-medium;
       }
     }
   }
 }
-
 @media (min-width: 998px) {
-  .section-contact {
-    .contact-text-wrapper {
-      .description-text {
-        &:hover {
-          animation: spin 2s ease-in-out infinite;
-        }
+  .contact-text-wrapper {
+    .description-text {
+      &:hover {
+        animation: spin 2s ease-in-out infinite;
       }
     }
-    .contact-cv-link-wrapper {
-      &:hover {
-        animation: shake 0.3s ease-in-out infinite;
-      }
-      .contact-cv-wrapper {
-        max-width: 250px;
-        margin: 0;
-      }
+  }
+  .contact-cv-link-wrapper {
+    margin-right: 0;
+    &:hover {
+      animation: shake 0.3s ease-in-out infinite;
+    }
+    .contact-cv-wrapper {
+      max-width: 250px;
+      margin: 0;
     }
   }
 }

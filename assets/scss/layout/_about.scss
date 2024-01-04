@@ -2,37 +2,49 @@
 .section-about {
   position: relative;
   background-color: $white;
-  .section-about-wrapper {
-    background-color: $blue-light;
-    padding: 20px 10px;
-  }
-  .about-pre-wrapper {
-    display: grid;
-    grid-template-rows: 1fr;
-    transition: grid-template-rows 0.5s ease-out;
-    &.is-open {
-      grid-template-rows: 0fr;
-    }
-    pre {
-      overflow: hidden;
-      color: $blue;
-      font-family: monospace;
-      white-space: pre;
-      font-size: 15px;
+  &.yo {
+    opacity: 0;
+    .skills-info-box-wrapper {
+      opacity: 1;
     }
   }
+}
+.section-about-wrapper {
+  background-color: $blue-light;
+  padding: 40px 10px;
   .about-text-wrapper {
     .description-text {
-      color: $black;
+      margin-top: 15px;
     }
+  }
+}
+.about-pre-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.5s ease-out;
+  &.is-open {
+    grid-template-rows: 0fr;
+  }
+  pre {
+    overflow: hidden;
+    color: $blue;
+    font-family: monospace;
+    white-space: pre;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+.about-text-wrapper {
+  .description-text {
+    color: $black;
   }
 }
 @media (min-width: 992px) {
   .section-about {
     padding: 30px;
-    .section-about-wrapper {
-      border-radius: 25px;
-      padding: 40px 20px;
-    }
+  }
+  .section-about-wrapper {
+    border-radius: 25px;
+    padding: 40px 20px;
   }
 }
