@@ -11,7 +11,7 @@
             <h3
               class="description-title uppercase font-bold-italic d-inline bigger"
             >
-              {{ database.data.nav.work.name }}
+              {{ database.data.work.title }}
             </h3>
           </div>
         </div>
@@ -79,6 +79,14 @@
               >
                 {{ item.description01 }}
               </p>
+              <NuxtLink
+                :to="item.link"
+                class="description-text font-bold link"
+                target="”_blank”"
+                v-if="categoryFrontEndSelected === item.name && item.link"
+              >
+                {{ item.link_description }}
+              </NuxtLink>
               <p
                 class="description-text small font-bold"
                 v-if="categoryFrontEndSelected === item.name"
@@ -172,6 +180,14 @@
               >
                 {{ item.description01 }}
               </p>
+              <NuxtLink
+                :to="item.link"
+                class="description-text font-bold link"
+                target="”_blank”"
+                v-if="categoryVideoArtSelected === item.name && item.link"
+              >
+                {{ item.link_description }}
+              </NuxtLink>
               <p
                 class="description-text small font-bold"
                 v-if="categoryVideoArtSelected === item.name"

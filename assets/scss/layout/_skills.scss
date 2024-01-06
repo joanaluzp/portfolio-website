@@ -31,6 +31,8 @@
     grid-template-rows: 1fr;
   }
   .skills-dropdown-inner {
+    position: relative;
+    z-index: 9;
     overflow: hidden;
   }
 }
@@ -42,13 +44,14 @@
   padding: 30px 20px;
   border-radius: 35px;
   background-color: $white;
+  border: 1px solid $black;
+  &.is-open {
+    pointer-events: none;
+  }
   @include transition;
   .skills-dropdown-list-description {
     width: 100%;
     margin: 0 50px 20px 50px;
-    padding: 10px 15px;
-    border-radius: 25px;
-    border: 1px solid $black;
   }
   .skills-dropdown-list-item {
     .description-text {
@@ -62,35 +65,41 @@
         cursor: pointer;
       }
     }
-    .skills-infocard-big-wrapper {
-      z-index: 20;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: scroll;
-      opacity: 0;
-      display: flex;
-      pointer-events: none;
-      align-items: center;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-      &.is-open {
-        opacity: 1;
-        pointer-events: all;
-        cursor: auto;
-      }
-    }
     .skills-infocard-wrapper {
       @include transition;
-      animation: none;
+      position: fixed;
+      overflow-y: scroll;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 90%;
       max-width: 600px;
-      min-height: fit-content;
+      max-height: fit-content;
+      height: 50vh;
       background-color: $white;
       border-radius: 25px;
-      border: 1px solid $black;
       padding: 15px 20px;
+      opacity: 0;
+      animation: none;
+      pointer-events: none;
+      -webkit-box-shadow: 5px 5px 5px 0px rgba($black, 0.1);
+      box-shadow: 5px 5px 5px 0px rgba($black, 0.1);
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+      &.is-open {
+        opacity: 1;
+        cursor: auto;
+        pointer-events: initial;
+      }
       .skills-infocard {
         display: flex;
         flex-direction: column;
@@ -121,6 +130,15 @@
     }
   }
 }
+@media (min-width: 576px) {
+  .skills-dropdown-list {
+    .skills-dropdown-list-item {
+      .skills-infocard-wrapper {
+        height: auto;
+      }
+    }
+  }
+}
 @media (min-width: 992px) {
   .skills-dropdown-list {
     .skills-dropdown-list-item {
@@ -134,7 +152,7 @@
       .skills-infocard-wrapper {
         max-width: 700px;
         &:hover {
-          transform: scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
         }
       }
     }

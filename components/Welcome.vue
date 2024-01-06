@@ -1,67 +1,37 @@
 <template>
   <section class="section section-welcome" id="section-welcome">
-    <div class="welcome-text-wrapper">
-      <div class="welcome-text-box" :class="{ 'is-open': open }">
-        <p class="description-text">
-          {{ database.data.welcome.text }}
-        </p>
-      </div>
-      <div
-        class="welcome-text-btn"
-        data-aos="flip-up"
-        data-aos-duration="1000"
+    <div class="welcome-text-wrapper" :class="{ 'is-open': open }">
+      <p class="welcome-text-box description-text">
+        {{ database.data.welcome.text }}
+      </p>
+      <p
+        class="welcome-text-btn description-text text-right font-italic big"
+        :class="{ 'font-bold': open }"
         @click="open = !open"
       >
-        <p
-          class="description-text font-italic big"
-          :class="{ 'font-bold': open }"
-        >
-          {{ database.data.welcome.btn }} 👈
-        </p>
-      </div>
+        {{ database.data.welcome.btn }} 👈
+      </p>
     </div>
     <pre>
-echo "                                                                                    ";
-echo "                                                                                    ";
-echo "      .--.   ,---.                    ,---,                                         ";
-echo "    .--,`|  '   ,'\               ,-+-. /  |                                        ";
-echo "    |  |.  /   /   |  ,--.--.    ,--.'|'   |  ,--.--.                               ";
-echo "    '--`_ .   ; ,. : /       \  |   |  ,"' | /       \                              ";
-echo "    ,--,'|'   | |: :.--.  .-. | |   | /  | |.--.  .-. |                             ";
-echo "    |  | ''   | .; : \__\/: . . |   | |  | | \__\/: . .                             ";
-echo "    :  | ||   :    | ," .--.; | |   | |  |/  ," .--.; |                             ";
-echo "  __|  : ' \   \  / /  /  ,.  | |   | |--'  /  /  ,.  |                             ";
-echo ".'__/\_: |  `----' ;  :   .'   \|   |/     ;  :   .'   \                            ";
-echo "|   :    :         |  ,     .-./'---'      |  ,     .-./                            ";
-echo " \   \  /           `--`---'                `--`---'                                ";
-echo "  `--`-'                     ____                         ___                ,--,   ";
-echo ",-.----.    ,--,           ,'  , `.                     ,--.'|_            ,--.'|   ";
-echo "\    /  \ ,--.'|        ,-+-,.' _ |             ,---,   |  | :,'           |  | :   ";
-echo "|   :    ||  |,      ,-+-. ;   , ||         ,-+-. /  |  :  : ' :           :  : '   ";
-echo "|   | .\ :`--'_     ,--.'|'   |  || ,---.  ,--.'|'   |.;__,'  /     ,---.  |  ' |   ";
-echo ".   : |: |,' ,'|   |   |  ,', |  |,/     \|   |  ,"' ||  |   |     /     \ '  | |   ";
-echo "|   |  \ :'  | |   |   | /  | |--'/    /  |   | /  | |:__,'| :    /    /  ||  | :   ";
-echo "|   : .  ||  | :   |   : |  | ,  .    ' / |   | |  | |  '  : |__ .    ' / |'  : |__ ";
-echo ":     |`-''  : |__ |   : |  |/   '   ;   /|   | |  |/   |  | '.'|'   ;   /||  | '.'|";
-echo ":   : :   |  | '.'||   | |`-'    '   |  / |   | |--'    ;  :    ;'   |  / |;  :    ;";
-echo "|   | :   ;  :    ;|   ;/        |   :    |   |/        |  ,   / |   :    ||  ,   / ";
-echo "`---'.|   |  ,   / '---'          \   \  /'---'          ---`-'   \   \  /  ---`-'  ";
-echo "  `---`    ---`-'                  `----'                          `----'           ";
+                   ,----------------,           ,---------,
+           ,-----------------------,          ,"        ,"|
+         ,"                      ,"|        ,"        ,"  |
+        +-----------------------+  |      ,"        ,"    |
+        |  .-----------------.  |  |     +---------+      |
+        |  |                 |  |  |     | -==----'|      |
+        |  |                 |  |  |     |         |      |
+        |  |                 |  |  |/----|`---=    |      |
+        |  |  C:\>_ root@    |  |  |   ,/|==== ooo |      ;
+        |  |                 |  |  |  // |(((( [33]|    ,"
+        |  `-----------------'  |," .;'| |((((     |  ,"
+        +-----------------------+  ;;  | |         |,"     
+          /_)______________(_/  //'   | +---------+
+    ___________________________/___  `,
+    /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+  / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+  /_==__==========__==_ooo__ooo=_/'   /___________,"
+  `-----------------------------'
     </pre>
-    <div
-      class="welcome-video-primary-wrapper"
-      data-aos="fade-in"
-      data-aos-duration="1000"
-    >
-      <video autoplay muted playsinline loop>
-        <source :src="database.data.welcome.video_primary" type="video/mp4" />
-      </video>
-    </div>
-    <div class="welcome-video-secondary-wrapper">
-      <video autoplay muted playsinline loop>
-        <source :src="database.data.welcome.video_secondary" type="video/mp4" />
-      </video>
-    </div>
   </section>
 </template>
 <script setup>
@@ -77,41 +47,7 @@ const clickOutside = (event) => {
   }
 };
 
-const hoverEffect = () => {
-  let el = document.querySelector(".welcome-video-primary-wrapper video");
-  const height = el.clientHeight;
-  const width = el.clientWidth;
-  if (el) {
-    el.addEventListener("mousemove", handleMove);
-    function handleMove(e) {
-      const xVal = e.layerX;
-      const yVal = e.layerY;
-      const yRotation = 20 * ((xVal - width / 2) / width);
-      const xRotation = -20 * ((yVal - height / 2) / height);
-      const string =
-        "perspective(500px) scale(1.9) rotateX(" +
-        xRotation +
-        "deg) rotateY(" +
-        yRotation +
-        "deg)";
-      el.style.transform = string;
-    }
-    el.addEventListener("mouseout", function () {
-      el.style.transform = "perspective(500px) scale(1) rotateX(0) rotateY(0)";
-    });
-    el.addEventListener("mousedown", function () {
-      el.style.transform =
-        "perspective(500px) scale(0.9) rotateX(0) rotateY(0)";
-    });
-    el.addEventListener("mouseup", function () {
-      el.style.transform =
-        "perspective(500px) scale(1.9) rotateX(0) rotateY(0)";
-    });
-  }
-};
-
 onMounted(() => {
-  hoverEffect();
   window.addEventListener("click", clickOutside);
 });
 </script>

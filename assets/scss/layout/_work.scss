@@ -15,18 +15,28 @@
   margin-bottom: 30px;
   .description-title {
     width: fit-content;
+    text-align: center;
     color: $red;
-    font-family: $font-01;
+    font-family: $font-02;
   }
 }
 .work-option-list-wrapper {
   &:last-child {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
   }
 }
-.work-item-info-wrapper .description-text {
-  &:last-child {
-    padding-bottom: 10px;
+.work-item-info-wrapper {
+  .description-text {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    &.link {
+      width: fit-content;
+      color: $blue;
+    }
+    &:last-child {
+      padding-bottom: 10px;
+    }
   }
 }
 .work-option-list-wrapper {
@@ -39,11 +49,6 @@
         font-style: italic;
       }
     }
-  }
-}
-.work-item-info-wrapper {
-  .description-text {
-    color: $black-clear01;
   }
 }
 .work-item-swiper-wrapper {
@@ -130,6 +135,16 @@
 @media (min-width: 992px) {
   .section-work-option {
     display: block;
+  }
+  .work-item-info-wrapper {
+    .description-text {
+      &.link {
+        @include transition;
+        &:hover {
+          animation: rotate3d 3s ease-in-out infinite;
+        }
+      }
+    }
   }
   .work-item-swiper-wrapper {
     &.photo {
