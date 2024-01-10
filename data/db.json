@@ -24,7 +24,7 @@
       "skills": {
         "text": "my technical skills",
         "text_toggle": "click to toggle",
-        "text_informative": "click on each skill to open it's informative wikipedia definition",
+        "text_informative": "click on each skill to open its informative wikipedia definition",
         "close": "close",
         "option": [
           {
@@ -164,7 +164,7 @@
           {
             "id": 2,
             "name": "work-related-projects",
-            "description01": "projects for a variety of clients such as E-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer @ Webcomum, Digital Business and Tech",
+            "description01": "projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer @ Webcomum",
             "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
             "link": "https://www.webcomum.com/",
             "link_description": "you can enter their website here",
@@ -403,7 +403,7 @@
       "email": "joanaluzp@gmail.com",
       "cv": {
         "text": "you can also check my cv ",
-        "link": "https://iamarandomlink.com/",
+        "link": "CV.pdf",
         "link_text": "<a>here</a>"
       }
     }
