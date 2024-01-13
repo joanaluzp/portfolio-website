@@ -8,7 +8,7 @@
               <p class="description-title big font-bold-italic">
                 {{ database.data.about.intro }}
               </p>
-              <p class="description-text">
+              <p class="description-text small">
                 {{ database.data.about.text }}
               </p>
             </div>

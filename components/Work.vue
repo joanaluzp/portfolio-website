@@ -54,7 +54,7 @@
               :key="item.id"
             >
               <p
-                class="description-text"
+                class="description-text small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
@@ -74,7 +74,7 @@
               :key="item.id"
             >
               <p
-                class="description-text"
+                class="description-text small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
@@ -175,7 +175,7 @@
               :key="item.id"
             >
               <p
-                class="description-text"
+                class="description-text small"
                 v-if="categoryVideoArtSelected === item.name"
               >
                 {{ item.description01 }}
