@@ -3,7 +3,7 @@
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-xxl-6">
+          <div class="col-12">
             <div class="about-text-wrapper">
               <p class="description-title big font-bold-italic">
                 {{ database.data.about.intro }}
@@ -13,7 +13,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-xxl-6">
+          <div class="col-12">
             <div
               class="skills-dropdown-toggle d-inline-block"
               @click="openSkills = !openSkills"

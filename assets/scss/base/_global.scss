@@ -45,9 +45,6 @@ body {
   @media (min-width: 1400px) {
     .container {
       height: auto;
-      .row {
-        --bs-gutter-y: 0;
-      }
     }
   }
 }
