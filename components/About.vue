@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-12">
             <div class="about-text-wrapper">
-              <p class="description-title big font-bold-italic">
+              <p class="description-title font-bold text-decoration">
                 {{ database.data.about.intro }}
               </p>
               <p class="description-text small">
