@@ -149,7 +149,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-xxl-2">
+          <div class="col-12 col-xxxl-2">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li
                 class="work-option-item"
@@ -168,7 +168,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-xxl-3">
+          <div class="col-12 col-xxxl-3">
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryVideoArt.slice().reverse()"
@@ -196,7 +196,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-xxl-7">
+          <div class="col-12 col-xxxl-7">
             <div
               v-for="item in categoryVideoArt.slice().reverse()"
               :key="item.id"
