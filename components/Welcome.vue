@@ -1,9 +1,9 @@
 <template>
   <section class="section section-welcome" id="section-welcome">
     <div class="welcome-text-wrapper" :class="{ 'is-open': open }">
-      <p class="welcome-text-box description-text">
+      <h3 class="welcome-text-box description-text">
         {{ database.data.welcome.text }}
-      </p>
+      </h3>
       <p
         class="welcome-text-btn description-text text-right font-italic big"
         :class="{ 'font-bold': open }"

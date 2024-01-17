@@ -8,9 +8,9 @@
               <p class="description-title font-bold text-decoration">
                 {{ database.data.about.intro }}
               </p>
-              <p class="description-text small">
+              <h5 class="description-text small">
                 {{ database.data.about.text }}
-              </p>
+              </h5>
             </div>
           </div>
           <div class="col-12">
@@ -52,12 +52,12 @@
                     v-for="item in skillOption"
                     :key="item.id"
                   >
-                    <p
+                    <h6
                       class="description-text option d-inline font-italic uppercase"
                       @click="showElm(item.category)"
                     >
                       {{ item.skill }}
-                    </p>
+                </h6>
                     <p class="description-text divider d-inline uppercase">
                       🔗
                     </p>

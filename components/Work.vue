@@ -8,11 +8,11 @@
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <h3
+            <p
               class="description-title uppercase font-bold-italic d-inline bigger"
             >
               {{ database.data.work.title }}
-            </h3>
+        </p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
                 v-for="item in categoryFrontEnd.slice().reverse()"
                 :key="item.id"
               >
-                <p
+                <h1
                   class="d-inline description-text"
                   @click="categoryFrontEndSelected = item.name"
                   :class="{
@@ -40,25 +40,25 @@
                   }"
                 >
                   {{ item.name }}
-                </p>
+                </h1>
               </li>
             </ul>
           </div>
           <div
             class="col-12 col-xxxl-8"
-            v-if="categoryFrontEndSelected === 'this website!'"
+            v-if="categoryFrontEndSelected === '★this website★'"
           >
             <div
               class="work-item-info-wrapper"
               v-for="item in categoryFrontEnd.slice().reverse()"
               :key="item.id"
             >
-              <p
+              <h2
                 class="description-text small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
-              </p>
+        </h2>
               <p
                 class="description-text small font-bold"
                 v-if="categoryFrontEndSelected === item.name"
@@ -73,14 +73,15 @@
               v-for="item in categoryFrontEnd.slice().reverse()"
               :key="item.id"
             >
-              <p
+              <h2
                 class="description-text small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
-              </p>
+          </h2>
               <NuxtLink
                 :to="item.link"
+                :title="item.link"
                 class="description-text font-bold link"
                 target="”_blank”"
                 v-if="categoryFrontEndSelected === item.name && item.link"
@@ -156,7 +157,7 @@
                 v-for="item in categoryVideoArt.slice().reverse()"
                 :key="item.id"
               >
-                <p
+                <h1
                   class="d-inline description-text"
                   @click="categoryVideoArtSelected = item.name"
                   :class="{
@@ -164,7 +165,7 @@
                   }"
                 >
                   {{ item.name }}
-                </p>
+                </h1>
               </li>
             </ul>
           </div>
@@ -174,14 +175,15 @@
               v-for="item in categoryVideoArt.slice().reverse()"
               :key="item.id"
             >
-              <p
+              <h2
                 class="description-text small"
                 v-if="categoryVideoArtSelected === item.name"
               >
                 {{ item.description01 }}
-              </p>
+          </h2>
               <NuxtLink
                 :to="item.link"
+                :title="item.link"
                 class="description-text font-bold link"
                 target="”_blank”"
                 v-if="categoryVideoArtSelected === item.name && item.link"
@@ -223,7 +225,7 @@
                   }"
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <img class="work-item-swiper photo" :src="image.image" />
+                    <img class="work-item-swiper photo" :title="item.name" :alt="item.name" :src="image.image" />
                   </SwiperSlide>
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">

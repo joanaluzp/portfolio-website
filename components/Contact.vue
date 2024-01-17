@@ -8,11 +8,12 @@
               {{ database.data.contact.text }}
             </p>
             <NuxtLink
+              :title="database.data.contact.email"
               to="mailto:joanaluzp@gmail.com"
               class="contact-email-link"
-              ><p class="description-text big">
+              ><h1 class="description-text big">
                 {{ database.data.contact.email }}
-              </p></NuxtLink
+              </h1></NuxtLink
             >
           </div>
         </div>
@@ -20,6 +21,7 @@
           <NuxtLink
             :to="database.data.contact.cv.link"
             class="contact-cv-link-wrapper"
+            :title="database.data.contact.cv.description"
             target="”_blank”"
           >
             <div
