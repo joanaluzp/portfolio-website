@@ -2,28 +2,50 @@
 .navbar {
   position: fixed;
   height: auto;
+  width: fit-content;
+  min-width: 200px;
   z-index: 19;
   top: 15px;
-  left: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   @include transition;
+  background-color: $red;
+  border-radius: 25px;
+  .description-title {
+    &.menu {
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      pointer-events: none;
+    }
+  }
+}
+.navbar-menu-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  &.is-open {
+    grid-template-rows: 1fr;
+  }
 }
 .navbar-menu-list {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 7px;
   flex-wrap: wrap;
   width: 100%;
   overflow: hidden;
   @include transition;
+  overflow: hidden;
   .navbar-menu-item {
     @include transition;
     .description-title {
       cursor: pointer;
       padding: 3px 10px;
       text-align: center;
-      color: $black;
+      color: $white;
     }
   }
 }
@@ -31,6 +53,22 @@
 @media (min-width: 576px) {
   .navbar {
     min-width: auto;
+    top: 15px;
+    left: 15px;
+    transform: translateX(0);
+    padding: 10px;
+    background-color: transparent;
+  }
+  .navbar-menu-wrapper {
+    grid-template-rows: 1fr;
+  }
+  .navbar-menu-list {
+    justify-content: flex-start;
+    .navbar-menu-item {
+      .description-title {
+        color: $black;
+      }
+    }
   }
 }
 @media (min-width: 992px) {

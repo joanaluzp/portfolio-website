@@ -1,6 +1,10 @@
 {
   "data": {
     "nav": {
+      "menu": {
+        "open": "close",
+        "close": "menu"
+      },
       "about": {
         "name": "about",
         "category": "section-about"

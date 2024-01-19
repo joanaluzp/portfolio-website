@@ -16,7 +16,6 @@
           <div class="col-12">
             <div
               class="skills-dropdown-toggle d-inline-block"
-              @click="openSkills = !openSkills"
             >
               <p
                 class="description-text d-inline lowercase font-black text-justify"
@@ -57,7 +56,7 @@
                       @click="showElm(item.category)"
                     >
                       {{ item.skill }}
-                </h6>
+                    </h6>
                     <p class="description-text divider d-inline uppercase">
                       🔗
                     </p>
@@ -103,6 +102,16 @@ const openSkillsInfo = ref(false);
 const openSkills = ref(false);
 const info = ref("");
 
+const toggleSkillsHandler = () => {
+  let skillsToggle = document.querySelector(".skills-dropdown-toggle");
+  if (skillsToggle) {
+      skillsToggle.addEventListener("click", () => {
+        openSkills.value = !openSkills.value;
+        skillsToggle.scrollIntoView({ behavior: "smooth", top: 200 });
+    });
+  }
+};
+
 const showElm = (elmId) => {
   openSkillsInfo.value = true;
   info.value = elmId;
@@ -118,6 +127,7 @@ const clickOutside = (event) => {
 };
 
 onMounted(() => {
+  toggleSkillsHandler();
   window.addEventListener("click", clickOutside);
   skillOption.value = database.data.about.skills.option;
 });

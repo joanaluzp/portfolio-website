@@ -1,5 +1,11 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" @click="open = !open">
+    <p class="description-title menu d-block d-sm-none" v-if="open">
+      {{ database.data.nav.menu.open }}
+    </p>
+    <p class="description-title menu d-block d-sm-none" v-else>
+      {{ database.data.nav.menu.close }}
+    </p>
     <div class="navbar-menu-wrapper" :class="{ 'is-open': open }">
       <ul class="navbar-menu-list">
         <li class="navbar-menu-item">
@@ -42,6 +48,15 @@ const scrollToComponent = (id) => {
   }
 };
 
+const clickOutside = (event) => {
+  const navbar = document.querySelector(".navbar");
+  if (navbar) {
+    if (!navbar.contains(event.target)) {
+      open.value = false;
+    }
+  }
+};
+
 const handleScrollNavbar = () => {
   let scroll = window.pageYOffset;
   let elmNavbar = document.querySelector(".navbar");
@@ -58,6 +73,7 @@ const handleScrollNavbar = () => {
 };
 
 onMounted(() => {
+  window.addEventListener("click", clickOutside);
   window.addEventListener("scroll", handleScrollNavbar);
 });
 </script>

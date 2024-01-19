@@ -158,13 +158,6 @@
         box-shadow: 5px 5px 5px 0px $grey-clear02,
           inset 4px 4px 15px 0px $grey-clear02;
       }
-      .swiper-slide {
-        .work-item-swiper {
-          &.video {
-            object-fit: contain;
-          }
-        }
-      }
     }
   }
   .work-choose-btn-options-wrapper {
@@ -196,17 +189,6 @@
   .work-item-info-wrapper .description-text {
     &:last-child {
       padding-bottom: 30px;
-    }
-  }
-  .work-item-swiper-wrapper {
-    .swiper {
-      .swiper-slide {
-        .work-item-swiper {
-          &.video {
-            object-fit: contain;
-          }
-        }
-      }
     }
   }
 }
