@@ -30,17 +30,15 @@
   }
 }
 .navbar-menu-list {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
-  @include transition;
   overflow: hidden;
   .navbar-menu-item {
-    @include transition;
     .description-title {
       cursor: pointer;
       padding: 3px 10px;
@@ -63,7 +61,10 @@
     grid-template-rows: 1fr;
   }
   .navbar-menu-list {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    flex-direction: row;
     .navbar-menu-item {
       .description-title {
         color: $black;
