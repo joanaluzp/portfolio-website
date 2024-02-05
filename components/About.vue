@@ -3,35 +3,36 @@
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <div class="about-text-wrapper">
-              <p class="description-title font-bold text-decoration">
-                {{ database.data.about.intro }}
-              </p>
-              <h5 class="description-text small">
+          <div class="col-8">
+            <div class="about-text-wrapper" :class="{'is-open': openAbout}">
+              <h5
+                class="description-text text-justify small"
+              >
                 {{ database.data.about.text }}
               </h5>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-4">
             <div
-              class="skills-dropdown-toggle d-inline-block"
+              class="about-text-toggle d-inline-block"
+              @click="openAbout = !openAbout"
             >
               <p
                 class="description-text d-inline lowercase font-black text-justify"
               >
-                {{ database.data.about.skills.text }}
-              </p>
-              <p
-                class="description-text d-inline small font-italic lowercase text-justify"
-              >
-                {{ database.data.about.skills.text_toggle }}
+                {{ database.data.about.intro }}
               </p>
             </div>
-            <div
-              class="skills-dropdown-wrapper"
-              :class="{ 'is-open': openSkills }"
-            >
+          </div>
+          <div class="col-12">
+            <div class="skills-dropdown-toggle">
+              <p
+                class="description-text d-inline lowercase font-black text-center"
+              >
+                {{ database.data.about.skills.text }}
+              </p>
+            </div>
+            <div class="skills-dropdown-wrapper is-open">
               <div class="skills-dropdown-inner">
                 <ul
                   class="skills-dropdown-list"
@@ -100,17 +101,8 @@ import database from "../data/db.json";
 const skillOption = ref([]);
 const openSkillsInfo = ref(false);
 const openSkills = ref(false);
+const openAbout = ref(false);
 const info = ref("");
-
-const toggleSkillsHandler = () => {
-  let skillsToggle = document.querySelector(".skills-dropdown-toggle");
-  if (skillsToggle) {
-      skillsToggle.addEventListener("click", () => {
-        openSkills.value = !openSkills.value;
-        skillsToggle.scrollIntoView({ behavior: "smooth", top: 200 });
-    });
-  }
-};
 
 const showElm = (elmId) => {
   openSkillsInfo.value = true;
@@ -127,7 +119,6 @@ const clickOutside = (event) => {
 };
 
 onMounted(() => {
-  toggleSkillsHandler();
   window.addEventListener("click", clickOutside);
   skillOption.value = database.data.about.skills.option;
 });

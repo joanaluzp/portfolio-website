@@ -2,29 +2,22 @@
 .section-welcome {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 0;
+  z-index: 22;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  pre {
-    width: fit-content;
-    color: $black-clear02;
-    font-weight: 800;
-    font-family: monospace;
-    white-space: pre;
-    font-size: 15px;
-  }
 }
 .welcome-text-wrapper {
-  position: absolute;
-  z-index: 3;
-  right: 10%;
-  bottom: 90px;
+  position: fixed;
+  right: -12%;
+  bottom: 140px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   &.is-open {
+    right: 10%;
     .welcome-text-box {
       display: block;
     }
@@ -44,23 +37,23 @@
   .welcome-text-btn {
     cursor: pointer;
     width: fit-content;
-    background-color: $white;
+    background-color: rgba($white, 0.8);
+    border: 1px solid rgba($black, 0.5);
+    padding: 10px;
     margin-top: 20px;
-    animation: translate 2s ease infinite;
+    animation: translateRotate 2s ease infinite;
   }
 }
-@media (min-width: 992px) {
-  .section-welcome {
-    width: 40%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    pre {
-      font-size: 20px;
-    }
-  }
+@media (min-width: 1200px) {
   .welcome-text-wrapper {
     bottom: 100px;
+    right: auto;
+    left: 10%;
+    &.is-open {
+      right: auto;
+    }
+    .welcome-text-btn {
+      animation: translate 2s ease infinite;
+    }
   }
 }

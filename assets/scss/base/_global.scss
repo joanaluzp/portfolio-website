@@ -61,7 +61,7 @@ body {
   &:last-child {
     padding-bottom: 60px;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     &:nth-child(2) {
       padding-top: 40px;
     }
@@ -91,6 +91,17 @@ body {
   }
   to {
     transform: rotateY(360deg);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes jump {
@@ -150,6 +161,17 @@ body {
   }
   100% {
     transform: translateX(15px);
+  }
+}
+@keyframes translateRotate {
+  0% {
+    transform: rotate(90deg) translateX(15px);
+  }
+  50% {
+    transform: rotate(90deg) translateX(-15px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(15px);
   }
 }
 @keyframes gelatine {

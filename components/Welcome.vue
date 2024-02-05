@@ -5,33 +5,13 @@
         {{ database.data.welcome.text }}
       </h3>
       <p
-        class="welcome-text-btn description-text text-right font-italic big"
+        class="welcome-text-btn description-title text-right font-italic click-me"
         :class="{ 'font-bold': open }"
         @click="open = !open"
       >
-        {{ database.data.welcome.btn }} 👈
+        {{ open ? database.data.welcome.close : database.data.welcome.btn }} 👈
       </p>
     </div>
-    <pre>
-                   ,----------------,           ,---------,
-           ,-----------------------,          ,"        ,"|
-         ,"                      ,"|        ,"        ,"  |
-        +-----------------------+  |      ,"        ,"    |
-        |  .-----------------.  |  |     +---------+      |
-        |  |                 |  |  |     | -==----'|      |
-        |  |                 |  |  |     |         |      |
-        |  |                 |  |  |/----|`---=    |      |
-        |  |  C:\>_ root@    |  |  |   ,/|==== ooo |      ;
-        |  |                 |  |  |  // |(((( [33]|    ,"
-        |  `-----------------'  |," .;'| |((((     |  ,"
-        +-----------------------+  ;;  | |         |,"     
-          /_)______________(_/  //'   | +---------+
-    ___________________________/___  `,
-    /  oooooooooooooooo  .o.  oooo /,   \,"-----------
-  / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
-  /_==__==========__==_ooo__ooo=_/'   /___________,"
-  `-----------------------------'
-    </pre>
   </section>
 </template>
 <script setup>

@@ -85,7 +85,7 @@
       pointer-events: all;
       cursor: pointer;
       i {
-        color: $white;
+        color: rgba($white, 0.8);
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $black;
         @include transition2(all, 0.2s, ease-in-out);
@@ -97,6 +97,13 @@
           -webkit-text-stroke-color: $red;
         }
       }
+    }
+  }
+  &.video {
+    justify-content: center;
+    align-items: center;
+    .swiper, .slider-arrows-wrapper {
+      width: 70%;
     }
   }
 }

@@ -12,7 +12,7 @@
               class="description-title uppercase font-bold-italic d-inline bigger"
             >
               {{ database.data.work.title }}
-        </p>
+            </p>
           </div>
         </div>
       </div>
@@ -20,8 +20,6 @@
     <div
       class="section-work-option"
       v-if="categoryOption === `${database.data.work.category.front_end}`"
-      data-aos="fade-in"
-      data-aos-duration="2000"
     >
       <div class="container">
         <div class="row">
@@ -54,13 +52,13 @@
               :key="item.id"
             >
               <h2
-                class="description-text small"
+                class="description-text text-justify small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
-        </h2>
+              </h2>
               <p
-                class="description-text small font-bold"
+                class="description-text text-justify small font-bold"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description02 }}
@@ -74,22 +72,22 @@
               :key="item.id"
             >
               <h2
-                class="description-text small"
+                class="description-text text-justify small"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description01 }}
-          </h2>
+              </h2>
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text font-bold link"
+                class="description-text text-justify font-bold link"
                 target="”_blank”"
                 v-if="categoryFrontEndSelected === item.name && item.link"
               >
                 {{ item.link_description }}
               </NuxtLink>
               <p
-                class="description-text small font-bold"
+                class="description-text text-justify small font-bold"
                 v-if="categoryFrontEndSelected === item.name"
               >
                 {{ item.description02 }}
@@ -103,6 +101,8 @@
             >
               <div
                 class="work-item-swiper-wrapper video"
+                data-aos="fade-in"
+                data-aos-duration="1500"
                 v-if="
                   categoryFrontEndSelected === item.name &&
                   item.images.length > 0
@@ -145,8 +145,6 @@
     <div
       class="section-work-option"
       v-if="categoryOption === `${database.data.work.category.video_art}`"
-      data-aos="fade-in"
-      data-aos-duration="2000"
     >
       <div class="container">
         <div class="row">
@@ -176,22 +174,22 @@
               :key="item.id"
             >
               <h2
-                class="description-text small"
+                class="description-text text-justify small"
                 v-if="categoryVideoArtSelected === item.name"
               >
                 {{ item.description01 }}
-          </h2>
+              </h2>
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text font-bold link"
+                class="description-text text-justify font-bold link"
                 target="”_blank”"
                 v-if="categoryVideoArtSelected === item.name && item.link"
               >
                 {{ item.link_description }}
               </NuxtLink>
               <p
-                class="description-text small font-bold"
+                class="description-text text-justify small font-bold"
                 v-if="categoryVideoArtSelected === item.name"
               >
                 {{ item.description02 }}
@@ -205,6 +203,8 @@
             >
               <div
                 class="work-item-swiper-wrapper photo"
+                data-aos="fade-in"
+                data-aos-duration="1500"
                 v-if="
                   categoryVideoArtSelected === item.name &&
                   item.images.length > 0
@@ -225,7 +225,12 @@
                   }"
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <img class="work-item-swiper photo" :title="item.name" :alt="item.name" :src="image.image" />
+                    <img
+                      class="work-item-swiper photo"
+                      :title="item.name"
+                      :alt="item.name"
+                      :src="image.image"
+                    />
                   </SwiperSlide>
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">
@@ -260,7 +265,7 @@
                   categoryOption = `${database.data.work.category.front_end}`
                 "
               >
-                <p class="description-text font-bold-italic">
+                <p class="description-text text-justify font-bold-italic">
                   {{ database.data.work.category.front_end }}
                 </p>
               </div>
@@ -275,7 +280,7 @@
                   categoryOption = `${database.data.work.category.video_art}`
                 "
               >
-                <p class="description-text font-bold-italic">
+                <p class="description-text text-justify font-bold-italic">
                   {{ database.data.work.category.video_art }}
                 </p>
               </div>

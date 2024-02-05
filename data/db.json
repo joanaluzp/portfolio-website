@@ -20,10 +20,11 @@
     },
     "welcome": {
       "btn": "click me",
+      "close": "close me",
       "text": "Welcome to my little corner in the big World Wide Web. I'm a Junior Front-end Developer && Audiovisual Artist fascinated by the technological field, innovative methods of art, design and new media."
     },
     "about": {
-      "intro": "hi, i'm joana",
+      "intro": "about me",
       "text": "I've been hyper interested and curious about technology since I can remember. Once I could actually choose what to learn, I studied Multimedia Arts, specifically Audiovisual practical studies, and later I did a post-graduation in Sound Arts. During these years I did some contemporary art exhibitions with my friends and colleagues. In 2022, I had the need to involve myself in a more left-brain field, while still having the opportunity to be close to design and art, and learned Front-end Development. Since then, I've been working as a Junior Front-end Developer and can't be more passionate about what I do professionally.",
       "skills": {
         "text": "my technical skills",
@@ -87,60 +88,66 @@
           },
           {
             "id": 10,
+            "skill": "gulp.js",
+            "category": "gulp",
+            "description": "gulp is an open-source JavaScript toolkit, used as a streaming build system (similar to a more package-focused Make) in front-end web development. It is a task runner built on Node.js and npm, used for automation of time-consuming and repetitive tasks involved in web development like minification, concatenation, cache busting, unit testing, linting, optimization, etc.[6] gulp uses a code-over-configuration approach to define its tasks and relies on its small, single-purpose plugins to carry them out. The gulp ecosystem includes more than 3500 such plugins.[7]"
+          },
+          {
+            "id": 11,
             "skill": "json",
             "category": "json",
             "description": "JSON (JavaScript Object Notation, pronounced /ˈdʒeɪsən/; also /ˈdʒeɪˌsɒn/) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers."
           },
           {
-            "id": 11,
+            "id": 12,
             "skill": "command-line interface",
             "category": "command-line interface",
             "description": "A command-line interface (CLI) is a means of interacting with a computer program by inputting lines of text called command-lines. Command-line interfaces emerged in the mid-1960s, on computer terminals, as a user-friendly alternative to punched cards. Today, most users rely on graphical user interfaces ('GUIs') instead of CLIs. However, many programs and operating system utilities lack GUIs, and are intended to be used through CLIs."
           },
           {
-            "id": 12,
+            "id": 13,
             "skill": "package manager",
             "category": "package manager",
             "description": "A package manager deals with packages, distributions of software and data in archive files. Packages contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum (preferably a cryptographic hash function), and a list of dependencies necessary for the software to run properly. Upon installation, metadata is stored in a local package database. Package managers typically maintain a database of software dependencies and version information to prevent software mismatches and missing prerequisites. They work closely with software repositories, binary repository managers, and app stores."
           },
           {
-            "id": 13,
+            "id": 14,
             "skill": "responsive web design",
             "category": "responsive",
             "description": "Responsive web design (RWD) or responsive design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.[1][2] A responsive design adapts the web-page layout to the viewing environment[1] by using techniques such as fluid proportion-based grids,[3][4] flexible images,[5][6] and CSS3 media queries,[7][8][9] an extension of the @media rule"
           },
           {
-            "id": 14,
+            "id": 15,
             "skill": "figma",
             "category": "figma",
             "description": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. The feature set of Figma focuses on user interface and user experience design, with an emphasis on real-time collaboration,[1] utilising a variety of vector graphics editor and prototyping tools. The Figma mobile app for Android and iOS allows viewing and interacting with Figma prototypes in real-time on mobile and tablet devices."
           },
           {
-            "id": 15,
+            "id": 16,
             "skill": "photoshop",
             "category": "photoshop",
             "description": "Photoshop can edit and compose raster images in multiple layers and supports masks, alpha compositing and several color models. Photoshop uses its own PSD and PSB file formats to support these features. In addition to raster graphics, Photoshop has limited abilities to edit or render text and vector graphics (especially through clipping path for the latter), as well as 3D graphics and video. Its feature set can be expanded by plug-ins; programs developed and distributed independently of Photoshop that run inside it and offer new or enhanced features."
           },
           {
-            "id": 16,
+            "id": 17,
             "skill": "premiere",
             "category": "premiere",
             "description": "Premiere Pro can be used for all common video editing tasks necessary for producing broadcast-quality, high-definition video. It can be used to import video, audio and graphics, and is used to create new, edited versions of video which can be exported to the medium and format necessary for the distribution. When creating videos using Premiere Pro, various videos, still images and audio files can be edited together. Titles and motion graphics can be added to videos and filters can be applied along with other effects."
           },
           {
-            "id": 17,
+            "id": 18,
             "skill": "Lightroom",
             "category": "lightroom",
             "description": " Lightroom's editing functions include white balance, presence, tone, tone curve, HSL, color grading, detail, lens corrections, and calibration manipulation, as well as transformation, spot removal, red eye correction, graduated filters, radial filters, and adjustment brushing. The name of the software is based on darkrooms used for processing light-sensitive photographic materials."
           },
           {
-            "id": 18,
+            "id": 19,
             "skill": "After Effects",
             "category": "after_effects",
             "description": "Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Inc.; it is used in the post-production process of film making, video games and television production. Among other things, After Effects can be used for keying, tracking, compositing, and animation. It also functions as a very basic non-linear editor, audio editor, and media transcoder. In 2019, the program won an Academy Award for scientific and technical achievement.[3]"
           },
           {
-            "id": 19,
+            "id": 20,
             "skill": "ableton live",
             "category": "ableton",
             "description": "Ableton Live, also known as Live or sometimes colloquially as 'Ableton', is a digital audio workstation for macOS and Windows developed by the German company Ableton. In contrast to many other software sequencers, Live is designed to be an instrument for live performances as well as a tool for composing, recording, arranging, mixing, and mastering. It is also used by DJs, as it offers a suite of controls for beatmatching, crossfading, and other different effects used by turntablists, and was one of the first music applications to automatically beatmatch songs.[3]"

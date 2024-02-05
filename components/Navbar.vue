@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar" @click="open = !open">
-    <p class="description-title menu d-block d-sm-none" v-if="open">
+    <p class="description-title menu d-block d-xl-none" v-if="open">
       {{ database.data.nav.menu.open }}
     </p>
-    <p class="description-title menu d-block d-sm-none" v-else>
+    <p class="description-title menu d-block d-xl-none" v-else>
       {{ database.data.nav.menu.close }}
     </p>
     <div class="navbar-menu-wrapper" :class="{ 'is-open': open }">
@@ -62,7 +62,7 @@ const handleScrollNavbar = () => {
   let elmNavbar = document.querySelector(".navbar");
   let heightNavbar = elmNavbar ? elmNavbar.offsetHeight : 0;
   if (scroll > heightNavbar) {
-    elmNavbar.style.top = "-150px";
+    elmNavbar.style.top = "-300px";
     if (scroll < prevScroll.value) {
       elmNavbar.style.top = "15px";
     }
