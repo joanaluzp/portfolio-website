@@ -51,12 +51,12 @@ body {
 .section {
   width: 100%;
   height: auto;
-  padding: 20px 0;
+  padding: 35px 0;
   &:first-child {
     padding: 0;
   }
   &:nth-child(2) {
-    padding-top: 0;
+    padding-top: 30px;
   }
   &:last-child {
     padding-bottom: 60px;
@@ -68,8 +68,8 @@ body {
     &.aside {
       position: relative;
       top: 0;
-      left: 40%;
-      width: 60%;
+      left: 50%;
+      width: 50%;
     }
   }
   @media (min-width: 1200px) {
@@ -98,7 +98,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -152,6 +152,10 @@ body {
     transform: rotate(360deg);
   }
 }
+@keyframes spin2 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(720deg); }
+}
 @keyframes translate {
   0% {
     transform: translateX(15px);
@@ -173,6 +177,11 @@ body {
   100% {
     transform: rotate(90deg) translateX(15px);
   }
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
 @keyframes gelatine {
   from,

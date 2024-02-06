@@ -2,37 +2,54 @@
   <section class="section aside section-about" id="section-about">
     <div class="section-about-wrapper">
       <div class="container">
-        <div class="row">
-          <div class="col-8">
-            <div class="about-text-wrapper" :class="{'is-open': openAbout}">
-              <h5
-                class="description-text text-justify small"
-              >
-                {{ database.data.about.text }}
-              </h5>
-            </div>
-          </div>
-          <div class="col-4">
+        <div class="row align-items-center">
+          <div class="col-12">
             <div
-              class="about-text-toggle d-inline-block"
+              class="about-text-background"
               @click="openAbout = !openAbout"
             >
               <p
-                class="description-text d-inline lowercase font-black text-justify"
+                class="description-title bigger d-inline lowercase text-center"
               >
                 {{ database.data.about.intro }}
               </p>
             </div>
           </div>
           <div class="col-12">
-            <div class="skills-dropdown-toggle">
+            <div class="about-text-wrapper" :class="{ unblurred: openAbout }">
+              <h5 class="description-text text-justify font-bold small">
+                {{ database.data.about.text }}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-skills-wrapper">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 d-flex justify-content-center flex-column align-items-center"
+          >
+            <div
+              class="skills-dropdown-toggle"
+              :class="{ 'no-animation': openSkills }"
+            >
               <p
                 class="description-text d-inline lowercase font-black text-center"
               >
                 {{ database.data.about.skills.text }}
               </p>
+              <p class="description-text d-inline small lowercase text-center">
+                {{ database.data.about.skills.text_toggle }}
+              </p>
             </div>
-            <div class="skills-dropdown-wrapper is-open">
+            <div
+              class="skills-dropdown-wrapper"
+              :class="{
+                'is-open': openSkills,
+              }"
+            >
               <div class="skills-dropdown-inner">
                 <ul
                   class="skills-dropdown-list"
@@ -109,6 +126,16 @@ const showElm = (elmId) => {
   info.value = elmId;
 };
 
+const toggleSkillsHandler = () => {
+  let skillsToggle = document.querySelector(".skills-dropdown-toggle");
+  if (skillsToggle) {
+    skillsToggle.addEventListener("click", () => {
+      openSkills.value = !openSkills.value;
+      skillsToggle.scrollIntoView({ behavior: "smooth", top: 200 });
+    });
+  }
+};
+
 const clickOutside = (event) => {
   const elmList = document.querySelector(".skills-dropdown-list");
   if (elmList) {
@@ -119,6 +146,7 @@ const clickOutside = (event) => {
 };
 
 onMounted(() => {
+  toggleSkillsHandler();
   window.addEventListener("click", clickOutside);
   skillOption.value = database.data.about.skills.option;
 });

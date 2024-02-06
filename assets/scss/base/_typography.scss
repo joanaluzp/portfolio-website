@@ -84,7 +84,7 @@
     @include fluid-type(320px, 992px, 40px, 60px);
   }
   &.click-me {
-    @include fluid-type(320px, 992px, 18px, 70px);
+    @include fluid-type(320px, 992px, 16px, 60px);
   }
   &.text-right {
     text-align: right;

@@ -1,45 +1,47 @@
 /*====ABOUT====*/
 .section-about {
   background-color: $white;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .section-about-wrapper {
   background-color: $blue-light;
-  padding: 70px 10px;
-  .about-text-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
-    &.is-open {
-      grid-template-rows: 1fr;
-    }
-    .description-text {
-      overflow: hidden;
-    }
-  }
-  .about-text-toggle {
+  padding: 20px 0;
+  border-radius: 25px;
+  .about-text-background {
+    animation: spin 1s ease;
     position: relative;
     z-index: 7;
+    width: 100%;
+    min-height: 200px;
     margin-bottom: 20px;
-    padding: 70px 20px;
     border-radius: 25px;
-    background-color: $white;
-    background-image: url("nature-technology-abstract-concept-robot-260nw-2385062343-ezgif.com-webp-to-jpg-converter.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
     cursor: pointer;
-    .description-text {
-      &:first-child {
-        color: $black;
-      }
+    background: $white url("F0dteNKaIAE85YZ.jpg") no-repeat center center /
+      cover;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .description-title {
+      color: $black;
+      font-family: $font-handwriting;
     }
   }
 }
 .about-text-wrapper {
   .description-text {
     color: $black;
+     filter: blur(4px);
+    -webkit-filter: blur(4px); 
+    font-size: 25px;
+    @include transition;
+  }
+  &.unblurred {
+    .description-text {
+      filter: blur(0);
+      -webkit-filter: blur(0);
+    }
   }
 }
 @media (min-width: 992px) {
@@ -48,6 +50,16 @@
   }
   .section-about-wrapper {
     border-radius: 25px;
-    padding: 40px 20px;
+    padding: 20px 10px;
+    .about-text-background {
+      .description-title {
+        @include transition;
+      }
+      &:hover {
+        .description-title {
+          color: $red;
+        }
+      }
+    }
   }
 }

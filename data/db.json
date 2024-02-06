@@ -25,7 +25,7 @@
     },
     "about": {
       "intro": "about me",
-      "text": "I've been hyper interested and curious about technology since I can remember. Once I could actually choose what to learn, I studied Multimedia Arts, specifically Audiovisual practical studies, and later I did a post-graduation in Sound Arts. During these years I did some contemporary art exhibitions with my friends and colleagues. In 2022, I had the need to involve myself in a more left-brain field, while still having the opportunity to be close to design and art, and learned Front-end Development. Since then, I've been working as a Junior Front-end Developer and can't be more passionate about what I do professionally.",
+      "text": "Hello. My name is Joana. I love new things. After years of naively designing layouts on the web, I can actually build them now.",
       "skills": {
         "text": "my technical skills",
         "text_toggle": "click to toggle",
@@ -414,7 +414,7 @@
       "email": "joanaluzp@gmail.com",
       "cv": {
         "text": "you can also check my cv ",
-        "description": "Resume Joana Pimentel",
+        "description": "CV Joana Pimentel",
         "link": "CV.pdf",
         "link_text": "<a>here</a>"
       }

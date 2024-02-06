@@ -10,7 +10,7 @@ export default defineNuxtConfig({
           name: "viewport",
           content: "width=device-width, initial-scale=1, user-scalable=no",
         },
-        { hid: "description", name: "description", content: "Joana da Luz Pimentel. Junior Front-end Developer and Audiovisual Artist fascinated by the technological field, innovative methods of art, design and new media." },
+        { hid: "description", name: "description", content: "Joana da Luz Pimentel. Junior Front-end Developer and Audiovisual Artist." },
         { hid: "author", name: "author", content: "Joana da Luz Pimentel" },
         { hid: "og:title", name: "og:title", content: "Joana da Luz Pimentel" },
         { name: "theme-color", content: "#ffffff" },

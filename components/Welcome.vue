@@ -1,7 +1,7 @@
 <template>
   <section class="section section-welcome" id="section-welcome">
     <div class="welcome-text-wrapper" :class="{ 'is-open': open }">
-      <h3 class="welcome-text-box description-text">
+      <h3 class="welcome-text-box description-text small text-justify">
         {{ database.data.welcome.text }}
       </h3>
       <p

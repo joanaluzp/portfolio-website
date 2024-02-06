@@ -6,7 +6,7 @@
           <div
             class="work-title-wrapper d-flex justify-content-center"
             data-aos="fade-left"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <p
               class="description-title uppercase font-bold-italic d-inline bigger"
@@ -80,7 +80,7 @@
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text text-justify font-bold link"
+                class="description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="categoryFrontEndSelected === item.name && item.link"
               >
@@ -130,10 +130,10 @@
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">
                   <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-4x fa-chevron-left"></i>
+                    <i class="fa-solid fa-3x fa-chevron-left"></i>
                   </button>
                   <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-4x fa-chevron-right"></i>
+                    <i class="fa-solid fa-3x fa-chevron-right"></i>
                   </button>
                 </div>
               </div>
@@ -182,7 +182,7 @@
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text text-justify font-bold link"
+                class="description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="categoryVideoArtSelected === item.name && item.link"
               >
@@ -235,10 +235,10 @@
                 </Swiper>
                 <div class="slider-arrows-wrapper d-none d-lg-flex">
                   <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-4x fa-chevron-left"></i>
+                    <i class="fa-solid fa-3x fa-chevron-left"></i>
                   </button>
                   <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-4x fa-chevron-right"></i>
+                    <i class="fa-solid fa-3x fa-chevron-right"></i>
                   </button>
                 </div>
               </div>
