@@ -2,10 +2,11 @@
   <section class="section aside section-about" id="section-about">
     <div class="section-about-wrapper">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-lg-9 col-xxl-8">
             <div
               class="about-text-background"
+              :class="{ animation: !openAbout }"
               @click="openAbout = !openAbout"
             >
               <p
@@ -15,7 +16,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-lg-11 col-xxl-10">
             <div class="about-text-wrapper" :class="{ unblurred: openAbout }">
               <h5 class="description-text text-justify font-bold small">
                 {{ database.data.about.text }}
