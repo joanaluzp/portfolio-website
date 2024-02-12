@@ -1,5 +1,4 @@
 <template>
-  <section class="section section-welcome" id="section-welcome">
     <div class="welcome-text-wrapper" :class="{ 'is-open': open }">
       <h3 class="welcome-text-box description-text text-justify">
         {{ database.data.welcome.text }}
@@ -12,7 +11,6 @@
         {{ open ? database.data.welcome.close : database.data.welcome.btn }} 👈
       </p>
     </div>
-  </section>
 </template>
 <script setup>
 import database from "../data/db.json";

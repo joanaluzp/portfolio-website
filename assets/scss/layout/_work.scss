@@ -20,11 +20,6 @@
     font-family: $font-02;
   }
 }
-.work-option-list-wrapper {
-  &:last-child {
-    padding-bottom: 15px;
-  }
-}
 .work-item-info-wrapper {
   .description-text {
     &:first-child {
@@ -41,9 +36,11 @@
 }
 .work-option-list-wrapper {
   gap: 5px;
+  &:last-child {
+    padding-bottom: 15px;
+  }
   .work-option-item {
     .description-text {
-      font-size: 25px;
       cursor: pointer;
       &.active {
         font-weight: 800;

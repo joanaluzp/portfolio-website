@@ -1,8 +1,8 @@
 <template>
   <main class="main">
-    <LazyNavbar />
+    <Navbar />
+    <Welcome/>
     <section class="sections">
-      <LazyWelcome />
       <LazyAbout />
       <LazyWork />
       <LazyContact />

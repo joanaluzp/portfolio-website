@@ -31,7 +31,7 @@
                 :key="item.id"
               >
                 <h1
-                  class="d-inline description-text"
+                  class="d-inline description-text work-title"
                   @click="categoryFrontEndSelected = item.name"
                   :class="{
                     active: categoryFrontEndSelected === item.name,
@@ -156,7 +156,7 @@
                 :key="item.id"
               >
                 <h1
-                  class="d-inline description-text"
+                  class="d-inline description-text work-title"
                   @click="categoryVideoArtSelected = item.name"
                   :class="{
                     active: categoryVideoArtSelected === item.name,

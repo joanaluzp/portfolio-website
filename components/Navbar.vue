@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" @click="open = !open">
+  <nav class="navbar d-lg-none" @click="open = !open">
     <p class="description-title menu d-block d-xl-none" v-if="open">
       {{ database.data.nav.menu.open }}
     </p>
