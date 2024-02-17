@@ -10,5 +10,5 @@
   </main>
 </template>
 <script setup>
-const maintenance = ref(false);
+const maintenance = ref(true);
 </script>
