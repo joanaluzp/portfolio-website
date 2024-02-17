@@ -1,5 +1,5 @@
 <template>
-  <section class="section aside section-about" id="section-about">
+  <section class="section section-about" id="section-about">
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row align-items-center justify-content-center">

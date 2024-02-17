@@ -161,253 +161,271 @@
         "front_end": "front-end development",
         "video_art": "video art"
       },
-      "categoryItem": {
-        "front_end": [
-          {
-            "id": 1,
-            "name": "★this website★",
-            "description01": "Made with love and possibly constantly changing ༺☆༻💌",
-            "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
-            "link": "",
-            "link_description": "",
-            "images": []
-          },
-          {
-            "id": 2,
-            "name": "work-related-projects",
-            "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer at Webcomum.",
-            "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
-            "link": "https://www.webcomum.com/",
-            "link_description": "you can enter their website here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/videos/just_work.mp4"
-              },
-              {
-                "id": 2,
-                "image": "/videos/chave_nova.mp4"
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "name": "kunst 3",
-            "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between English and German.",
-            "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
-            "link": "https://kunst3.netlify.app/",
-            "link_description": "you can enter the website here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/videos/kunst_3.mp4"
-              }
-            ]
-          }
-        ],
-        "video_art": [
-          {
-            "id": 1,
-            "name": "kapa4",
-            "description01": "Vaguely based on the futurist flyer 'K4, O Quadrado Azul' by Almada Negreiros.",
-            "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
-            "link": "https://vimeo.com/202110873",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/kapa4/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/kapa4/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/kapa4/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/kapa4/4.png"
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "시공간 @espaço/tempo",
-            "description01": "Surrealist approach of quantum mechanics 'Time and Space' (Spacetime) concept.",
-            "description02": "additional info: 2017, video 2’23”",
-            "link": "https://vimeo.com/202770388",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/espaço_tempo/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/espaço_tempo/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/espaço_tempo/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/espaço_tempo/4.png"
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "name": "Energy Field",
-            "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
-            "description02": "additional info: 2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
-            "link": "https://vimeo.com/277728983",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/energy_field/1.jpg"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/energy_field/2.jpg"
-              }
-            ]
-          },
-          {
-            "id": 4,
-            "name": "Life 0",
-            "description01": "> Which came first, the Chicken or the Egg? < concept (individual transformation cycle).",
-            "description02": "additional info: 2019, video exhibition 5’17” @ Festival 'SOMA'",
-            "link": "https://vimeo.com/343492455",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/life0/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/life0/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/life0/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/life0/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/life0/5.png"
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "name": "Explaining Sound To A Deaf Person",
-            "description01": "The title of the video already explains everything...",
-            "description02": "additional info: 2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
-            "link": "https://vimeo.com/352076169",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/explaining_sound/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/explaining_sound/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/explaining_sound/3.png"
-              }
-            ]
-          },
-          {
-            "id": 6,
-            "name": "lunch time/pleasure and pain: a constant feeling of nothingness through 4 hours straight",
-            "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
-            "description02": "additional info: 2021, video installation 45’14” @ Festival 'A Colina'",
-            "link": "https://vimeo.com/655658351",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/pleasure_pain/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/pleasure_pain/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/pleasure_pain/3.png"
-              }
-            ]
-          },
-          {
-            "id": 7,
-            "name": "power house nr8",
-            "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
-            "description02": "additional info: 2022, video 2’56” @ 'Dose' magazine",
-            "link": "https://vimeo.com/722374867",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/power_house_8/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/power_house_8/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/power_house_8/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/power_house_8/4.png"
-              }
-            ]
-          },
-          {
-            "id": 8,
-            "name": "Negative Index",
-            "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
-            "description02": "additional info: 2023, video 6’59”",
-            "link": "https://vimeo.com/802064965",
-            "link_description": "you can watch the video here",
-            "images": [
-              {
-                "id": 1,
-                "image": "/images/video_art/negative_index/1.png"
-              },
-              {
-                "id": 2,
-                "image": "/images/video_art/negative_index/2.png"
-              },
-              {
-                "id": 3,
-                "image": "/images/video_art/negative_index/3.png"
-              },
-              {
-                "id": 4,
-                "image": "/images/video_art/negative_index/4.png"
-              },
-              {
-                "id": 5,
-                "image": "/images/video_art/negative_index/5.png"
-              }
-            ]
-          }
-        ]
-      }
+      "categoryItem": [
+        {
+          "id": 1,
+          "name": "★this website★",
+          "slug": "my-web",
+          "category": "front-end development",
+          "description01": "Made with love and possibly constantly changing ༺☆༻💌",
+          "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
+          "link": "",
+          "link_description": "",
+          "images": []
+        },
+        {
+          "id": 2,
+          "name": "work-related-projects",
+          "slug": "work-related-projects",
+          "category": "front-end development",
+          "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer at Webcomum.",
+          "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
+          "link": "https://www.webcomum.com/",
+          "link_description": "you can enter their website here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/videos/just_work.mp4"
+            },
+            {
+              "id": 2,
+              "image": "/videos/chave_nova.mp4"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "kunst 3",
+          "slug": "kunst-3",
+          "category": "front-end development",
+          "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between English and German.",
+          "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
+          "link": "https://kunst3.netlify.app/",
+          "link_description": "you can enter the website here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/videos/kunst_3.mp4"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "kapa4",
+          "slug": "kapa-4",
+          "category": "video art",
+          "description01": "Vaguely based on the futurist flyer 'K4, O Quadrado Azul' by Almada Negreiros.",
+          "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
+          "link": "https://vimeo.com/202110873",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/kapa4/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/kapa4/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/kapa4/3.png"
+            },
+            {
+              "id": 4,
+              "image": "/images/video_art/kapa4/4.png"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "시공간 @espaço/tempo",
+          "slug": "espaço-tempo",
+          "category": "video art",
+          "description01": "Surrealist approach of quantum mechanics 'Time and Space' (Spacetime) concept.",
+          "description02": "additional info: 2017, video 2’23”",
+          "link": "https://vimeo.com/202770388",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/espaço_tempo/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/espaço_tempo/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/espaço_tempo/3.png"
+            },
+            {
+              "id": 4,
+              "image": "/images/video_art/espaço_tempo/4.png"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Energy Field",
+          "slug": "energy-field",
+          "category": "video art",
+          "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
+          "description02": "additional info: 2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
+          "link": "https://vimeo.com/277728983",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/energy_field/1.jpg"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/energy_field/2.jpg"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Life 0",
+          "slug": "life-0",
+          "category": "video art",
+          "description01": "> Which came first, the Chicken or the Egg? < concept (individual transformation cycle).",
+          "description02": "additional info: 2019, video exhibition 5’17” @ Festival 'SOMA'",
+          "link": "https://vimeo.com/343492455",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/life0/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/life0/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/life0/3.png"
+            },
+            {
+              "id": 4,
+              "image": "/images/video_art/life0/4.png"
+            },
+            {
+              "id": 5,
+              "image": "/images/video_art/life0/5.png"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Explaining Sound To A Deaf Person",
+          "slug": "explaining-sound-to-a-deaf-person",
+          "category": "video art",
+          "description01": "The title of the video already explains everything...",
+          "description02": "additional info: 2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
+          "link": "https://vimeo.com/352076169",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/explaining_sound/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/explaining_sound/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/explaining_sound/3.png"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "lunch time/pleasure and pain: a constant feeling of nothingness through 4 hours straight",
+          "slug": "lunch-time-pleasure-pain",
+          "category": "video art",
+          "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
+          "description02": "additional info: 2021, video installation 45’14” @ Festival 'A Colina'",
+          "link": "https://vimeo.com/655658351",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/pleasure_pain/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/pleasure_pain/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/pleasure_pain/3.png"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "power house nr8",
+          "slug": "power-house-8",
+          "category": "video art",
+          "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
+          "description02": "additional info: 2022, video 2’56” @ 'Dose' magazine",
+          "link": "https://vimeo.com/722374867",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/power_house_8/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/power_house_8/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/power_house_8/3.png"
+            },
+            {
+              "id": 4,
+              "image": "/images/video_art/power_house_8/4.png"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "Negative Index",
+          "slug": "negative-index",
+          "category": "video art",
+          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
+          "description02": "additional info: 2023, video 6’59”",
+          "link": "https://vimeo.com/802064965",
+          "link_description": "you can watch the video here",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/video_art/negative_index/1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/video_art/negative_index/2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/video_art/negative_index/3.png"
+            },
+            {
+              "id": 4,
+              "image": "/images/video_art/negative_index/4.png"
+            },
+            {
+              "id": 5,
+              "image": "/images/video_art/negative_index/5.png"
+            }
+          ]
+        }
+      ]
     },
     "contact": {
       "text": "you can contact me here",

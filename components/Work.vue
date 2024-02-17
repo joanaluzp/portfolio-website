@@ -1,5 +1,5 @@
 <template>
-  <section class="section aside section-work" id="section-work">
+  <section class="section section-work" id="section-work">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -17,232 +17,65 @@
         </div>
       </div>
     </div>
-    <div
-      class="section-work-option"
-      v-if="categoryOption === `${database.data.work.category.front_end}`"
-    >
+    <div class="section-work-option">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <ul class="work-option-list-wrapper flex-wrap d-flex">
+            <ul class="work-option-list-wrapper list-effect">
               <li
                 class="work-option-item"
-                v-for="item in categoryFrontEnd.slice().reverse()"
+                v-for="item in workData.slice().reverse()"
                 :key="item.id"
               >
-                <h1
-                  class="d-inline description-text work-title"
-                  @click="categoryFrontEndSelected = item.name"
-                  :class="{
-                    active: categoryFrontEndSelected === item.name,
-                  }"
+                <NuxtLink
+                  :to="{ path: '/work/' + item.id }"
+                  v-if="
+                    categoryOption ===
+                      `${database.data.work.category.front_end}` &&
+                    item.category === 'front-end development'
+                  "
                 >
-                  {{ item.name }}
-                </h1>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="col-12"
-            v-if="categoryFrontEndSelected === '★this website★'"
-          >
-            <div
-              class="work-item-info-wrapper"
-              v-for="item in categoryFrontEnd.slice().reverse()"
-              :key="item.id"
-            >
-              <h2
-                class="description-text text-justify small"
-                v-if="categoryFrontEndSelected === item.name"
-              >
-                {{ item.description01 }}
-              </h2>
-              <p
-                class="description-text text-justify small font-bold"
-                v-if="categoryFrontEndSelected === item.name"
-              >
-                {{ item.description02 }}
-              </p>
-            </div>
-          </div>
-          <div class="col-12" v-else>
-            <div
-              class="work-item-info-wrapper"
-              v-for="item in categoryFrontEnd.slice().reverse()"
-              :key="item.id"
-            >
-              <h2
-                class="description-text text-justify small"
-                v-if="categoryFrontEndSelected === item.name"
-              >
-                {{ item.description01 }}
-              </h2>
-              <NuxtLink
-                :to="item.link"
-                :title="item.link"
-                class="description-text big text-justify font-bold link"
-                target="”_blank”"
-                v-if="categoryFrontEndSelected === item.name && item.link"
-              >
-                {{ item.link_description }}
-              </NuxtLink>
-              <p
-                class="description-text text-justify small font-bold"
-                v-if="categoryFrontEndSelected === item.name"
-              >
-                {{ item.description02 }}
-              </p>
-            </div>
-          </div>
-          <div class="col-12">
-            <div
-              v-for="item in categoryFrontEnd.slice().reverse()"
-              :key="item.id"
-            >
-              <div
-                class="work-item-swiper-wrapper video"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                v-if="
-                  categoryFrontEndSelected === item.name &&
-                  item.images.length > 0
-                "
-              >
-                <Swiper
-                  :modules="[SwiperAutoplay, SwiperNavigation]"
-                  :slides-per-view="1"
-                  :pagination="{ clickable: true }"
-                  :speed="1000"
-                  :loop="true"
-                  :autoplay="{
-                    delay: 5000,
-                  }"
-                  :navigation="{
-                    nextEl: '.arrow-gallery-next',
-                    prevEl: '.arrow-gallery-prev',
-                  }"
-                >
-                  <SwiperSlide v-for="image in item.images" :key="image.id">
+                  <h1 class="description-text work-title">
+                    {{ item.name }}
+                  </h1>
+                  <div
+                    class="work-item-swiper-wrapper video"
+                    data-aos="fade-in"
+                    data-aos-duration="1500"
+                    v-if="item.images.length > 0"
+                  >
                     <video class="work-item-swiper video" loop muted autoplay>
-                      <source :src="image.image" type="video/mp4" />
+                      <source :src="item.images[0].image" type="video/mp4" />
                     </video>
-                  </SwiperSlide>
-                </Swiper>
-                <div class="slider-arrows-wrapper d-none d-lg-flex">
-                  <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-3x fa-chevron-left"></i>
-                  </button>
-                  <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-3x fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="section-work-option"
-      v-if="categoryOption === `${database.data.work.category.video_art}`"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <ul class="work-option-list-wrapper flex-wrap d-flex">
-              <li
-                class="work-option-item"
-                v-for="item in categoryVideoArt.slice().reverse()"
-                :key="item.id"
-              >
-                <h1
-                  class="d-inline description-text work-title"
-                  @click="categoryVideoArtSelected = item.name"
-                  :class="{
-                    active: categoryVideoArtSelected === item.name,
-                  }"
+                  </div>
+                </NuxtLink>
+                <NuxtLink
+                  :to="{ path: '/work/' + item.id }"
+                  v-if="
+                    categoryOption ===
+                      `${database.data.work.category.video_art}` &&
+                    item.category === 'video art'
+                  "
                 >
-                  {{ item.name }}
-                </h1>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12">
-            <div
-              class="work-item-info-wrapper"
-              v-for="item in categoryVideoArt.slice().reverse()"
-              :key="item.id"
-            >
-              <h2
-                class="description-text text-justify small"
-                v-if="categoryVideoArtSelected === item.name"
-              >
-                {{ item.description01 }}
-              </h2>
-              <NuxtLink
-                :to="item.link"
-                :title="item.link"
-                class="description-text big text-justify font-bold link"
-                target="”_blank”"
-                v-if="categoryVideoArtSelected === item.name && item.link"
-              >
-                {{ item.link_description }}
-              </NuxtLink>
-              <p
-                class="description-text text-justify small font-bold"
-                v-if="categoryVideoArtSelected === item.name"
-              >
-                {{ item.description02 }}
-              </p>
-            </div>
-          </div>
-          <div class="col-12">
-            <div
-              v-for="item in categoryVideoArt.slice().reverse()"
-              :key="item.id"
-            >
-              <div
-                class="work-item-swiper-wrapper photo"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                v-if="
-                  categoryVideoArtSelected === item.name &&
-                  item.images.length > 0
-                "
-              >
-                <Swiper
-                  :modules="[SwiperAutoplay, SwiperNavigation]"
-                  :slides-per-view="1"
-                  :pagination="{ clickable: true }"
-                  :speed="1000"
-                  :loop="true"
-                  :autoplay="{
-                    delay: 5000,
-                  }"
-                  :navigation="{
-                    nextEl: '.arrow-gallery-next',
-                    prevEl: '.arrow-gallery-prev',
-                  }"
-                >
-                  <SwiperSlide v-for="image in item.images" :key="image.id">
+                  <h1 class="description-text work-title">
+                    {{ item.name }}
+                  </h1>
+                  <div
+                    class="work-item-swiper-wrapper photo"
+                    data-aos="fade-in"
+                    data-aos-duration="1500"
+                    v-if="item.images.length > 0"
+                  >
                     <img
                       class="work-item-swiper photo"
                       :title="item.name"
                       :alt="item.name"
-                      :src="image.image"
+                      :src="item.images[0].image"
                     />
-                  </SwiperSlide>
-                </Swiper>
-                <div class="slider-arrows-wrapper d-none d-lg-flex">
-                  <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-3x fa-chevron-left"></i>
-                  </button>
-                  <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-3x fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+                  </div>
+                </NuxtLink>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -294,13 +127,8 @@
 <script setup>
 import database from "../data/db.json";
 const categoryOption = ref(`${database.data.work.category.front_end}`);
-const categoryFrontEnd = ref([]);
-const categoryFrontEndSelected = ref("kunst 3");
-const categoryVideoArt = ref([]);
-const categoryVideoArtSelected = ref("Negative Index");
-
+const workData = ref([]);
 onMounted(() => {
-  categoryFrontEnd.value = database.data.work.categoryItem.front_end;
-  categoryVideoArt.value = database.data.work.categoryItem.video_art;
+  workData.value = database.data.work.categoryItem;
 });
 </script>

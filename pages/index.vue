@@ -1,13 +1,7 @@
 <template>
-  <main class="main">
-    <Navbar />
-    <Welcome/>
-    <section class="sections">
-      <LazyAbout />
-      <LazyWork />
-      <LazyContact />
-    </section>
-  </main>
+  <LazyAbout />
+  <LazyWork />
+  <LazyContact />
 </template>
 
 <script setup>

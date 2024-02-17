@@ -39,6 +39,39 @@
   &:last-child {
     padding-bottom: 15px;
   }
+  &.list-effect {
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+    .work-option-item {
+      position: relative;
+      .work-title {
+        @include transition;
+        
+      }
+      .work-item-swiper-wrapper {
+        display: none;
+        position: absolute;
+        top: -40px;
+        left: 40%;
+        .work-item-swiper {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-width: 500px;
+        }
+      }
+      &:hover {
+        .work-title {
+          transform: translateX(20px);
+        }
+        .work-item-swiper-wrapper {
+          display: block;
+        }
+      }
+    }
+  }
   .work-option-item {
     .description-text {
       cursor: pointer;
