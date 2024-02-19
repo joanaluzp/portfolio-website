@@ -30,7 +30,7 @@
                 target="”_blank”"
                 v-if="item.link"
               >
-                {{ item.link_description }}
+                {{ item.linkDescription }}
               </NuxtLink>
               <p class="description-text text-justify small font-bold">
                 {{ item.description02 }}
@@ -110,7 +110,7 @@
                 target="”_blank”"
                 v-if="item.link"
               >
-                {{ item.link_description }}
+                {{ item.linkDescription }}
               </NuxtLink>
               <p class="description-text text-justify small font-bold">
                 {{ item.description02 }}

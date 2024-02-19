@@ -33,7 +33,7 @@
                 {{ database.data.contact.cv.text }}
               </p>
               <p class="description-text link d-inline">
-                {{ database.data.contact.cv.link_text }}
+                {{ database.data.contact.cv.linkText }}
               </p>
             </div></NuxtLink
           >

@@ -28,8 +28,8 @@
       "text": "Hello. My name is Joana. I love new things. After years of naively designing layouts on the web, I can actually build them now.",
       "skills": {
         "text": "my technical skills",
-        "text_toggle": "click to toggle",
-        "text_informative": "click on each skill to open its informative wikipedia definition",
+        "textToggle": "click to toggle",
+        "textInformative": "click on each skill to open its informative wikipedia definition",
         "close": "close",
         "option": [
           {
@@ -158,8 +158,8 @@
     "work": {
       "title": "▬▬ι═══════ﺤ www.ork",
       "category": {
-        "front_end": "front-end development",
-        "video_art": "video art"
+        "frontEnd": "front-end development",
+        "videoArt": "video art"
       },
       "categoryItem": [
         {
@@ -170,7 +170,7 @@
           "description01": "Made with love and possibly constantly changing ༺☆༻💌",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
           "link": "",
-          "link_description": "",
+          "linkDescription": "",
           "images": []
         },
         {
@@ -181,7 +181,7 @@
           "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer at Webcomum.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
           "link": "https://www.webcomum.com/",
-          "link_description": "you can enter their website here",
+          "linkDescription": "you can enter their website here",
           "images": [
             {
               "id": 1,
@@ -201,7 +201,7 @@
           "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between English and German.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
           "link": "https://kunst3.netlify.app/",
-          "link_description": "you can enter the website here",
+          "linkDescription": "you can enter the website here",
           "images": [
             {
               "id": 1,
@@ -217,7 +217,7 @@
           "description01": "Vaguely based on the futurist flyer 'K4, O Quadrado Azul' by Almada Negreiros.",
           "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -245,7 +245,7 @@
           "description01": "Surrealist approach of quantum mechanics 'Time and Space' (Spacetime) concept.",
           "description02": "additional info: 2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -273,7 +273,7 @@
           "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
           "description02": "additional info: 2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
           "link": "https://vimeo.com/277728983",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -293,7 +293,7 @@
           "description01": "> Which came first, the Chicken or the Egg? < concept (individual transformation cycle).",
           "description02": "additional info: 2019, video exhibition 5’17” @ Festival 'SOMA'",
           "link": "https://vimeo.com/343492455",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -325,7 +325,7 @@
           "description01": "The title of the video already explains everything...",
           "description02": "additional info: 2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
           "link": "https://vimeo.com/352076169",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -349,7 +349,7 @@
           "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
           "description02": "additional info: 2021, video installation 45’14” @ Festival 'A Colina'",
           "link": "https://vimeo.com/655658351",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -373,7 +373,7 @@
           "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
           "description02": "additional info: 2022, video 2’56” @ 'Dose' magazine",
           "link": "https://vimeo.com/722374867",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -401,7 +401,7 @@
           "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
           "description02": "additional info: 2023, video 6’59”",
           "link": "https://vimeo.com/802064965",
-          "link_description": "you can watch the video here",
+          "linkDescription": "you can watch the video here",
           "images": [
             {
               "id": 1,
@@ -434,7 +434,7 @@
         "text": "you can also check my cv ",
         "description": "CV Joana Pimentel",
         "link": "CV.pdf",
-        "link_text": "<a>here</a>"
+        "linkText": "<a>here</a>"
       }
     }
   }

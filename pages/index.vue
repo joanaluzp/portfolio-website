@@ -1,7 +1,5 @@
 <template>
-  <LazyAbout />
   <LazyWork />
-  <LazyContact />
 </template>
 
 <script setup>

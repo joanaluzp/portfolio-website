@@ -1,47 +1,24 @@
 <template>
   <section class="section section-work" id="section-work">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div
-            class="work-title-wrapper d-flex justify-content-center"
-            data-aos="fade-left"
-            data-aos-duration="500"
-          >
-            <p
-              class="description-title uppercase font-bold-italic d-inline bigger"
-            >
-              {{ database.data.work.title }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="section-work-option">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <ul class="work-option-list-wrapper list-effect">
+            <ul class="work-option-list-wrapper version-work-list">
               <li
                 class="work-option-item"
-                v-for="item in workData.slice().reverse()"
+                v-for="item in workDataFrontEnd.slice().reverse()"
                 :key="item.id"
+                v-if="
+                  categoryOption === `${database.data.work.category.frontEnd}`
+                "
               >
-                <NuxtLink
-                  :to="{ path: '/work/' + item.id }"
-                  v-if="
-                    categoryOption ===
-                      `${database.data.work.category.front_end}` &&
-                    item.category === 'front-end development'
-                  "
-                >
-                  <h1 class="description-text work-title">
+                <NuxtLink :to="{ path: '/work/' + item.id }">
+                  <h1 class="description-text font-italic work-title">
                     {{ item.name }}
                   </h1>
                   <div
                     class="work-item-swiper-wrapper video"
-                    data-aos="fade-in"
-                    data-aos-duration="1500"
                     v-if="item.images.length > 0"
                   >
                     <video class="work-item-swiper video" loop muted autoplay>
@@ -49,21 +26,21 @@
                     </video>
                   </div>
                 </NuxtLink>
-                <NuxtLink
-                  :to="{ path: '/work/' + item.id }"
-                  v-if="
-                    categoryOption ===
-                      `${database.data.work.category.video_art}` &&
-                    item.category === 'video art'
-                  "
-                >
-                  <h1 class="description-text work-title">
+              </li>
+              <li
+                class="work-option-item"
+                v-for="item in workDataVideoArt.slice().reverse()"
+                :key="item.id"
+                v-if="
+                  categoryOption === `${database.data.work.category.videoArt}`
+                "
+              >
+                <NuxtLink :to="{ path: '/work/' + item.id }">
+                  <h1 class="description-text font-italic work-title">
                     {{ item.name }}
                   </h1>
                   <div
                     class="work-item-swiper-wrapper photo"
-                    data-aos="fade-in"
-                    data-aos-duration="1500"
                     v-if="item.images.length > 0"
                   >
                     <img
@@ -92,14 +69,14 @@
                 :class="{
                   active:
                     categoryOption ===
-                    `${database.data.work.category.front_end}`,
+                    `${database.data.work.category.frontEnd}`,
                 }"
                 @click="
-                  categoryOption = `${database.data.work.category.front_end}`
+                  changeWorkOption(`${database.data.work.category.frontEnd}`)
                 "
               >
                 <p class="description-text text-justify font-bold-italic">
-                  {{ database.data.work.category.front_end }}
+                  {{ database.data.work.category.frontEnd }}
                 </p>
               </div>
               <div
@@ -107,14 +84,14 @@
                 :class="{
                   active:
                     categoryOption ===
-                    `${database.data.work.category.video_art}`,
+                    `${database.data.work.category.videoArt}`,
                 }"
                 @click="
-                  categoryOption = `${database.data.work.category.video_art}`
+                  changeWorkOption(`${database.data.work.category.videoArt}`)
                 "
               >
                 <p class="description-text text-justify font-bold-italic">
-                  {{ database.data.work.category.video_art }}
+                  {{ database.data.work.category.videoArt }}
                 </p>
               </div>
             </div>
@@ -126,9 +103,22 @@
 </template>
 <script setup>
 import database from "../data/db.json";
-const categoryOption = ref(`${database.data.work.category.front_end}`);
-const workData = ref([]);
+const categoryOption = ref(`${database.data.work.category.frontEnd}`);
+const workDataVideoArt = ref([]);
+const workDataFrontEnd = ref([]);
+
+const changeWorkOption = (e) => {
+  let workElmSection = document.querySelector(".section-work");
+  workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
+  categoryOption.value = e;
+};
+
 onMounted(() => {
-  workData.value = database.data.work.categoryItem;
+  workDataFrontEnd.value = database.data.work.categoryItem.filter(
+    (item) => item.category === "front-end development"
+  );
+  workDataVideoArt.value = database.data.work.categoryItem.filter(
+    (item) => item.category === "video art"
+  );
 });
 </script>

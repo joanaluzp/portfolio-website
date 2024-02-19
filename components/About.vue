@@ -42,7 +42,7 @@
                 {{ database.data.about.skills.text }}
               </p>
               <p class="description-text d-inline small lowercase text-center">
-                {{ database.data.about.skills.text_toggle }}
+                {{ database.data.about.skills.textToggle }}
               </p>
             </div>
             <div
@@ -62,7 +62,7 @@
                     <p
                       class="description-text font-bold-italic lowercase text-center"
                     >
-                      {{ database.data.about.skills.text_informative }}
+                      {{ database.data.about.skills.textInformative }}
                     </p>
                   </li>
                   <li
