@@ -1,15 +1,11 @@
 <template>
-  <section class="section section-work">
-    <div
-      class="section-work-option"
-    >
+  <section class="section section-work item-id">
+    <div class="section-work-option">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
-              <li
-                class="work-option-item"
-              >
+              <li class="work-option-item">
                 <h1 class="d-inline description-text work-title">
                   {{ item.name }}
                 </h1>
@@ -17,9 +13,7 @@
             </ul>
           </div>
           <div class="col-12">
-            <div
-              class="work-item-info-wrapper"
-            >
+            <div class="work-item-info-wrapper">
               <h2 class="description-text text-justify small">
                 {{ item.description01 }}
               </h2>
@@ -38,13 +32,13 @@
             </div>
           </div>
           <div class="col-12">
-            <div
-            >
+            <div>
               <div
                 class="work-item-swiper-wrapper video"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                v-if="item.images.length > 0"
+                v-if="
+                  item.images.length > 0 &&
+                  item.category === 'front-end development'
+                "
               >
                 <Swiper
                   :modules="[SwiperAutoplay, SwiperNavigation]"
@@ -75,56 +69,9 @@
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="section-work-option"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <ul class="work-option-list-wrapper flex-wrap d-flex">
-              <li
-                class="work-option-item"
-              >
-                <h1 class="d-inline description-text work-title">
-                  {{ item.name }}
-                </h1>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12">
-            <div
-              class="work-item-info-wrapper"
-            >
-              <h2 class="description-text text-justify small">
-                {{ item.description01 }}
-              </h2>
-              <NuxtLink
-                :to="item.link"
-                :title="item.link"
-                class="description-text big text-justify font-bold link"
-                target="”_blank”"
-                v-if="item.link"
-              >
-                {{ item.linkDescription }}
-              </NuxtLink>
-              <p class="description-text text-justify small font-bold">
-                {{ item.description02 }}
-              </p>
-            </div>
-          </div>
-          <div class="col-12">
-            <div
-            >
               <div
                 class="work-item-swiper-wrapper photo"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                v-if="item.images.length > 0"
+                v-if="item.images.length > 0 && item.category === 'video art'"
               >
                 <Swiper
                   :modules="[SwiperAutoplay, SwiperNavigation]"
@@ -166,9 +113,16 @@
   </section>
 </template>
 <script setup>
-import database from "../data/db.json";
+const props = defineProps({
+  database: {
+    type: Object,
+    required: true,
+  },
+});
 import { ref } from "vue";
 const route = useRoute();
 const id = parseInt(route.params.id);
-const item = ref(database.data.work.categoryItem.find((item) => item.id === id));
+const item = ref(
+  props.database.data.work.categoryItem.find((item) => item.id === id)
+);
 </script>

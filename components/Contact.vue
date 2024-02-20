@@ -5,23 +5,23 @@
         <div class="col-12 col-xxl-4">
           <div class="contact-text-wrapper">
             <p class="description-title font-italic big lowercase">
-              {{ database.data.contact.text }}
+              {{ props.database.data.contact.text }}
             </p>
             <NuxtLink
-              :title="database.data.contact.email"
+              :title="props.database.data.contact.email"
               to="mailto:joanaluzp@gmail.com"
               class="contact-email-link"
               ><h1 class="description-text big">
-                {{ database.data.contact.email }}
+                {{ props.database.data.contact.email }}
               </h1></NuxtLink
             >
           </div>
         </div>
         <div class="col-12 col-xxl-6 d-flex justify-content-end">
           <NuxtLink
-            :to="database.data.contact.cv.link"
+            :to="props.database.data.contact.cv.link"
             class="contact-cv-link-wrapper"
-            :title="database.data.contact.cv.description"
+            :title="props.database.data.contact.cv.description"
             target="”_blank”"
           >
             <div
@@ -30,10 +30,10 @@
               data-aos-duration="1000"
             >
               <p class="description-text d-inline text-center lowercase">
-                {{ database.data.contact.cv.text }}
+                {{ props.database.data.contact.cv.text }}
               </p>
               <p class="description-text link d-inline">
-                {{ database.data.contact.cv.linkText }}
+                {{ props.database.data.contact.cv.linkText }}
               </p>
             </div></NuxtLink
           >
@@ -43,5 +43,10 @@
   </section>
 </template>
 <script setup>
-import database from "../data/db.json";
+const props = defineProps({
+  database: {
+    type: Object,
+    required: true,
+  },
+});
 </script>

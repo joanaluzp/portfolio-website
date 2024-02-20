@@ -3,7 +3,6 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 .section-work-option {
   display: flex;
@@ -47,7 +46,6 @@
     align-items: center;
     .work-option-item {
       display: inline;
-      position: static;
       width: fit-content;
       @include transition;
       a {
@@ -101,6 +99,7 @@
         display: inline-block;
         width: 55%;
         max-width: 55%;
+        min-height: auto;
         .work-item-swiper {
           max-width: 100%;
           -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
@@ -173,7 +172,7 @@
   .work-choose-btn-options {
     width: 100%;
     position: relative;
-    bottom: -20px;
+    top: 70px;
     left: 0;
     z-index: 1;
     gap: 8px;
@@ -257,6 +256,10 @@
     &.version-work-background {
       .work-option-item {
         position: relative;
+        &:hover {
+          animation: gelatine 2s ease infinite;
+
+        }
       }
     }
   }

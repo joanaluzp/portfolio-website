@@ -12,14 +12,14 @@
               <p
                 class="description-title bigger d-inline lowercase text-center"
               >
-                {{ database.data.about.intro }}
+                {{ props.database.data.about.intro }}
               </p>
             </div>
           </div>
           <div class="col-12 col-lg-11 col-xxl-10">
             <div class="about-text-wrapper" :class="{ unblurred: openAbout }">
               <h5 class="description-text text-justify font-bold small">
-                {{ database.data.about.text }}
+                {{ props.database.data.about.text }}
               </h5>
             </div>
           </div>
@@ -39,10 +39,10 @@
               <p
                 class="description-text d-inline lowercase font-black text-center"
               >
-                {{ database.data.about.skills.text }}
+                {{ props.database.data.about.skills.text }}
               </p>
               <p class="description-text d-inline small lowercase text-center">
-                {{ database.data.about.skills.textToggle }}
+                {{ props.database.data.about.skills.textToggle }}
               </p>
             </div>
             <div
@@ -62,7 +62,7 @@
                     <p
                       class="description-text font-bold-italic lowercase text-center"
                     >
-                      {{ database.data.about.skills.textInformative }}
+                      {{ props.database.data.about.skills.textInformative }}
                     </p>
                   </li>
                   <li
@@ -90,7 +90,7 @@
                           class="close d-inline description-text font-bold-italic lowercase big"
                           @click="openSkillsInfo = false"
                         >
-                          {{ database.data.about.skills.close }}
+                          {{ props.database.data.about.skills.close }}
                         </p>
                         <p
                           class="info-title description-title capitalize bigger"
@@ -115,12 +115,17 @@
   </section>
 </template>
 <script setup>
-import database from "../data/db.json";
 const skillOption = ref([]);
 const openSkillsInfo = ref(false);
 const openSkills = ref(false);
 const openAbout = ref(false);
 const info = ref("");
+const props = defineProps({
+  database: {
+    type: Object,
+    required: true,
+  },
+});
 
 const showElm = (elmId) => {
   openSkillsInfo.value = true;
@@ -149,6 +154,6 @@ const clickOutside = (event) => {
 onMounted(() => {
   toggleSkillsHandler();
   window.addEventListener("click", clickOutside);
-  skillOption.value = database.data.about.skills.option;
+  skillOption.value = props.database.data.about.skills.option;
 });
 </script>

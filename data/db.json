@@ -6,7 +6,7 @@
         "close": "menu"
       },
       "about": {
-        "name": "about",
+        "name": "about me",
         "category": "section-about"
       },
       "work": {
@@ -436,6 +436,9 @@
         "link": "CV.pdf",
         "linkText": "<a>here</a>"
       }
+    },
+    "footer": {
+      "text": "Design and Development by Joana da Luz Pimentel"
     }
   }
 }

@@ -1,5 +1,47 @@
 <template>
-  <section class="section section-work" id="section-work">
+  <section class="section section-work">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="work-choose-btn-options-wrapper">
+            <div
+              class="work-choose-btn-options d-flex flex-wrap align-items-center"
+            >
+              <div
+                class="work-choose-btn"
+                :class="{
+                  active:
+                    categoryOption ===
+                    `${props.database.data.work.category.frontEnd}`,
+                }"
+                @click="
+                  changeWorkOption(`${props.database.data.work.category.frontEnd}`)
+                "
+              >
+                <p class="description-text text-justify font-bold-italic">
+                  {{ props.database.data.work.category.frontEnd }}
+                </p>
+              </div>
+              <div
+                class="work-choose-btn"
+                :class="{
+                  active:
+                    categoryOption ===
+                    `${props.database.data.work.category.videoArt}`,
+                }"
+                @click="
+                  changeWorkOption(`${props.database.data.work.category.videoArt}`)
+                "
+              >
+                <p class="description-text text-justify font-bold-italic">
+                  {{ props.database.data.work.category.videoArt }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="section-work-option">
       <div class="container">
         <div class="row">
@@ -10,7 +52,7 @@
                 v-for="item in workDataFrontEnd.slice().reverse()"
                 :key="item.id"
                 v-if="
-                  categoryOption === `${database.data.work.category.frontEnd}`
+                  categoryOption === `${props.database.data.work.category.frontEnd}`
                 "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
@@ -32,7 +74,7 @@
                 v-for="item in workDataVideoArt.slice().reverse()"
                 :key="item.id"
                 v-if="
-                  categoryOption === `${database.data.work.category.videoArt}`
+                  categoryOption === `${props.database.data.work.category.videoArt}`
                 "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
@@ -57,67 +99,31 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="work-choose-btn-options-wrapper">
-            <div
-              class="work-choose-btn-options d-flex flex-wrap align-items-center"
-            >
-              <div
-                class="work-choose-btn"
-                :class="{
-                  active:
-                    categoryOption ===
-                    `${database.data.work.category.frontEnd}`,
-                }"
-                @click="
-                  changeWorkOption(`${database.data.work.category.frontEnd}`)
-                "
-              >
-                <p class="description-text text-justify font-bold-italic">
-                  {{ database.data.work.category.frontEnd }}
-                </p>
-              </div>
-              <div
-                class="work-choose-btn"
-                :class="{
-                  active:
-                    categoryOption ===
-                    `${database.data.work.category.videoArt}`,
-                }"
-                @click="
-                  changeWorkOption(`${database.data.work.category.videoArt}`)
-                "
-              >
-                <p class="description-text text-justify font-bold-italic">
-                  {{ database.data.work.category.videoArt }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </section>
 </template>
 <script setup>
-import database from "../data/db.json";
-const categoryOption = ref(`${database.data.work.category.frontEnd}`);
+const props = defineProps({
+  database: {
+    type: Object,
+    required: true,
+  },
+});
+const categoryOption = ref(`${props.database.data.work.category.frontEnd}`);
 const workDataVideoArt = ref([]);
 const workDataFrontEnd = ref([]);
 
-const changeWorkOption = (e) => {
+const changeWorkOption = (elm) => {
   let workElmSection = document.querySelector(".section-work");
   workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
-  categoryOption.value = e;
+  categoryOption.value = elm;
 };
 
 onMounted(() => {
-  workDataFrontEnd.value = database.data.work.categoryItem.filter(
+  workDataFrontEnd.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "front-end development"
   );
-  workDataVideoArt.value = database.data.work.categoryItem.filter(
+  workDataVideoArt.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "video art"
   );
 });

@@ -1,0 +1,22 @@
+/*====FOOTER====*/
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  .footer-wrapper {
+    min-height: 70px;
+    padding: 15px 20px;
+    background-color: $blue-medium;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .description-text {
+      color: $white;
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+}

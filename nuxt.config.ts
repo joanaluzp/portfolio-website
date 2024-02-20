@@ -10,7 +10,12 @@ export default defineNuxtConfig({
           name: "viewport",
           content: "width=device-width, initial-scale=1, user-scalable=no",
         },
-        { hid: "description", name: "description", content: "Joana da Luz Pimentel. Junior Front-end Developer and Audiovisual Artist." },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Joana da Luz Pimentel. Junior Front-end Developer and Audiovisual Artist.",
+        },
         { hid: "author", name: "author", content: "Joana da Luz Pimentel" },
         { hid: "og:title", name: "og:title", content: "Joana da Luz Pimentel" },
         { name: "theme-color", content: "#ffffff" },
@@ -29,6 +34,8 @@ export default defineNuxtConfig({
       ],
       script: [{ src: "https://unpkg.com/aos@2.3.1/dist/aos.js" }],
     },
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "slide", mode: "out-in" },
   },
   modules: ["nuxt-swiper"],
   css: ["@/assets/scss/style.scss"],
