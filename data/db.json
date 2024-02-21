@@ -6,26 +6,18 @@
         "close": "menu"
       },
       "about": {
-        "name": "about me",
-        "category": "section-about"
+        "name": "about"
       },
       "work": {
-        "name": "work",
-        "category": "section-work"
+        "name": "ul"
       },
       "contact": {
-        "name": "contact",
-        "category": "section-contact"
+        "name": "contact"
       }
-    },
-    "welcome": {
-      "btn": "click me",
-      "close": "close me",
-      "text": "Welcome to my little corner in the big World Wide Web. I'm a Junior Front-end Developer && Audiovisual Artist fascinated by the technological field, innovative methods of art, design and new media."
     },
     "about": {
       "intro": "about me",
-      "text": "Hello. My name is Joana. I love new things. After years of naively designing layouts on the web, I can actually build them now.",
+      "text": "Hello. My name is Joana. I love new things. After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",

@@ -35,7 +35,6 @@
 .work-option-list-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   max-width: 100%;
   overflow: hidden;
   a {
@@ -84,22 +83,19 @@
     }
   }
   &.version-work-list {
+    gap: 30px;
     .work-option-item {
       padding: 20px;
+      .row {
+        width: 100%;
+      }
       a {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      .work-title {
-        width: 35%;
-        max-width: 35%;
-      }
       .work-item-swiper-wrapper {
         display: inline-block;
-        width: 55%;
-        max-width: 55%;
-        min-height: auto;
         .work-item-swiper {
           max-width: 100%;
           -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
@@ -118,7 +114,6 @@
   display: flex;
   justify-content: end;
   position: relative;
-  min-height: 30vh;
   .swiper {
     @include transition;
     .swiper-slide {
@@ -168,11 +163,10 @@
   }
 }
 .work-choose-btn-options-wrapper {
-  min-height: 100px;
   .work-choose-btn-options {
     width: 100%;
     position: relative;
-    top: 70px;
+    top: 0;
     left: 0;
     z-index: 1;
     gap: 8px;
@@ -214,10 +208,17 @@
       }
     }
   }
-  .work-item-swiper-wrapper {
-    &.photo {
-      min-height: 50vh;
+  .work-option-list-wrapper {
+    &.version-work-background {
+      .work-option-item {
+        position: relative;
+        &:hover {
+          animation: gelatine 2s ease infinite;
+        }
+      }
     }
+  }
+  .work-item-swiper-wrapper {
     .swiper {
       &:hover {
         transform: translateX(-50px);
@@ -230,6 +231,7 @@
   }
   .work-choose-btn-options-wrapper {
     position: relative;
+    min-height: 80px;
     .work-choose-btn-options {
       position: absolute;
       justify-content: flex-start;
@@ -246,19 +248,6 @@
             font-size: 40px;
             color: $black;
           }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 1200px) {
-  .work-option-list-wrapper {
-    &.version-work-background {
-      .work-option-item {
-        position: relative;
-        &:hover {
-          animation: gelatine 2s ease infinite;
-
         }
       }
     }

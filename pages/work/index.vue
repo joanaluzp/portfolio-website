@@ -15,7 +15,9 @@
                     `${props.database.data.work.category.frontEnd}`,
                 }"
                 @click="
-                  changeWorkOption(`${props.database.data.work.category.frontEnd}`)
+                  changeWorkOption(
+                    `${props.database.data.work.category.frontEnd}`
+                  )
                 "
               >
                 <p class="description-text text-justify font-bold-italic">
@@ -30,7 +32,9 @@
                     `${props.database.data.work.category.videoArt}`,
                 }"
                 @click="
-                  changeWorkOption(`${props.database.data.work.category.videoArt}`)
+                  changeWorkOption(
+                    `${props.database.data.work.category.videoArt}`
+                  )
                 "
               >
                 <p class="description-text text-justify font-bold-italic">
@@ -52,20 +56,35 @@
                 v-for="item in workDataFrontEnd.slice().reverse()"
                 :key="item.id"
                 v-if="
-                  categoryOption === `${props.database.data.work.category.frontEnd}`
+                  categoryOption ===
+                  `${props.database.data.work.category.frontEnd}`
                 "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
-                  <h1 class="description-text font-italic work-title">
-                    {{ item.name }}
-                  </h1>
-                  <div
-                    class="work-item-swiper-wrapper video"
-                    v-if="item.images.length > 0"
-                  >
-                    <video class="work-item-swiper video" loop muted autoplay>
-                      <source :src="item.images[0].image" type="video/mp4" />
-                    </video>
+                  <div class="row align-items-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                      <h1 class="description-text font-italic work-title">
+                        {{ item.name }}
+                      </h1>
+                    </div>
+                    <div class="col-12 col-sm-4 col-lg-6">
+                      <div
+                        class="work-item-swiper-wrapper video"
+                        v-if="item.images.length > 0"
+                      >
+                        <video
+                          class="work-item-swiper video"
+                          loop
+                          muted
+                          autoplay
+                        >
+                          <source
+                            :src="item.images[0].image"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </div>
                   </div>
                 </NuxtLink>
               </li>
@@ -74,23 +93,30 @@
                 v-for="item in workDataVideoArt.slice().reverse()"
                 :key="item.id"
                 v-if="
-                  categoryOption === `${props.database.data.work.category.videoArt}`
+                  categoryOption ===
+                  `${props.database.data.work.category.videoArt}`
                 "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
-                  <h1 class="description-text font-italic work-title">
-                    {{ item.name }}
-                  </h1>
-                  <div
-                    class="work-item-swiper-wrapper photo"
-                    v-if="item.images.length > 0"
-                  >
-                    <img
-                      class="work-item-swiper photo"
-                      :title="item.name"
-                      :alt="item.name"
-                      :src="item.images[0].image"
-                    />
+                  <div class="row align-items-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                      <h1 class="description-text font-italic work-title">
+                        {{ item.name }}
+                      </h1>
+                    </div>
+                    <div class="col-12 col-sm-4 col-lg-6">
+                      <div
+                        class="work-item-swiper-wrapper photo"
+                        v-if="item.images.length > 0"
+                      >
+                        <img
+                          class="work-item-swiper photo"
+                          :title="item.name"
+                          :alt="item.name"
+                          :src="item.images[0].image"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </NuxtLink>
               </li>
@@ -99,7 +125,6 @@
         </div>
       </div>
     </div>
-
   </section>
 </template>
 <script setup>

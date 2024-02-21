@@ -2,17 +2,17 @@
   <div class="maintenance" v-if="maintenance">
     <p class="description-text text-center big">website under maintenance :(</p>
   </div>
-  <main class="main" v-else>
-    <LazyNavbar :database="database" />
-    <section class="sections">
+  <div class="app-content" v-else>
+    <Navbar :database="database" />
+    <main class="main">
       <NuxtPage :database="database" />
-    </section>
+    </main>
     <LazyFooter :database="database" />
-  </main>
+  </div>
 </template>
 <script setup>
 import database from "../data/db.json";
-const maintenance = ref(true);
+const maintenance = ref(false);
 </script>
 <style>
 .page-enter-active,

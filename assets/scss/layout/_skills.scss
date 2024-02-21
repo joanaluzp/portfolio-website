@@ -23,7 +23,7 @@
   }
 }
 .skills-dropdown-wrapper {
-  z-index: 18;
+  z-index: 20;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
@@ -36,24 +36,22 @@
   }
 }
 .skills-dropdown-list {
+  @include transition;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 500px;
   gap: 5px;
   padding: 30px 20px;
-  border-radius: 35px;
-  background-color: $grey-clear01;
   &.is-open {
     pointer-events: none;
   }
-  @include transition;
   .skills-dropdown-list-description {
     width: 100%;
     margin: 0 50px 20px 50px;
   }
   .skills-dropdown-list-item {
     .description-text {
-      text-align: center;
       color: $black;
       &.divider {
         font-weight: 900;
@@ -61,35 +59,30 @@
       &.option {
         font-weight: 400;
         cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     .skills-infocard-wrapper {
-      @include transition;
       position: fixed;
       overflow-y: scroll;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      max-width: 600px;
-      max-height: fit-content;
-      height: 50vh;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      min-height: 100vh;
       background-color: $white;
-      border-radius: 25px;
-      padding: 15px 20px;
+      padding: 30px 0;
       opacity: 0;
       animation: none;
       pointer-events: none;
-      -webkit-box-shadow: 5px 5px 5px 0px rgba($black, 0.1);
-      box-shadow: 5px 5px 5px 0px rgba($black, 0.1);
       &::-webkit-scrollbar {
         width: 0;
       }
-      /* Track */
       &::-webkit-scrollbar-track {
         background: transparent;
       }
-      /* Handle */
       &::-webkit-scrollbar-thumb {
         background: transparent;
       }
@@ -103,12 +96,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .close {
-          width: fit-content;
+        .btn-close {
           cursor: pointer;
-          text-align: center;
-          text-decoration: underline;
-          margin-bottom: 10px;
           color: $black;
           span {
             text-decoration: none;
@@ -117,7 +106,7 @@
           }
         }
         .info-title {
-          font-family: $font-handwriting;
+          margin: 30px 0;
           text-align: center;
           color: $black-clear02;
         }
@@ -126,38 +115,5 @@
         }
       }
     }
-  }
-}
-@media (min-width: 576px) {
-  .skills-dropdown-list {
-    .skills-dropdown-list-item {
-      .skills-infocard-wrapper {
-        height: auto;
-      }
-    }
-  }
-}
-@media (min-width: 992px) {
-  .skills-dropdown-list {
-    .skills-dropdown-list-item {
-      .description-text {
-        &.option {
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-      .skills-infocard-wrapper {
-        max-width: 700px;
-        &:hover {
-          transform: translate(-50%, -50%) scale(1.1);
-        }
-      }
-    }
-  }
-}
-@media (min-width: 1200px) {
-  .skills-dropdown-wrapper {
-    z-index: 99;
   }
 }

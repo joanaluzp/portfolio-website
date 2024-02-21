@@ -51,7 +51,6 @@
     </div>
   </section>
 </template>
-
 <script setup>
 import { ref, onMounted } from "vue";
 let categoryItems = ref([]);

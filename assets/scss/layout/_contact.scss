@@ -27,9 +27,9 @@
     flex-wrap: nowrap;
     border-radius: 25px;
     -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 4px 4px 15px 0px $grey-clear02;
+      inset 2px 2px 15px 0px $grey-clear02;
     box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 4px 4px 15px 0px $grey-clear02;
+      inset 2px 2px 15px 0px $grey-clear02;
     .description-text {
       text-align: center;
       color: $black-clear01;
@@ -45,16 +45,6 @@
       &:hover {
         animation: spin 2s ease-in-out infinite;
       }
-    }
-  }
-  .contact-cv-link-wrapper {
-    margin-right: 0;
-    &:hover {
-      animation: shake 0.3s ease-in-out infinite;
-    }
-    .contact-cv-wrapper {
-      max-width: 250px;
-      margin: 0;
     }
   }
 }

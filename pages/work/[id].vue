@@ -14,7 +14,7 @@
           </div>
           <div class="col-12">
             <div class="work-item-info-wrapper">
-              <h2 class="description-text text-justify small">
+              <h2 class="description-text text-justify">
                 {{ item.description01 }}
               </h2>
               <NuxtLink
@@ -26,7 +26,7 @@
               >
                 {{ item.linkDescription }}
               </NuxtLink>
-              <p class="description-text text-justify small font-bold">
+              <p class="description-text text-justify font-bold">
                 {{ item.description02 }}
               </p>
             </div>

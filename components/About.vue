@@ -2,7 +2,7 @@
   <section class="section section-about" id="section-about">
     <div class="section-about-wrapper">
       <div class="container">
-        <div class="row align-items-center justify-content-center">
+        <div class="row">
           <div class="col-12 col-lg-9 col-xxl-8">
             <div
               class="about-text-background"
@@ -15,10 +15,8 @@
                 {{ props.database.data.about.intro }}
               </p>
             </div>
-          </div>
-          <div class="col-12 col-lg-11 col-xxl-10">
-            <div class="about-text-wrapper" :class="{ unblurred: openAbout }">
-              <h5 class="description-text text-justify font-bold small">
+            <div class="about-text-wrapper">
+              <h5 class="description-text text-justify">
                 {{ props.database.data.about.text }}
               </h5>
             </div>
@@ -86,22 +84,28 @@
                       }"
                     >
                       <div class="skills-infocard">
-                        <p
-                          class="close d-inline description-text font-bold-italic lowercase big"
-                          @click="openSkillsInfo = false"
-                        >
-                          {{ props.database.data.about.skills.close }}
-                        </p>
-                        <p
-                          class="info-title description-title capitalize bigger"
-                        >
-                          {{ item.skill }}
-                        </p>
-                        <p
-                          class="info-description description-text text-justify"
-                        >
-                          {{ item.description }}
-                        </p>
+                        <div class="container">
+                          <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8">
+                              <p
+                                class="btn-close d-inline description-text font-bold lowercase big"
+                                @click="openSkillsInfo = false"
+                              >
+                                {{ props.database.data.about.skills.close }}
+                              </p>
+                              <p
+                                class="info-title description-title capitalize font-italic bigger"
+                              >
+                                {{ item.skill }}
+                              </p>
+                              <p
+                                class="info-description description-text text-justify"
+                              >
+                                {{ item.description }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -137,23 +141,13 @@ const toggleSkillsHandler = () => {
   if (skillsToggle) {
     skillsToggle.addEventListener("click", () => {
       openSkills.value = !openSkills.value;
-      skillsToggle.scrollIntoView({ behavior: "smooth", top: 200 });
+      skillsToggle.scrollIntoView({ behavior: "smooth", top: 0 });
     });
-  }
-};
-
-const clickOutside = (event) => {
-  const elmList = document.querySelector(".skills-dropdown-list");
-  if (elmList) {
-    if (!elmList.contains(event.target)) {
-      openSkillsInfo.value = false;
-    }
   }
 };
 
 onMounted(() => {
   toggleSkillsHandler();
-  window.addEventListener("click", clickOutside);
   skillOption.value = props.database.data.about.skills.option;
 });
 </script>
