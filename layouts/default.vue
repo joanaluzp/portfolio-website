@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import database from "../data/db.json";
-const maintenance = ref(false);
+const maintenance = ref(true);
 </script>
 <style>
 .page-enter-active,
