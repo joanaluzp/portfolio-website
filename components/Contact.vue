@@ -2,7 +2,7 @@
   <section class="section section-contact" id="section-contact">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12">
+        <div class="col-12 col-md-6">
           <div class="contact-text-wrapper">
             <p class="description-title font-italic big lowercase">
               {{ props.database.data.contact.text }}
@@ -17,7 +17,7 @@
             >
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
           <NuxtLink
             :to="props.database.data.contact.cv.link"
             class="contact-cv-link-wrapper"

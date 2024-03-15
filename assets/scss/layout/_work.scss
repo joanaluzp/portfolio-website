@@ -3,11 +3,31 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-}
-.section-work-option {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
+  .section-work-modal {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    .work-modal {
+      background-color: $pink;
+      border-radius: 25px;
+      padding: 30px 40px;
+      .description-title {
+        text-align: center;
+      }
+    }
+  }
+  .section-work-option {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
 }
 .work-title-wrapper {
   margin-bottom: 30px;
@@ -46,6 +66,7 @@
     .work-option-item {
       display: inline;
       width: fit-content;
+      pointer-events: none;
       @include transition;
       a {
         position: relative;
@@ -195,8 +216,10 @@
   }
 }
 @media (min-width: 992px) {
-  .section-work-option {
-    display: block;
+  .section-work {
+    .section-work-option {
+      display: block;
+    }
   }
   .work-item-info-wrapper {
     .description-text {
@@ -212,6 +235,7 @@
     &.version-work-background {
       .work-option-item {
         position: relative;
+        pointer-events: initial;
         &:hover {
           animation: gelatine 2s ease infinite;
         }

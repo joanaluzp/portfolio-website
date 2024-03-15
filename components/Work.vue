@@ -1,49 +1,59 @@
 <template>
   <section class="section section-work" id="section-work">
+    <div class="section-work-modal d-lg-none">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <NuxtLink :to="{ path: '/work/' }">
+              <div class="work-modal">
+                <p class="description-title bigger">
+                  {{ props.database.data.work.modal }}
+                </p>
+              </div>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="section-work-option">
       <ul class="work-option-list-wrapper version-work-background">
         <li
-          class="work-option-item"
-          :id="item.slug"
-          v-for="item in categoryItems"
+          v-for="item in filteredCategoryItems"
           :key="item.id"
-          :style="{
-            left: item.randomLeft + 'px',
-            top: item.randomTop + 'px',
-          }"
+          :style="{ left: item.randomLeft + 'px', top: item.randomTop + 'px' }"
+          class="work-option-item"
         >
           <NuxtLink :to="{ path: '/work/' + item.id }">
             <h1
               class="description-text work-title"
-              :class="item.images.length > 0 ? '' : 'no-img'"
+              :class="{ 'no-img': item.images.length === 0 }"
             >
               {{ item.name }}
             </h1>
             <div
-              class="work-item-swiper-wrapper video"
+              class="work-item-swiper-wrapper"
+              :class="{
+                video: item.category === 'front-end development',
+                photo: item.category === 'video art',
+              }"
               data-aos="fade-in"
               data-aos-duration="1500"
-              v-if="
-                item.images.length > 0 &&
-                item.category === 'front-end development'
-              "
             >
-              <video class="work-item-swiper video" loop muted autoplay>
-                <source :src="item.images[0].image" type="video/mp4" />
-              </video>
-            </div>
-            <div
-              class="work-item-swiper-wrapper photo"
-              data-aos="fade-in"
-              data-aos-duration="1500"
-              v-if="item.images.length > 0 && item.category === 'video art'"
-            >
-              <img
-                class="work-item-swiper photo"
-                :title="item.name"
-                :alt="item.name"
-                :src="item.images[0].image"
-              />
+              <template v-if="item.images.length > 0">
+                <template v-if="item.category === 'front-end development'">
+                  <video class="work-item-swiper video" loop muted autoplay>
+                    <source :src="item.images[0].image" type="video/mp4" />
+                  </video>
+                </template>
+                <template v-else-if="item.category === 'video art'">
+                  <img
+                    class="work-item-swiper photo"
+                    :title="item.name"
+                    :alt="item.name"
+                    :src="item.images[0].image"
+                  />
+                </template>
+              </template>
             </div>
           </NuxtLink>
         </li>
@@ -61,7 +71,16 @@ const props = defineProps({
   },
 });
 
-function randomWorkArray (array) {
+const filteredCategoryItems = computed(() => {
+  return categoryItems.value.filter((item) => {
+    return (
+      (item.images.length > 0 && item.category === "front-end development") ||
+      (item.images.length > 0 && item.category === "video art")
+    );
+  });
+});
+
+function randomWorkArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -76,13 +95,13 @@ function getRandomPosition() {
 
 onMounted(() => {
   categoryItems.value = props.database.data.work.categoryItem;
-    if (categoryItems.value) {
+  if (categoryItems.value) {
     randomWorkArray(categoryItems.value);
     categoryItems.value.forEach((item) => {
       const randomPosition = getRandomPosition();
       item.randomLeft = randomPosition.left;
       item.randomTop = randomPosition.top;
     });
-  }  
-}); 
+  }
+});
 </script>

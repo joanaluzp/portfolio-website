@@ -1,40 +1,49 @@
 <template>
   <nav class="navbar">
-    <p class="description-title menu d-block d-lg-none" @click="open = true" v-if="open">
-      {{ database.data.nav.menu.open }}
-    </p>
-    <p class="description-title menu d-block d-lg-none" @click="open = false" v-else>
-      {{ database.data.nav.menu.close }}
-    </p>
-    <div class="navbar-menu-wrapper" :class="{ 'is-open': open }">
-      <ul class="navbar-menu-list">
-        <NuxtLink :to="{ path: '/about/' }">
-          <li class="navbar-menu-item">
-            <p class="description-title bigger">
+    <div class="navbar-menu-wrapper">
+      <ul class="navbar-menu-list d-lg-none">
+        <li class="navbar-menu-item animation item-01">
+          <NuxtLink :to="{ path: '/about/' }">
+            <p class="description-title big">
               {{ props.database.data.nav.about.name }}
             </p>
-          </li>
-        </NuxtLink>
-        <NuxtLink :to="{ path: '/work/' }">
-          <li class="navbar-menu-item">
-            <p class="description-title bigger">
-              {{ props.database.data.nav.work.name }}
-            </p>
-          </li>
-        </NuxtLink>
-        <NuxtLink :to="{ path: '/contact/' }">
-          <li class="navbar-menu-item">
-            <p class="description-title bigger">
+          </NuxtLink>
+        </li>
+        <li class="navbar-menu-item animation item-02">
+          <NuxtLink :to="{ path: '/contact/' }">
+            <p class="description-title big">
               {{ props.database.data.nav.contact.name }}
             </p>
-          </li></NuxtLink
-        >
+          </NuxtLink>
+        </li>
+      </ul>
+      <ul class="navbar-menu-list d-none d-lg-flex">
+        <li class="navbar-menu-item animation item-01">
+          <NuxtLink :to="{ path: '/about/' }">
+            <p class="description-title big">
+              {{ props.database.data.nav.about.name }}
+            </p>
+          </NuxtLink>
+        </li>
+        <li class="navbar-menu-item animation item-02">
+          <NuxtLink :to="{ path: '/work/' }">
+            <p class="description-title big">
+              {{ props.database.data.nav.work.name }}
+            </p>
+          </NuxtLink>
+        </li>
+        <li class="navbar-menu-item animation item-03">
+          <NuxtLink :to="{ path: '/contact/' }">
+            <p class="description-title big">
+              {{ props.database.data.nav.contact.name }}
+            </p>
+          </NuxtLink>
+        </li>
       </ul>
     </div>
   </nav>
 </template>
 <script setup>
-const open = ref(false);
 const prevScroll = ref(0);
 const props = defineProps({
   database: {
@@ -43,32 +52,35 @@ const props = defineProps({
   },
 });
 
-const clickOutside = (event) => {
-  const navbar = document.querySelector(".navbar");
-  if (navbar) {
-    if (!navbar.contains(event.target)) {
-      open.value = false;
-    }
-  }
-};
-
 const handleScrollNavbar = () => {
   let scroll = window.pageYOffset;
   let elmNavbar = document.querySelector(".navbar");
+  const elmNavbarItem = document.querySelectorAll(".navbar-menu-item");
   let heightNavbar = elmNavbar ? elmNavbar.offsetHeight : 0;
   if (scroll > heightNavbar) {
-    elmNavbar.style.top = "-300px";
+    elmNavbar.style.top = "-100px";
+    elmNavbarItem.forEach((el) => {
+      el.classList.remove("animation");
+      el.classList.add("opacity-0");
+    });
     if (scroll < prevScroll.value) {
       elmNavbar.style.top = "15px";
+      elmNavbarItem.forEach((el) => {
+        el.classList.add("animation");
+        el.classList.remove("opacity-0");
+      });
     }
   } else {
     elmNavbar.style.top = "15px";
+    elmNavbarItem.forEach((el) => {
+      el.classList.add("animation");
+      el.classList.remove("opacity-0");
+    });
   }
   prevScroll.value = scroll;
 };
 
 onMounted(() => {
-  window.addEventListener("click", clickOutside);
   window.addEventListener("scroll", handleScrollNavbar);
 });
 </script>

@@ -37,7 +37,6 @@ body {
   .main {
     position: relative;
     min-height: 100vh;
-    padding: 140px 0;
     .section {
       width: 100%;
       height: auto;
@@ -76,12 +75,17 @@ body {
     transform: rotateY(360deg);
   }
 }
-@keyframes scale {
+@keyframes navbarItem {
   0% {
-    transform: scale(1);
+    transform: scale(0.4);
+    opacity: 0;
   }
-  50% {
-    transform: scale(0.9);
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.8);
   }
   100% {
     transform: scale(1);
