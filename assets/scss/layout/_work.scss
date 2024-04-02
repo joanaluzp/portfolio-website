@@ -15,11 +15,17 @@
       color: $white;
     }
     .work-modal {
-      background-color: $pink;
+      background-color: $yellow;
       border-radius: 25px;
       padding: 30px 40px;
+      -webkit-box-shadow: 3px 3px 5px 0px $grey-clear01,
+        inset 2px 2px 20px 0px $grey-clear01;
+      box-shadow: 3px 3px 5px 0px $grey-clear01,
+        inset 2px 2px 20px 0px $grey-clear01;
+      animation: shake02 0.7s ease-in-out infinite;
       .description-title {
         text-align: center;
+        color: $purple;
       }
     }
   }
@@ -27,6 +33,20 @@
     display: flex;
     align-items: flex-end;
     width: 100%;
+    .work-go-back {
+      text-decoration: none;
+      color: $black;
+      .description-title {
+        &:hover {
+          animation: gelatine 0.8s ease-in-out infinite;
+        }
+      }
+    }
+  }
+  &.item-id {
+    .work-title {
+      color: $purple;
+    }
   }
 }
 .work-title-wrapper {
@@ -118,15 +138,17 @@
       .work-item-swiper-wrapper {
         display: inline-block;
         .work-item-swiper {
+          border-radius: 25px;
           max-width: 100%;
-          -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-            inset 4px 4px 15px 0px $grey-clear02;
-          box-shadow: 5px 5px 5px 0px $grey-clear02,
-            inset 4px 4px 15px 0px $grey-clear02;
+          -webkit-box-shadow: 3px 3px 5px 0px $grey-clear01,
+            inset 2px 2px 20px 0px $grey-clear01;
+          box-shadow: 3px 3px 5px 0px $grey-clear01,
+            inset 2px 2px 20px 0px $grey-clear01;
         }
       }
       &:hover {
         background-color: $green;
+        animation: bounce 0.8s ease-in-out infinite;
       }
     }
   }
@@ -164,9 +186,7 @@
       pointer-events: all;
       cursor: pointer;
       i {
-        color: rgba($white, 0.8);
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $black;
+        color: $white;
         @include transition2(all, 0.2s, ease-in-out);
       }
       &:hover {

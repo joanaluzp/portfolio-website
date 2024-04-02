@@ -3,7 +3,7 @@
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-9 col-xxl-8">
+          <div class="col-12 col-lg-6">
             <div
               class="about-text-background"
               :class="{ animation: !openAbout }"
@@ -35,7 +35,7 @@
               :class="{ 'no-animation': openSkills }"
             >
               <p
-                class="description-text d-inline lowercase font-black text-center"
+                class="description-title d-inline lowercase big font-bold text-center"
               >
                 {{ props.database.data.about.skills.text }}
               </p>
@@ -79,9 +79,7 @@
                     </p>
                     <div
                       class="skills-infocard-wrapper"
-                      :class="{
-                        'is-open': openSkillsInfo && info === item.category,
-                      }"
+                      v-if="openSkillsInfo && info === item.category"
                     >
                       <div class="skills-infocard">
                         <div class="container">
@@ -141,7 +139,9 @@ const toggleSkillsHandler = () => {
   if (skillsToggle) {
     skillsToggle.addEventListener("click", () => {
       openSkills.value = !openSkills.value;
-      skillsToggle.scrollIntoView({ behavior: "smooth", top: 0 });
+      setTimeout(() => {
+        window.scrollBy(0, window.innerHeight);
+      }, 300);
     });
   }
 };

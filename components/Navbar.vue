@@ -1,23 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-menu-wrapper">
-      <ul class="navbar-menu-list d-lg-none">
-        <li class="navbar-menu-item animation item-01">
-          <NuxtLink :to="{ path: '/about/' }">
-            <p class="description-title big">
-              {{ props.database.data.nav.about.name }}
-            </p>
-          </NuxtLink>
-        </li>
-        <li class="navbar-menu-item animation item-02">
-          <NuxtLink :to="{ path: '/contact/' }">
-            <p class="description-title big">
-              {{ props.database.data.nav.contact.name }}
-            </p>
-          </NuxtLink>
-        </li>
-      </ul>
-      <ul class="navbar-menu-list d-none d-lg-flex">
+      <ul class="navbar-menu-list">
         <li class="navbar-menu-item animation item-01">
           <NuxtLink :to="{ path: '/about/' }">
             <p class="description-title big">
@@ -61,20 +45,17 @@ const handleScrollNavbar = () => {
     elmNavbar.style.top = "-100px";
     elmNavbarItem.forEach((el) => {
       el.classList.remove("animation");
-      el.classList.add("opacity-0");
     });
     if (scroll < prevScroll.value) {
       elmNavbar.style.top = "15px";
       elmNavbarItem.forEach((el) => {
         el.classList.add("animation");
-        el.classList.remove("opacity-0");
       });
     }
   } else {
     elmNavbar.style.top = "15px";
     elmNavbarItem.forEach((el) => {
       el.classList.add("animation");
-      el.classList.remove("opacity-0");
     });
   }
   prevScroll.value = scroll;

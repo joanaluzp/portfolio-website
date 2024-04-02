@@ -6,7 +6,7 @@
           <div class="col-12">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li class="work-option-item">
-                <h1 class="d-inline description-text work-title">
+                <h1 class="d-inline description-text work-title font-bold">
                   {{ item.name }}
                 </h1>
               </li>
@@ -106,6 +106,21 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-12">
+            <NuxtLink
+            to="javascript:history.back()"
+            class="work-go-back"
+            :title="props.database.data.work.goBack"
+          >
+            <div
+              class="d-inline-flex"
+            >
+              <p class="description-title big font-bold d-inline lowercase">
+                {{ props.database.data.work.goBack }}
+              </p>
+            </div></NuxtLink
+          >
           </div>
         </div>
       </div>

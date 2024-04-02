@@ -1,4 +1,4 @@
-/*====SKILLS===*/
+/*====ABOUT===*/
 .skills-dropdown-toggle {
   position: relative;
   cursor: pointer;
@@ -16,14 +16,9 @@
   &.no-animation {
     animation: none;
   }
-  .description-text {
-    &:first-child {
-      color: $blue;
-    }
-  }
 }
 .skills-dropdown-wrapper {
-  z-index: 20;
+  z-index: 2000;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
@@ -33,6 +28,8 @@
   .skills-dropdown-inner {
     position: relative;
     overflow: hidden;
+    border-radius: 0;
+    background-color: $grey-clear03;
   }
 }
 .skills-dropdown-list {
@@ -40,19 +37,18 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 500px;
   gap: 5px;
-  padding: 30px 20px;
+  padding: 40px;
   &.is-open {
     pointer-events: none;
   }
   .skills-dropdown-list-description {
     width: 100%;
-    margin: 0 50px 20px 50px;
+    margin-bottom: 20px;
   }
   .skills-dropdown-list-item {
     .description-text {
-      color: $black;
+      color: $blue;
       &.divider {
         font-weight: 900;
       }
@@ -74,9 +70,8 @@
       min-height: 100vh;
       background-color: $white;
       padding: 30px 0;
-      opacity: 0;
       animation: none;
-      pointer-events: none;
+      pointer-events: initial;
       &::-webkit-scrollbar {
         width: 0;
       }
@@ -86,11 +81,6 @@
       &::-webkit-scrollbar-thumb {
         background: transparent;
       }
-      &.is-open {
-        opacity: 1;
-        cursor: auto;
-        pointer-events: initial;
-      }
       .skills-infocard {
         display: flex;
         flex-direction: column;
@@ -99,16 +89,27 @@
         .btn-close {
           cursor: pointer;
           color: $black;
+          padding: 20px;
+          border-radius: 50%;
+          border: 2px solid transparent;
+          @include transition;
           span {
             text-decoration: none;
             font-style: none;
             font-weight: 400;
           }
+          &:hover {
+            border: 2px solid $purple;
+          }
         }
         .info-title {
-          margin: 30px 0;
+          margin: 50px 0;
           text-align: center;
-          color: $black-clear02;
+          color: $yellow;
+          font-family: $font-01;
+          animation: rotate3d 1.3s ease-in-out;
+          -webkit-text-stroke-width: 0.7px;
+          -webkit-text-stroke-color: $grey-clear02;
         }
         .info-description {
           color: $black;

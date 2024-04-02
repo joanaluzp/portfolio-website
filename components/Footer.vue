@@ -20,4 +20,20 @@ const props = defineProps({
     required: true,
   },
 });
+const handleScrollFooter = () => {
+  const footer = document.querySelector(".footer-wrapper");
+  const windowHeight = window.innerHeight;
+  const scrollableHeight = document.documentElement.scrollHeight - windowHeight;
+  const currentScroll = window.scrollY;
+
+  if (currentScroll >= scrollableHeight) {
+    footer.style.bottom = "0";
+  } else {
+    footer.style.bottom = "-100px";
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScrollFooter);
+});
 </script>

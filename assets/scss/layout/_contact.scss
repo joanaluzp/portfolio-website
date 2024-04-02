@@ -24,16 +24,11 @@
     align-items: center;
     flex-wrap: nowrap;
     border-radius: 25px;
-    -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 2px 2px 15px 0px $grey-clear02;
-    box-shadow: 5px 5px 5px 0px $grey-clear02,
-      inset 2px 2px 15px 0px $grey-clear02;
+    background-color: $red;
+    margin-top: 40px;
     .description-text {
       text-align: center;
-      color: $black-clear01;
-      &.link {
-        color: $blue-medium;
-      }
+      color: $white;
     }
   }
 }
@@ -42,6 +37,13 @@
     .description-text {
       &:hover {
         animation: spin 2s ease-in-out infinite;
+      }
+    }
+  }
+  .contact-cv-link-wrapper {
+    .contact-cv-wrapper {
+      &:hover {
+        animation: shake 0.2s ease-in-out infinite;
       }
     }
   }

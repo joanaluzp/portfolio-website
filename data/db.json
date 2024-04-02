@@ -148,7 +148,8 @@
       }
     },
     "work": {
-      "modal": "i want to explore all the work",
+      "modal": "i want to explore all work",
+      "goBack": "go back",
       "category": {
         "frontEnd": "front-end development",
         "videoArt": "video art"
@@ -159,7 +160,7 @@
           "name": "★this website★",
           "slug": "my-web",
           "category": "front-end development",
-          "description01": "Made with love and possibly constantly changing ༺☆༻💌",
+          "description01": "Made with love and possibly constantly changing ༺☆༻",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
           "link": "",
           "linkDescription": "",
@@ -206,7 +207,7 @@
           "name": "kapa4",
           "slug": "kapa-4",
           "category": "video art",
-          "description01": "Vaguely based on the futurist flyer 'K4, O Quadrado Azul' by Almada Negreiros.",
+          "description01": "Vaguely based on the futurist flyer ===K4, O Quadrado Azul=== by Almada Negreiros.",
           "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
           "linkDescription": "you can watch the video here",
@@ -234,7 +235,7 @@
           "name": "시공간 @espaço/tempo",
           "slug": "espaço-tempo",
           "category": "video art",
-          "description01": "Surrealist approach of quantum mechanics 'Time and Space' (Spacetime) concept.",
+          "description01": "Surrealist approach of quantum mechanics ===Time and Space=== (Spacetime) concept.",
           "description02": "additional info: 2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
           "linkDescription": "you can watch the video here",
@@ -282,8 +283,8 @@
           "name": "Life 0",
           "slug": "life-0",
           "category": "video art",
-          "description01": "> Which came first, the Chicken or the Egg? < concept (individual transformation cycle).",
-          "description02": "additional info: 2019, video exhibition 5’17” @ Festival 'SOMA'",
+          "description01": "Which came first, the Chicken or the Egg? === concept (individual transformation cycle)",
+          "description02": "additional info: 2019, video exhibition 5’17” @ Festival SOMA",
           "link": "https://vimeo.com/343492455",
           "linkDescription": "you can watch the video here",
           "images": [
@@ -339,7 +340,7 @@
           "slug": "lunch-time-pleasure-pain",
           "category": "video art",
           "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
-          "description02": "additional info: 2021, video installation 45’14” @ Festival 'A Colina'",
+          "description02": "additional info: 2021, video installation 45’14” @ Festival A Colina",
           "link": "https://vimeo.com/655658351",
           "linkDescription": "you can watch the video here",
           "images": [
@@ -363,7 +364,7 @@
           "slug": "power-house-8",
           "category": "video art",
           "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
-          "description02": "additional info: 2022, video 2’56” @ 'Dose' magazine",
+          "description02": "additional info: 2022, video 2’56” @ Dose magazine",
           "link": "https://vimeo.com/722374867",
           "linkDescription": "you can watch the video here",
           "images": [
@@ -430,7 +431,7 @@
       }
     },
     "footer": {
-      "text": "Design and Development by Joana da Luz Pimentel"
+      "text": "design and development by Joana da Luz Pimentel"
     }
   }
 }
