@@ -3574,12 +3574,18 @@ html .main,
 body .main {
   position: relative;
   min-height: 100vh;
-  padding: 100px 0;
 }
 html .main .section,
 body .main .section {
   width: 100%;
   height: auto;
+  padding: 140px 0 50px 0;
+}
+@media (min-width: 576px) {
+  html .main .section,
+  body .main .section {
+    padding: 100px 0 50px 0;
+  }
 }
 html .maintenance,
 body .maintenance {
@@ -3778,12 +3784,11 @@ body .container .row {
   height: auto;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 90%;
+  min-width: 100%;
   z-index: 18;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
   transition: all 0.3s ease-in-out;
 }
 .navbar a {
@@ -3817,6 +3822,10 @@ body .container .row {
 .navbar-menu-list .navbar-menu-item.item-03.animation {
   animation: navbarItem 1.5s ease-in-out;
   animation-delay: 0.9s;
+}
+.navbar-menu-list .navbar-menu-item.item-04.animation {
+  animation: navbarItem 1.5s ease-in-out;
+  animation-delay: 1.2s;
 }
 .navbar-menu-list .navbar-menu-item .description-title {
   cursor: pointer;
@@ -3867,6 +3876,14 @@ body .container .row {
 }
 .section-work.item-id .work-title {
   color: #6f00ff;
+}
+.section-work.item-list .work-option-list-wrapper {
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  border: 20px solid #1900ff;
+  background-color: #ececec;
+  padding: 15px;
+  margin-top: 20px;
 }
 
 .work-title-wrapper {
@@ -3950,6 +3967,8 @@ body .container .row {
 }
 .work-option-list-wrapper.version-work-list .work-option-item {
   padding: 20px;
+  border: 1px solid #000;
+  transition: all 0.3s ease-in-out;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .row {
   width: 100%;
@@ -3968,6 +3987,7 @@ body .container .row {
   box-shadow: 3px 3px 5px 0px #ececec, inset 2px 2px 20px 0px #ececec;
 }
 .work-option-list-wrapper.version-work-list .work-option-item:hover {
+  border: 1px solid transparent;
   background-color: #26c548;
   animation: bounce 0.8s ease-in-out infinite;
 }

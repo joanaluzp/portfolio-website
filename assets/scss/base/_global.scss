@@ -36,10 +36,13 @@ body {
   .main {
     position: relative;
     min-height: 100vh;
-    padding: 100px 0;
     .section {
       width: 100%;
       height: auto;
+      padding: 140px 0 50px 0;
+      @media (min-width: 576px) {
+        padding: 100px 0 50px 0;
+      }
     }
   }
   .maintenance {

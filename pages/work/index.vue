@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-work">
+  <section class="section section-work item-list">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -134,7 +134,7 @@ const props = defineProps({
     required: true,
   },
 });
-const categoryOption = ref(`${props.database.data.work.category.frontEnd}`);
+const categoryOption = ref(`${props.database.data.work.category.frontEnd}`)
 const workDataVideoArt = ref([]);
 const workDataFrontEnd = ref([]);
 

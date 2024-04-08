@@ -5,6 +5,9 @@
         "open": "close",
         "close": "menu"
       },
+      "home": {
+        "name": "home"
+      },
       "about": {
         "name": "about"
       },
@@ -17,7 +20,7 @@
     },
     "about": {
       "intro": "about me",
-      "text": "Hello. My name is Joana. I love new things. After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
+      "text": "Hello. My name is Joana. Born in Lisbon, based in Berlin. I love new and shiny things. After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",
@@ -207,7 +210,7 @@
           "name": "kapa4",
           "slug": "kapa-4",
           "category": "video art",
-          "description01": "Vaguely based on the futurist flyer ===K4, O Quadrado Azul=== by Almada Negreiros.",
+          "description01": "Vaguely based on the futurist flyer ~K4, O Quadrado Azul~ by Almada Negreiros.",
           "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
           "linkDescription": "you can watch the video here",
@@ -235,7 +238,7 @@
           "name": "시공간 @espaço/tempo",
           "slug": "espaço-tempo",
           "category": "video art",
-          "description01": "Surrealist approach of quantum mechanics ===Time and Space=== (Spacetime) concept.",
+          "description01": "Surrealist approach of quantum mechanics ~Time and Space~ (Spacetime) concept.",
           "description02": "additional info: 2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
           "linkDescription": "you can watch the video here",
@@ -283,7 +286,7 @@
           "name": "Life 0",
           "slug": "life-0",
           "category": "video art",
-          "description01": "Which came first, the Chicken or the Egg? === concept (individual transformation cycle)",
+          "description01": "Which came first, the Chicken or the Egg? ~ concept (individual transformation cycle)",
           "description02": "additional info: 2019, video exhibition 5’17” @ Festival SOMA",
           "link": "https://vimeo.com/343492455",
           "linkDescription": "you can watch the video here",

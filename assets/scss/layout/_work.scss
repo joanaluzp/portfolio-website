@@ -48,6 +48,16 @@
       color: $purple;
     }
   }
+  &.item-list {
+    .work-option-list-wrapper {
+      @include transition;
+      border-radius: 30px;
+      border: 20px solid $blue;
+      background-color: $grey-clear01;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  }
 }
 .work-title-wrapper {
   margin-bottom: 30px;
@@ -127,6 +137,8 @@
     gap: 30px;
     .work-option-item {
       padding: 20px;
+      border: 1px solid $black;
+      @include transition;
       .row {
         width: 100%;
       }
@@ -147,6 +159,7 @@
         }
       }
       &:hover {
+        border: 1px solid transparent;
         background-color: $green;
         animation: bounce 0.8s ease-in-out infinite;
       }
