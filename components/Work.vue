@@ -41,7 +41,15 @@
             >
               <template v-if="item.images.length > 0">
                 <template v-if="item.category === 'front-end development'">
-                  <video class="work-item-swiper video" loop muted autoplay>
+                  <video
+                    class="work-item-swiper video"
+                    autoplay
+                    loop
+                    muted
+                    controls
+                    webkit-playsinline
+                    playsinline
+                  >
                     <source :src="item.images[0].image" type="video/mp4" />
                   </video>
                 </template>

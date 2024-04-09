@@ -74,9 +74,12 @@
                       >
                         <video
                           class="work-item-swiper video"
+                          autoplay
                           loop
                           muted
-                          autoplay
+                          controls
+                          webkit-playsinline
+                          playsinline
                         >
                           <source
                             :src="item.images[0].image"
@@ -134,7 +137,7 @@ const props = defineProps({
     required: true,
   },
 });
-const categoryOption = ref(`${props.database.data.work.category.frontEnd}`)
+const categoryOption = ref(`${props.database.data.work.category.frontEnd}`);
 const workDataVideoArt = ref([]);
 const workDataFrontEnd = ref([]);
 

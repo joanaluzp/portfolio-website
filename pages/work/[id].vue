@@ -55,7 +55,15 @@
                   }"
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <video class="work-item-swiper video" loop muted autoplay>
+                    <video
+                      class="work-item-swiper video"
+                      autoplay
+                      loop
+                      muted
+                      controls
+                      webkit-playsinline
+                      playsinline
+                    >
                       <source :src="image.image" type="video/mp4" />
                     </video>
                   </SwiperSlide>
@@ -109,18 +117,16 @@
           </div>
           <div class="col-12">
             <NuxtLink
-            to="javascript:history.back()"
-            class="work-go-back"
-            :title="props.database.data.work.goBack"
-          >
-            <div
-              class="d-inline-flex"
+              to="javascript:history.back()"
+              class="work-go-back"
+              :title="props.database.data.work.goBack"
             >
-              <p class="description-title big font-bold d-inline lowercase">
-                {{ props.database.data.work.goBack }}
-              </p>
-            </div></NuxtLink
-          >
+              <div class="d-inline-flex">
+                <p class="description-title big font-bold d-inline lowercase">
+                  {{ props.database.data.work.goBack }}
+                </p>
+              </div></NuxtLink
+            >
           </div>
         </div>
       </div>
