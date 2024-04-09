@@ -35,6 +35,10 @@ body {
   }
   video {
     pointer-events: none;
+    &::-webkit-media-controls-panel {
+      display: none !important;
+      opacity: 1 !important;
+    }
   }
   .main {
     position: relative;
