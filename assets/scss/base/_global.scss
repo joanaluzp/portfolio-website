@@ -33,6 +33,9 @@ body {
     background: $grey-clear02;
     border: 1px solid $black-clear02;
   }
+  video {
+    pointer-events: none;
+  }
   .main {
     position: relative;
     min-height: 100vh;
