@@ -81,7 +81,7 @@ const props = defineProps({
 const filteredCategoryItems = computed(() => {
   return categoryItems.value.filter((item) => {
     return (
-      (item.images.length > 0 && item.category === "front-end development") ||
+      (item.images.length > 0 || item.category === "front-end development") ||
       (item.images.length > 0 && item.category === "video art")
     );
   });

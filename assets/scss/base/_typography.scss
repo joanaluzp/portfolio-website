@@ -4,13 +4,13 @@
   word-break: break-word;
   width: 100%;
   font-family: $font-regular;
-  @include fluid-type(320px, 1199px, 14px, 16px);
+  @include fluid-type(320px, 1199px, 12px, 14px);
   text-align: left;
   line-height: 1.5;
   margin: 0;
   padding: 0;
   &.small {
-    @include fluid-type(320px, 1199px, 12px, 14px);
+    @include fluid-type(320px, 1199px, 10px, 12px);
   }
   &.medium {
     @include fluid-type(320px, 1199px, 16px, 18px);

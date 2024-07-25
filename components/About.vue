@@ -16,13 +16,21 @@
               </p>
             </div>
             <div class="about-text-wrapper">
+              <h5 class="description-text font-bold medium text-justify">
+                {{ props.database.data.about.text01 }}
+              </h5>
               <h5 class="description-text text-justify">
-                {{ props.database.data.about.text }}
+                {{ props.database.data.about.text02 }}
               </h5>
             </div>
           </div>
         </div>
       </div>
+      <p class="localization description-text font-bold small text-justify">
+        <span class="d-inline-block">
+          {{ props.database.data.about.localization }}</span
+        >
+      </p>
     </div>
     <div class="section-skills-wrapper">
       <div class="container">

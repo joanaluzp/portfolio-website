@@ -67,11 +67,11 @@
                         {{ item.name }}
                       </h1>
                     </div>
-                    <div class="col-12 col-sm-4 col-lg-6">
-                      <div
-                        class="work-item-swiper-wrapper video"
-                        v-if="item.images.length > 0"
-                      >
+                    <div
+                      class="col-12 col-sm-4 col-lg-6"
+                      v-if="item.images.length > 0"
+                    >
+                      <div class="work-item-swiper-wrapper video">
                         <video
                           class="work-item-swiper video"
                           autoplay
@@ -106,11 +106,11 @@
                         {{ item.name }}
                       </h1>
                     </div>
-                    <div class="col-12 col-sm-4 col-lg-6">
-                      <div
-                        class="work-item-swiper-wrapper photo"
-                        v-if="item.images.length > 0"
-                      >
+                    <div
+                      class="col-12 col-sm-4 col-lg-6"
+                      v-if="item.images.length > 0"
+                    >
+                      <div class="work-item-swiper-wrapper photo">
                         <img
                           class="work-item-swiper photo"
                           :title="item.name"

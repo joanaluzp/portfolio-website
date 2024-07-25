@@ -3290,29 +3290,29 @@ section {
   padding: 0;
 }
 .description-text {
-  font-size: 14px;
-}
-@media screen and (min-width: 320px) {
-  .description-text {
-    font-size: calc(14px + 2 * (100vw - 320px) / 879);
-  }
-}
-@media screen and (min-width: 1199px) {
-  .description-text {
-    font-size: 16px;
-  }
-}
-.description-text.small {
   font-size: 12px;
 }
 @media screen and (min-width: 320px) {
-  .description-text.small {
+  .description-text {
     font-size: calc(12px + 2 * (100vw - 320px) / 879);
   }
 }
 @media screen and (min-width: 1199px) {
-  .description-text.small {
+  .description-text {
     font-size: 14px;
+  }
+}
+.description-text.small {
+  font-size: 10px;
+}
+@media screen and (min-width: 320px) {
+  .description-text.small {
+    font-size: calc(10px + 2 * (100vw - 320px) / 879);
+  }
+}
+@media screen and (min-width: 1199px) {
+  .description-text.small {
+    font-size: 12px;
   }
 }
 .description-text.medium {
@@ -3569,6 +3569,15 @@ html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background: #969696;
   border: 1px solid #575757;
+}
+html video,
+body video {
+  pointer-events: none;
+}
+html video::-webkit-media-controls-panel,
+body video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
 }
 html .main,
 body .main {
@@ -4123,6 +4132,12 @@ body .container .row {
   }
 }
 /*====ABOUT===*/
+.about-text-wrapper .localization {
+  display: inline;
+  color: #3375e0;
+  animation: strobe 2s ease infinite;
+}
+
 .skills-dropdown-toggle {
   position: relative;
   cursor: pointer;

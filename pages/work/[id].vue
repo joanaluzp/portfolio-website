@@ -12,11 +12,15 @@
               </li>
             </ul>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-lg-6">
             <div class="work-item-info-wrapper">
-              <h2 class="description-text text-justify">
+              <h2 class="description-text big text-justify">
                 {{ item.description01 }}
               </h2>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="work-item-info-wrapper">
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
@@ -28,6 +32,12 @@
               </NuxtLink>
               <p class="description-text text-justify font-bold">
                 {{ item.description02 }}
+              </p>
+              <p
+                class="description-text text-justify font-bold"
+                v-if="item.description03"
+              >
+                {{ item.description03 }}
               </p>
             </div>
           </div>

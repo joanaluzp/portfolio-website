@@ -1,4 +1,20 @@
 /*====ABOUT===*/
+.section-about {
+  position: relative;
+  .localization {
+    position: absolute;
+    z-index: 30;
+    width: fit-content;
+    right: 10%;
+    top: 150px;
+    span {
+      animation: spin 10s ease infinite;
+      background-color: $purple-light;
+      padding: 20px;
+      border-radius: 50%;
+    }
+  }
+}
 .skills-dropdown-toggle {
   position: relative;
   cursor: pointer;

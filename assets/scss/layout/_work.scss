@@ -22,7 +22,7 @@
         inset 2px 2px 20px 0px $grey-clear01;
       box-shadow: 3px 3px 5px 0px $grey-clear01,
         inset 2px 2px 20px 0px $grey-clear01;
-      animation: shake02 0.7s ease-in-out infinite;
+      animation: bounce 0.7s ease-in-out infinite;
       .description-title {
         text-align: center;
         color: $purple;
@@ -50,10 +50,9 @@
   }
   &.item-list {
     .work-option-list-wrapper {
+      position: relative;
+      z-index: 3;
       @include transition;
-      border-radius: 30px;
-      border: 20px solid $blue;
-      background-color: $grey-clear01;
       padding: 15px;
       margin-top: 20px;
     }
@@ -136,15 +135,15 @@
   &.version-work-list {
     gap: 30px;
     .work-option-item {
+      position: relative;
       padding: 20px;
       border: 1px solid $black;
-      @include transition;
       .row {
         width: 100%;
       }
       a {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
       }
       .work-item-swiper-wrapper {
@@ -152,16 +151,17 @@
         .work-item-swiper {
           border-radius: 25px;
           max-width: 100%;
-          -webkit-box-shadow: 3px 3px 5px 0px $grey-clear01,
-            inset 2px 2px 20px 0px $grey-clear01;
-          box-shadow: 3px 3px 5px 0px $grey-clear01,
-            inset 2px 2px 20px 0px $grey-clear01;
+          -webkit-box-shadow: -10px 0px 20px -7px $white,
+            10px 0px 20px -7px $white, 0 0 20px 5px $white;
+          box-shadow: -10px 0px 20px -7px $white,
+            10px 0px 20px -7px $white, 0 0 20px 5px $white;
         }
       }
       &:hover {
+        z-index: 1000;
         border: 1px solid transparent;
         background-color: $green;
-        animation: bounce 0.8s ease-in-out infinite;
+        animation: shake02 0.3s ease-in-out infinite;
       }
     }
   }

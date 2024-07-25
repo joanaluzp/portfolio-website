@@ -20,7 +20,9 @@
     },
     "about": {
       "intro": "about me",
-      "text": "Hello. My name is Joana. Born in Lisbon, based in Berlin. I love new&shiny things! After years of naively designing layouts on the web, I can actually build them now. ꧁꧂ As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
+      "localization": "living in portugal atm",
+      "text01": "Joana Pimentel b. 1996 Lisbon, Portugal",
+      "text02": "After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",
@@ -174,20 +176,11 @@
           "name": "work-related-projects",
           "slug": "work-related-projects",
           "category": "front-end development",
-          "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer at Webcomum.",
+          "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
           "link": "https://www.webcomum.com/",
           "linkDescription": "you can enter their website here",
-          "images": [
-            {
-              "id": 1,
-              "image": "/videos/just_work.mp4"
-            },
-            {
-              "id": 2,
-              "image": "/videos/chave_nova.mp4"
-            }
-          ]
+          "images": []
         },
         {
           "id": 3,
@@ -196,14 +189,10 @@
           "category": "front-end development",
           "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between English and German.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
+          "description03": "additional info: 2023",
           "link": "https://kunst3.netlify.app/",
           "linkDescription": "you can enter the website here",
-          "images": [
-            {
-              "id": 1,
-              "image": "/videos/kunst_3.mp4"
-            }
-          ]
+          "images": []
         },
         {
           "id": 4,
