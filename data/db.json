@@ -21,8 +21,7 @@
     "about": {
       "intro": "about me",
       "localization": "living in portugal atm",
-      "text01": "Joana Pimentel b. 1996 Lisbon, Portugal",
-      "text02": "After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
+      "text": "After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",
@@ -157,7 +156,8 @@
       "goBack": "go back",
       "category": {
         "frontEnd": "front-end development",
-        "videoArt": "video art"
+        "videoArt": "video art",
+        "miscellaneous": "miscellaneous"
       },
       "categoryItem": [
         {

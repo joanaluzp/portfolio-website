@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col-12">
           <div class="work-choose-btn-options-wrapper">
-            <div
-              class="work-choose-btn-options d-flex flex-wrap align-items-center"
-            >
+            <div class="work-choose-btn-options d-flex">
               <div
                 class="work-choose-btn"
                 :class="{
@@ -20,7 +18,13 @@
                   )
                 "
               >
-                <p class="description-text text-justify font-bold-italic">
+                <p
+                  class="description-text text-justify font-bold-italic"
+                  :class="{
+                    'd-none':
+                      categoryOption !== `${props.database.data.work.category.frontEnd}`,
+                  }"
+                >
                   {{ props.database.data.work.category.frontEnd }}
                 </p>
               </div>
@@ -39,6 +43,23 @@
               >
                 <p class="description-text text-justify font-bold-italic">
                   {{ props.database.data.work.category.videoArt }}
+                </p>
+              </div>
+              <div
+                class="work-choose-btn"
+                :class="{
+                  active:
+                    categoryOption ===
+                    `${props.database.data.work.category.miscellaneous}`,
+                }"
+                @click="
+                  changeWorkOption(
+                    `${props.database.data.work.category.miscellaneous}`
+                  )
+                "
+              >
+                <p class="description-text text-justify font-bold-italic">
+                  {{ props.database.data.work.category.miscellaneous }}
                 </p>
               </div>
             </div>
@@ -62,7 +83,10 @@
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
-                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div
+                      class="col-12"
+                      :class="{ 'col-sm-8 col-lg-6': item.images.length > 0 }"
+                    >
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>

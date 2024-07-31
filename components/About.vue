@@ -16,11 +16,8 @@
               </p>
             </div>
             <div class="about-text-wrapper">
-              <h5 class="description-text font-bold medium text-justify">
-                {{ props.database.data.about.text01 }}
-              </h5>
-              <h5 class="description-text text-justify">
-                {{ props.database.data.about.text02 }}
+              <h5 class="description-text medium text-justify">
+                {{ props.database.data.about.text }}
               </h5>
             </div>
           </div>

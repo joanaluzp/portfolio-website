@@ -30,11 +30,11 @@
               >
                 {{ item.linkDescription }}
               </NuxtLink>
-              <p class="description-text text-justify font-bold">
+              <p class="description-text text-justify">
                 {{ item.description02 }}
               </p>
               <p
-                class="description-text text-justify font-bold"
+                class="description-text text-justify"
                 v-if="item.description03"
               >
                 {{ item.description03 }}

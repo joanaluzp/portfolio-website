@@ -74,6 +74,7 @@
     }
     &.link {
       width: fit-content;
+      text-decoration: none;
       color: $blue;
     }
     &:last-child {
@@ -138,6 +139,8 @@
       position: relative;
       padding: 20px;
       border: 1px solid $black;
+      background-color: $white;
+      @include transition;
       .row {
         width: 100%;
       }
@@ -153,15 +156,14 @@
           max-width: 100%;
           -webkit-box-shadow: -10px 0px 20px -7px $white,
             10px 0px 20px -7px $white, 0 0 20px 5px $white;
-          box-shadow: -10px 0px 20px -7px $white,
-            10px 0px 20px -7px $white, 0 0 20px 5px $white;
+          box-shadow: -10px 0px 20px -7px $white, 10px 0px 20px -7px $white,
+            0 0 20px 5px $white;
         }
       }
       &:hover {
-        z-index: 1000;
         border: 1px solid transparent;
         background-color: $green;
-        animation: shake02 0.3s ease-in-out infinite;
+        transform: skew(20deg, 20deg);
       }
     }
   }
@@ -219,11 +221,15 @@
 .work-choose-btn-options-wrapper {
   .work-choose-btn-options {
     width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     gap: 8px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
     .work-choose-btn {
       @include transition;
       display: inline;
@@ -233,6 +239,8 @@
       border: 2px solid $blue-light;
       background-color: $white;
       cursor: pointer;
+      max-width: 20px;
+      overflow: hidden;
       .description-text {
         @include transition;
         text-align: center;
@@ -240,6 +248,7 @@
       }
       &.active {
         background-color: $blue-medium;
+        min-width: 200px;
         .description-text {
           text-decoration: none;
           color: $white;
@@ -259,7 +268,7 @@
       &.link {
         @include transition;
         &:hover {
-          animation: rotate3d 3s ease-in-out infinite;
+          animation: rotate3d 1s ease-in-out infinite;
         }
       }
     }
@@ -276,9 +285,8 @@
     }
   }
   .work-item-swiper-wrapper {
-    .swiper {
-      &:hover {
-        transform: translateX(-50px);
+    &:hover {
+      .swiper {
         -webkit-box-shadow: 5px 5px 5px 0px $grey-clear02,
           inset 4px 4px 15px 0px $grey-clear02;
         box-shadow: 5px 5px 5px 0px $grey-clear02,
@@ -288,21 +296,18 @@
   }
   .work-choose-btn-options-wrapper {
     position: relative;
-    min-height: 80px;
     .work-choose-btn-options {
-      position: absolute;
-      justify-content: flex-start;
-      transform: translateX(0);
       .work-choose-btn {
-        min-width: 350px;
-        position: relative;
         &:hover {
           background-color: $red;
           border-color: $black;
-          animation: strobe 0.3s ease-in-out infinite;
+          -webkit-filter: blur(2px);
+          -moz-filter: blur(2px);
+          -o-filter: blur(2px);
+          -ms-filter: blur(2px);
+          filter: blur(2px);
           .description-text {
-            font-family: $font-03;
-            font-size: 40px;
+            font-weight: 900;
             color: $black;
           }
         }

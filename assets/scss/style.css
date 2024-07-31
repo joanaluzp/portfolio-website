@@ -3587,7 +3587,6 @@ body .main {
 html .main .section,
 body .main .section {
   width: 100%;
-  height: auto;
   padding: 140px 0 50px 0;
 }
 @media (min-width: 576px) {
@@ -3794,7 +3793,7 @@ body .container .row {
   width: -moz-fit-content;
   width: fit-content;
   min-width: 100%;
-  z-index: 18;
+  z-index: 10000;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
@@ -3819,6 +3818,8 @@ body .container .row {
   backdrop-filter: blur(8px);
   border-radius: 25px;
   padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .navbar-menu-list .navbar-menu-item.item-01.animation {
   animation: navbarItem 1.5s ease-in-out;
@@ -3837,9 +3838,16 @@ body .container .row {
   animation-delay: 1.2s;
 }
 .navbar-menu-list .navbar-menu-item .description-title {
-  cursor: pointer;
   text-align: center;
   color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-menu-list .navbar-menu-item:hover {
+  background-color: #1900ff;
+}
+.navbar-menu-list .navbar-menu-item:hover .description-title {
+  color: #ffffff;
+  font-family: "Berzulis-Magyla";
 }
 
 /*====WORK====*/
@@ -3865,7 +3873,7 @@ body .container .row {
   border-radius: 25px;
   padding: 30px 40px;
   box-shadow: 3px 3px 5px 0px #ececec, inset 2px 2px 20px 0px #ececec;
-  animation: shake02 0.7s ease-in-out infinite;
+  animation: bounce 0.7s ease-in-out infinite;
 }
 .section-work .section-work-modal .work-modal .description-title {
   text-align: center;
@@ -3887,10 +3895,9 @@ body .container .row {
   color: #6f00ff;
 }
 .section-work.item-list .work-option-list-wrapper {
+  position: relative;
+  z-index: 3;
   transition: all 0.3s ease-in-out;
-  border-radius: 30px;
-  border: 20px solid #1900ff;
-  background-color: #ececec;
   padding: 15px;
   margin-top: 20px;
 }
@@ -3912,6 +3919,7 @@ body .container .row {
 .work-item-info-wrapper .description-text.link {
   width: -moz-fit-content;
   width: fit-content;
+  text-decoration: none;
   color: #1900ff;
 }
 .work-item-info-wrapper .description-text:last-child {
@@ -3975,8 +3983,10 @@ body .container .row {
   gap: 30px;
 }
 .work-option-list-wrapper.version-work-list .work-option-item {
+  position: relative;
   padding: 20px;
   border: 1px solid #000;
+  background-color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .row {
@@ -3984,7 +3994,7 @@ body .container .row {
 }
 .work-option-list-wrapper.version-work-list .work-option-item a {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .work-item-swiper-wrapper {
@@ -3993,12 +4003,12 @@ body .container .row {
 .work-option-list-wrapper.version-work-list .work-option-item .work-item-swiper-wrapper .work-item-swiper {
   border-radius: 25px;
   max-width: 100%;
-  box-shadow: 3px 3px 5px 0px #ececec, inset 2px 2px 20px 0px #ececec;
+  box-shadow: -10px 0px 20px -7px #ffffff, 10px 0px 20px -7px #ffffff, 0 0 20px 5px #ffffff;
 }
 .work-option-list-wrapper.version-work-list .work-option-item:hover {
   border: 1px solid transparent;
   background-color: #26c548;
-  animation: bounce 0.8s ease-in-out infinite;
+  transform: skew(20deg, 20deg);
 }
 
 .work-item-swiper-wrapper {
@@ -4056,11 +4066,15 @@ body .container .row {
 
 .work-choose-btn-options-wrapper .work-choose-btn-options {
   width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   gap: 8px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn {
   transition: all 0.3s ease-in-out;
@@ -4072,6 +4086,8 @@ body .container .row {
   border: 2px solid #e7ebff;
   background-color: #ffffff;
   cursor: pointer;
+  max-width: 20px;
+  overflow: hidden;
 }
 .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn .description-text {
   transition: all 0.3s ease-in-out;
@@ -4080,6 +4096,7 @@ body .container .row {
 }
 .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn.active {
   background-color: #3375e0;
+  min-width: 200px;
 }
 .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn.active .description-text {
   text-decoration: none;
@@ -4094,7 +4111,7 @@ body .container .row {
     transition: all 0.3s ease-in-out;
   }
   .work-item-info-wrapper .description-text.link:hover {
-    animation: rotate3d 3s ease-in-out infinite;
+    animation: rotate3d 1s ease-in-out infinite;
   }
   .work-option-list-wrapper.version-work-background .work-option-item {
     position: relative;
@@ -4103,39 +4120,42 @@ body .container .row {
   .work-option-list-wrapper.version-work-background .work-option-item:hover {
     animation: gelatine 2s ease infinite;
   }
-  .work-item-swiper-wrapper .swiper:hover {
-    transform: translateX(-50px);
+  .work-item-swiper-wrapper:hover .swiper {
     box-shadow: 5px 5px 5px 0px #969696, inset 4px 4px 15px 0px #969696;
   }
   .work-choose-btn-options-wrapper {
-    position: relative;
-    min-height: 80px;
-  }
-  .work-choose-btn-options-wrapper .work-choose-btn-options {
-    position: absolute;
-    justify-content: flex-start;
-    transform: translateX(0);
-  }
-  .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn {
-    min-width: 350px;
     position: relative;
   }
   .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn:hover {
     background-color: #ff0000;
     border-color: #000;
-    animation: strobe 0.3s ease-in-out infinite;
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
   }
   .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn:hover .description-text {
-    font-family: "Berzulis-Magyla";
-    font-size: 40px;
+    font-weight: 900;
     color: #000;
   }
 }
 /*====ABOUT===*/
-.about-text-wrapper .localization {
-  display: inline;
-  color: #3375e0;
-  animation: strobe 2s ease infinite;
+.section-about {
+  position: relative;
+}
+.section-about .localization {
+  position: absolute;
+  z-index: 30;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 10%;
+  top: 150px;
+}
+.section-about .localization span {
+  animation: spin 10s ease infinite;
+  background-color: #bf98e9;
+  padding: 20px;
+  border-radius: 50%;
 }
 
 .skills-dropdown-toggle {
