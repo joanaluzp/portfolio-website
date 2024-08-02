@@ -9,10 +9,6 @@
   left: 50%;
   transform: translateX(-50%);
   @include transition;
-  a {
-    text-decoration: none;
-    color: $black;
-  }
 }
 .navbar-menu-list {
   display: flex;
@@ -26,7 +22,6 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-radius: 25px;
-    padding: 10px 20px;
     cursor: pointer;
     @include transition;
     &.item-01 {
@@ -53,16 +48,22 @@
         animation-delay: 1.2s;
       }
     }
-    .description-title {
-      text-align: center;
-      color: $black;
-      @include transition;
-    }
     &:hover {
       background-color: $blue;
       .description-title {
         color: $white;
         font-family: $font-03;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: $black;
+      padding: 10px 20px;
+      .description-title {
+        text-align: center;
+        color: $black;
+        @include transition;
       }
     }
   }

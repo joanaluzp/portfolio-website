@@ -9,7 +9,7 @@
     top: 150px;
     span {
       animation: spin 10s ease infinite;
-      background-color: $purple-light;
+      background-color: $yellow;
       padding: 20px;
       border-radius: 50%;
     }
@@ -22,15 +22,17 @@
   width: 100%;
   padding: 15px 20px;
   border-radius: 25px;
-  background-color: $pink;
+  background-color: $purple-light;
   max-width: 500px;
   display: flex;
+  color: $white;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   animation: strobe 1.5s ease-in-out infinite;
   &.no-animation {
     animation: none;
+    background-color: $purple;
   }
 }
 .skills-dropdown-wrapper {

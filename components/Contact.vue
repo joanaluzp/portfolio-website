@@ -4,7 +4,7 @@
       <div class="row align-items-center">
         <div class="col-12">
           <div class="contact-text-wrapper">
-            <p class="description-title font-italic big lowercase">
+            <p class="description-title bigger font-italic big lowercase">
               {{ props.database.data.contact.text }}
             </p>
             <NuxtLink

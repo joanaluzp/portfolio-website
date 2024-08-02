@@ -1,70 +1,48 @@
 <template>
   <section class="section section-work item-list">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="work-choose-btn-options-wrapper">
-            <div class="work-choose-btn-options d-flex">
-              <div
-                class="work-choose-btn"
-                :class="{
-                  active:
-                    categoryOption ===
-                    `${props.database.data.work.category.frontEnd}`,
-                }"
-                @click="
-                  changeWorkOption(
-                    `${props.database.data.work.category.frontEnd}`
-                  )
-                "
-              >
-                <p
-                  class="description-text text-justify font-bold-italic"
-                  :class="{
-                    'd-none':
-                      categoryOption !== `${props.database.data.work.category.frontEnd}`,
-                  }"
-                >
-                  {{ props.database.data.work.category.frontEnd }}
-                </p>
-              </div>
-              <div
-                class="work-choose-btn"
-                :class="{
-                  active:
-                    categoryOption ===
-                    `${props.database.data.work.category.videoArt}`,
-                }"
-                @click="
-                  changeWorkOption(
-                    `${props.database.data.work.category.videoArt}`
-                  )
-                "
-              >
-                <p class="description-text text-justify font-bold-italic">
-                  {{ props.database.data.work.category.videoArt }}
-                </p>
-              </div>
-              <div
-                class="work-choose-btn"
-                :class="{
-                  active:
-                    categoryOption ===
-                    `${props.database.data.work.category.miscellaneous}`,
-                }"
-                @click="
-                  changeWorkOption(
-                    `${props.database.data.work.category.miscellaneous}`
-                  )
-                "
-              >
-                <p class="description-text text-justify font-bold-italic">
-                  {{ props.database.data.work.category.miscellaneous }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="work-choose-btn-options d-flex">
+      <div
+        class="work-choose-btn"
+        :class="{
+          active:
+            categoryOption === `${props.database.data.work.category.frontEnd}`,
+        }"
+        @click="
+          changeWorkOption(`${props.database.data.work.category.frontEnd}`)
+        "
+      >
+        <p class="description-text text-justify font-bold-italic">
+          {{ props.database.data.work.category.frontEnd }}
+        </p>
+      </div>
+      <div
+        class="work-choose-btn"
+        :class="{
+          active:
+            categoryOption === `${props.database.data.work.category.videoArt}`,
+        }"
+        @click="
+          changeWorkOption(`${props.database.data.work.category.videoArt}`)
+        "
+      >
+        <p class="description-text text-justify font-bold-italic">
+          {{ props.database.data.work.category.videoArt }}
+        </p>
+      </div>
+      <div
+        class="work-choose-btn"
+        :class="{
+          active:
+            categoryOption ===
+            `${props.database.data.work.category.miscellaneous}`,
+        }"
+        @click="
+          changeWorkOption(`${props.database.data.work.category.miscellaneous}`)
+        "
+      >
+        <p class="description-text text-justify font-bold-italic">
+          {{ props.database.data.work.category.miscellaneous }}
+        </p>
       </div>
     </div>
     <div class="section-work-option">
@@ -80,6 +58,8 @@
                   categoryOption ===
                   `${props.database.data.work.category.frontEnd}`
                 "
+                data-aos="fade-in"
+                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
@@ -122,6 +102,8 @@
                   categoryOption ===
                   `${props.database.data.work.category.videoArt}`
                 "
+                data-aos="fade-in"
+                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
@@ -170,6 +152,21 @@ const changeWorkOption = (elm) => {
   categoryOption.value = elm;
 };
 
+const effectSkew = () => {
+  const workElmItem = document.querySelectorAll(".work-option-item");
+  workElmItem.forEach(elm => {
+    elm.addEventListener('mouseenter', () => {
+      const skewX = Math.floor(Math.random() * 31) - 20
+      const skewY = Math.floor(Math.random() * 31) - 20
+      elm.style.transform = `skew(${skewX}deg, ${skewY}deg)`
+    })
+
+    elm.addEventListener('mouseleave', () => {
+      elm.style.transform = 'skew(0deg, 0deg)'
+    })
+  })
+}
+
 onMounted(() => {
   workDataFrontEnd.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "front-end development"
@@ -177,5 +174,6 @@ onMounted(() => {
   workDataVideoArt.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "video art"
   );
+  effectSkew();
 });
 </script>

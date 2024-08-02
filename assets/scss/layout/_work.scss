@@ -163,7 +163,6 @@
       &:hover {
         border: 1px solid transparent;
         background-color: $green;
-        transform: skew(20deg, 20deg);
       }
     }
   }
@@ -218,41 +217,43 @@
     align-items: center;
   }
 }
-.work-choose-btn-options-wrapper {
-  .work-choose-btn-options {
-    width: 100%;
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    gap: 8px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
-    .work-choose-btn {
+.work-choose-btn-options {
+  width: 100%;
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  z-index: 10;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+  .work-choose-btn {
+    @include transition;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 35px;
+    border: 2px solid $blue-light;
+    background-color: $white;
+    cursor: pointer;
+    min-width: 40px;
+    min-height: 40px;
+    overflow: hidden;
+    pointer-events: auto;
+    .description-text {
       @include transition;
-      display: inline;
-      width: fit-content;
-      padding: 10px 15px;
-      border-radius: 35px;
-      border: 2px solid $blue-light;
-      background-color: $white;
-      cursor: pointer;
-      max-width: 20px;
-      overflow: hidden;
+      text-align: center;
+      color: $blue-medium;
+    }
+    &.active {
+      animation: rotate3d 5s ease-in-out infinite;
+      background-color: $red;
+      min-width: 250px;
       .description-text {
-        @include transition;
-        text-align: center;
-        color: $blue-medium;
-      }
-      &.active {
-        background-color: $blue-medium;
-        min-width: 200px;
-        .description-text {
-          text-decoration: none;
-          color: $white;
-        }
+        text-decoration: none;
+        color: $white;
       }
     }
   }
@@ -294,24 +295,7 @@
       }
     }
   }
-  .work-choose-btn-options-wrapper {
-    position: relative;
-    .work-choose-btn-options {
-      .work-choose-btn {
-        &:hover {
-          background-color: $red;
-          border-color: $black;
-          -webkit-filter: blur(2px);
-          -moz-filter: blur(2px);
-          -o-filter: blur(2px);
-          -ms-filter: blur(2px);
-          filter: blur(2px);
-          .description-text {
-            font-weight: 900;
-            color: $black;
-          }
-        }
-      }
-    }
+  .work-choose-btn-options {
+    bottom: 100px;
   }
 }

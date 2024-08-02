@@ -3799,10 +3799,6 @@ body .container .row {
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
 }
-.navbar a {
-  text-decoration: none;
-  color: #000;
-}
 
 .navbar-menu-list {
   display: flex;
@@ -3817,7 +3813,6 @@ body .container .row {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-radius: 25px;
-  padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -3837,17 +3832,23 @@ body .container .row {
   animation: navbarItem 1.5s ease-in-out;
   animation-delay: 1.2s;
 }
-.navbar-menu-list .navbar-menu-item .description-title {
-  text-align: center;
-  color: #000;
-  transition: all 0.3s ease-in-out;
-}
 .navbar-menu-list .navbar-menu-item:hover {
   background-color: #1900ff;
 }
 .navbar-menu-list .navbar-menu-item:hover .description-title {
   color: #ffffff;
   font-family: "Berzulis-Magyla";
+}
+.navbar-menu-list .navbar-menu-item a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+}
+.navbar-menu-list .navbar-menu-item a .description-title {
+  text-align: center;
+  color: #000;
+  transition: all 0.3s ease-in-out;
 }
 
 /*====WORK====*/
@@ -4008,7 +4009,6 @@ body .container .row {
 .work-option-list-wrapper.version-work-list .work-option-item:hover {
   border: 1px solid transparent;
   background-color: #26c548;
-  transform: skew(20deg, 20deg);
 }
 
 .work-item-swiper-wrapper {
@@ -4064,41 +4064,44 @@ body .container .row {
   align-items: center;
 }
 
-.work-choose-btn-options-wrapper .work-choose-btn-options {
+.work-choose-btn-options {
   width: 100%;
   position: fixed;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 70px;
   z-index: 10;
   gap: 8px;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-end;
+  pointer-events: none;
 }
-.work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn {
+.work-choose-btn-options .work-choose-btn {
   transition: all 0.3s ease-in-out;
-  display: inline;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 15px;
   border-radius: 35px;
   border: 2px solid #e7ebff;
   background-color: #ffffff;
   cursor: pointer;
-  max-width: 20px;
+  min-width: 40px;
+  min-height: 40px;
   overflow: hidden;
+  pointer-events: auto;
 }
-.work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn .description-text {
+.work-choose-btn-options .work-choose-btn .description-text {
   transition: all 0.3s ease-in-out;
   text-align: center;
   color: #3375e0;
 }
-.work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn.active {
-  background-color: #3375e0;
-  min-width: 200px;
+.work-choose-btn-options .work-choose-btn.active {
+  animation: rotate3d 5s ease-in-out infinite;
+  background-color: #ff0000;
+  min-width: 250px;
 }
-.work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn.active .description-text {
+.work-choose-btn-options .work-choose-btn.active .description-text {
   text-decoration: none;
   color: #ffffff;
 }
@@ -4123,20 +4126,8 @@ body .container .row {
   .work-item-swiper-wrapper:hover .swiper {
     box-shadow: 5px 5px 5px 0px #969696, inset 4px 4px 15px 0px #969696;
   }
-  .work-choose-btn-options-wrapper {
-    position: relative;
-  }
-  .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn:hover {
-    background-color: #ff0000;
-    border-color: #000;
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-  }
-  .work-choose-btn-options-wrapper .work-choose-btn-options .work-choose-btn:hover .description-text {
-    font-weight: 900;
-    color: #000;
+  .work-choose-btn-options {
+    bottom: 100px;
   }
 }
 /*====ABOUT===*/
@@ -4153,7 +4144,7 @@ body .container .row {
 }
 .section-about .localization span {
   animation: spin 10s ease infinite;
-  background-color: #bf98e9;
+  background-color: #ffff00;
   padding: 20px;
   border-radius: 50%;
 }
@@ -4165,9 +4156,10 @@ body .container .row {
   width: 100%;
   padding: 15px 20px;
   border-radius: 25px;
-  background-color: #fc87e1;
+  background-color: #bf98e9;
   max-width: 500px;
   display: flex;
+  color: #ffffff;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -4175,6 +4167,7 @@ body .container .row {
 }
 .skills-dropdown-toggle.no-animation {
   animation: none;
+  background-color: #6f00ff;
 }
 
 .skills-dropdown-wrapper {
@@ -4285,7 +4278,7 @@ body .container .row {
 }
 
 .contact-text-wrapper {
-  max-width: 245px;
+  max-width: 500px;
 }
 .contact-text-wrapper .contact-email-link {
   color: #1900ff;
