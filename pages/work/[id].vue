@@ -44,51 +44,8 @@
           <div class="col-12">
             <div>
               <div
-                class="work-item-swiper-wrapper video"
-                v-if="
-                  item.images.length > 0 &&
-                  item.category === 'front-end development'
-                "
-              >
-                <Swiper
-                  :modules="[SwiperAutoplay, SwiperNavigation]"
-                  :slides-per-view="1"
-                  :pagination="{ clickable: true }"
-                  :speed="1000"
-                  :loop="true"
-                  :autoplay="{
-                    delay: 5000,
-                  }"
-                  :navigation="{
-                    nextEl: '.arrow-gallery-next',
-                    prevEl: '.arrow-gallery-prev',
-                  }"
-                >
-                  <SwiperSlide v-for="image in item.images" :key="image.id">
-                    <video
-                      class="work-item-swiper video"
-                      autoplay
-                      loop
-                      muted
-                      webkit-playsinline
-                      playsinline
-                    >
-                      <source :src="image.image" type="video/mp4" />
-                    </video>
-                  </SwiperSlide>
-                </Swiper>
-                <div class="slider-arrows-wrapper d-none d-lg-flex">
-                  <button type="button" class="arrow-prev arrow-gallery-prev">
-                    <i class="fa-solid fa-3x fa-chevron-left"></i>
-                  </button>
-                  <button type="button" class="arrow-next arrow-gallery-next">
-                    <i class="fa-solid fa-3x fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="work-item-swiper-wrapper photo"
-                v-if="item.images.length > 0 && item.category === 'video art'"
+                class="work-item-swiper-wrapper"
+                v-if="item.images.length > 0"
               >
                 <Swiper
                   :modules="[SwiperAutoplay, SwiperNavigation]"
@@ -106,7 +63,7 @@
                 >
                   <SwiperSlide v-for="image in item.images" :key="image.id">
                     <img
-                      class="work-item-swiper photo"
+                      class="work-item-swiper"
                       :title="item.name"
                       :alt="item.name"
                       :src="image.image"

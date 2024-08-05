@@ -3793,7 +3793,7 @@ body .container .row {
   width: -moz-fit-content;
   width: fit-content;
   min-width: 100%;
-  z-index: 10000;
+  z-index: 999;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
@@ -3870,27 +3870,28 @@ body .container .row {
   color: #ffffff;
 }
 .section-work .section-work-modal .work-modal {
-  background-color: #ffff00;
-  border-radius: 25px;
+  border-radius: 50%;
   padding: 30px 40px;
-  box-shadow: 3px 3px 5px 0px #ececec, inset 2px 2px 20px 0px #ececec;
-  animation: bounce 0.7s ease-in-out infinite;
+  border: 2px solid #6f00ff;
+  animation: spin 20s ease-in-out infinite;
 }
 .section-work .section-work-modal .work-modal .description-title {
   text-align: center;
   color: #6f00ff;
 }
 .section-work .section-work-option {
-  display: flex;
-  align-items: flex-end;
   width: 100%;
 }
 .section-work .section-work-option .work-go-back {
-  text-decoration: none;
+  position: relative;
+  z-index: 5;
+}
+.section-work .section-work-option .work-go-back .description-title {
   color: #000;
+  transition: all 0.3s ease-in-out;
 }
 .section-work .section-work-option .work-go-back .description-title:hover {
-  animation: gelatine 0.8s ease-in-out infinite;
+  text-decoration: underline;
 }
 .section-work.item-id .work-title {
   color: #6f00ff;
@@ -3899,8 +3900,6 @@ body .container .row {
   position: relative;
   z-index: 3;
   transition: all 0.3s ease-in-out;
-  padding: 15px;
-  margin-top: 20px;
 }
 
 .work-title-wrapper {
@@ -3982,13 +3981,14 @@ body .container .row {
 }
 .work-option-list-wrapper.version-work-list {
   gap: 30px;
+  position: relative;
 }
 .work-option-list-wrapper.version-work-list .work-option-item {
-  position: relative;
-  padding: 20px;
   border: 1px solid #000;
+  border-radius: 25px;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
+  min-height: 100px;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .row {
   width: 100%;
@@ -3997,6 +3997,7 @@ body .container .row {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .work-item-swiper-wrapper {
   display: inline-block;
@@ -4007,6 +4008,8 @@ body .container .row {
   box-shadow: -10px 0px 20px -7px #ffffff, 10px 0px 20px -7px #ffffff, 0 0 20px 5px #ffffff;
 }
 .work-option-list-wrapper.version-work-list .work-option-item:hover {
+  position: fixed;
+  z-index: 20;
   border: 1px solid transparent;
   background-color: #26c548;
 }
@@ -4059,24 +4062,20 @@ body .container .row {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ff0000;
 }
-.work-item-swiper-wrapper.video {
-  justify-content: center;
-  align-items: center;
-}
 
-.work-choose-btn-options {
-  width: 100%;
+.work-choose-btn-wrapper {
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 70px;
   z-index: 10;
+}
+.work-choose-btn-wrapper .work-choose-btn-list {
+  width: 100%;
   gap: 8px;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-end;
   pointer-events: none;
 }
-.work-choose-btn-options .work-choose-btn {
+.work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item {
   transition: all 0.3s ease-in-out;
   display: inline-flex;
   align-items: center;
@@ -4086,30 +4085,24 @@ body .container .row {
   border: 2px solid #e7ebff;
   background-color: #ffffff;
   cursor: pointer;
-  min-width: 40px;
   min-height: 40px;
   overflow: hidden;
   pointer-events: auto;
 }
-.work-choose-btn-options .work-choose-btn .description-text {
+.work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item .description-text {
   transition: all 0.3s ease-in-out;
   text-align: center;
   color: #3375e0;
 }
-.work-choose-btn-options .work-choose-btn.active {
-  animation: rotate3d 5s ease-in-out infinite;
+.work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active {
   background-color: #ff0000;
-  min-width: 250px;
 }
-.work-choose-btn-options .work-choose-btn.active .description-text {
+.work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active .description-text {
   text-decoration: none;
   color: #ffffff;
 }
 
 @media (min-width: 992px) {
-  .section-work .section-work-option {
-    display: block;
-  }
   .work-item-info-wrapper .description-text.link {
     transition: all 0.3s ease-in-out;
   }
@@ -4126,9 +4119,6 @@ body .container .row {
   .work-item-swiper-wrapper:hover .swiper {
     box-shadow: 5px 5px 5px 0px #969696, inset 4px 4px 15px 0px #969696;
   }
-  .work-choose-btn-options {
-    bottom: 100px;
-  }
 }
 /*====ABOUT===*/
 .section-about {
@@ -4136,7 +4126,7 @@ body .container .row {
 }
 .section-about .localization {
   position: absolute;
-  z-index: 30;
+  z-index: 10;
   width: -moz-fit-content;
   width: fit-content;
   right: 10%;
@@ -4171,7 +4161,7 @@ body .container .row {
 }
 
 .skills-dropdown-wrapper {
-  z-index: 2000;
+  z-index: 1000;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
@@ -4274,7 +4264,6 @@ body .container .row {
 /*====CONTACT====*/
 .section-contact {
   position: relative;
-  background-color: #ffffff;
 }
 
 .contact-text-wrapper {
@@ -4332,7 +4321,7 @@ body .container .row {
   transition: all 0.3s ease-in-out;
   width: 95%;
   max-width: 100%;
-  z-index: 5;
+  z-index: 20;
   bottom: -100px;
   left: 50%;
   transform: translateX(-50%);

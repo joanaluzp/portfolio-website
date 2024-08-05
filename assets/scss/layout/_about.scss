@@ -3,7 +3,7 @@
   position: relative;
   .localization {
     position: absolute;
-    z-index: 30;
+    z-index: 10;
     width: fit-content;
     right: 10%;
     top: 150px;
@@ -36,7 +36,7 @@
   }
 }
 .skills-dropdown-wrapper {
-  z-index: 2000;
+  z-index: 1000;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;

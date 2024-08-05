@@ -32,34 +32,16 @@
             </h1>
             <div
               class="work-item-swiper-wrapper"
-              :class="{
-                video: item.category === 'front-end development',
-                photo: item.category === 'video art',
-              }"
               data-aos="fade-in"
               data-aos-duration="1500"
             >
               <template v-if="item.images.length > 0">
-                <template v-if="item.category === 'front-end development'">
-                  <video
-                    class="work-item-swiper video"
-                    autoplay
-                    loop
-                    muted
-                    webkit-playsinline
-                    playsinline
-                  >
-                    <source :src="item.images[0].image" type="video/mp4" />
-                  </video>
-                </template>
-                <template v-else-if="item.category === 'video art'">
-                  <img
-                    class="work-item-swiper photo"
-                    :title="item.name"
-                    :alt="item.name"
-                    :src="item.images[0].image"
-                  />
-                </template>
+                <img
+                  class="work-item-swiper"
+                  :title="item.name"
+                  :alt="item.name"
+                  :src="item.images[0].image"
+                />
               </template>
             </div>
           </NuxtLink>
@@ -81,11 +63,25 @@ const props = defineProps({
 const filteredCategoryItems = computed(() => {
   return categoryItems.value.filter((item) => {
     return (
-      (item.images.length > 0 || item.category === "front-end development") ||
+      item.images.length > 0 ||
+      item.category === "front-end development" ||
       (item.images.length > 0 && item.category === "video art")
     );
   });
 });
+
+const effectSkewBg = () => {
+  const workElmItem = document.querySelectorAll(
+    ".work-option-list-wrapper.version-work-background .work-option-item .work-item-swiper"
+  );
+  if (workElmItem) {
+    workElmItem.forEach((elm) => {
+      const skewX = Math.floor(Math.random() * 100) - 100;
+      const skewY = Math.floor(Math.random() * 100) - 100;
+      elm.style.transform = `skew(${skewX}deg, ${skewY}deg)`;
+    });
+  }
+};
 
 function randomWorkArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -110,5 +106,9 @@ onMounted(() => {
       item.randomTop = randomPosition.top;
     });
   }
+});
+
+onUpdated(() => {
+  effectSkewBg();
 });
 </script>

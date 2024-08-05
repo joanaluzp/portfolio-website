@@ -1,54 +1,60 @@
 <template>
   <section class="section section-work item-list">
-    <div class="work-choose-btn-options d-flex">
-      <div
-        class="work-choose-btn"
-        :class="{
-          active:
-            categoryOption === `${props.database.data.work.category.frontEnd}`,
-        }"
-        @click="
-          changeWorkOption(`${props.database.data.work.category.frontEnd}`)
-        "
-      >
-        <p class="description-text text-justify font-bold-italic">
-          {{ props.database.data.work.category.frontEnd }}
-        </p>
-      </div>
-      <div
-        class="work-choose-btn"
-        :class="{
-          active:
-            categoryOption === `${props.database.data.work.category.videoArt}`,
-        }"
-        @click="
-          changeWorkOption(`${props.database.data.work.category.videoArt}`)
-        "
-      >
-        <p class="description-text text-justify font-bold-italic">
-          {{ props.database.data.work.category.videoArt }}
-        </p>
-      </div>
-      <div
-        class="work-choose-btn"
-        :class="{
-          active:
-            categoryOption ===
-            `${props.database.data.work.category.miscellaneous}`,
-        }"
-        @click="
-          changeWorkOption(`${props.database.data.work.category.miscellaneous}`)
-        "
-      >
-        <p class="description-text text-justify font-bold-italic">
-          {{ props.database.data.work.category.miscellaneous }}
-        </p>
-      </div>
-    </div>
     <div class="section-work-option">
+      <div class="work-choose-btn-wrapper">
+        <div class="work-choose-btn-list d-flex">
+          <div
+            class="work-choose-btn-item"
+            :class="{
+              active:
+                categoryOption ===
+                `${props.database.data.work.category.frontEnd}`,
+            }"
+            @click="
+              changeWorkOption(`${props.database.data.work.category.frontEnd}`)
+            "
+          >
+            <p class="description-text text-justify font-bold-italic">
+              {{ props.database.data.work.category.frontEnd }}
+            </p>
+          </div>
+          <div
+            class="work-choose-btn-item"
+            :class="{
+              active:
+                categoryOption ===
+                `${props.database.data.work.category.videoArt}`,
+            }"
+            @click="
+              changeWorkOption(`${props.database.data.work.category.videoArt}`)
+            "
+          >
+            <p class="description-text text-justify font-bold-italic">
+              {{ props.database.data.work.category.videoArt }}
+            </p>
+          </div>
+          <div
+            class="work-choose-btn-item"
+            :class="{
+              active:
+                categoryOption ===
+                `${props.database.data.work.category.miscellaneous}`,
+            }"
+            @click="
+              changeWorkOption(
+                `${props.database.data.work.category.miscellaneous}`
+              )
+            "
+          >
+            <p class="description-text text-justify font-bold-italic">
+              {{ props.database.data.work.category.miscellaneous }}
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 col-lg-9 offset-lg-3">
             <ul class="work-option-list-wrapper version-work-list">
               <li
                 class="work-option-item"
@@ -58,8 +64,6 @@
                   categoryOption ===
                   `${props.database.data.work.category.frontEnd}`
                 "
-                data-aos="fade-in"
-                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
@@ -75,20 +79,13 @@
                       class="col-12 col-sm-4 col-lg-6"
                       v-if="item.images.length > 0"
                     >
-                      <div class="work-item-swiper-wrapper video">
-                        <video
-                          class="work-item-swiper video"
-                          autoplay
-                          loop
-                          muted
-                          webkit-playsinline
-                          playsinline
-                        >
-                          <source
-                            :src="item.images[0].image"
-                            type="video/mp4"
-                          />
-                        </video>
+                      <div class="work-item-swiper-wrapper">
+                        <img
+                          class="work-item-swiper"
+                          :title="item.name"
+                          :alt="item.name"
+                          :src="item.images[0].image"
+                        />
                       </div>
                     </div>
                   </div>
@@ -102,23 +99,18 @@
                   categoryOption ===
                   `${props.database.data.work.category.videoArt}`
                 "
-                data-aos="fade-in"
-                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
-                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="col-12 col-lg-6">
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>
                     </div>
-                    <div
-                      class="col-12 col-sm-4 col-lg-6"
-                      v-if="item.images.length > 0"
-                    >
-                      <div class="work-item-swiper-wrapper photo">
+                    <div class="col-12 col-lg-6" v-if="item.images.length > 0">
+                      <div class="work-item-swiper-wrapper">
                         <img
-                          class="work-item-swiper photo"
+                          class="work-item-swiper"
                           :title="item.name"
                           :alt="item.name"
                           :src="item.images[0].image"
@@ -152,20 +144,41 @@ const changeWorkOption = (elm) => {
   categoryOption.value = elm;
 };
 
-const effectSkew = () => {
-  const workElmItem = document.querySelectorAll(".work-option-item");
-  workElmItem.forEach(elm => {
-    elm.addEventListener('mouseenter', () => {
-      const skewX = Math.floor(Math.random() * 31) - 20
-      const skewY = Math.floor(Math.random() * 31) - 20
-      elm.style.transform = `skew(${skewX}deg, ${skewY}deg)`
-    })
+const effectSkewList = () => {
+  const workElmItem = document.querySelectorAll(
+    ".work-option-list-wrapper.version-work-list .work-option-item"
+  );
+  const skewX = Math.floor(Math.random() * 70) - 70;
+  const skewY = Math.floor(Math.random() * 70) - 70;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  let placeholder = null;
 
-    elm.addEventListener('mouseleave', () => {
-      elm.style.transform = 'skew(0deg, 0deg)'
-    })
-  })
-}
+  if (workElmItem) {
+    workElmItem.forEach((elm) => {
+      const positionElm = elm.getBoundingClientRect();
+      elm.addEventListener("mouseenter", () => {
+        elm.style.transform = `skew(${skewX}deg, ${skewY}deg)`;
+        if (!placeholder) {
+          placeholder = document.createElement("div");
+          placeholder.style.width = `${elm.offsetWidth}px`;
+          placeholder.style.height = `${elm.offsetHeight}px`;
+          placeholder.style.visibility = "hidden";
+          elm.parentNode.insertBefore(placeholder, elm);
+        }
+        elm.style.top = `${positionElm.top + scrollTop}px`;
+        elm.style.left = `${positionElm.left + scrollLeft}px`;
+      });
+      elm.addEventListener("mouseleave", () => {
+        elm.style.transform = "skew(0deg, 0deg)";
+        if (placeholder) {
+          placeholder.parentNode.removeChild(placeholder);
+          placeholder = null;
+        }
+      });
+    });
+  }
+};
 
 onMounted(() => {
   workDataFrontEnd.value = props.database.data.work.categoryItem.filter(
@@ -174,6 +187,9 @@ onMounted(() => {
   workDataVideoArt.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "video art"
   );
-  effectSkew();
+});
+
+onUpdated(() => {
+  effectSkewList();
 });
 </script>

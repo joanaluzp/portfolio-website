@@ -15,14 +15,10 @@
       color: $white;
     }
     .work-modal {
-      background-color: $yellow;
-      border-radius: 25px;
+      border-radius: 50%;
       padding: 30px 40px;
-      -webkit-box-shadow: 3px 3px 5px 0px $grey-clear01,
-        inset 2px 2px 20px 0px $grey-clear01;
-      box-shadow: 3px 3px 5px 0px $grey-clear01,
-        inset 2px 2px 20px 0px $grey-clear01;
-      animation: bounce 0.7s ease-in-out infinite;
+      border: 2px solid $purple;
+      animation: spin 20s ease-in-out infinite;
       .description-title {
         text-align: center;
         color: $purple;
@@ -30,15 +26,15 @@
     }
   }
   .section-work-option {
-    display: flex;
-    align-items: flex-end;
     width: 100%;
     .work-go-back {
-      text-decoration: none;
-      color: $black;
+      position: relative;
+      z-index: 5;
       .description-title {
+        color: $black;
+        @include transition;
         &:hover {
-          animation: gelatine 0.8s ease-in-out infinite;
+          text-decoration: underline;
         }
       }
     }
@@ -53,8 +49,6 @@
       position: relative;
       z-index: 3;
       @include transition;
-      padding: 15px;
-      margin-top: 20px;
     }
   }
 }
@@ -135,12 +129,13 @@
   }
   &.version-work-list {
     gap: 30px;
+    position: relative;
     .work-option-item {
-      position: relative;
-      padding: 20px;
       border: 1px solid $black;
+      border-radius: 25px;
       background-color: $white;
       @include transition;
+      min-height: 100px;
       .row {
         width: 100%;
       }
@@ -148,6 +143,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
       }
       .work-item-swiper-wrapper {
         display: inline-block;
@@ -161,6 +157,8 @@
         }
       }
       &:hover {
+        position: fixed;
+        z-index: 20;
         border: 1px solid transparent;
         background-color: $green;
       }
@@ -212,58 +210,46 @@
       }
     }
   }
-  &.video {
-    justify-content: center;
-    align-items: center;
-  }
 }
-.work-choose-btn-options {
-  width: 100%;
+.work-choose-btn-wrapper {
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 70px;
   z-index: 10;
-  gap: 8px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: none;
-  .work-choose-btn {
-    @include transition;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    border-radius: 35px;
-    border: 2px solid $blue-light;
-    background-color: $white;
-    cursor: pointer;
-    min-width: 40px;
-    min-height: 40px;
-    overflow: hidden;
-    pointer-events: auto;
-    .description-text {
+  .work-choose-btn-list {
+    width: 100%;
+    gap: 8px;
+    flex-wrap: wrap;
+    pointer-events: none;
+    .work-choose-btn-item {
       @include transition;
-      text-align: center;
-      color: $blue-medium;
-    }
-    &.active {
-      animation: rotate3d 5s ease-in-out infinite;
-      background-color: $red;
-      min-width: 250px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      border-radius: 35px;
+      border: 2px solid $blue-light;
+      background-color: $white;
+      cursor: pointer;
+      min-height: 40px;
+      overflow: hidden;
+      pointer-events: auto;
       .description-text {
-        text-decoration: none;
-        color: $white;
+        @include transition;
+        text-align: center;
+        color: $blue-medium;
+      }
+      &.active {
+        background-color: $red;
+        .description-text {
+          text-decoration: none;
+          color: $white;
+        }
       }
     }
   }
 }
 @media (min-width: 992px) {
-  .section-work {
-    .section-work-option {
-      display: block;
-    }
-  }
   .work-item-info-wrapper {
     .description-text {
       &.link {
@@ -294,8 +280,5 @@
           inset 4px 4px 15px 0px $grey-clear02;
       }
     }
-  }
-  .work-choose-btn-options {
-    bottom: 100px;
   }
 }
