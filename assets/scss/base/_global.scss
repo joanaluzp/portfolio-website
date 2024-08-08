@@ -76,14 +76,6 @@ body {
 .p-relative {
   position: relative;
 }
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes rotate3d {
   from {
     transform: rotateY(0deg);

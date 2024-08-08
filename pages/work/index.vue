@@ -14,7 +14,7 @@
               changeWorkOption(`${props.database.data.work.category.frontEnd}`)
             "
           >
-            <p class="description-text text-justify font-bold-italic">
+            <p class="description-text medium font-italic text-justify">
               {{ props.database.data.work.category.frontEnd }}
             </p>
           </div>
@@ -29,7 +29,7 @@
               changeWorkOption(`${props.database.data.work.category.videoArt}`)
             "
           >
-            <p class="description-text text-justify font-bold-italic">
+            <p class="description-text medium font-italic text-justify">
               {{ props.database.data.work.category.videoArt }}
             </p>
           </div>
@@ -46,7 +46,7 @@
               )
             "
           >
-            <p class="description-text text-justify font-bold-italic">
+            <p class="description-text medium font-italic text-justify">
               {{ props.database.data.work.category.miscellaneous }}
             </p>
           </div>
@@ -79,7 +79,11 @@
                       class="col-12 col-sm-4 col-lg-6"
                       v-if="item.images.length > 0"
                     >
-                      <div class="work-item-swiper-wrapper">
+                      <div
+                        class="work-item-swiper-wrapper"
+                        data-aos="fade-in"
+                        data-aos-duration="1500"
+                      >
                         <img
                           class="work-item-swiper"
                           :title="item.name"
@@ -108,7 +112,44 @@
                       </h1>
                     </div>
                     <div class="col-12 col-lg-6" v-if="item.images.length > 0">
-                      <div class="work-item-swiper-wrapper">
+                      <div
+                        class="work-item-swiper-wrapper"
+                        data-aos="fade-in"
+                        data-aos-duration="1500"
+                      >
+                        <img
+                          class="work-item-swiper"
+                          :title="item.name"
+                          :alt="item.name"
+                          :src="item.images[0].image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </NuxtLink>
+              </li>
+              <li
+                class="work-option-item"
+                v-for="item in workDataMiscellaneous.slice().reverse()"
+                :key="item.id"
+                v-if="
+                  categoryOption ===
+                  `${props.database.data.work.category.miscellaneous}`
+                "
+              >
+                <NuxtLink :to="{ path: '/work/' + item.id }">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                      <h1 class="description-text font-italic work-title">
+                        {{ item.name }}
+                      </h1>
+                    </div>
+                    <div class="col-12 col-lg-6" v-if="item.images.length > 0">
+                      <div
+                        class="work-item-swiper-wrapper"
+                        data-aos="fade-in"
+                        data-aos-duration="1500"
+                      >
                         <img
                           class="work-item-swiper"
                           :title="item.name"
@@ -137,47 +178,12 @@ const props = defineProps({
 const categoryOption = ref(`${props.database.data.work.category.frontEnd}`);
 const workDataVideoArt = ref([]);
 const workDataFrontEnd = ref([]);
+const workDataMiscellaneous = ref([]);
 
 const changeWorkOption = (elm) => {
   let workElmSection = document.querySelector(".section-work");
   workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
   categoryOption.value = elm;
-};
-
-const effectSkewList = () => {
-  const workElmItem = document.querySelectorAll(
-    ".work-option-list-wrapper.version-work-list .work-option-item"
-  );
-  const skewX = Math.floor(Math.random() * 70) - 70;
-  const skewY = Math.floor(Math.random() * 70) - 70;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  let placeholder = null;
-
-  if (workElmItem) {
-    workElmItem.forEach((elm) => {
-      const positionElm = elm.getBoundingClientRect();
-      elm.addEventListener("mouseenter", () => {
-        elm.style.transform = `skew(${skewX}deg, ${skewY}deg)`;
-        if (!placeholder) {
-          placeholder = document.createElement("div");
-          placeholder.style.width = `${elm.offsetWidth}px`;
-          placeholder.style.height = `${elm.offsetHeight}px`;
-          placeholder.style.visibility = "hidden";
-          elm.parentNode.insertBefore(placeholder, elm);
-        }
-        elm.style.top = `${positionElm.top + scrollTop}px`;
-        elm.style.left = `${positionElm.left + scrollLeft}px`;
-      });
-      elm.addEventListener("mouseleave", () => {
-        elm.style.transform = "skew(0deg, 0deg)";
-        if (placeholder) {
-          placeholder.parentNode.removeChild(placeholder);
-          placeholder = null;
-        }
-      });
-    });
-  }
 };
 
 onMounted(() => {
@@ -187,9 +193,8 @@ onMounted(() => {
   workDataVideoArt.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "video art"
   );
-});
-
-onUpdated(() => {
-  effectSkewList();
+  workDataMiscellaneous.value = props.database.data.work.categoryItem.filter(
+    (item) => item.category === "miscellaneous"
+  );
 });
 </script>

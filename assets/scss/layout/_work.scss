@@ -16,7 +16,7 @@
     }
     .work-modal {
       border-radius: 50%;
-      padding: 30px 40px;
+      padding: 50px;
       border: 2px solid $purple;
       animation: spin 20s ease-in-out infinite;
       .description-title {
@@ -63,16 +63,11 @@
 }
 .work-item-info-wrapper {
   .description-text {
-    &:first-child {
-      margin-bottom: 10px;
-    }
     &.link {
       width: fit-content;
+      margin-bottom: 40px;
       text-decoration: none;
       color: $blue;
-    }
-    &:last-child {
-      padding-bottom: 10px;
     }
   }
 }
@@ -132,9 +127,8 @@
     position: relative;
     .work-option-item {
       border: 1px solid $black;
-      border-radius: 25px;
       background-color: $white;
-      @include transition;
+      @include transition2(all, 0.5s, ease-in-out);
       min-height: 100px;
       .row {
         width: 100%;
@@ -147,9 +141,12 @@
       }
       .work-item-swiper-wrapper {
         display: inline-block;
+        width: 100%;
         .work-item-swiper {
+          object-fit: cover;
           border-radius: 25px;
-          max-width: 100%;
+          width: 100%;
+          max-height: 200px;
           -webkit-box-shadow: -10px 0px 20px -7px $white,
             10px 0px 20px -7px $white, 0 0 20px 5px $white;
           box-shadow: -10px 0px 20px -7px $white, 10px 0px 20px -7px $white,
@@ -157,8 +154,6 @@
         }
       }
       &:hover {
-        position: fixed;
-        z-index: 20;
         border: 1px solid transparent;
         background-color: $green;
       }
@@ -216,40 +211,47 @@
   left: 20px;
   bottom: 70px;
   z-index: 10;
+  @include transition;
   .work-choose-btn-list {
     width: 100%;
     gap: 8px;
     flex-wrap: wrap;
+    flex-direction: column;
     pointer-events: none;
     .work-choose-btn-item {
-      @include transition;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 10px 15px;
       border-radius: 35px;
-      border: 2px solid $blue-light;
-      background-color: $white;
+      background-color: $blue-light;
       cursor: pointer;
-      min-height: 40px;
+      min-height: 50px;
+      min-width: 250px;
       overflow: hidden;
       pointer-events: auto;
       .description-text {
-        @include transition;
         text-align: center;
-        color: $blue-medium;
+        color: $purple;
       }
       &.active {
-        background-color: $red;
+        background-color: rgba($white, 0.5);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
         .description-text {
+          text-shadow: 0px 3px 3px rgba($white, 0.5);
           text-decoration: none;
-          color: $white;
+          font-weight: 700;
+          color: $black;
         }
       }
     }
   }
 }
 @media (min-width: 992px) {
+  .work-choose-btn-wrapper {
+    left: 100px;
+  }
   .work-item-info-wrapper {
     .description-text {
       &.link {

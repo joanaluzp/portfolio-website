@@ -167,6 +167,7 @@
           "category": "front-end development",
           "description01": "Made with love and possibly constantly changing ༺☆༻",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
+          "description03": "additional info: 2023-present",
           "link": "",
           "linkDescription": "",
           "images": []
@@ -178,6 +179,7 @@
           "category": "front-end development",
           "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
+          "description03": "additional info: 2023-2024",
           "link": "https://www.webcomum.com/",
           "linkDescription": "you can enter their website here",
           "images": []
@@ -409,6 +411,101 @@
               "image": "/images/video_art/negative_index/5.png"
             }
           ]
+        },
+        {
+          "id": 12,
+          "name": "Dose 8",
+          "slug": "dose-8",
+          "category": "miscellaneous",
+          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
+          "description02": "additional info: 2022",
+          "link": "",
+          "linkDescription": "",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/miscellaneous/dose8/dose1_1.jpg"
+            },
+            {
+              "id": 2,
+              "image": "/images/miscellaneous/dose8/dose1.jpg"
+            },
+            {
+              "id": 3,
+              "image": "/images/miscellaneous/dose8/dose2_1.jpg"
+            },
+            {
+              "id": 4,
+              "image": "/images/miscellaneous/dose8/dose2.jpg"
+            },
+            {
+              "id": 5,
+              "image": "/images/miscellaneous/dose8/dose3_1.jpg"
+            },
+            {
+              "id": 6,
+              "image": "/images/miscellaneous/dose8/dose3.jpg"
+            },
+            {
+              "id": 7,
+              "image": "/images/miscellaneous/dose8/dose4_1.jpg"
+            },
+            {
+              "id": 8,
+              "image": "/images/miscellaneous/dose8/dose4.jpg"
+            },
+            {
+              "id": 9,
+              "image": "/images/miscellaneous/dose8/dose5_1.jpg"
+            },
+            {
+              "id": 10,
+              "image": "/images/miscellaneous/dose8/dose5.jpg"
+            },
+            {
+              "id": 11,
+              "image": "/images/miscellaneous/dose8/dose6_1.jpg"
+            },
+            {
+              "id": 12,
+              "image": "/images/miscellaneous/dose8/dose6.jpg"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "IMAGO: Intra-connective",
+          "slug": "dose-8",
+          "category": "miscellaneous",
+          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
+          "description02": "additional info: 2022",
+          "link": "",
+          "linkDescription": "",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/miscellaneous/imago/imago_1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/miscellaneous/imago/imago_2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/miscellaneous/imago/imago_3.png"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "rádio Teia",
+          "slug": "radio-teia",
+          "category": "miscellaneous",
+          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
+          "description02": "additional info: 2022",
+          "link": "",
+          "linkDescription": "",
+          "images": []
         }
       ]
     },
