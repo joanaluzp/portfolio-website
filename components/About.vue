@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-about" id="section-about">
+  <section class="section section-about">
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
@@ -23,11 +23,6 @@
           </div>
         </div>
       </div>
-      <p class="localization description-text font-bold small text-justify">
-        <span class="d-inline-block">
-          {{ props.database.data.about.localization }}</span
-        >
-      </p>
     </div>
     <div class="section-skills-wrapper">
       <div class="container">
@@ -40,7 +35,7 @@
               :class="{ 'no-animation': openSkills }"
             >
               <p
-                class="description-title d-inline lowercase big font-bold text-center"
+                class="description-title d-inline lowercase big text-center"
               >
                 {{ props.database.data.about.skills.text }}
               </p>

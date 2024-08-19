@@ -20,8 +20,7 @@
     },
     "about": {
       "intro": "about me",
-      "localization": "living in portugal atm",
-      "text": "After years of naively designing layouts on the web, I can actually build them now. As a Junior Front-end Developer and Audiovisual Artist, I'm particularly fascinated by the technological field, innovative methods of art, design and new media.",
+      "text": "After years of naively designing layouts on the web, I can actually build them now. As a junior front-end developer and audiovisual artist, I'm particularly fascinated by the technological field, innovative methods of art, music, design and new media.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",

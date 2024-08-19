@@ -30,7 +30,7 @@ body {
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $grey-clear02;
+    background: $grey-clear03;
     border: 1px solid $black-clear02;
   }
   video {
@@ -45,9 +45,23 @@ body {
     min-height: 100vh;
     .section {
       width: 100%;
-      padding: 140px 0 50px 0;
+      padding: 140px 0 70px 0;
       @media (min-width: 576px) {
-        padding: 100px 0 50px 0;
+        padding: 100px 0 70px 0;
+      }
+      &.homepage {
+        padding: 0;
+      }
+      &.section-background {
+        position: fixed;
+        left: 0;
+        top: 0;
+        .background-img-item {
+          width: 100%;
+          height: 100vh;
+          background-size: 200%;
+          background-position: center center;
+        }
       }
     }
   }
@@ -192,17 +206,6 @@ body {
   }
   100% {
     transform: translateX(15px);
-  }
-}
-@keyframes translateRotate {
-  0% {
-    transform: rotate(90deg) translateX(15px);
-  }
-  50% {
-    transform: rotate(90deg) translateX(-15px);
-  }
-  100% {
-    transform: rotate(90deg) translateX(15px);
   }
 }
 @keyframes bounce {

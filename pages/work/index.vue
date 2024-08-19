@@ -1,60 +1,66 @@
 <template>
   <section class="section section-work item-list">
     <div class="section-work-option">
-      <div class="work-choose-btn-wrapper">
-        <div class="work-choose-btn-list d-flex">
-          <div
-            class="work-choose-btn-item"
-            :class="{
-              active:
-                categoryOption ===
-                `${props.database.data.work.category.frontEnd}`,
-            }"
-            @click="
-              changeWorkOption(`${props.database.data.work.category.frontEnd}`)
-            "
-          >
-            <p class="description-text medium font-italic text-justify">
-              {{ props.database.data.work.category.frontEnd }}
-            </p>
-          </div>
-          <div
-            class="work-choose-btn-item"
-            :class="{
-              active:
-                categoryOption ===
-                `${props.database.data.work.category.videoArt}`,
-            }"
-            @click="
-              changeWorkOption(`${props.database.data.work.category.videoArt}`)
-            "
-          >
-            <p class="description-text medium font-italic text-justify">
-              {{ props.database.data.work.category.videoArt }}
-            </p>
-          </div>
-          <div
-            class="work-choose-btn-item"
-            :class="{
-              active:
-                categoryOption ===
-                `${props.database.data.work.category.miscellaneous}`,
-            }"
-            @click="
-              changeWorkOption(
-                `${props.database.data.work.category.miscellaneous}`
-              )
-            "
-          >
-            <p class="description-text medium font-italic text-justify">
-              {{ props.database.data.work.category.miscellaneous }}
-            </p>
-          </div>
-        </div>
-      </div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-9 offset-lg-3">
+          <div class="col-12 col-lg-3">
+            <div class="work-choose-btn-wrapper">
+              <div class="work-choose-btn-list d-flex">
+                <div
+                  class="work-choose-btn-item"
+                  :class="{
+                    active:
+                      categoryOption ===
+                      `${props.database.data.work.category.frontEnd}`,
+                  }"
+                  @click="
+                    changeWorkOption(
+                      `${props.database.data.work.category.frontEnd}`
+                    )
+                  "
+                >
+                  <p class="description-text medium font-italic text-justify">
+                    {{ props.database.data.work.category.frontEnd }}
+                  </p>
+                </div>
+                <div
+                  class="work-choose-btn-item"
+                  :class="{
+                    active:
+                      categoryOption ===
+                      `${props.database.data.work.category.videoArt}`,
+                  }"
+                  @click="
+                    changeWorkOption(
+                      `${props.database.data.work.category.videoArt}`
+                    )
+                  "
+                >
+                  <p class="description-text medium font-italic text-justify">
+                    {{ props.database.data.work.category.videoArt }}
+                  </p>
+                </div>
+                <div
+                  class="work-choose-btn-item"
+                  :class="{
+                    active:
+                      categoryOption ===
+                      `${props.database.data.work.category.miscellaneous}`,
+                  }"
+                  @click="
+                    changeWorkOption(
+                      `${props.database.data.work.category.miscellaneous}`
+                    )
+                  "
+                >
+                  <p class="description-text medium font-italic text-justify">
+                    {{ props.database.data.work.category.miscellaneous }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 offset-lg-1">
             <ul class="work-option-list-wrapper version-work-list">
               <li
                 class="work-option-item"

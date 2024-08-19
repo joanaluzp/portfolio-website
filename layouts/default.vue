@@ -6,6 +6,7 @@
     <Navbar :database="database" />
     <main class="main">
       <NuxtPage :database="database" />
+      <BackgroundImg :database="database" />
     </main>
     <LazyFooter :database="database" />
   </div>
@@ -13,6 +14,7 @@
 <script setup>
 import database from "../data/db.json";
 const maintenance = ref(true);
+
 </script>
 <style>
 .page-enter-active,

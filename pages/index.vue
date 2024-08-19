@@ -1,5 +1,5 @@
 <template>
-  <Work :database="database"/>
+  <Homepage :database="database"/>
 </template>
 
 <script setup>

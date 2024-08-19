@@ -6,7 +6,7 @@
           <div class="col-12">
             <ul class="work-option-list-wrapper flex-wrap d-flex">
               <li class="work-option-item">
-                <h1 class="d-inline description-text work-title font-bold">
+                <h1 class="d-inline description-text work-title font-italic">
                   {{ item.name }}
                 </h1>
               </li>
@@ -24,7 +24,7 @@
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text big text-justify font-bold link"
+                class="description-text big text-justify font-italic link"
                 target="”_blank”"
                 v-if="item.link"
               >

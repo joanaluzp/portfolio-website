@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-work" id="section-work">
+  <section class="section section-work homepage">
     <div class="section-work-modal d-lg-none">
       <div class="container">
         <div class="row">
@@ -62,11 +62,7 @@ const props = defineProps({
 
 const filteredCategoryItems = computed(() => {
   return categoryItems.value.filter((item) => {
-    return (
-      item.images.length > 0 ||
-      item.category === "front-end development" ||
-      (item.images.length > 0 && item.category === "video art")
-    );
+    return item.images.length > 0;
   });
 });
 

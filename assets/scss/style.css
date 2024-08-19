@@ -3567,7 +3567,7 @@ body::-webkit-scrollbar-track {
 }
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background: #969696;
+  background: #d3d3d3;
   border: 1px solid #575757;
 }
 html video,
@@ -3587,13 +3587,30 @@ body .main {
 html .main .section,
 body .main .section {
   width: 100%;
-  padding: 140px 0 50px 0;
+  padding: 140px 0 70px 0;
 }
 @media (min-width: 576px) {
   html .main .section,
   body .main .section {
-    padding: 100px 0 50px 0;
+    padding: 100px 0 70px 0;
   }
+}
+html .main .section.homepage,
+body .main .section.homepage {
+  padding: 0;
+}
+html .main .section.section-background,
+body .main .section.section-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+html .main .section.section-background .background-img-item,
+body .main .section.section-background .background-img-item {
+  width: 100%;
+  height: 100vh;
+  background-size: 200%;
+  background-position: center center;
 }
 html .maintenance,
 body .maintenance {
@@ -3742,17 +3759,6 @@ body .container .row {
     transform: translateX(15px);
   }
 }
-@keyframes translateRotate {
-  0% {
-    transform: rotate(90deg) translateX(15px);
-  }
-  50% {
-    transform: rotate(90deg) translateX(-15px);
-  }
-  100% {
-    transform: rotate(90deg) translateX(15px);
-  }
-}
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -3825,7 +3831,7 @@ body .container .row {
   animation-delay: 1.2s;
 }
 .navbar-menu-list .navbar-menu-item:hover {
-  background-color: #1900ff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .navbar-menu-list .navbar-menu-item:hover .description-title {
   color: #ffffff;
@@ -3845,7 +3851,6 @@ body .container .row {
 
 /*====WORK====*/
 .section-work {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -3864,12 +3869,12 @@ body .container .row {
 .section-work .section-work-modal .work-modal {
   border-radius: 50%;
   padding: 50px;
-  border: 2px solid #6f00ff;
+  border: 2px solid #ff00c3;
   animation: spin 20s ease-in-out infinite;
 }
 .section-work .section-work-modal .work-modal .description-title {
   text-align: center;
-  color: #6f00ff;
+  color: #ff00c3;
 }
 .section-work .section-work-option {
   width: 100%;
@@ -3886,7 +3891,10 @@ body .container .row {
   text-decoration: underline;
 }
 .section-work.item-id .work-title {
-  color: #6f00ff;
+  color: #ffff00;
+  font-family: "Coentgen-Kanzley";
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #969696;
 }
 .section-work.item-list .work-option-list-wrapper {
   position: relative;
@@ -3908,7 +3916,7 @@ body .container .row {
 .work-item-info-wrapper .description-text.link {
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #1900ff;
 }
@@ -3973,8 +3981,7 @@ body .container .row {
 .work-option-list-wrapper.version-work-list .work-option-item {
   border: 1px solid #000;
   background-color: #ffffff;
-  transition: all 0.5s ease-in-out;
-  min-height: 100px;
+  min-height: 100;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .row {
   width: 100%;
@@ -3999,7 +4006,10 @@ body .container .row {
 }
 .work-option-list-wrapper.version-work-list .work-option-item:hover {
   border: 1px solid transparent;
-  background-color: #26c548;
+  background-color: #000;
+}
+.work-option-list-wrapper.version-work-list .work-option-item:hover .description-text {
+  color: #ffffff;
 }
 
 .work-item-swiper-wrapper {
@@ -4052,10 +4062,6 @@ body .container .row {
 }
 
 .work-choose-btn-wrapper {
-  position: fixed;
-  left: 20px;
-  bottom: 70px;
-  z-index: 10;
   transition: all 0.3s ease-in-out;
 }
 .work-choose-btn-wrapper .work-choose-btn-list {
@@ -4080,7 +4086,7 @@ body .container .row {
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item .description-text {
   text-align: center;
-  color: #6f00ff;
+  color: #ff00c3;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active {
   background-color: rgba(255, 255, 255, 0.5);
@@ -4088,8 +4094,6 @@ body .container .row {
   backdrop-filter: blur(8px);
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active .description-text {
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-  text-decoration: none;
   font-weight: 700;
   color: #000;
 }
@@ -4119,40 +4123,28 @@ body .container .row {
 .section-about {
   position: relative;
 }
-.section-about .localization {
-  position: absolute;
-  z-index: 10;
-  width: -moz-fit-content;
-  width: fit-content;
-  right: 10%;
-  top: 150px;
-}
-.section-about .localization span {
-  animation: spin 10s ease infinite;
-  background-color: #ffff00;
-  padding: 20px;
-  border-radius: 50%;
-}
 
 .skills-dropdown-toggle {
   position: relative;
   cursor: pointer;
   margin: 30px 0 20px 0;
-  width: 100%;
   padding: 15px 20px;
   border-radius: 25px;
-  background-color: #bf98e9;
-  max-width: 500px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   display: flex;
-  color: #ffffff;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation: strobe 1.5s ease-in-out infinite;
+  animation: shake 2s ease-in-out infinite;
+  margin-top: -30px;
 }
 .skills-dropdown-toggle.no-animation {
   animation: none;
-  background-color: #6f00ff;
+}
+.skills-dropdown-toggle .description-title,
+.skills-dropdown-toggle .description-text {
+  color: #1900ff;
 }
 
 .skills-dropdown-wrapper {
@@ -4168,11 +4160,12 @@ body .container .row {
   position: relative;
   overflow: hidden;
   border-radius: 0;
-  background-color: #d3d3d3;
 }
 
 .skills-dropdown-list {
   transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  border: 1px solid #575757;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -4241,7 +4234,7 @@ body .container .row {
   font-weight: 400;
 }
 .skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-close:hover {
-  border: 2px solid #6f00ff;
+  border: 2px solid #ff00c3;
 }
 .skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .info-title {
   margin: 50px 0;
@@ -4287,12 +4280,12 @@ body .container .row {
   align-items: center;
   flex-wrap: nowrap;
   border-radius: 25px;
-  background-color: #ff0000;
+  background-color: #ffff00;
   margin-top: 40px;
 }
 .contact-cv-link-wrapper .contact-cv-wrapper .description-text {
   text-align: center;
-  color: #ffffff;
+  color: #969696;
 }
 
 @media (min-width: 998px) {
@@ -4310,6 +4303,7 @@ body .container .row {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-top: -50px;
 }
 .footer .footer-wrapper {
   position: relative;
@@ -4322,14 +4316,16 @@ body .container .row {
   transform: translateX(-50%);
   min-height: 50px;
   padding: 10px 25px;
-  background-color: #3375e0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-radius: 30px 30px 0 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .footer .footer-wrapper .description-text {
-  color: #ffffff;
+  color: #000;
 }
 .footer .footer-wrapper .description-text span {
   margin-right: 5px;
