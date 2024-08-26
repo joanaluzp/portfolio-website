@@ -4,7 +4,13 @@
 }
 .contact-text-wrapper {
   max-width: 500px;
+  .description-title {
+    text-shadow: 0px 3px 3px rgba($white, 0.5);
+  }
   .contact-email-link {
+    display: block;
+    padding: 20px;
+    background-color: $white;
     color: $blue;
     text-decoration: none;
     width: fit-content;

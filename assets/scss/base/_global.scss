@@ -44,6 +44,8 @@ body {
     position: relative;
     min-height: 100vh;
     .section {
+      position: relative;
+      z-index: 1;
       width: 100%;
       padding: 140px 0 70px 0;
       @media (min-width: 576px) {
@@ -56,11 +58,11 @@ body {
         position: fixed;
         left: 0;
         top: 0;
+        z-index: 0;
         .background-img-item {
           width: 100%;
           height: 100vh;
-          background-size: 200%;
-          background-position: center center;
+          object-fit: cover;
         }
       }
     }
