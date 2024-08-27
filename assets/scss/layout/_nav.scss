@@ -26,34 +26,30 @@
     @include transition;
     &.item-01 {
       &.animation {
-        animation: navbarItem 1.5s ease-in-out;
-        animation-delay: 0.3s;
+        animation: navbarItem 0.7s ease-in-out;
+        animation-delay: 0.1s;
       }
     }
     &.item-02 {
       &.animation {
-        animation: navbarItem 1.5s ease-in-out;
-        animation-delay: 0.6s;
+        animation: navbarItem 0.7s ease-in-out;
+        animation-delay: 0.3s;
       }
     }
     &.item-03 {
       &.animation {
-        animation: navbarItem 1.5s ease-in-out;
-        animation-delay: 0.9s;
+        animation: navbarItem 0.7s ease-in-out;
+        animation-delay: 0.5s;
       }
     }
     &.item-04 {
       &.animation {
-        animation: navbarItem 1.5s ease-in-out;
-        animation-delay: 1.2s;
+        animation: navbarItem 0.7s ease-in-out;
+        animation-delay: 0.7s;
       }
     }
     &:hover {
-      background-color: rgba($black, 0.5);
-      .description-title {
-        color: $white;
-        font-family: $font-03;
-      }
+      text-decoration: underline;
     }
     a {
       display: block;

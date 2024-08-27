@@ -30,7 +30,7 @@ body {
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $grey-clear03;
+    background: $white;
     border: 1px solid $black-clear02;
   }
   video {
@@ -45,7 +45,6 @@ body {
     min-height: 100vh;
     .section {
       position: relative;
-      z-index: 1;
       width: 100%;
       padding: 140px 0 70px 0;
       @media (min-width: 576px) {
@@ -56,13 +55,48 @@ body {
       }
       &.section-background {
         position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        .background-img-item {
-          width: 100%;
-          height: 100vh;
-          object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+        height: 100vh;
+        overflow: hidden;
+        .cube-container {
+          position: relative;
+          width: 500px;
+          height: 500px;
+          transform-style: preserve-3d;
+          animation: rotateCube 100s infinite linear;
+          .cube-face {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            backface-visibility: hidden;
+            &.front {
+              transform: translateZ(100px);
+            }
+            &.back {
+              transform: rotateY(180deg) translateZ(100px);
+            }
+            &.left {
+              transform: rotateY(-90deg) translateZ(100px);
+            }
+            &.right {
+              transform: rotateY(90deg) translateZ(100px);
+            }
+            &.top {
+              transform: rotateX(90deg) translateZ(100px);
+            }
+            &.bottom {
+              transform: rotateX(-90deg) translateZ(100px);
+            }
+            .background-img-item {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              filter: url(#svgFilter);
+            }
+          }
         }
       }
     }
@@ -100,18 +134,18 @@ body {
     transform: rotateY(360deg);
   }
 }
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
 @keyframes navbarItem {
   0% {
     transform: scale(0.4);
     opacity: 0;
-  }
-  30% {
-    transform: scale(1.2);
-    opacity: 0.5;
-  }
-  70% {
-    transform: scale(0.8);
-    opacity: 1;
   }
   100% {
     transform: scale(1);

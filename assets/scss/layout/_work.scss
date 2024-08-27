@@ -125,10 +125,11 @@
     }
   }
   &.version-work-list {
-    gap: 30px;
+    gap: 20px;
     position: relative;
     .work-option-item {
       background-color: $white;
+      border-radius: 25px;
       .row {
         width: 100%;
       }
@@ -153,10 +154,9 @@
         }
       }
       &:hover {
-        background-color: $black;
-        .description-text {
-          color: $white;
-        }
+        background-color: rgba($white, 0.5);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
       }
     }
   }
@@ -215,23 +215,19 @@
     flex-wrap: wrap;
     flex-direction: column;
     pointer-events: none;
+    background-color: $blue-light;
     .work-choose-btn-item {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 15px;
-      border-radius: 35px;
-      background-color: $blue-light;
       cursor: pointer;
-      min-height: 50px;
-      min-width: 250px;
       overflow: hidden;
       pointer-events: auto;
       .description-text {
         text-align: center;
         color: $pink;
       }
-      &.active {
+       &.active {
         background-color: rgba($white, 0.5);
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
@@ -239,7 +235,7 @@
           font-weight: 700;
           color: $black;
         }
-      }
+      } 
     }
   }
 }

@@ -7,28 +7,15 @@
     <main class="main">
       <svg xmlns="" style="display: none">
         <defs>
-          <filter
-            id="svgFilter"
-            x="-20%"
-            y="-20%"
-            width="140%"
-            height="140%"
-            filterUnits="objectBoundingBox"
-            primitiveUnits="userSpaceOnUse"
-            color-interpolation-filters="linearRGB"
-          >
+          <filter id="svgFilter">
             <feDisplacementMap
               in="SourceGraphic"
-              in2="blur"
-              scale="150"
+              in2="noise"
+              scale="100"
               xChannelSelector="R"
-              yChannelSelector="B"
-              x="0%"
-              y="0%"
-              width="100%"
-              height="100%"
-              result="displacementMap1"
+              yChannelSelector="R"
             />
+
           </filter>
         </defs>
       </svg>
@@ -40,7 +27,7 @@
 </template>
 <script setup>
 import database from "../data/db.json";
-const maintenance = ref(true);
+const maintenance = ref(false);
 </script>
 <style>
 .page-enter-active,

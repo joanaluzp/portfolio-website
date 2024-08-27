@@ -75,28 +75,10 @@
                   <div class="row align-items-center">
                     <div
                       class="col-12"
-                      :class="{ 'col-sm-8 col-lg-6': item.images.length > 0 }"
                     >
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>
-                    </div>
-                    <div
-                      class="col-12 col-sm-4 col-lg-6"
-                      v-if="item.images.length > 0"
-                    >
-                      <div
-                        class="work-item-swiper-wrapper"
-                        data-aos="fade-in"
-                        data-aos-duration="1500"
-                      >
-                        <img
-                          class="work-item-swiper"
-                          :title="item.name"
-                          :alt="item.name"
-                          :src="item.images[0].image"
-                        />
-                      </div>
                     </div>
                   </div>
                 </NuxtLink>
@@ -112,24 +94,10 @@
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>
-                    </div>
-                    <div class="col-12 col-lg-6" v-if="item.images.length > 0">
-                      <div
-                        class="work-item-swiper-wrapper"
-                        data-aos="fade-in"
-                        data-aos-duration="1500"
-                      >
-                        <img
-                          class="work-item-swiper"
-                          :title="item.name"
-                          :alt="item.name"
-                          :src="item.images[0].image"
-                        />
-                      </div>
                     </div>
                   </div>
                 </NuxtLink>
@@ -145,24 +113,10 @@
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>
-                    </div>
-                    <div class="col-12 col-lg-6" v-if="item.images.length > 0">
-                      <div
-                        class="work-item-swiper-wrapper"
-                        data-aos="fade-in"
-                        data-aos-duration="1500"
-                      >
-                        <img
-                          class="work-item-swiper"
-                          :title="item.name"
-                          :alt="item.name"
-                          :src="item.images[0].image"
-                        />
-                      </div>
                     </div>
                   </div>
                 </NuxtLink>

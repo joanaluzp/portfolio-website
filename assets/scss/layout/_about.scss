@@ -3,7 +3,6 @@
   position: relative;
   .section-about-wrapper {
     .about-text-wrapper {
-      padding: 20px;
       background-color: $white;
     }
   }
@@ -14,7 +13,9 @@
   margin: 30px 0 20px 0;
   padding: 15px 20px;
   border-radius: 25px;
-  background-color: $yellow;
+  background-color: rgba($white, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   max-width: fit-content;
   display: flex;
   justify-content: center;
@@ -31,7 +32,7 @@
   }
 }
 .skills-dropdown-wrapper {
-  z-index: 1000;
+  z-index: 19900;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
@@ -47,11 +48,11 @@
 .skills-dropdown-list {
   @include transition;
   background-color: $white;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5px;
-  padding: 40px;
   &.is-open {
     pointer-events: none;
   }
@@ -102,17 +103,13 @@
         .btn-close {
           cursor: pointer;
           color: $black;
-          padding: 20px;
-          border-radius: 50%;
-          border: 2px solid transparent;
           @include transition;
           span {
-            text-decoration: none;
             font-style: none;
             font-weight: 400;
           }
           &:hover {
-            border: 2px solid $pink;
+            text-decoration: underline;
           }
         }
         .info-title {
