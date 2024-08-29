@@ -5,11 +5,6 @@
         <div class="row">
           <div class="col-12 col-lg-6">
             <div class="about-text-wrapper">
-              <p
-                class="description-title bigger d-inline lowercase text-center"
-              >
-                {{ props.database.data.about.intro }}
-              </p>
               <h5 class="description-text medium text-justify">
                 {{ props.database.data.about.text }}
               </h5>
@@ -29,13 +24,13 @@
               :class="{ 'no-animation': openSkills }"
             >
               <p
-                class="description-title d-inline lowercase big text-center"
+                class="description-title d-inline font-italic lowercase big text-center"
               >
                 {{ props.database.data.about.skills.text }}
               </p>
-              <p class="description-text d-inline small lowercase text-center">
+              <!--               <p class="description-text d-inline small lowercase text-center">
                 {{ props.database.data.about.skills.textToggle }}
-              </p>
+              </p> -->
             </div>
             <div
               class="skills-dropdown-wrapper"
@@ -69,7 +64,7 @@
                       {{ item.skill }}
                     </h6>
                     <p class="description-text divider d-inline uppercase">
-                      🔗
+                      📂
                     </p>
                     <div
                       class="skills-infocard-wrapper"
@@ -85,11 +80,18 @@
                               >
                                 {{ props.database.data.about.skills.close }}
                               </p>
-                              <p
-                                class="info-title description-title capitalize font-italic bigger"
-                              >
-                                {{ item.skill }}
-                              </p>
+                              <div class="info-title-wrapper">
+                                <p
+                                  class="info-title description-title capitalize font-italic bigger"
+                                >
+                                  {{ item.skill }}
+                                </p>
+                                <p
+                                  class="info-title-overlay description-title font-italic lowercase big"
+                                >
+                                  {{ item.skill }}
+                                </p>
+                              </div>
                               <p
                                 class="info-description description-text text-justify"
                               >

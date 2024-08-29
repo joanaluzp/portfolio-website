@@ -27,10 +27,10 @@
             <div
               class="contact-cv-wrapper d-inline-flex"
             >
-              <p class="description-text d-inline text-center lowercase">
+              <p class="description-text medium d-inline text-center lowercase">
                 {{ props.database.data.contact.cv.text }}
               </p>
-              <p class="description-text big font-bold link d-inline">
+              <p class="description-text big font-italic link d-inline">
                 {{ props.database.data.contact.cv.linkText }}
               </p>
             </div></NuxtLink

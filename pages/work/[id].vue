@@ -9,6 +9,9 @@
                 <h1 class="d-inline description-text work-title font-italic">
                   {{ item.name }}
                 </h1>
+                <h1 class="d-inline description-title big font-italic">
+                  {{ item.name }}
+                </h1>
               </li>
             </ul>
           </div>

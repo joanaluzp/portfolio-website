@@ -3,7 +3,7 @@
     <div class="section-work-option">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-3">
+          <div class="col-12 offset-lg-3 col-lg-3">
             <div class="work-choose-btn-wrapper">
               <div class="work-choose-btn-list d-flex">
                 <div
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-8 offset-lg-1">
+          <div class="col-12 col-lg-6">
             <ul class="work-option-list-wrapper version-work-list">
               <li
                 class="work-option-item"

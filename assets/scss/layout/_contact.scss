@@ -25,11 +25,13 @@
     align-items: center;
     flex-wrap: nowrap;
     border-radius: 25px;
-    background-color: $yellow;
+    background-color: rgba($white, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px); 
     margin-top: 40px;
     .description-text {
       text-align: center;
-      color: $grey-clear02;
+      color: $black;
     }
   }
 }
