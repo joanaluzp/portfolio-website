@@ -73,13 +73,7 @@
                       <div class="skills-infocard">
                         <div class="container">
                           <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8">
-                              <p
-                                class="btn-close d-inline description-text font-bold lowercase big"
-                                @click="openSkillsInfo = false"
-                              >
-                                {{ props.database.data.about.skills.close }}
-                              </p>
+                            <div class="col-12">
                               <div class="info-title-wrapper">
                                 <p
                                   class="info-title description-title capitalize font-italic bigger"
@@ -93,9 +87,15 @@
                                 </p>
                               </div>
                               <p
-                                class="info-description description-text text-justify"
+                                class="info-description description-text big text-justify"
                               >
                                 {{ item.description }}
+                              </p>
+                              <p
+                                class="btn-go-back description-text font-bold lowercase big"
+                                @click="openSkillsInfo = false"
+                              >
+                                {{ props.database.data.about.skills.goBack }}
                               </p>
                             </div>
                           </div>

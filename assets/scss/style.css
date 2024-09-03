@@ -3946,6 +3946,9 @@ body .container .row {
 .section-work .section-work-option .work-go-back .description-title:hover {
   text-decoration: underline;
 }
+.section-work.item-id {
+  width: 100%;
+}
 .section-work.item-id .work-title {
   color: #ffff00;
   font-family: "Coentgen-Kanzley";
@@ -3980,12 +3983,11 @@ body .container .row {
 .work-item-info-wrapper .description-text.link {
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 20px;
   text-decoration: none;
   color: #1900ff;
 }
 .work-item-info-wrapper .description-text.link:hover {
-  text-decoration: overline;
+  text-decoration: underline;
 }
 
 .work-option-list-wrapper {
@@ -4134,12 +4136,12 @@ body .container .row {
 }
 .work-choose-btn-wrapper .work-choose-btn-list {
   flex-wrap: wrap;
-  align-items: center;
   flex-direction: column;
   pointer-events: none;
   gap: 20px;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item {
+  background-color: #000;
   width: -moz-fit-content;
   width: fit-content;
   display: inline-flex;
@@ -4154,7 +4156,7 @@ body .container .row {
   color: #ff00c3;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active {
-  background-color: white;
+  background-color: #ffffff;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active .description-text {
   font-weight: 700;
@@ -4190,7 +4192,7 @@ body .container .row {
   margin: 30px 0 20px 0;
   padding: 15px 20px;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   max-width: -moz-fit-content;
@@ -4263,9 +4265,7 @@ body .container .row {
   width: 100vw;
   height: 100%;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background-color: #ffffff;
   padding: 30px 0;
   animation: none;
   pointer-events: initial;
@@ -4285,16 +4285,18 @@ body .container .row {
   align-items: center;
   justify-content: center;
 }
-.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-close {
+.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-go-back {
+  display: inline-block;
   cursor: pointer;
+  margin-top: 20px;
   color: #000;
   transition: all 0.3s ease-in-out;
 }
-.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-close span {
+.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-go-back span {
   font-style: none;
   font-weight: 400;
 }
-.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-close:hover {
+.skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .btn-go-back:hover {
   text-decoration: underline;
 }
 .skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .info-title-wrapper {
@@ -4303,7 +4305,7 @@ body .container .row {
   width: fit-content;
 }
 .skills-dropdown-list .skills-dropdown-list-item .skills-infocard-wrapper .skills-infocard .info-title-wrapper .info-title {
-  margin: 50px 0;
+  margin: 30px 0 50px 0;
   text-align: center;
   color: #ffff00;
   font-family: "Coentgen-Kanzley";

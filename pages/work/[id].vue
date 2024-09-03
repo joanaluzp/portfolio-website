@@ -15,7 +15,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="col-12">
             <div class="work-item-info-wrapper">
               <h2 class="description-text big text-justify">
                 {{ item.description01 }}
@@ -27,17 +27,26 @@
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="description-text big text-justify font-italic link"
+                class="description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="item.link"
               >
                 {{ item.linkDescription }}
               </NuxtLink>
-              <p class="description-text text-justify">
+              <NuxtLink
+                :to="item.link02"
+                :title="item.link02"
+                class="description-text big text-justify font-bold link"
+                target="”_blank”"
+                v-if="item.link02"
+              >
+                {{ item.linkDescription02 }}
+              </NuxtLink>
+              <p class="description-text medium font-italic text-justify">
                 {{ item.description02 }}
               </p>
               <p
-                class="description-text text-justify"
+                class="description-text medium font-italic text-justify"
                 v-if="item.description03"
               >
                 {{ item.description03 }}

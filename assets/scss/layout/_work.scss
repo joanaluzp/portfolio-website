@@ -42,6 +42,7 @@
     }
   }
   &.item-id {
+    width: 100%;
     .work-title {
       color: $yellow;
       font-family: $font-01;
@@ -78,11 +79,10 @@
   .description-text {
     &.link {
       width: fit-content;
-      margin-bottom: 20px;
       text-decoration: none;
       color: $blue;
       &:hover {
-        text-decoration: overline;
+        text-decoration: underline;
       }
     }
   }
@@ -231,11 +231,11 @@
   @include transition;
   .work-choose-btn-list {
     flex-wrap: wrap;
-    align-items: center;
     flex-direction: column;
     pointer-events: none;
     gap: 20px;
     .work-choose-btn-item {
+      background-color: $black;
       width: fit-content;
       display: inline-flex;
       align-items: center;
@@ -248,7 +248,7 @@
         color: $pink;
       }
       &.active {
-        background-color: rgba($white, 1);
+        background-color: $white;
         .description-text {
           font-weight: 700;
           color: $black;

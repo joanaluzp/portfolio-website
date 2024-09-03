@@ -25,7 +25,7 @@
         "text": "my technical skills",
         "textToggle": "click to toggle",
         "textInformative": "click on each skill to open its informative wikipedia definition",
-        "close": "close",
+        "goBack": "go back",
         "option": [
           {
             "id": 1,
@@ -164,7 +164,7 @@
           "name": "★this website★",
           "slug": "my-web",
           "category": "front-end development",
-          "description01": "Made with love and possibly constantly changing ༺☆༻",
+          "description01": "Made with love and possibly constantly changing ✩♬ ₊˚.🎶⋆☾⋆⁺₊✧",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
           "description03": "additional info: 2023-present",
           "link": "",
@@ -176,11 +176,13 @@
           "name": "work-related-projects",
           "slug": "work-related-projects",
           "category": "front-end development",
-          "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a Trainee/Junior Front-end Developer.",
+          "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a trainee/junior front-end developer.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
           "description03": "additional info: 2023-2024",
-          "link": "https://www.webcomum.com/",
-          "linkDescription": "you can enter their website here",
+          "link": "https://app.justwork.pt/",
+          "linkDescription": "link to website 01",
+          "link02": "https://www.chavenova.com/",
+          "linkDescription02": "link to website 02",
           "images": []
         },
         {
@@ -188,11 +190,11 @@
           "name": "kunst 3",
           "slug": "kunst-3",
           "category": "front-end development",
-          "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between English and German.",
+          "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between english and german.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
           "description03": "additional info: 2023",
           "link": "https://kunst3.netlify.app/",
-          "linkDescription": "you can enter the website here",
+          "linkDescription": "link to website",
           "images": []
         },
         {
@@ -200,10 +202,10 @@
           "name": "kapa4",
           "slug": "kapa-4",
           "category": "video art",
-          "description01": "Vaguely based on the futurist flyer ~K4, O Quadrado Azul~ by Almada Negreiros.",
+          "description01": "Vaguely based on the futurist flyer K4, O Quadrado Azul by Almada Negreiros.",
           "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -228,10 +230,10 @@
           "name": "시공간 @espaço/tempo",
           "slug": "espaço-tempo",
           "category": "video art",
-          "description01": "Surrealist approach of quantum mechanics ~Time and Space~ (Spacetime) concept.",
+          "description01": "Surrealist approach of quantum mechanics Time and Space (Spacetime) concept.",
           "description02": "additional info: 2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -259,7 +261,7 @@
           "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
           "description02": "additional info: 2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
           "link": "https://vimeo.com/277728983",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -276,10 +278,10 @@
           "name": "Life 0",
           "slug": "life-0",
           "category": "video art",
-          "description01": "Which came first, the Chicken or the Egg? ~ concept (individual transformation cycle)",
+          "description01": "Which came first, the Chicken or the Egg? concept (individual transformation cycle)",
           "description02": "additional info: 2019, video exhibition 5’17” @ Festival SOMA",
           "link": "https://vimeo.com/343492455",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -308,10 +310,10 @@
           "name": "Explaining Sound To A Deaf Person",
           "slug": "explaining-sound-to-a-deaf-person",
           "category": "video art",
-          "description01": "The title of the video already explains everything...",
+          "description01": "Visual representation of sound waves and effects (how is sound perceived as a deaf person)",
           "description02": "additional info: 2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
           "link": "https://vimeo.com/352076169",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -335,7 +337,7 @@
           "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
           "description02": "additional info: 2021, video installation 45’14” @ Festival A Colina",
           "link": "https://vimeo.com/655658351",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -359,7 +361,7 @@
           "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
           "description02": "additional info: 2022, video 2’56” @ Dose magazine",
           "link": "https://vimeo.com/722374867",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -387,7 +389,7 @@
           "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
           "description02": "additional info: 2023, video 6’59”",
           "link": "https://vimeo.com/802064965",
-          "linkDescription": "you can watch the video here",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -416,10 +418,10 @@
           "name": "Dose 8",
           "slug": "dose-8",
           "category": "miscellaneous",
-          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
-          "description02": "additional info: 2022",
-          "link": "",
-          "linkDescription": "",
+          "description01": "6 photoshop collages, here showing the magazine selected color and the original color, about the same theme of the video (it can be watched in the video art section)",
+          "description02": "additional info: 2022, collages @ Dose magazine",
+          "link": "https://www.instagram.com/dose_mag/",
+          "linkDescription": "link to instagram",
           "images": [
             {
               "id": 1,
@@ -476,10 +478,10 @@
           "name": "IMAGO: Intra-connective",
           "slug": "dose-8",
           "category": "miscellaneous",
-          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
-          "description02": "additional info: 2022",
-          "link": "",
-          "linkDescription": "",
+          "description01": "Conceptual collective exhibition that actually existed, in times of social isolation, where we existed at covid-19. Gonsalo recreated, through 3d modeling, the ideal works of 7 artists, including himself. This fictional exhibition appeared to be as real as ever, as 2020 expressed the need to globally connect through technology and deceive.",
+          "description02": "additional info: 2020, 3d object installation @ IMAGO, Curated by Isabel Ouro",
+          "link": "https://gonssalo.com/imago-eng",
+          "linkDescription": "link to website",
           "images": [
             {
               "id": 1,
@@ -500,11 +502,31 @@
           "name": "rádio Teia",
           "slug": "radio-teia",
           "category": "miscellaneous",
-          "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
-          "description02": "additional info: 2022",
-          "link": "",
-          "linkDescription": "",
+          "description01": "3 tracks mix for Teia 25",
+          "description02": "additional info: 2021, selected mix @ rádio Teia",
+          "link": "https://teiaradio.com/",
+          "linkDescription": "link to website",
           "images": []
+        },
+        {
+          "id": 15,
+          "name": "Out the Window: 2 Be",
+          "slug": "2-be",
+          "category": "miscellaneous",
+          "description01": "Installation of a disney TV, a warrior and the fake reflection of it in a video on loop playing on the TV. The video is pre-done and it's not representative of the warrior in the present moment, but it appears to be recording the warrior live.",
+          "description02": "additional info: 2020, object/video installation 29’00” @ galeria Arte Graça",
+          "link": "https://artegraca.pt/out-the-window/",
+          "linkDescription": "link to website",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/miscellaneous/2be/2be_1.jpg"
+            },
+            {
+              "id": 2,
+              "image": "/images/miscellaneous/2be/2be_2.jpg"
+            }
+          ]
         }
       ]
     },

@@ -27,7 +27,7 @@
 </template>
 <script setup>
 import database from "../data/db.json";
-const maintenance = ref(true);
+const maintenance = ref(false);
 </script>
 <style>
 .page-enter-active,
