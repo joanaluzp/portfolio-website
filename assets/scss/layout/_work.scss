@@ -142,6 +142,7 @@
     gap: 20px;
     position: relative;
     .work-option-item {
+      border-radius: 25px;
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       @include transition2(all, 1s, ease-in-out);
@@ -229,12 +230,13 @@
 .work-choose-btn-wrapper {
   @include transition;
   .work-choose-btn-list {
-    width: 100%;
     flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
     pointer-events: none;
     gap: 20px;
     .work-choose-btn-item {
+      width: fit-content;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -257,7 +259,9 @@
 }
 @media (min-width: 992px) {
   .work-choose-btn-wrapper {
-    left: 100px;
+    .work-choose-btn-list {
+      flex-direction: row;
+    }
   }
   .work-option-list-wrapper {
     &.version-work-background {

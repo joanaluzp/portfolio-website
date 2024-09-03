@@ -509,13 +509,17 @@
       ]
     },
     "contact": {
-      "text": "you can contact me here",
+      "text": "send me an email (っ ͡ ͡º - ͡ ͡º ς)",
       "email": "joanaluzp@gmail.com",
       "cv": {
-        "text": "you can also check my cv ",
         "description": "CV Joana Pimentel",
         "link": "CV.pdf",
-        "linkText": "<a>here</a>"
+        "linkText": "cv"
+      },
+      "github": {
+        "description": "GitHub Joana Pimentel",
+        "link": "https://github.com/joanaluzp",
+        "linkText": "github"
       }
     },
     "footer": {

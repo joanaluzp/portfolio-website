@@ -3,8 +3,7 @@
   position: relative;
 }
 .contact-text-wrapper {
-  max-width: 500px;
-  background-color: $white;
+ background-color: $white;
   .contact-email-link {
     display: block;
     color: $blue;
@@ -12,41 +11,27 @@
     width: fit-content;
     .description-text {
       width: fit-content;
-    }
-  }
-}
-.contact-cv-link-wrapper {
-  text-decoration: none;
-  .contact-cv-wrapper {
-    padding: 15px 20px;
-    height: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    border-radius: 25px;
-    background-color: rgba($white, 0.5);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px); 
-    margin-top: 40px;
-    .description-text {
-      text-align: center;
-      color: $black;
-    }
-  }
-}
-@media (min-width: 998px) {
-  .contact-text-wrapper {
-    .description-text {
       &:hover {
         animation: spin 2s ease-in-out infinite;
       }
     }
   }
-  .contact-cv-link-wrapper {
-    .contact-cv-wrapper {
+}
+.contact-link-list {
+  gap: 30px;
+  .contact-link-item {
+    background-color: $white;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    .description-text {
+      text-align: center;
+      color: $black;
       &:hover {
-        animation: shake 0.2s ease-in-out infinite;
+        text-decoration: underline;
       }
     }
   }

@@ -4046,6 +4046,7 @@ body .container .row {
   position: relative;
 }
 .work-option-list-wrapper.version-work-list .work-option-item {
+  border-radius: 25px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: all 1s ease-in-out;
@@ -4132,13 +4133,15 @@ body .container .row {
   transition: all 0.3s ease-in-out;
 }
 .work-choose-btn-wrapper .work-choose-btn-list {
-  width: 100%;
   flex-wrap: wrap;
+  align-items: center;
   flex-direction: column;
   pointer-events: none;
   gap: 20px;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item {
+  width: -moz-fit-content;
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4159,8 +4162,8 @@ body .container .row {
 }
 
 @media (min-width: 992px) {
-  .work-choose-btn-wrapper {
-    left: 100px;
+  .work-choose-btn-wrapper .work-choose-btn-list {
+    flex-direction: row;
   }
   .work-option-list-wrapper.version-work-background .work-option-item {
     position: relative;
@@ -4304,7 +4307,6 @@ body .container .row {
   text-align: center;
   color: #ffff00;
   font-family: "Coentgen-Kanzley";
-  animation: rotate3d 2s ease-in-out;
   -webkit-text-stroke-width: 0.7px;
   -webkit-text-stroke-color: #969696;
 }
@@ -4323,7 +4325,6 @@ body .container .row {
 }
 
 .contact-text-wrapper {
-  max-width: 500px;
   background-color: #ffffff;
 }
 .contact-text-wrapper .contact-email-link {
@@ -4337,37 +4338,31 @@ body .container .row {
   width: -moz-fit-content;
   width: fit-content;
 }
-
-.contact-cv-link-wrapper {
-  text-decoration: none;
+.contact-text-wrapper .contact-email-link .description-text:hover {
+  animation: spin 2s ease-in-out infinite;
 }
-.contact-cv-link-wrapper .contact-cv-wrapper {
-  padding: 15px 20px;
+
+.contact-link-list {
+  gap: 30px;
+}
+.contact-link-list .contact-link-item {
+  background-color: #ffffff;
   height: -moz-fit-content;
   height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
   margin-top: 40px;
 }
-.contact-cv-link-wrapper .contact-cv-wrapper .description-text {
+.contact-link-list .contact-link-item .description-text {
   text-align: center;
   color: #000;
 }
-
-@media (min-width: 998px) {
-  .contact-text-wrapper .description-text:hover {
-    animation: spin 2s ease-in-out infinite;
-  }
-  .contact-cv-link-wrapper .contact-cv-wrapper:hover {
-    animation: shake 0.2s ease-in-out infinite;
-  }
+.contact-link-list .contact-link-item .description-text:hover {
+  text-decoration: underline;
 }
+
 /*====FOOTER====*/
 .footer {
   position: relative;

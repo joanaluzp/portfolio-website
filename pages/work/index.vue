@@ -3,7 +3,7 @@
     <div class="section-work-option">
       <div class="container">
         <div class="row">
-          <div class="col-12 offset-lg-3 col-lg-3">
+          <div class="col-12 col-lg-8 offset-lg-4">
             <div class="work-choose-btn-wrapper">
               <div class="work-choose-btn-list d-flex">
                 <div
@@ -19,7 +19,7 @@
                     )
                   "
                 >
-                  <p class="description-text medium font-italic text-justify">
+                  <p class="description-text medium text-justify">
                     {{ props.database.data.work.category.frontEnd }}
                   </p>
                 </div>
@@ -36,7 +36,7 @@
                     )
                   "
                 >
-                  <p class="description-text medium font-italic text-justify">
+                  <p class="description-text medium text-justify">
                     {{ props.database.data.work.category.videoArt }}
                   </p>
                 </div>
@@ -53,14 +53,14 @@
                     )
                   "
                 >
-                  <p class="description-text medium font-italic text-justify">
+                  <p class="description-text medium text-justify">
                     {{ props.database.data.work.category.miscellaneous }}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 offset-lg-6">
             <ul class="work-option-list-wrapper version-work-list">
               <li
                 class="work-option-item"
