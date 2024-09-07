@@ -42,11 +42,11 @@
               >
                 {{ item.linkDescription02 }}
               </NuxtLink>
-              <p class="description-text medium font-italic text-justify">
+              <p class="description-text font-italic text-justify">
                 {{ item.description02 }}
               </p>
               <p
-                class="description-text medium font-italic text-justify"
+                class="description-text font-italic text-justify"
                 v-if="item.description03"
               >
                 {{ item.description03 }}
@@ -124,4 +124,43 @@ const id = parseInt(route.params.id);
 const item = ref(
   props.database.data.work.categoryItem.find((item) => item.id === id)
 );
+
+onMounted(() => {
+  const swiperElement = document.querySelector(".work-item-swiper-wrapper");
+  const prevArrow = document.querySelector(".arrow-gallery-prev");
+  const nextArrow = document.querySelector(".arrow-gallery-next");
+
+  const handleMouseMove = (event) => {
+    const swiperRect = swiperElement.getBoundingClientRect();
+    const mouseX = event.clientX - swiperRect.left;
+    const mouseY = event.clientY - swiperRect.top;
+    const swiperWidth = swiperRect.width;
+    if (mouseX <= swiperWidth / 2) {
+      prevArrow.style.transform = `translate(${mouseX - 20}px, ${
+        mouseY - 20
+      }px)`;
+      prevArrow.style.opacity = 1;
+      nextArrow.style.opacity = 0;
+    }
+
+    if (mouseX > swiperWidth / 2) {
+      const relativeX = mouseX - swiperWidth / 2;
+
+      nextArrow.style.transform = `translate(${
+        relativeX + swiperWidth / 2 - 20
+      }px, ${mouseY - 20}px)`;
+      prevArrow.style.opacity = 0;
+      nextArrow.style.opacity = 1;
+    }
+  };
+  if (swiperElement) {
+    swiperElement.addEventListener("mousemove", handleMouseMove);
+  }
+
+  onBeforeUnmount(() => {
+    if (swiperElement) {
+      swiperElement.removeEventListener("mousemove", handleMouseMove);
+    }
+  });
+});
 </script>

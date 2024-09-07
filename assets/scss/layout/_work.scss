@@ -200,29 +200,32 @@
   }
   .slider-arrows-wrapper {
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    top: 0;
+    left: 0;
     pointer-events: none;
-    align-items: center;
-    justify-content: space-between;
     .arrow-gallery-prev,
     .arrow-gallery-next {
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
       pointer-events: all;
       cursor: pointer;
+      .arrow-gallery-prev {
+        left: 0;
+      }
+      .arrow-gallery-next {
+        right: 0;
+      }
       i {
         color: $white;
-        @include transition2(all, 0.2s, ease-in-out);
-      }
-      &:hover {
-        i {
-          color: $pink;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $pink;
-        }
+        text-shadow: 0 1px $grey-clear02, -1px 0 $grey-clear01,
+          -1px 2px $grey-clear02, -2px 1px $grey-clear01, -2px 3px $grey-clear02,
+          -3px 2px $grey-clear01, -3px 4px $grey-clear02, -4px 3px $grey-clear01,
+          -4px 5px $grey-clear02, -5px 4px $grey-clear01, -5px 6px $grey-clear02,
+          -6px 5px $grey-clear01, -6px 7px $grey-clear02, -7px 6px $grey-clear01,
+          -7px 8px $grey-clear02, -8px 7px $grey-clear01;
       }
     }
   }
