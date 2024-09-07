@@ -3,9 +3,14 @@
   position: relative;
 }
 .contact-text-wrapper {
-  background-color: $white;
+  background-color: rgba($white, 0);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 25px;
+  .description-title {
+    width: fit-content;
+  }
   .contact-email-link {
     display: block;
     color: $blue;
