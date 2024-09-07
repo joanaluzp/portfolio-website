@@ -234,9 +234,8 @@
   @include transition;
   .work-choose-btn-list {
     flex-wrap: wrap;
-    flex-direction: column;
     pointer-events: none;
-    gap: 20px;
+    gap: 15px;
     .work-choose-btn-item {
       background-color: $black;
       width: fit-content;
@@ -261,11 +260,6 @@
   }
 }
 @media (min-width: 992px) {
-  .work-choose-btn-wrapper {
-    .work-choose-btn-list {
-      flex-direction: row;
-    }
-  }
   .work-option-list-wrapper {
     &.version-work-background {
       .work-option-item {

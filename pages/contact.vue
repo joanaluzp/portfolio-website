@@ -5,7 +5,7 @@
         <div class="col-12 col-lg-6">
           <div class="contact-text-wrapper">
             <p class="description-title big font-italic big lowercase">
-              {{ props.database.data.contact.text }}
+              {{ props.database.data.contact.text }} (っ ͡ ͡º - ͡ ͡º ς)
             </p>
             <NuxtLink
               :title="props.database.data.contact.email"

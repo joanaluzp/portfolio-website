@@ -3367,14 +3367,14 @@ section {
   text-align: center;
 }
 .description-text.font-bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 .description-text.font-bold-italic {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
 }
 .description-text.font-black {
-  font-weight: 900;
+  font-weight: 800;
 }
 .description-text.font-italic {
   font-style: italic;
@@ -3487,14 +3487,14 @@ section {
   text-align: center;
 }
 .description-title.font-bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 .description-title.font-bold-italic {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
 }
 .description-title.font-black {
-  font-weight: 900;
+  font-weight: 800;
 }
 .description-title.font-italic {
   font-style: italic;
@@ -4104,31 +4104,32 @@ body .container .row {
 }
 .work-item-swiper-wrapper .slider-arrows-wrapper {
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  align-items: center;
-  justify-content: space-between;
 }
 .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev,
 .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
   pointer-events: all;
   cursor: pointer;
+}
+.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev .arrow-gallery-prev,
+.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next .arrow-gallery-prev {
+  left: 0;
+}
+.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev .arrow-gallery-next,
+.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next .arrow-gallery-next {
+  right: 0;
 }
 .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev i,
 .work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next i {
   color: #ffffff;
-  transition: all 0.2s ease-in-out;
-}
-.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-prev:hover i,
-.work-item-swiper-wrapper .slider-arrows-wrapper .arrow-gallery-next:hover i {
-  color: #ff00c3;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ff00c3;
+  text-shadow: 0 1px #969696, -1px 0 #ececec, -1px 2px #969696, -2px 1px #ececec, -2px 3px #969696, -3px 2px #ececec, -3px 4px #969696, -4px 3px #ececec, -4px 5px #969696, -5px 4px #ececec, -5px 6px #969696, -6px 5px #ececec, -6px 7px #969696, -7px 6px #ececec, -7px 8px #969696, -8px 7px #ececec;
 }
 
 .work-choose-btn-wrapper {
@@ -4136,9 +4137,8 @@ body .container .row {
 }
 .work-choose-btn-wrapper .work-choose-btn-list {
   flex-wrap: wrap;
-  flex-direction: column;
   pointer-events: none;
-  gap: 20px;
+  gap: 15px;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item {
   background-color: #000;
@@ -4164,9 +4164,6 @@ body .container .row {
 }
 
 @media (min-width: 992px) {
-  .work-choose-btn-wrapper .work-choose-btn-list {
-    flex-direction: row;
-  }
   .work-option-list-wrapper.version-work-background .work-option-item {
     position: relative;
     pointer-events: initial;
@@ -4328,6 +4325,8 @@ body .container .row {
 
 .contact-text-wrapper {
   background-color: #ffffff;
+  padding: 20px;
+  border-radius: 25px;
 }
 .contact-text-wrapper .contact-email-link {
   display: block;
@@ -4385,10 +4384,6 @@ body .container .row {
   left: 50%;
   transform: translateX(-50%);
   min-height: 50px;
-  padding: 10px 25px;
-  /*     -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px); */
-  border-radius: 30px 30px 0 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;

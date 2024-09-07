@@ -3,7 +3,9 @@
   position: relative;
 }
 .contact-text-wrapper {
- background-color: $white;
+  background-color: $white;
+  padding: 20px;
+  border-radius: 25px;
   .contact-email-link {
     display: block;
     color: $blue;
