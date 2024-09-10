@@ -4192,12 +4192,14 @@ body .container .row {
   background-color: #ffffff;
 }
 .section-about .section-about-wrapper .about-text-wrapper .about-playlist-text {
+  background-color: #000;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 5px;
 }
 .section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link {
   color: #ff00c3;
   text-decoration: none;
-  background-color: #000;
 }
 .section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link:hover {
   text-decoration: underline;

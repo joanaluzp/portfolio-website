@@ -5,11 +5,12 @@
     .about-text-wrapper {
       background-color: $white;
       .about-playlist-text {
+        background-color: $black;
+        width: fit-content;
         margin-top: 5px;
         .about-playlist-link {
           color: $pink;
           text-decoration: none;
-          background-color: $black;
           &:hover {
             text-decoration: underline;
           }
@@ -128,7 +129,7 @@
         }
         .info-title-wrapper {
           position: relative;
-          width:fit-content;
+          width: fit-content;
           .info-title {
             margin: 30px 0 50px 0;
             text-align: center;
