@@ -6,14 +6,12 @@
       background-color: $white;
     }
     .about-playlist-text {
-      background-color: $black;
       width: fit-content;
       .about-playlist-link {
-        color: $pink;
         text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
+      }
+      &:hover {
+        animation: spin 0.2s ease-in-out infinite;
       }
     }
   }

@@ -11,7 +11,7 @@
             </div>
           </div>
           <div class="col-12 col-lg-4 offset-lg-2">
-            <p class="about-playlist-text description-text medium text-justify">
+            <p class="about-playlist-text description-title bigger text-justify">
               <NuxtLink
                 :title="props.database.data.about.playlistLink"
                 :to="props.database.data.about.playlistLink"
