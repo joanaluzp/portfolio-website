@@ -4168,7 +4168,7 @@ body .container .row {
   background-color: #ffffff;
 }
 .work-choose-btn-wrapper .work-choose-btn-list .work-choose-btn-item.active .description-text {
-  font-weight: 700;
+  font-style: italic;
   color: #000;
 }
 
