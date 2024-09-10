@@ -3612,8 +3612,8 @@ body .main .section.section-background {
 html .main .section.section-background .cube-container,
 body .main .section.section-background .cube-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 500%;
+  height: 500%;
   transform-style: preserve-3d;
   animation: rotateCube 100s infinite linear;
 }
@@ -3654,6 +3654,7 @@ body .main .section.section-background .cube-container .cube-face .background-im
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: skew(-30deg, -30deg);
   filter: url(#svgFilter);
 }
 html .maintenance,
@@ -3842,6 +3843,17 @@ body .container .row {
   }
   75% {
     transform: scale(0.95, 1.05);
+  }
+}
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
   }
 }
 /*====NAVBAR====*/
@@ -4132,9 +4144,6 @@ body .container .row {
   text-shadow: 0 1px #969696, -1px 0 #ececec, -1px 2px #969696, -2px 1px #ececec, -2px 3px #969696, -3px 2px #ececec, -3px 4px #969696, -4px 3px #ececec, -4px 5px #969696, -5px 4px #ececec, -5px 6px #969696, -6px 5px #ececec, -6px 7px #969696, -7px 6px #ececec, -7px 8px #969696, -8px 7px #ececec;
 }
 
-.work-choose-btn-wrapper {
-  transition: all 0.3s ease-in-out;
-}
 .work-choose-btn-wrapper .work-choose-btn-list {
   flex-wrap: wrap;
   pointer-events: none;
@@ -4181,6 +4190,17 @@ body .container .row {
 }
 .section-about .section-about-wrapper .about-text-wrapper {
   background-color: #ffffff;
+}
+.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text {
+  margin-top: 5px;
+}
+.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link {
+  color: #ff00c3;
+  text-decoration: none;
+  background-color: #000;
+}
+.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link:hover {
+  text-decoration: underline;
 }
 
 .skills-dropdown-toggle {
@@ -4324,9 +4344,15 @@ body .container .row {
 }
 
 .contact-text-wrapper {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 25px;
+}
+.contact-text-wrapper .description-title {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .contact-text-wrapper .contact-email-link {
   display: block;

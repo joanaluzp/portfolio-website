@@ -4,6 +4,17 @@
   .section-about-wrapper {
     .about-text-wrapper {
       background-color: $white;
+      .about-playlist-text {
+        margin-top: 5px;
+        .about-playlist-link {
+          color: $pink;
+          text-decoration: none;
+          background-color: $black;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }

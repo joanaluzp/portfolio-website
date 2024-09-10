@@ -21,6 +21,8 @@
     "about": {
       "intro": "about me",
       "text": "After years of naively designing layouts on the web, I can actually build them now. As a junior front-end developer and audiovisual artist, I'm particularly fascinated by the technological field, innovative methods of art, music, design and new media.",
+      "playlistText": "current playlist",
+      "playlistLink": "https://open.spotify.com/playlist/3G9sldPP0LtUja6DBpwPQD?si=b483ae69c66d4faf",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",

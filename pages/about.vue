@@ -8,6 +8,17 @@
               <h5 class="description-text medium text-justify">
                 {{ props.database.data.about.text }}
               </h5>
+              <p
+                class="about-playlist-text description-text medium text-justify"
+              >
+                <NuxtLink
+                  :title="props.database.data.about.playlistLink"
+                  :to="props.database.data.about.playlistLink"
+                  target="”_blank”"
+                  class="about-playlist-link"
+                  >{{ props.database.data.about.playlistText }}</NuxtLink
+                >
+              </p>
             </div>
           </div>
         </div>

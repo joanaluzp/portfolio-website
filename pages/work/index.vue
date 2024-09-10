@@ -145,7 +145,6 @@ const changeWorkOption = (elm) => {
   workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
   categoryOption.value = elm;
 };
-
 onMounted(() => {
   workDataFrontEnd.value = props.database.data.work.categoryItem.filter(
     (item) => item.category === "front-end development"
@@ -157,4 +156,5 @@ onMounted(() => {
     (item) => item.category === "miscellaneous"
   );
 });
+
 </script>

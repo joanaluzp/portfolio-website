@@ -231,7 +231,6 @@
   }
 }
 .work-choose-btn-wrapper {
-  @include transition;
   .work-choose-btn-list {
     flex-wrap: wrap;
     pointer-events: none;

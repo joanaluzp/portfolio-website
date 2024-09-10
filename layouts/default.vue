@@ -11,7 +11,7 @@
             <feDisplacementMap
               in="SourceGraphic"
               in2="noise"
-              scale="100"
+              scale="150"
               xChannelSelector="R"
               yChannelSelector="R"
             />
