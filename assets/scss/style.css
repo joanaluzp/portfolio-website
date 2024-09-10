@@ -3605,7 +3605,7 @@ body .main .section.section-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1000px;
+  perspective: 10000px;
   height: 100vh;
   overflow: hidden;
 }
@@ -4191,17 +4191,16 @@ body .container .row {
 .section-about .section-about-wrapper .about-text-wrapper {
   background-color: #ffffff;
 }
-.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text {
+.section-about .section-about-wrapper .about-playlist-text {
   background-color: #000;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 5px;
 }
-.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link {
+.section-about .section-about-wrapper .about-playlist-text .about-playlist-link {
   color: #ff00c3;
   text-decoration: none;
 }
-.section-about .section-about-wrapper .about-text-wrapper .about-playlist-text .about-playlist-link:hover {
+.section-about .section-about-wrapper .about-playlist-text .about-playlist-link:hover {
   text-decoration: underline;
 }
 
@@ -4340,6 +4339,11 @@ body .container .row {
   color: #000;
 }
 
+@media (min-width: 992px) {
+  .section-about .about-playlist-text {
+    margin-top: 30px;
+  }
+}
 /*====CONTACT====*/
 .section-contact {
   position: relative;
