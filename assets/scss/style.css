@@ -4227,7 +4227,7 @@ body .container .row {
   align-items: center;
   flex-direction: column;
   animation-name: hor-movement, ver-movement;
-  animation-duration: 5s, 3s;
+  animation-duration: 8s, 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
