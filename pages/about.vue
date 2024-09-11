@@ -3,15 +3,15 @@
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-6">
+          <div class="col-9 col-lg-4">
             <div class="about-text-wrapper">
               <h5 class="description-text medium text-justify">
                 {{ props.database.data.about.text }}
               </h5>
             </div>
           </div>
-          <div class="col-12 col-lg-4 offset-lg-2">
-            <p class="about-playlist-text description-title bigger text-justify">
+          <div class="col-3 col-lg-8">
+            <div class="about-playlist-text">
               <NuxtLink
                 :title="props.database.data.about.playlistLink"
                 :to="props.database.data.about.playlistLink"
@@ -19,7 +19,7 @@
                 class="about-playlist-link"
                 >{{ props.database.data.about.playlistText }}</NuxtLink
               >
-            </p>
+            </div>
           </div>
         </div>
       </div>

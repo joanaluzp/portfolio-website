@@ -175,7 +175,7 @@
       &:hover {
         .description-text,
         .description-title {
-          text-decoration: overline;
+          text-decoration: underline;
         }
       }
     }
@@ -211,7 +211,7 @@
       z-index: 2;
       opacity: 0;
       pointer-events: all;
-      cursor: pointer;
+      cursor: none;
       .arrow-gallery-prev {
         left: 0;
       }
@@ -249,7 +249,7 @@
       border-radius: 25px;
       .description-text {
         text-align: center;
-        color: $black;
+        color: $green;
       }
       &.active {
         background-color: $white;

@@ -20,7 +20,6 @@
   .navbar-menu-item {
     border-radius: 25px;
     cursor: pointer;
-    @include transition;
     &.item-01 {
       &.animation {
         animation: navbarItem 0.7s ease-in-out;
@@ -59,5 +58,10 @@
         @include transition;
       }
     }
+  }
+}
+@media (min-width: 768px) {
+  .navbar-menu-list {
+    justify-content: space-between;
   }
 }

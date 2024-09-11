@@ -136,7 +136,7 @@ onMounted(() => {
     const mouseY = event.clientY - swiperRect.top;
     const swiperWidth = swiperRect.width;
     if (mouseX <= swiperWidth / 2) {
-      prevArrow.style.transform = `translate(${mouseX - 20}px, ${
+      prevArrow.style.transform = `translate(${mouseX - 10}px, ${
         mouseY - 20
       }px)`;
       prevArrow.style.opacity = 1;
@@ -147,8 +147,8 @@ onMounted(() => {
       const relativeX = mouseX - swiperWidth / 2;
 
       nextArrow.style.transform = `translate(${
-        relativeX + swiperWidth / 2 - 20
-      }px, ${mouseY - 20}px)`;
+        relativeX + swiperWidth / 2 - 15
+      }px, ${mouseY - 15}px)`;
       prevArrow.style.opacity = 0;
       nextArrow.style.opacity = 1;
     }

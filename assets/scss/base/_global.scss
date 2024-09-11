@@ -95,7 +95,7 @@ body {
               height: 100%;
               object-fit: cover;
               transform: skew(-30deg, -30deg) scale(1.5);
-              filter: url(#svgFilter);
+              filter: url(#svgFilter) drop-shadow(30px 30px 60px $white);
             }
           }
         }
@@ -145,11 +145,10 @@ body {
 }
 @keyframes navbarItem {
   0% {
-    transform: scale(0.4);
-    opacity: 0;
+    background-color: transparent;
   }
   100% {
-    transform: scale(1);
+    background-color: $pink;
   }
 }
 @keyframes jump {
@@ -289,16 +288,5 @@ body {
   }
   75% {
     transform: scale(0.95, 1.05);
-  }
-}
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg); 
   }
 }
