@@ -3661,9 +3661,7 @@ body .main .section.section-background .cube-container .cube-face .background-im
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  /*               transform: skew(-30deg, -30deg) scale(1.5);
-   */
-  filter: url(#svgFilter) drop-shadow(10px 5px 10px #575757);
+  filter: url(#svgFilter) drop-shadow(5px 5px 5px #969696);
 }
 html .maintenance,
 body .maintenance {
@@ -3708,10 +3706,10 @@ body .container .row {
 }
 @keyframes rotateCube {
   from {
-    transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg) skew(-30deg, -30deg) scale(1.5);
   }
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg) skew(-30deg, -30deg) scale(1.5);
   }
 }
 @keyframes navbarItem {
