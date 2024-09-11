@@ -19,8 +19,8 @@
           </filter>
         </defs>
       </svg>
-<!--       <BackgroundImg :database="database" />
- -->      <NuxtPage :database="database" />
+      <BackgroundImg :database="database" />
+      <NuxtPage :database="database" />
     </main>
     <LazyFooter :database="database" />
   </div>

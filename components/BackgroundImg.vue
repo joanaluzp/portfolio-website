@@ -52,7 +52,7 @@ const filteredCategoryItems = computed(() => {
 
 const selectRandomItem = () => {
   const filteredItems = filteredCategoryItems.value;
-  if (filteredItems.length > 0) {
+  if (filteredItems && filteredItems.length > 0) {
     randomItem.value =
       filteredItems[Math.floor(Math.random() * filteredItems.length)];
     if (randomItem.value.images.length > 0) {
