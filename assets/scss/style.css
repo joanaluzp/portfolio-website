@@ -3661,7 +3661,8 @@ body .main .section.section-background .cube-container .cube-face .background-im
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: skew(-30deg, -30deg) scale(1.5);
+  /*               transform: skew(-30deg, -30deg) scale(1.5);
+   */
   filter: url(#svgFilter) drop-shadow(10px 5px 10px #575757);
 }
 html .maintenance,
