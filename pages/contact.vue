@@ -35,7 +35,7 @@
             target="”_blank”"
           >
             <div class="contact-link-item d-inline-flex">
-              <p class="description-text big font-italic link d-inline">
+              <p class="description-text medium font-italic link d-inline">
                 {{ props.database.data.contact.cv.linkText }}
               </p>
             </div></NuxtLink
@@ -46,7 +46,7 @@
             target="”_blank”"
           >
             <div class="contact-link-item d-inline-flex">
-              <p class="description-text big font-italic link d-inline">
+              <p class="description-text medium font-italic link d-inline">
                 {{ props.database.data.contact.github.linkText }}
               </p>
             </div></NuxtLink

@@ -3,14 +3,14 @@
     <div class="section-about-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-9 col-lg-4">
+          <div class="col-12 col-lg-4">
             <div class="about-text-wrapper">
-              <h5 class="description-text medium text-justify">
+              <h5 class="description-text text-justify">
                 {{ props.database.data.about.text }}
               </h5>
             </div>
           </div>
-          <div class="col-3 col-lg-8">
+<!--           <div class="col-3 col-lg-8">
             <div class="about-playlist-text">
               <NuxtLink
                 :title="props.database.data.about.playlistLink"
@@ -20,7 +20,7 @@
                 >{{ props.database.data.about.playlistText }}</NuxtLink
               >
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
                 >
                   <li class="skills-dropdown-list-description">
                     <p
-                      class="description-text font-bold-italic lowercase text-center"
+                      class="description-text font-italic lowercase text-center"
                     >
                       {{ props.database.data.about.skills.textInformative }}
                     </p>
