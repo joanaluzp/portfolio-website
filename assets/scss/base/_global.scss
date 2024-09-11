@@ -46,10 +46,7 @@ body {
     .section {
       position: relative;
       width: 100%;
-      padding: 140px 0 70px 0;
-      @media (min-width: 576px) {
-        padding: 100px 0 70px 0;
-      }
+      padding: 100px 0 70px 0;
       &.homepage {
         padding: 0;
       }
@@ -58,7 +55,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        perspective: 10000px;
+        perspective: 1000px;
         height: 100vh;
         overflow: hidden;
         .cube-container {
@@ -95,7 +92,7 @@ body {
               height: 100%;
               object-fit: cover;
               transform: skew(-30deg, -30deg) scale(1.5);
-              filter: url(#svgFilter) drop-shadow(30px 30px 60px $white);
+              filter: url(#svgFilter) drop-shadow(10px 5px 10px $black-clear02);
             }
           }
         }
@@ -288,5 +285,21 @@ body {
   }
   75% {
     transform: scale(0.95, 1.05);
+  }
+}
+@keyframes hor-movement {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 50%;
+  }
+}
+@keyframes ver-movement {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 50%;
   }
 }

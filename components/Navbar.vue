@@ -54,13 +54,13 @@ const handleScrollNavbar = () => {
       el.classList.remove("animation");
     });
     if (scroll < prevScroll.value) {
-      elmNavbar.style.top = "15px";
+      elmNavbar.style.top = "0";
       elmNavbarItem.forEach((el) => {
         el.classList.add("animation");
       });
     }
   } else {
-    elmNavbar.style.top = "15px";
+    elmNavbar.style.top = "0";
     elmNavbarItem.forEach((el) => {
       el.classList.add("animation");
     });

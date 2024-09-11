@@ -3600,13 +3600,7 @@ html .main .section,
 body .main .section {
   position: relative;
   width: 100%;
-  padding: 140px 0 70px 0;
-}
-@media (min-width: 576px) {
-  html .main .section,
-  body .main .section {
-    padding: 100px 0 70px 0;
-  }
+  padding: 100px 0 70px 0;
 }
 html .main .section.homepage,
 body .main .section.homepage {
@@ -3618,7 +3612,7 @@ body .main .section.section-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 10000px;
+  perspective: 1000px;
   height: 100vh;
   overflow: hidden;
 }
@@ -3668,7 +3662,7 @@ body .main .section.section-background .cube-container .cube-face .background-im
   -o-object-fit: cover;
      object-fit: cover;
   transform: skew(-30deg, -30deg) scale(1.5);
-  filter: url(#svgFilter) drop-shadow(30px 30px 60px #ffffff);
+  filter: url(#svgFilter) drop-shadow(10px 5px 10px #575757);
 }
 html .maintenance,
 body .maintenance {
@@ -3724,7 +3718,7 @@ body .container .row {
     background-color: transparent;
   }
   100% {
-    background-color: #ff00c3;
+    background-color: #ff29cd;
   }
 }
 @keyframes jump {
@@ -3857,6 +3851,22 @@ body .container .row {
     transform: scale(0.95, 1.05);
   }
 }
+@keyframes hor-movement {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 50%;
+  }
+}
+@keyframes ver-movement {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 50%;
+  }
+}
 /*====NAVBAR====*/
 .navbar {
   position: fixed;
@@ -3865,7 +3875,7 @@ body .container .row {
   width: fit-content;
   min-width: 100%;
   z-index: 999;
-  top: 15px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
@@ -3876,7 +3886,7 @@ body .container .row {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 15px;
   width: 100%;
 }
 .navbar-menu-list .navbar-menu-item {
@@ -3906,7 +3916,7 @@ body .container .row {
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 10px 20px;
+  padding: 5px;
 }
 .navbar-menu-list .navbar-menu-item a .description-title {
   text-align: center;
@@ -3993,7 +4003,7 @@ body .container .row {
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  color: #ff00c3;
+  color: #ff29cd;
   font-family: "Blackbird";
 }
 
@@ -4198,28 +4208,11 @@ body .container .row {
 .section-about {
   position: relative;
 }
-.section-about .section-about-wrapper .about-text-wrapper {
+.section-about .about-text-wrapper {
   background-color: #ffffff;
-}
-.section-about .section-about-wrapper .about-playlist-text {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-about .section-about-wrapper .about-playlist-text .about-playlist-link {
-  transition: all 0.3s ease-in-out;
-  transform: scale(2);
-  text-decoration: none;
-  color: #000;
-}
-.section-about .section-about-wrapper .about-playlist-text .about-playlist-link:hover {
-  text-decoration: underline;
 }
 
 .skills-dropdown-toggle {
-  position: relative;
   cursor: pointer;
   margin: 30px 0 20px 0;
   padding: 15px 20px;
@@ -4233,15 +4226,19 @@ body .container .row {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*   animation: shake 0.2s ease-in-out infinite;
-  */
+  animation-name: hor-movement, ver-movement;
+  animation-duration: 5s, 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 .skills-dropdown-toggle.no-animation {
   animation: none;
 }
 .skills-dropdown-toggle.no-animation .description-text,
 .skills-dropdown-toggle.no-animation .description-title {
-  font-weight: 700;
+  font-family: "Beau Rivage", cursive;
+  font-size: 80px;
 }
 .skills-dropdown-toggle .description-title,
 .skills-dropdown-toggle .description-text {
@@ -4367,6 +4364,9 @@ body .container .row {
   padding: 15px;
   border-radius: 25px;
 }
+.contact-text-wrapper:hover {
+  animation: spin 2s ease-in-out infinite;
+}
 .contact-text-wrapper .description-title {
   width: -moz-fit-content;
   width: fit-content;
@@ -4381,9 +4381,6 @@ body .container .row {
 .contact-text-wrapper .contact-email-link .description-text {
   width: -moz-fit-content;
   width: fit-content;
-}
-.contact-text-wrapper .contact-email-link .description-text:hover {
-  animation: spin 2s ease-in-out infinite;
 }
 
 .contact-link-list {

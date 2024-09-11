@@ -1,121 +1,95 @@
 <template>
   <section class="section section-about">
-    <div class="section-about-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="about-text-wrapper">
-              <h5 class="description-text text-justify">
-                {{ props.database.data.about.text }}
-              </h5>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="about-text-wrapper">
+            <h5 class="description-title big text-justify">
+              {{ props.database.data.about.text }}
+            </h5>
           </div>
-<!--           <div class="col-3 col-lg-8">
-            <div class="about-playlist-text">
-              <NuxtLink
-                :title="props.database.data.about.playlistLink"
-                :to="props.database.data.about.playlistLink"
-                target="”_blank”"
-                class="about-playlist-link"
-                >{{ props.database.data.about.playlistText }}</NuxtLink
-              >
-            </div>
-          </div> -->
         </div>
-      </div>
-    </div>
-    <div class="section-skills-wrapper">
-      <div class="container">
-        <div class="row">
+        <div
+          class="col-12 col-lg-8 d-flex justify-content-center flex-column align-items-center"
+        >
           <div
-            class="col-12 d-flex justify-content-center flex-column align-items-center"
+            class="skills-dropdown-toggle"
+            :class="{ 'no-animation': openSkills }"
           >
-            <div
-              class="skills-dropdown-toggle"
-              :class="{ 'no-animation': openSkills }"
+            <p
+              class="description-title d-inline font-italic lowercase big text-center"
             >
-              <p
-                class="description-title d-inline font-italic lowercase big text-center"
+              {{ props.database.data.about.skills.text }}
+            </p>
+          </div>
+          <div
+            class="skills-dropdown-wrapper"
+            :class="{
+              'is-open': openSkills,
+            }"
+          >
+            <div class="skills-dropdown-inner">
+              <ul
+                class="skills-dropdown-list"
+                :class="{
+                  'is-open': openSkillsInfo,
+                }"
               >
-                {{ props.database.data.about.skills.text }}
-              </p>
-              <!--               <p class="description-text d-inline small lowercase text-center">
-                {{ props.database.data.about.skills.textToggle }}
-              </p> -->
-            </div>
-            <div
-              class="skills-dropdown-wrapper"
-              :class="{
-                'is-open': openSkills,
-              }"
-            >
-              <div class="skills-dropdown-inner">
-                <ul
-                  class="skills-dropdown-list"
-                  :class="{
-                    'is-open': openSkillsInfo,
-                  }"
+                <li class="skills-dropdown-list-description">
+                  <p class="description-text font-italic lowercase text-center">
+                    {{ props.database.data.about.skills.textInformative }}
+                  </p>
+                </li>
+                <li
+                  class="skills-dropdown-list-item"
+                  v-for="item in skillOption"
+                  :key="item.id"
                 >
-                  <li class="skills-dropdown-list-description">
-                    <p
-                      class="description-text font-italic lowercase text-center"
-                    >
-                      {{ props.database.data.about.skills.textInformative }}
-                    </p>
-                  </li>
-                  <li
-                    class="skills-dropdown-list-item"
-                    v-for="item in skillOption"
-                    :key="item.id"
+                  <h6
+                    class="description-text option d-inline font-italic uppercase"
+                    @click="showElm(item.category)"
                   >
-                    <h6
-                      class="description-text option d-inline font-italic uppercase"
-                      @click="showElm(item.category)"
-                    >
-                      {{ item.skill }}
-                    </h6>
-                    <p class="description-text divider d-inline uppercase">
-                      📂
-                    </p>
-                    <div
-                      class="skills-infocard-wrapper"
-                      v-if="openSkillsInfo && info === item.category"
-                    >
-                      <div class="skills-infocard">
-                        <div class="container">
-                          <div class="row justify-content-center">
-                            <div class="col-12">
-                              <div class="info-title-wrapper">
-                                <p
-                                  class="info-title description-title capitalize font-italic bigger"
-                                >
-                                  {{ item.skill }}
-                                </p>
-                                <p
-                                  class="info-title-overlay description-title font-italic lowercase big"
-                                >
-                                  {{ item.skill }}
-                                </p>
-                              </div>
+                    {{ item.skill }}
+                  </h6>
+                  <p class="description-text divider d-inline uppercase">📂</p>
+                  <div
+                    class="skills-infocard-wrapper"
+                    v-if="openSkillsInfo && info === item.category"
+                  >
+                    <div class="skills-infocard">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12">
+                            <div class="info-title-wrapper">
                               <p
-                                class="info-description description-text big text-justify"
+                                class="info-title description-title capitalize font-italic bigger"
                               >
-                                {{ item.description }}
+                                {{ item.skill }}
                               </p>
                               <p
-                                class="btn-go-back description-text font-bold lowercase big"
-                                @click="openSkillsInfo = false"
+                                class="info-title-overlay description-title font-italic lowercase big"
                               >
-                                {{ props.database.data.about.skills.goBack }}
+                                {{ item.skill }}
                               </p>
                             </div>
+                            <p
+                              class="info-description description-text big text-justify"
+                            >
+                              {{ item.description }}
+                            </p>
+                            <p
+                              class="btn-go-back description-text font-bold lowercase big"
+                              @click="openSkillsInfo = false"
+                            >
+                              {{ props.database.data.about.skills.goBack }}
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

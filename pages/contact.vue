@@ -4,14 +4,14 @@
       <div class="row">
         <div class="col-12 col-lg-6">
           <div class="contact-text-wrapper">
-<!--             <div class="d-inline-flex flex-wrap">
-              <p class="description-title big font-italic big lowercase">
+<!--              <div class="d-inline-flex flex-wrap">
+              <p class="description-text medium font-italic lowercase">
                 {{ props.database.data.contact.text }}
               </p>
-              <p class="description-title big font-italic big lowercase">
+              <p class="description-text medium font-italic lowercase">
                 (っ ͡ ͡º - ͡ ͡º ς)
               </p>
-            </div> -->
+            </div>  -->
             <NuxtLink
               :title="props.database.data.contact.email"
               to="mailto:joanaluzp@gmail.com"
