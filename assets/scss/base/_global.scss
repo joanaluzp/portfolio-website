@@ -46,7 +46,10 @@ body {
     .section {
       position: relative;
       width: 100%;
-      padding: 100px 0 70px 0;
+      padding: 70px 0 70px 0;
+      @media (min-width: 768px) {
+        padding: 100px 0 70px 0;
+      }
       &.homepage {
         padding: 0;
       }

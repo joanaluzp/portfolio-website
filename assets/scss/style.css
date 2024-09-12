@@ -3600,7 +3600,13 @@ html .main .section,
 body .main .section {
   position: relative;
   width: 100%;
-  padding: 100px 0 70px 0;
+  padding: 70px 0 70px 0;
+}
+@media (min-width: 768px) {
+  html .main .section,
+  body .main .section {
+    padding: 100px 0 70px 0;
+  }
 }
 html .main .section.homepage,
 body .main .section.homepage {
@@ -3883,9 +3889,8 @@ body .container .row {
 .navbar-menu-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
   width: 100%;
 }
 .navbar-menu-list .navbar-menu-item {
@@ -3923,11 +3928,6 @@ body .container .row {
   transition: all 0.3s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .navbar-menu-list {
-    justify-content: space-between;
-  }
-}
 /*====WORK====*/
 .section-work {
   display: flex;
@@ -3956,7 +3956,7 @@ body .container .row {
   text-align: center;
   color: #1900ff;
   font-family: "Coentgen-Kanzley";
-  font-weight: 600;
+  font-size: 70px;
 }
 .section-work .section-work-option {
   width: 100%;

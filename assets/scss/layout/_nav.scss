@@ -13,9 +13,8 @@
 .navbar-menu-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
   width: 100%;
   .navbar-menu-item {
     border-radius: 25px;
@@ -60,8 +59,4 @@
     }
   }
 }
-@media (min-width: 768px) {
-  .navbar-menu-list {
-    justify-content: space-between;
-  }
-}
+
