@@ -61,15 +61,17 @@
             </div>
           </div>
           <div class="col-12 col-lg-6 offset-lg-6">
-            <ul class="work-option-list-wrapper version-work-list">
+            <ul
+              class="work-option-list-wrapper version-work-list"
+              v-if="
+                categoryOption ===
+                `${props.database.data.work.category.frontEnd}`
+              "
+            >
               <li
                 class="work-option-item"
                 v-for="item in workDataFrontEnd.slice().reverse()"
                 :key="item.id"
-                v-if="
-                  categoryOption ===
-                  `${props.database.data.work.category.frontEnd}`
-                "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
@@ -89,18 +91,20 @@
                   </template>
                 </NuxtLink>
               </li>
+            </ul>
+            <ul
+              class="work-option-list-wrapper version-work-list"
+              v-if="
+                categoryOption ===
+                `${props.database.data.work.category.videoArt}`
+              "
+            >
               <li
                 class="work-option-item"
                 v-for="item in workDataVideoArt.slice().reverse()"
                 :key="item.id"
-                v-if="
-                  categoryOption ===
-                  `${props.database.data.work.category.videoArt}`
-                "
               >
-                <NuxtLink
-                  :to="{ path: '/work/' + item.id }"
-                >
+                <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
                     <div class="col-12">
                       <h1 class="description-text font-italic work-title">
@@ -118,14 +122,18 @@
                   </template>
                 </NuxtLink>
               </li>
+            </ul>
+            <ul
+              class="work-option-list-wrapper version-work-list"
+              v-if="
+                categoryOption ===
+                `${props.database.data.work.category.miscellaneous}`
+              "
+            >
               <li
                 class="work-option-item"
                 v-for="item in workDataMiscellaneous.slice().reverse()"
                 :key="item.id"
-                v-if="
-                  categoryOption ===
-                  `${props.database.data.work.category.miscellaneous}`
-                "
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">

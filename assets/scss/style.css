@@ -3785,20 +3785,12 @@ body .container .row {
     opacity: 0;
   }
 }
-@keyframes opacityIn {
+@keyframes opacity {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes opacityOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes spin {
@@ -3816,13 +3808,10 @@ body .container .row {
 }
 @keyframes translate {
   0% {
-    transform: translateX(15px);
-  }
-  50% {
-    transform: translateX(-15px);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateX(15px);
+    transform: translateY(0);
   }
 }
 @keyframes bounce {
@@ -3850,7 +3839,7 @@ body .container .row {
     transform: scale(0.95, 1.05);
   }
 }
-@keyframes hor-movement {
+@keyframes XMovement {
   from {
     margin-left: -50%;
   }
@@ -3858,7 +3847,7 @@ body .container .row {
     margin-left: 50%;
   }
 }
-@keyframes ver-movement {
+@keyframes YMovement {
   from {
     margin-top: -70%;
   }
@@ -3959,11 +3948,11 @@ body .container .row {
   position: relative;
   z-index: 5;
 }
-.section-work .section-work-option .work-go-back .description-title {
+.section-work .section-work-option .work-go-back .description-text {
   color: #000;
   transition: all 0.3s ease-in-out;
 }
-.section-work .section-work-option .work-go-back .description-title:hover {
+.section-work .section-work-option .work-go-back .description-text:hover {
   text-decoration: underline;
 }
 .section-work.item-id {
@@ -4075,7 +4064,6 @@ body .container .row {
   border-radius: 25px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  transition: all 1s ease-in-out;
 }
 .work-option-list-wrapper.version-work-list .work-option-item .row {
   width: 100%;
@@ -4228,7 +4216,7 @@ body .container .row {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation-name: hor-movement, ver-movement;
+  animation-name: XMovement, YMovement;
   animation-duration: 8s, 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -4253,7 +4241,7 @@ body .container .row {
 }
 .skills-dropdown-wrapper.is-open {
   display: block;
-  animation: opacityIn 2s ease-in-out;
+  animation: opacity 2s ease-in-out;
 }
 .skills-dropdown-wrapper .skills-dropdown-inner {
   position: relative;

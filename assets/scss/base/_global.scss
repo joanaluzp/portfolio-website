@@ -47,7 +47,6 @@ body {
       position: relative;
       width: 100%;
       padding: 70px 0 70px 0;
-
       &.homepage {
         padding: 0;
       }
@@ -217,20 +216,12 @@ body {
     opacity: 0;
   }
 }
-@keyframes opacityIn {
+@keyframes opacity {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes opacityOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes spin {
@@ -248,13 +239,10 @@ body {
 }
 @keyframes translate {
   0% {
-    transform: translateX(15px);
-  }
-  50% {
-    transform: translateX(-15px);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateX(15px);
+    transform: translateY(0);
   }
 }
 @keyframes bounce {
@@ -287,7 +275,7 @@ body {
     transform: scale(0.95, 1.05);
   }
 }
-@keyframes hor-movement {
+@keyframes XMovement {
   from {
     margin-left: -50%;
   }
@@ -295,7 +283,7 @@ body {
     margin-left: 50%;
   }
 }
-@keyframes ver-movement {
+@keyframes YMovement {
   from {
     margin-top: -70%;
   }

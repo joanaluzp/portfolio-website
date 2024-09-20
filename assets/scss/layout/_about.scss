@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation-name: hor-movement, ver-movement;
+  animation-name: XMovement, YMovement;
   animation-duration: 8s, 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -41,7 +41,7 @@
   display: none;
   &.is-open {
     display: block;
-    animation: opacityIn 2s ease-in-out;
+    animation: opacity 2s ease-in-out;
   }
   .skills-dropdown-inner {
     position: relative;

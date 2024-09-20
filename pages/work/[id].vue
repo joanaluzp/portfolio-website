@@ -100,7 +100,7 @@
               :title="props.database.data.work.goBack"
             >
               <div class="d-inline-flex">
-                <p class="description-title big font-bold d-inline lowercase">
+                <p class="description-text font-bold lowercase medium d-inline">
                   {{ props.database.data.work.goBack }}
                 </p>
               </div></NuxtLink

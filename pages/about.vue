@@ -78,7 +78,7 @@
                               {{ item.description }}
                             </p>
                             <p
-                              class="btn-go-back description-text font-bold lowercase big"
+                              class="btn-go-back description-text font-bold lowercase medium"
                               @click="openSkillsInfo = false"
                             >
                               {{ props.database.data.about.skills.goBack }}
