@@ -73,14 +73,20 @@
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
                   <div class="row align-items-center">
-                    <div
-                      class="col-12"
-                    >
+                    <div class="col-12">
                       <h1 class="description-text font-italic work-title">
                         {{ item.name }}
                       </h1>
                     </div>
                   </div>
+                  <template v-if="item.images.length > 0">
+                    <img
+                      class="work-img"
+                      :title="item.name"
+                      :alt="item.name"
+                      :src="item.images[0].image"
+                    />
+                  </template>
                 </NuxtLink>
               </li>
               <li
@@ -92,7 +98,9 @@
                   `${props.database.data.work.category.videoArt}`
                 "
               >
-                <NuxtLink :to="{ path: '/work/' + item.id }">
+                <NuxtLink
+                  :to="{ path: '/work/' + item.id }"
+                >
                   <div class="row align-items-center">
                     <div class="col-12">
                       <h1 class="description-text font-italic work-title">
@@ -100,6 +108,14 @@
                       </h1>
                     </div>
                   </div>
+                  <template v-if="item.images.length > 0">
+                    <img
+                      class="work-img"
+                      :title="item.name"
+                      :alt="item.name"
+                      :src="item.images[0].image"
+                    />
+                  </template>
                 </NuxtLink>
               </li>
               <li
@@ -119,6 +135,14 @@
                       </h1>
                     </div>
                   </div>
+                  <template v-if="item.images.length > 0">
+                    <img
+                      class="work-img"
+                      :title="item.name"
+                      :alt="item.name"
+                      :src="item.images[0].image"
+                    />
+                  </template>
                 </NuxtLink>
               </li>
             </ul>
@@ -156,5 +180,4 @@ onMounted(() => {
     (item) => item.category === "miscellaneous"
   );
 });
-
 </script>

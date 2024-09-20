@@ -145,6 +145,7 @@
     gap: 20px;
     position: relative;
     .work-option-item {
+      position: relative;
       border-radius: 25px;
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
@@ -157,28 +158,30 @@
         justify-content: center;
         align-items: center;
       }
-      .work-item-swiper-wrapper {
-        display: inline-block;
-        width: 100%;
-        .work-item-swiper {
-          object-fit: cover;
-          border-radius: 25px;
-          width: 100%;
-          max-height: 200px;
-          -webkit-box-shadow: -10px 0px 20px -7px $white,
-            10px 0px 20px -7px $white, 0 0 20px 5px $white;
-          box-shadow: -10px 0px 20px -7px $white, 10px 0px 20px -7px $white,
-            0 0 20px 5px $white;
-        }
-      }
       .description-text,
       .description-title {
         color: $black;
+      }
+      .work-img {
+        @include transition;
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-50%);
+        object-fit: cover;
+        opacity: 0;
+        z-index: 0;
       }
       &:hover {
         .description-text,
         .description-title {
           text-decoration: underline;
+        }
+        .work-img {
+          opacity: 1;
+          z-index: 0;
         }
       }
     }

@@ -3602,12 +3602,6 @@ body .main .section {
   width: 100%;
   padding: 70px 0 70px 0;
 }
-@media (min-width: 768px) {
-  html .main .section,
-  body .main .section {
-    padding: 100px 0 70px 0;
-  }
-}
 html .main .section.homepage,
 body .main .section.homepage {
   padding: 0;
@@ -4012,6 +4006,9 @@ body .container .row {
   text-decoration: none;
   color: #1900ff;
 }
+.work-item-info-wrapper .description-text.link:not(:first-child) {
+  margin-left: 10px;
+}
 .work-item-info-wrapper .description-text.link:hover {
   text-decoration: underline;
 }
@@ -4074,6 +4071,7 @@ body .container .row {
   position: relative;
 }
 .work-option-list-wrapper.version-work-list .work-option-item {
+  position: relative;
   border-radius: 25px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -4087,25 +4085,30 @@ body .container .row {
   justify-content: center;
   align-items: center;
 }
-.work-option-list-wrapper.version-work-list .work-option-item .work-item-swiper-wrapper {
-  display: inline-block;
-  width: 100%;
-}
-.work-option-list-wrapper.version-work-list .work-option-item .work-item-swiper-wrapper .work-item-swiper {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 25px;
-  width: 100%;
-  max-height: 200px;
-  box-shadow: -10px 0px 20px -7px #ffffff, 10px 0px 20px -7px #ffffff, 0 0 20px 5px #ffffff;
-}
 .work-option-list-wrapper.version-work-list .work-option-item .description-text,
 .work-option-list-wrapper.version-work-list .work-option-item .description-title {
   color: #000;
 }
+.work-option-list-wrapper.version-work-list .work-option-item .work-img {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  z-index: 0;
+}
 .work-option-list-wrapper.version-work-list .work-option-item:hover .description-text,
 .work-option-list-wrapper.version-work-list .work-option-item:hover .description-title {
   text-decoration: underline;
+}
+.work-option-list-wrapper.version-work-list .work-option-item:hover .work-img {
+  opacity: 1;
+  z-index: 0;
 }
 
 .work-item-swiper-wrapper {
