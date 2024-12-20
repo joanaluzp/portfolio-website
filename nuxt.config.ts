@@ -35,7 +35,6 @@ export default defineNuxtConfig({
       script: [{ src: "https://unpkg.com/aos@2.3.1/dist/aos.js" }],
     },
     pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: { name: "slide", mode: "out-in" },
   },
   modules: ["nuxt-swiper"],
   css: ["@/assets/scss/style.scss"],
