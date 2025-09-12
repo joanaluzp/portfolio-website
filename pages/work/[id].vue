@@ -24,13 +24,13 @@
                 {{ item.description01 }}
               </h2>
               <h2
-                class="description-text text-justify"
+                class="description-text medium text-justify font-italic"
                 v-if="item.description02"
               >
                 {{ item.description02 }}
               </h2>
               <h2
-                class="description-text text-justify"
+                class="description-text medium text-justify font-italic"
                 v-if="item.description03"
               >
                 {{ item.description03 }}
