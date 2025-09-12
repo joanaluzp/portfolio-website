@@ -3725,7 +3725,7 @@ body .container .row {
   }
   100% {
     background: #ff29cd;
-    background: radial-gradient(circle, rgb(255, 41, 205) 0%, rgb(255, 255, 255) 70%);
+    background: radial-gradient(circle, rgb(255, 41, 205) 0%, rgb(255, 255, 255) 50%);
   }
 }
 @keyframes jump {
