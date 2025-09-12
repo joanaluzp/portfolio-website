@@ -13,6 +13,8 @@
   </footer>
 </template>
 <script setup>
+import { useRoute } from 'vue-router';
+
 const currentYear = ref(new Date().getFullYear());
 const props = defineProps({
   database: {
@@ -20,8 +22,13 @@ const props = defineProps({
     required: true,
   },
 });
+
+const route = useRoute();
+
 const handleScrollFooter = () => {
   const footer = document.querySelector(".footer-wrapper");
+  if (!footer) return; // guard
+
   const windowHeight = window.innerHeight;
   const scrollableHeight = document.documentElement.scrollHeight - windowHeight;
   const currentScroll = window.scrollY;
@@ -34,6 +41,14 @@ const handleScrollFooter = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScrollFooter);
+  if (route.path === "/") {
+    window.addEventListener("scroll", handleScrollFooter);
+  }
+});
+
+onUnmounted(() => {
+  if (route.path === "/") {
+    window.removeEventListener("scroll", handleScrollFooter);
+  }
 });
 </script>

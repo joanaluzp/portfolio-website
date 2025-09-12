@@ -36,7 +36,6 @@
                 {{ item.description03 }}
               </h2>
             </div>
-
             <div
               class="work-item-info-wrapper"
               v-if="
@@ -83,6 +82,21 @@
                 {{ item.linkDescription04 }}
               </NuxtLink>
             </div>
+            <div class="d-none d-lg-block">
+              <NuxtLink
+                to="javascript:history.back()"
+                class="work-go-back size-lg"
+                :title="props.database.data.work.goBack"
+              >
+                <div class="d-inline-flex">
+                  <p
+                    class="description-text font-bold lowercase medium d-inline"
+                  >
+                    {{ props.database.data.work.goBack }}
+                  </p>
+                </div></NuxtLink
+              >
+            </div>
           </div>
           <div class="col-12 col-lg-8 no-margin">
             <div>
@@ -124,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 d-lg-none">
             <NuxtLink
               to="javascript:history.back()"
               class="work-go-back"

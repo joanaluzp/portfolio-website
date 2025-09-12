@@ -60,7 +60,10 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 offset-lg-6">
+          <div class="col-12 col-lg-8 d-none d-lg-block">
+            <img class="work-index-img" :src="props.database.data.work.img" />
+          </div>
+          <div class="col-12 col-lg-4">
             <ul
               class="work-option-list-wrapper version-work-list"
               v-if="
@@ -70,7 +73,7 @@
             >
               <li
                 class="work-option-item"
-                v-for="item in workDataFrontEnd.slice().reverse()"
+                v-for="item in workDataFrontEnd"
                 :key="item.id"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
@@ -101,7 +104,7 @@
             >
               <li
                 class="work-option-item"
-                v-for="item in workDataVideoArt.slice().reverse()"
+                v-for="item in workDataVideoArt"
                 :key="item.id"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
@@ -132,7 +135,7 @@
             >
               <li
                 class="work-option-item"
-                v-for="item in workDataMiscellaneous.slice().reverse()"
+                v-for="item in workDataMiscellaneous"
                 :key="item.id"
               >
                 <NuxtLink :to="{ path: '/work/' + item.id }">
@@ -160,6 +163,7 @@
     </div>
   </section>
 </template>
+
 <script setup>
 const props = defineProps({
   database: {
@@ -176,16 +180,27 @@ const changeWorkOption = (elm) => {
   let workElmSection = document.querySelector(".section-work");
   workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
   categoryOption.value = elm;
+    localStorage.setItem("lastCategory", elm);
+
 };
+
 onMounted(() => {
-  workDataFrontEnd.value = props.database.data.work.categoryItem.filter(
-    (item) => item.category === "front-end development"
-  );
-  workDataVideoArt.value = props.database.data.work.categoryItem.filter(
-    (item) => item.category === "video art"
-  );
-  workDataMiscellaneous.value = props.database.data.work.categoryItem.filter(
-    (item) => item.category === "miscellaneous"
-  );
+  const savedCategory = localStorage.getItem("lastCategory");
+  if (savedCategory) {
+    categoryOption.value = savedCategory;
+  }
+  
+  workDataFrontEnd.value = props.database.data.work.categoryItem
+    .filter((item) => item.category === "front-end development")
+    .sort((a, b) => b.year - a.year);
+
+  workDataVideoArt.value = props.database.data.work.categoryItem
+    .filter((item) => item.category === "video art")
+    .sort((a, b) => b.year - a.year);
+
+  workDataMiscellaneous.value = props.database.data.work.categoryItem
+    .filter((item) => item.category === "miscellaneous")
+    .sort((a, b) => b.year - a.year);
 });
+
 </script>

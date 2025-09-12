@@ -2,6 +2,9 @@
 .section-work {
   display: flex;
   flex-direction: column;
+  .work-index-img{
+    
+  }
   .section-work-modal {
     position: fixed;
     width: 100%;
@@ -32,6 +35,10 @@
     .work-go-back {
       position: relative;
       z-index: 5;
+      margin-bottom: 60px;
+      &.size-lg .description-text {
+        margin-top: 10px;
+      }
       .description-text {
         color: $black;
         @include transition;
@@ -154,7 +161,7 @@
       background: $white;
       background: linear-gradient(
         0deg,
-        rgba(255, 255, 255, 1) 82%,
+        rgba(255, 255, 255, 1) 90%,
         rgba(150, 150, 150, 1) 100%
       );
       -webkit-backdrop-filter: blur(8px);

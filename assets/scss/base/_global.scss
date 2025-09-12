@@ -108,7 +108,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .no-margin{
+  .no-margin {
     margin: 0 !important;
   }
   .container {
@@ -151,7 +151,7 @@ body {
   }
   100% {
     background: $pink;
-background: radial-gradient(circle, rgba(255, 41, 205, 1) 0%, rgba(255, 255, 255, 1) 90%);
+    background: radial-gradient(circle, $pink 0%, transparent 90%);
   }
 }
 @keyframes jump {

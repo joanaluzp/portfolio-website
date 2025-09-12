@@ -20,7 +20,9 @@
     },
     "about": {
       "intro": "about me",
-      "text": "After years of naively designing layouts on the web, I can actually build them now. As a junior front-end developer and audiovisual artist, I'm particularly fascinated by the technological field, innovative methods of art, music, design and new media.",
+      "img": "/images/IMG_5910.png",
+      "imgTitle": "? it's me hey",
+      "text": "After years of naively designing layouts on the web, I can actually build them now. As a front-end developer and audiovisual artist, I'm particularly fascinated by the technological-artistic field that uses innovative art forms such as cinema, music, design and the web.",
       "skills": {
         "text": "my technical skills",
         "textToggle": "click to toggle",
@@ -153,6 +155,7 @@
     "work": {
       "modal": "i want to explore all work",
       "goBack": "go back",
+      "img": "/images/4444444.png",
       "category": {
         "frontEnd": "front-end development",
         "videoArt": "video art",
@@ -164,9 +167,10 @@
           "name": "★this website★",
           "slug": "my-web",
           "category": "front-end development",
+          "year": "2026",
           "description01": "Made with love and possibly constantly changing ̈́¨̈́¨̈́̈́̈́̈́¨¨̈́̈́̈́¨'¨'̈́̈́̈́ᥫ᭡.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
-          "description03": "additional info: 2023-present",
+          "description03": "2023-present",
           "link": "",
           "linkDescription": "",
           "images": []
@@ -176,17 +180,18 @@
           "name": "work-related-projects",
           "slug": "work-related-projects",
           "category": "front-end development",
+          "year": "2025",
           "description01": "Projects for a variety of clients such as e-commerce clients, social organizations and business companies, where I helped developing them as a trainee/junior front-end developer.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
-          "description03": "additional info: 2023-2024",
+          "description03": "2023-2025",
           "link": "https://app.justwork.pt/",
-          "linkDescription": "link to website",
+          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
           "link02": "https://www.chavenova.com/",
-          "linkDescription02": "link to website",
+          "linkDescription02": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
           "link03": "https://thelot.yust.com/",
-          "linkDescription03": "link to website",
+          "linkDescription03": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
           "link04": "https://aplaceantwerp.be/",
-          "linkDescription04": "link to website",
+          "linkDescription04": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
           "images": []
         },
         {
@@ -194,9 +199,11 @@
           "name": "kunst 3",
           "slug": "kunst-3",
           "category": "front-end development",
+          "year": "2023",
+
           "description01": "Website of a fictitious cultural space, a project that I developed in my spare time from work. I practiced on 4 important steps of an institutional website: the homepage, the events list page, the page for each event and a modal where the customer can buy a ticket for each respective event. I also used Internationalization (i18n) to make it possible to change languages between english and german.",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
-          "description03": "additional info: 2023",
+          "description03": "2023",
           "link": "https://kunst3.netlify.app/",
           "linkDescription": "link to website",
           "images": []
@@ -206,8 +213,10 @@
           "name": "kapa4",
           "slug": "kapa-4",
           "category": "video art",
+          "year": "2017",
+
           "description01": "Vaguely based on the futurist flyer K4, O Quadrado Azul by Almada Negreiros.",
-          "description02": "additional info: 2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
+          "description02": "2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
           "linkDescription": "link to video",
           "images": [
@@ -234,8 +243,10 @@
           "name": "시공간 @espaço/tempo",
           "slug": "espaço-tempo",
           "category": "video art",
+          "year": "2017",
+
           "description01": "Surrealist approach of quantum mechanics Time and Space (Spacetime) concept.",
-          "description02": "additional info: 2017, video 2’23”",
+          "description02": "2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
           "linkDescription": "link to video",
           "images": [
@@ -262,8 +273,10 @@
           "name": "Energy Field",
           "slug": "energy-field",
           "category": "video art",
+          "year": "2018",
+
           "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
-          "description02": "additional info: 2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
+          "description02": "2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
           "link": "https://vimeo.com/277728983",
           "linkDescription": "link to video",
           "images": [
@@ -282,8 +295,10 @@
           "name": "Life 0",
           "slug": "life-0",
           "category": "video art",
+          "year": "2019",
+
           "description01": "Which came first, the Chicken or the Egg? concept (individual transformation cycle)",
-          "description02": "additional info: 2019, video exhibition 5’17” @ Festival SOMA",
+          "description02": "2019, video exhibition 5’17” @ Festival SOMA",
           "link": "https://vimeo.com/343492455",
           "linkDescription": "link to video",
           "images": [
@@ -314,8 +329,10 @@
           "name": "Explaining Sound To A Deaf Person",
           "slug": "explaining-sound-to-a-deaf-person",
           "category": "video art",
+          "year": "2019",
+
           "description01": "Visual representation of sound waves and effects (how is sound perceived as a deaf person)",
-          "description02": "additional info: 2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
+          "description02": "2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
           "link": "https://vimeo.com/352076169",
           "linkDescription": "link to video",
           "images": [
@@ -338,8 +355,10 @@
           "name": "lunch time/pleasure and pain: a constant feeling of nothingness through 4 hours straight",
           "slug": "lunch-time-pleasure-pain",
           "category": "video art",
+          "year": "2021",
+
           "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
-          "description02": "additional info: 2021, video installation 45’14” @ Festival A Colina",
+          "description02": "2021, video installation 45’14” @ Festival A Colina",
           "link": "https://vimeo.com/655658351",
           "linkDescription": "link to video",
           "images": [
@@ -362,8 +381,10 @@
           "name": "power house nr8",
           "slug": "power-house-8",
           "category": "video art",
+          "year": "2022",
+
           "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
-          "description02": "additional info: 2022, video 2’56” @ Dose magazine",
+          "description02": "2022, video 2’56” @ Dose magazine",
           "link": "https://vimeo.com/722374867",
           "linkDescription": "link to video",
           "images": [
@@ -390,8 +411,10 @@
           "name": "Negative Index",
           "slug": "negative-index",
           "category": "video art",
+          "year": "2023",
+
           "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
-          "description02": "additional info: 2023, video 6’59”",
+          "description02": "2023, video 6’59”",
           "link": "https://vimeo.com/802064965",
           "linkDescription": "link to video",
           "images": [
@@ -422,8 +445,10 @@
           "name": "Dose 8",
           "slug": "dose-8",
           "category": "miscellaneous",
+          "year": "2022",
+
           "description01": "6 photoshop collages, here showing the magazine selected color and the original color, about the same theme of the video (it can be watched in the video art section)",
-          "description02": "additional info: 2022, collages @ Dose magazine",
+          "description02": "2022, collages @ Dose magazine",
           "link": "https://www.instagram.com/dose_mag/",
           "linkDescription": "link to instagram",
           "images": [
@@ -482,8 +507,10 @@
           "name": "IMAGO: Intra-connective",
           "slug": "dose-8",
           "category": "miscellaneous",
+          "year": "2020",
+
           "description01": "Conceptual collective exhibition that actually existed, in times of social isolation, where we existed at covid-19. Gonsalo recreated, through 3d modeling, the ideal works of 7 artists, including himself. This fictional exhibition appeared to be as real as ever, as 2020 expressed the need to globally connect through technology and deceive.",
-          "description02": "additional info: 2020, 3d object installation @ IMAGO, Curated by Isabel Ouro",
+          "description02": "2020, 3d object installation @ IMAGO, Curated by Isabel Ouro",
           "link": "https://gonssalo.com/imago-eng",
           "linkDescription": "link to website",
           "images": [
@@ -506,8 +533,10 @@
           "name": "rádio Teia",
           "slug": "radio-teia",
           "category": "miscellaneous",
+          "year": "2021",
+
           "description01": "3 tracks mix for Teia 25",
-          "description02": "additional info: 2021, selected mix @ rádio Teia",
+          "description02": "2021, selected mix @ rádio Teia",
           "link": "https://teiaradio.com/",
           "linkDescription": "link to website",
           "images": []
@@ -517,8 +546,10 @@
           "name": "Out the Window: 2 Be",
           "slug": "2-be",
           "category": "miscellaneous",
+          "year": "2020",
+
           "description01": "Installation of a disney TV, a warrior and the fake reflection of it in a video on loop playing on the TV. The video is pre-done and it's not representative of the warrior in the present moment, but it appears to be recording the warrior live.",
-          "description02": "additional info: 2020, object/video installation 29’00” @ galeria Arte Graça",
+          "description02": "2020, object/video installation 29’00” @ galeria Arte Graça",
           "link": "https://artegraca.pt/out-the-window/",
           "linkDescription": "link to website",
           "images": [
@@ -529,6 +560,46 @@
             {
               "id": 2,
               "image": "/images/miscellaneous/2be/2be_2.jpg"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "irmãs verdade: a vida como ela é",
+          "slug": "irmas-verdade",
+          "category": "miscellaneous",
+          "year": "2025",
+
+          "description01": "Duo exhibition, with an installation of random personal objects, a video on loop of me working on a call-center, a selected music set and some intimate texts. Posters made by me",
+          "description02": "2025, object/video installation @ galeria Zé dos Bois",
+          "images": [
+            {
+              "id": 1,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_1.png"
+            },
+            {
+              "id": 2,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_2.png"
+            },
+            {
+              "id": 3,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_3.jpg"
+            },
+            {
+              "id": 4,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_4.jpg"
+            },
+            {
+              "id": 5,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_5.jpg"
+            },
+            {
+              "id": 6,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_6.jpg"
+            },
+            {
+              "id": 7,
+              "image": "/images/miscellaneous/irmasverdade/irmasverdade_7.jpg"
             }
           ]
         }
@@ -549,7 +620,7 @@
       }
     },
     "footer": {
-      "text": "design and development by Joana da Luz Pimentel"
+      "text": "design and development by me"
     }
   }
 }

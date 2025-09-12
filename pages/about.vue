@@ -1,10 +1,11 @@
 <template>
   <section class="section section-about">
+    <img class="about-index-img" :src="props.database.data.about.img" :title="props.database.data.about.imgTitle" />
     <div class="container">
       <div
         class="row d-flex flex-column align-items-center justify-content-center"
       >
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-xl-6">
           <div class="about-text-wrapper">
             <h5 class="description-title big text-justify">
               {{ props.database.data.about.text }}
@@ -12,7 +13,7 @@
           </div>
         </div>
         <div
-          class="col-12 col-md-8 col-lg-4 d-flex justify-content-center flex-column align-items-center"
+          class="col-11 col-md-8 col-xl-4 d-flex justify-content-center flex-column align-items-center"
           :class="{
             'no-animation-wrapper':
               openSkills === true && openSkillsInfo === false,
@@ -79,12 +80,12 @@
                               </p>
                             </div>
                             <p
-                              class="info-description description-text big text-justify"
+                              class="info-description description-text medium text-justify"
                             >
                               {{ item.description }}
                             </p>
                             <p
-                              class="btn-go-back description-text font-bold lowercase medium"
+                              class="btn-go-back description-text font-bold lowercase medium text-center"
                               @click="openSkillsInfo = false"
                             >
                               {{ props.database.data.about.skills.goBack }}

@@ -15,17 +15,17 @@
               xChannelSelector="R"
               yChannelSelector="R"
             />
-
           </filter>
         </defs>
       </svg>
-      <!-- <BackgroundImg :database="database" /> -->
       <NuxtPage :database="database" />
     </main>
-    <LazyFooter :database="database" />
+    <LazyFooter v-if="route.path === '/'" :database="database" />
   </div>
 </template>
+
 <script setup>
 import database from "../data/db.json";
 const maintenance = ref(false);
+const route = useRoute();
 </script>
