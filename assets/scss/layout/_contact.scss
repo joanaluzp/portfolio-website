@@ -28,13 +28,12 @@
 .contact-link-list {
   gap: 30px;
   .contact-link-item {
-    background-color: $white;
+    background-color: $red;
     height: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 40px;
     .description-text {
       text-align: center;
       color: $black;

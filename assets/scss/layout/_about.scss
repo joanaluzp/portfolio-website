@@ -2,13 +2,15 @@
 .section-about {
   position: relative;
   .about-text-wrapper {
-    background-color: $white;
+    background: $white;
+    border: 1px solid $black;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 .skills-dropdown-toggle {
   cursor: pointer;
-  margin: 30px 0 20px 0;
-  padding: 15px 20px;
+  padding: 10px;
   border-radius: 25px;
   background-color: rgba($white, 0);
   -webkit-backdrop-filter: blur(8px);
@@ -36,8 +38,8 @@
     color: $black;
   }
 }
+
 .skills-dropdown-wrapper {
-  z-index: 19900;
   display: none;
   &.is-open {
     display: block;
@@ -49,7 +51,6 @@
 }
 .skills-dropdown-list {
   @include transition;
-  background-color: $white;
   border-radius: 25px;
   display: flex;
   justify-content: space-between;
@@ -60,7 +61,7 @@
   }
   .skills-dropdown-list-description {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .skills-dropdown-list-item {
     .description-text {
@@ -78,13 +79,14 @@
     }
     .skills-infocard-wrapper {
       position: fixed;
+      z-index: 19900;
       overflow-y: scroll;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100%;
       min-height: 100vh;
-      background-color: $white;
+      background-color: $blue-medium;
       padding: 30px 0 100px;
       animation: none;
       pointer-events: initial;
@@ -106,7 +108,7 @@
           display: inline-block;
           cursor: pointer;
           margin-top: 20px;
-          color: $black;
+          color: $white;
           @include transition;
           span {
             font-style: none;
@@ -122,7 +124,7 @@
           .info-title {
             margin: 30px 0 50px 0;
             text-align: center;
-            color: $yellow;
+            color: $pink;
             font-family: $font-01;
             -webkit-text-stroke-width: 0.7px;
             -webkit-text-stroke-color: $grey-clear02;
@@ -134,9 +136,18 @@
           }
         }
         .info-description {
-          color: $black;
+          color: $white;
         }
       }
     }
   }
+}
+.no-animation-wrapper {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba($white, 0);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }

@@ -45,6 +45,9 @@ body {
     min-height: 100vh;
     .section {
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       width: 100%;
       padding: 70px 0 70px 0;
       &.homepage {
@@ -105,6 +108,9 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .no-margin{
+    margin: 0 !important;
+  }
   .container {
     .row {
       --bs-gutter-y: 1.5rem;
@@ -144,7 +150,8 @@ body {
     background-color: transparent;
   }
   100% {
-    background-color: $pink;
+    background: $pink;
+background: radial-gradient(circle, rgba(255, 41, 205, 1) 0%, rgba(255, 255, 255, 1) 70%);
   }
 }
 @keyframes jump {

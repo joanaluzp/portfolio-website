@@ -1,8 +1,10 @@
 <template>
   <section class="section section-about">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4">
+      <div
+        class="row d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="col-12 col-lg-6">
           <div class="about-text-wrapper">
             <h5 class="description-title big text-justify">
               {{ props.database.data.about.text }}
@@ -10,7 +12,11 @@
           </div>
         </div>
         <div
-          class="col-12 col-lg-8 d-flex justify-content-center flex-column align-items-center"
+          class="col-8 col-lg-4 d-flex justify-content-center flex-column align-items-center"
+          :class="{
+            'no-animation-wrapper':
+              openSkills === true && openSkillsInfo === false,
+          }"
         >
           <div
             class="skills-dropdown-toggle"

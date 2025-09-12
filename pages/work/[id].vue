@@ -15,15 +15,37 @@
               </li>
             </ul>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-lg-4 no-margin">
             <div class="work-item-info-wrapper">
-              <h2 class="description-text medium text-justify">
+              <h2
+                class="description-text medium text-justify"
+                v-if="item.description01"
+              >
                 {{ item.description01 }}
               </h2>
+              <h2
+                class="description-text text-justify"
+                v-if="item.description02"
+              >
+                {{ item.description02 }}
+              </h2>
+              <h2
+                class="description-text text-justify"
+                v-if="item.description03"
+              >
+                {{ item.description03 }}
+              </h2>
             </div>
-          </div>
-          <div class="col-12">
-            <div class="work-item-info-wrapper">
+
+            <div
+              class="work-item-info-wrapper"
+              v-if="
+                item.linkDescription ||
+                item.linkDescription02 ||
+                item.linkDescription03 ||
+                item.linkDescription04
+              "
+            >
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
@@ -60,18 +82,9 @@
               >
                 {{ item.linkDescription04 }}
               </NuxtLink>
-              <p class="description-text font-italic text-justify">
-                {{ item.description04 }}
-              </p>
-              <p
-                class="description-text font-italic text-justify"
-                v-if="item.description03"
-              >
-                {{ item.description03 }}
-              </p>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-lg-8 no-margin">
             <div>
               <div
                 class="work-item-swiper-wrapper"

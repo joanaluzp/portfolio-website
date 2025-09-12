@@ -76,6 +76,10 @@
   }
 }
 .work-item-info-wrapper {
+  background-color: $blue-light;
+  &:nth-child(2){
+    margin-top: 10px;
+  }
   .description-text {
     &.link {
       width: fit-content;
@@ -147,6 +151,12 @@
     .work-option-item {
       position: relative;
       border-radius: 25px;
+      background: $white;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 82%,
+        rgba(150, 150, 150, 1) 100%
+      );
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       .row {
@@ -165,9 +175,9 @@
         @include transition;
         position: absolute;
         top: 50%;
-        right: 50px;
-        width: 50px;
-        height: 50px;
+        right: 100px;
+        width: 100px;
+        height: 100px;
         transform: translateY(-50%);
         object-fit: cover;
         opacity: 0;
