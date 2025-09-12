@@ -12,7 +12,7 @@
           </div>
         </div>
         <div
-          class="col-8 col-lg-4 d-flex justify-content-center flex-column align-items-center"
+          class="col-12 col-md-8 col-lg-4 d-flex justify-content-center flex-column align-items-center"
           :class="{
             'no-animation-wrapper':
               openSkills === true && openSkillsInfo === false,
