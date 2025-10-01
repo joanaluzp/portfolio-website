@@ -609,14 +609,19 @@
       "text": "send me an email",
       "email": "joanaluzp@gmail.com",
       "cv": {
-        "description": "CV Joana Pimentel",
+        "description": "CV",
         "link": "/files/CV.pdf",
         "linkText": "cv"
       },
       "github": {
-        "description": "GitHub Joana Pimentel",
+        "description": "GitHub",
         "link": "https://github.com/joanaluzp",
         "linkText": "github"
+      },
+        "vimeo": {
+        "description": "Vimeo",
+        "link": "https://vimeo.com/emoworm",
+        "linkText": "vimeo"
       }
     },
     "footer": {

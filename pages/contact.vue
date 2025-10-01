@@ -41,6 +41,17 @@
                 </p>
               </div></NuxtLink
             >
+            <NuxtLink
+              :to="props.database.data.contact.vimeo.link"
+              :title="props.database.data.contact.vimeo.description"
+              target="”_blank”"
+            >
+              <div class="contact-link-item d-inline-flex">
+                <p class="description-text medium font-italic link d-inline">
+                  {{ props.database.data.contact.vimeo.linkText }}
+                </p>
+              </div></NuxtLink
+            >
           </div>
         </div>
       </div>
