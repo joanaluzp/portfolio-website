@@ -2,8 +2,7 @@
 .section-work {
   display: flex;
   flex-direction: column;
-  .work-index-img{
-    
+  .work-index-img {
   }
   .section-work-modal {
     position: fixed;
@@ -83,20 +82,25 @@
   }
 }
 .work-item-info-wrapper {
-  background-color: $blue-light;
-  &:nth-child(2){
-    margin-top: 10px;
+  &:nth-child(2) {
+    margin: 10px 0;
   }
   .description-text {
     &.link {
       width: fit-content;
+      color: transparent;
       text-decoration: none;
-      color: $blue;
+      background: $black-clear02;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      text-shadow: 0px 3px 3px rgba($white, 0.5);
+      transition: all 0.3s ease-in-out;
       &:not(:first-child) {
         margin-left: 10px;
       }
       &:hover {
-        text-decoration: underline;
+        color: $black;
       }
     }
   }

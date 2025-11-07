@@ -168,7 +168,7 @@
           "slug": "my-web",
           "category": "front-end development",
           "year": "2026",
-          "description01": "Made with love and possibly constantly changing ̈́¨̈́¨̈́̈́̈́̈́¨¨̈́̈́̈́¨'¨'̈́̈́̈́ᥫ᭡.",
+          "description01": "Made with love and possibly constantly changing ℰᥫ᭡",
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js",
           "description03": "2023-present",
           "link": "",
@@ -185,13 +185,13 @@
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, Blade Php, Bootstrap, Tailwind CSS, Jquery, Alpine.js, Antlers Templates (Statamic)",
           "description03": "2023-2025",
           "link": "https://app.justwork.pt/",
-          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription": "link to website",
           "link02": "https://www.chavenova.com/",
-          "linkDescription02": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription02": "link to website",
           "link03": "https://thelot.yust.com/",
-          "linkDescription03": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription03": "link to website",
           "link04": "https://aplaceantwerp.be/",
-          "linkDescription04": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription04": "link to website",
           "images": []
         },
         {
@@ -205,7 +205,7 @@
           "description02": "tech stack: HTML, CSS (SCSS), Javascript, Vue.js, Nuxt.js, i18n",
           "description03": "2023",
           "link": "https://kunst3.netlify.app/",
-          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription": "link to website",
           "images": []
         },
         {
@@ -218,7 +218,7 @@
           "description01": "Vaguely based on the futurist flyer K4, O Quadrado Azul by Almada Negreiros.",
           "description02": "2017, video exhibition, 4’17” @ LOOPCAVE, Desterro",
           "link": "https://vimeo.com/202110873",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -248,7 +248,7 @@
           "description01": "Surrealist approach of quantum mechanics Time and Space (Spacetime) concept.",
           "description02": "2017, video 2’23”",
           "link": "https://vimeo.com/202770388",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -278,7 +278,7 @@
           "description01": "An installation with two televisions and headphones: the TV and ear of the headphone from the left represent the left-brain and the TV and ear of the headphone from the right represent the right-brain, both of them show the same information.",
           "description02": "2018, video installation 5’24” @ Faculty of Fine Arts Lisbon",
           "link": "https://vimeo.com/277728983",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -300,7 +300,7 @@
           "description01": "Which came first, the Chicken or the Egg? concept (individual transformation cycle)",
           "description02": "2019, video exhibition 5’17” @ Festival SOMA",
           "link": "https://vimeo.com/343492455",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -334,7 +334,7 @@
           "description01": "Visual representation of sound waves and effects (how is sound perceived as a deaf person)",
           "description02": "2019, video exhibition 4’27” @ Zaratan, Arte Contemporânea",
           "link": "https://vimeo.com/352076169",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -360,7 +360,7 @@
           "description01": "A political and social critique about long work shifts and its direct link to singular loneliness and alienation, filmed during my 4 hour work break.",
           "description02": "2021, video installation 45’14” @ Festival A Colina",
           "link": "https://vimeo.com/655658351",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -386,7 +386,7 @@
           "description01": "The importance of the number 8 when I was born, being also the magazine's number edition.",
           "description02": "2022, video 2’56” @ Dose magazine",
           "link": "https://vimeo.com/722374867",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -416,7 +416,7 @@
           "description01": "Long rant about a failed love story in a foreign country, filmed during my stay there.",
           "description02": "2023, video 6’59”",
           "link": "https://vimeo.com/802064965",
-          "linkDescription": "꧁ᬊᬁlink to videoᬊ᭄꧂",
+          "linkDescription": "link to video",
           "images": [
             {
               "id": 1,
@@ -450,7 +450,7 @@
           "description01": "6 photoshop collages, here showing the magazine selected color and the original color, about the same theme of the video (it can be watched in the video art section)",
           "description02": "2022, collages @ Dose magazine",
           "link": "https://www.instagram.com/dose_mag/",
-          "linkDescription": "꧁ᬊᬁlink to instagramᬊ᭄꧂",
+          "linkDescription": "link to instagram",
           "images": [
             {
               "id": 1,
@@ -512,7 +512,7 @@
           "description01": "Conceptual collective exhibition that actually existed, in times of social isolation, where we existed at covid-19. Gonsalo recreated, through 3d modeling, the ideal works of 7 artists, including himself. This fictional exhibition appeared to be as real as ever, as 2020 expressed the need to globally connect through technology and deceive.",
           "description02": "2020, 3d object installation @ IMAGO, Curated by Isabel Ouro",
           "link": "https://gonssalo.com/imago-eng",
-          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription": "link to website",
           "images": [
             {
               "id": 1,
@@ -538,7 +538,7 @@
           "description01": "3 tracks mix for Teia 25",
           "description02": "2021, selected mix @ rádio Teia",
           "link": "https://teiaradio.com/",
-          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription": "link to website",
           "images": []
         },
         {
@@ -551,7 +551,7 @@
           "description01": "Installation of a disney TV, a warrior and the fake reflection of it in a video on loop playing on the TV. The video is pre-done and it's not representative of the warrior in the present moment, but it appears to be recording the warrior live.",
           "description02": "2020, object/video installation 29’00” @ galeria Arte Graça",
           "link": "https://artegraca.pt/out-the-window/",
-          "linkDescription": "꧁ᬊᬁlink to websiteᬊ᭄꧂",
+          "linkDescription": "link to website",
           "images": [
             {
               "id": 1,

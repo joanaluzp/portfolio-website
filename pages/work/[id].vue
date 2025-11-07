@@ -48,34 +48,34 @@
               <NuxtLink
                 :to="item.link"
                 :title="item.link"
-                class="d-inline description-text text-justify font-bold link"
+                class="d-inline description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="item.link"
               >
-                {{ item.linkDescription }}
+                 {{ item.linkDescription }} 
               </NuxtLink>
               <NuxtLink
                 :to="item.link02"
                 :title="item.link02"
-                class="d-inline description-text text-justify font-bold link"
+                class="d-inline description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="item.link02"
               >
-                {{ item.linkDescription02 }}
+                 {{ item.linkDescription02 }}
               </NuxtLink>
               <NuxtLink
                 :to="item.link03"
                 :title="item.link03"
-                class="d-inline description-text text-justify font-bold link"
+                class="d-inline description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="item.link03"
               >
-                {{ item.linkDescription03 }}
+                 {{ item.linkDescription03 }}
               </NuxtLink>
               <NuxtLink
                 :to="item.link04"
                 :title="item.link04"
-                class="d-inline description-text text-justify font-bold link"
+                class="d-inline description-text big text-justify font-bold link"
                 target="”_blank”"
                 v-if="item.link02"
               >

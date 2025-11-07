@@ -3603,7 +3603,13 @@ body .main .section {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 70px 0 70px 0;
+  padding: 50px 0 70px 0;
+}
+@media (min-width: 992px) {
+  html .main .section,
+  body .main .section {
+    padding: 70px 0 70px 0;
+  }
 }
 html .main .section.homepage,
 body .main .section.homepage {
@@ -4001,23 +4007,26 @@ body .container .row {
   font-family: "Blackbird";
 }
 
-.work-item-info-wrapper {
-  background-color: #f2f4fd;
-}
 .work-item-info-wrapper:nth-child(2) {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .work-item-info-wrapper .description-text.link {
   width: -moz-fit-content;
   width: fit-content;
+  color: transparent;
   text-decoration: none;
-  color: #1900ff;
+  background: #575757;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
 }
 .work-item-info-wrapper .description-text.link:not(:first-child) {
   margin-left: 10px;
 }
 .work-item-info-wrapper .description-text.link:hover {
-  text-decoration: underline;
+  color: #000;
 }
 
 .work-option-list-wrapper {
