@@ -76,7 +76,7 @@
                 v-for="item in workDataFrontEnd"
                 :key="item.id"
               >
-                <NuxtLink :to="{ path: '/work/' + item.id }">
+                <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
                     <div class="col-12">
                       <h1 class="description-text font-italic work-title">
@@ -107,7 +107,7 @@
                 v-for="item in workDataVideoArt"
                 :key="item.id"
               >
-                <NuxtLink :to="{ path: '/work/' + item.id }">
+                <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
                     <div class="col-12">
                       <h1 class="description-text font-italic work-title">
@@ -138,7 +138,7 @@
                 v-for="item in workDataMiscellaneous"
                 :key="item.id"
               >
-                <NuxtLink :to="{ path: '/work/' + item.id }">
+                <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
                     <div class="col-12">
                       <h1 class="description-text font-italic work-title">

@@ -3930,6 +3930,9 @@ body .container .row {
   display: flex;
   flex-direction: column;
 }
+.section-work .work-index-img {
+  animation: bounce 2s ease infinite;
+}
 .section-work .section-work-modal {
   position: fixed;
   width: 100%;

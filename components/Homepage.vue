@@ -23,7 +23,7 @@
           :style="{ left: item.randomLeft + 'px', top: item.randomTop + 'px' }"
           class="work-option-item"
         >
-          <NuxtLink :to="{ path: '/work/' + item.id }">
+          <NuxtLink :to="{ path: '/work/' + item.slug }">
             <h1
               class="description-text work-title"
               :class="{ 'no-img': item.images.length === 0 }"

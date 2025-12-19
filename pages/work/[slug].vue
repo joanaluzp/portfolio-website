@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-work item-id">
+  <section class="section section-work item-id" v-if="item">
     <div class="section-work-option">
       <div class="container">
         <div class="row">
@@ -52,7 +52,7 @@
                 target="”_blank”"
                 v-if="item.link"
               >
-                 {{ item.linkDescription }} 
+                {{ item.linkDescription }}
               </NuxtLink>
               <NuxtLink
                 :to="item.link02"
@@ -61,7 +61,7 @@
                 target="”_blank”"
                 v-if="item.link02"
               >
-                 {{ item.linkDescription02 }}
+                {{ item.linkDescription02 }}
               </NuxtLink>
               <NuxtLink
                 :to="item.link03"
@@ -70,7 +70,7 @@
                 target="”_blank”"
                 v-if="item.link03"
               >
-                 {{ item.linkDescription03 }}
+                {{ item.linkDescription03 }}
               </NuxtLink>
               <NuxtLink
                 :to="item.link04"
@@ -83,10 +83,11 @@
               </NuxtLink>
             </div>
             <div class="d-none d-lg-block">
-              <NuxtLink
-                to="javascript:history.back()"
+              <button
+                type="button"
                 class="work-go-back size-lg"
                 :title="props.database.data.work.goBack"
+                @click="goBack"
               >
                 <div class="d-inline-flex">
                   <p
@@ -94,8 +95,8 @@
                   >
                     {{ props.database.data.work.goBack }}
                   </p>
-                </div></NuxtLink
-              >
+                </div>
+              </button>
             </div>
           </div>
           <div class="col-12 col-lg-8 no-margin">
@@ -139,17 +140,18 @@
             </div>
           </div>
           <div class="col-12 d-lg-none">
-            <NuxtLink
-              to="javascript:history.back()"
+            <button
+              type="button"
               class="work-go-back"
               :title="props.database.data.work.goBack"
+              @click="goBack"
             >
               <div class="d-inline-flex">
                 <p class="description-text font-bold lowercase medium d-inline">
                   {{ props.database.data.work.goBack }}
                 </p>
-              </div></NuxtLink
-            >
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -163,12 +165,22 @@ const props = defineProps({
     required: true,
   },
 });
-import { ref } from "vue";
 const route = useRoute();
-const id = parseInt(route.params.id);
-const item = ref(
-  props.database.data.work.categoryItem.find((item) => item.id === id)
+const router = useRouter();
+
+const item = computed(() =>
+  props.database.data.work.categoryItem.find(
+    (i) => i.slug === route.params.slug
+  )
 );
+
+const goBack = () => {
+  if (window.history.length > 1) {
+    router.back();
+  } else {
+    router.push("/work");
+  }
+};
 
 onMounted(() => {
   const swiperElement = document.querySelector(".work-item-swiper-wrapper");
