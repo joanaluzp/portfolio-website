@@ -3965,6 +3965,7 @@ body .container .row {
   position: relative;
   z-index: 5;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 .section-work .section-work-option .work-go-back.size-lg .description-text {
   margin-top: 10px;
