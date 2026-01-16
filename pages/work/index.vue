@@ -60,8 +60,45 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-8 d-none d-lg-block">
-            <img class="work-index-img" :src="props.database.data.work.img" />
+          <div
+            class="col-12 col-lg-8 d-none d-lg-block work-index-img-wrapper"
+            v-if="
+              categoryOption === `${props.database.data.work.category.frontEnd}`
+            "
+          >
+            <img
+              class="work-index-img"
+              :src="props.database.data.work.imgFrontEnd"
+                                            data-aos="fade-in"
+                data-aos-duration="1500"
+            />
+          </div>
+          <div
+            class="col-12 col-lg-8 d-none d-lg-block work-index-img-wrapper"
+            v-if="
+              categoryOption === `${props.database.data.work.category.videoArt}`
+            "
+          >
+            <img
+              class="work-index-img"
+              :src="props.database.data.work.imgVideoArt"
+                                            data-aos="fade-in"
+                data-aos-duration="1500"
+            />
+          </div>
+          <div
+            class="col-12 col-lg-8 d-none d-lg-block work-index-img-wrapper"
+            v-if="
+              categoryOption ===
+              `${props.database.data.work.category.miscellaneous}`
+            "
+          >
+            <img
+              class="work-index-img"
+              :src="props.database.data.work.imgMiscellaneous"
+                              data-aos="fade-in"
+                data-aos-duration="1500"
+            />
           </div>
           <div class="col-12 col-lg-4">
             <ul
@@ -75,6 +112,8 @@
                 class="work-option-item"
                 v-for="item in workDataFrontEnd"
                 :key="item.id"
+                data-aos="fade-left"
+                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
@@ -106,6 +145,8 @@
                 class="work-option-item"
                 v-for="item in workDataVideoArt"
                 :key="item.id"
+                data-aos="fade-left"
+                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
@@ -137,6 +178,8 @@
                 class="work-option-item"
                 v-for="item in workDataMiscellaneous"
                 :key="item.id"
+                data-aos="fade-left"
+                data-aos-duration="1500"
               >
                 <NuxtLink :to="{ path: '/work/' + item.slug }">
                   <div class="row align-items-center">
@@ -180,8 +223,7 @@ const changeWorkOption = (elm) => {
   let workElmSection = document.querySelector(".section-work");
   workElmSection.scrollIntoView({ behavior: "smooth", top: 0 });
   categoryOption.value = elm;
-    localStorage.setItem("lastCategory", elm);
-
+  localStorage.setItem("lastCategory", elm);
 };
 
 onMounted(() => {
@@ -189,7 +231,7 @@ onMounted(() => {
   if (savedCategory) {
     categoryOption.value = savedCategory;
   }
-  
+
   workDataFrontEnd.value = props.database.data.work.categoryItem
     .filter((item) => item.category === "front-end development")
     .sort((a, b) => b.year - a.year);
@@ -202,5 +244,4 @@ onMounted(() => {
     .filter((item) => item.category === "miscellaneous")
     .sort((a, b) => b.year - a.year);
 });
-
 </script>

@@ -3863,7 +3863,7 @@ body .container .row {
 }
 @keyframes YMovement {
   from {
-    margin-top: -70%;
+    margin-top: -100%;
   }
   to {
     margin-top: 50%;
@@ -3930,8 +3930,16 @@ body .container .row {
   display: flex;
   flex-direction: column;
 }
-.section-work .work-index-img {
-  animation: bounce 2s ease infinite;
+.section-work .work-index-img-wrapper {
+  position: relative;
+}
+.section-work .work-index-img-wrapper .work-index-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  min-width: 100px;
+  transform: translate(-50%, -50%);
 }
 .section-work .section-work-modal {
   position: fixed;

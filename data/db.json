@@ -155,7 +155,9 @@
     "work": {
       "modal": "i want to explore all work",
       "goBack": "go back",
-      "img": "/images/4444444.png",
+      "imgFrontEnd": "/images/99.webp",
+      "imgVideoArt": "/images/00.webp",
+      "imgMiscellaneous": "/images/738.webp",
       "category": {
         "frontEnd": "front-end development",
         "videoArt": "video art",

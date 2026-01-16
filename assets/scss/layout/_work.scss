@@ -2,8 +2,16 @@
 .section-work {
   display: flex;
   flex-direction: column;
-  .work-index-img {
-    animation: bounce 2s ease infinite;
+  .work-index-img-wrapper {
+    position: relative;
+    .work-index-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 100%;
+      min-width: 100px;
+      transform: translate(-50%, -50%);
+    }
   }
   .section-work-modal {
     position: fixed;
